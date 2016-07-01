@@ -1,0 +1,563 @@
+Version 3.2 HI-TECH Software Intermediate Code
+"21 fat_list.h
+[s S9 `*S9 1 `*S9 1 ]
+[n S9 fat_node previous next ]
+"27
+[s S8 `*S9 1 `*S9 1 ]
+[n S8 fat_list head tail ]
+"43 fat_cache.c
+[c E184 0 1 .. ]
+[n E184 eFatType FAT_TYPE_16 FAT_TYPE_32  ]
+"24 fat_access.h
+[v F166 `(i ~T0 @X0 0 tf3`ul`*uc`ul ]
+"25
+[v F171 `(i ~T0 @X0 0 tf3`ul`*uc`ul ]
+"35
+[s S3 `*F166 1 `*F171 1 ]
+[n S3 disk_if read_media write_media ]
+"79
+[v F205 `(v ~T0 @X0 0 tf ]
+"80
+[v F208 `(v ~T0 @X0 0 tf ]
+"49
+[s S4 `uc * -> 512 `i -> 1 `i `ul 1 `i 1 `*uc 1 `*S4 1 ]
+[n S4 fat_buffer sector address dirty ptr next ]
+"88
+[s S5 `uc 1 `ul 1 `ul 1 `ul 1 `ul 1 `ul 1 `us 1 `ul 1 `ul 1 `ul 1 `us 1 `us 1 `uc 1 `E184 1 `S3 1 `*F205 1 `*F208 1 `S4 1 `*S4 1 `S4 -> -> 1 `i `ux ]
+[n S5 fatfs sectors_per_cluster cluster_begin_lba rootdir_first_cluster rootdir_first_sector rootdir_sectors fat_begin_lba fs_info_sector lba_begin fat_sectors next_free_cluster root_entry_count reserved_sectors num_of_fats fat_type disk_io fl_lock fl_unlock currentsector fat_buffer_head fat_buffers ]
+"36 fat_filelib.h
+[s S32 `ul 1 `ul 1 ]
+[n S32 cluster_lookup ClusterIdx CurrentCluster ]
+"72
+[s S31 `ul 1 `ul 1 `ul 1 `ul 1 `i 1 `uc -> 10 `i `uc -> 10 `i `uc -> 11 `i `S32 1 `uc -> 512 `i `ul 1 `i 1 `uc 1 `S9 1 ]
+[n S31 sFL_FILE parentcluster startcluster bytenum filelength filelength_changed path filename shortfilename last_fat_lookup file_data_sector file_data_address file_data_dirty flags list_node ]
+[; ;string.h: 4: typedef int ptrdiff_t;
+[; ;string.h: 5: typedef unsigned size_t;
+[; ;string.h: 6: typedef unsigned short wchar_t;
+[; ;string.h: 9: extern int errno;
+[; ;string.h: 22: extern void * memcpy(void *, const void *, size_t);
+[; ;string.h: 23: extern void * memmove(void *, const void *, size_t);
+[; ;string.h: 24: extern void * memset(void *, int, size_t);
+[; ;string.h: 35: extern char * strcat(char *, const char *);
+[; ;string.h: 36: extern char * strcpy(char *, const char *);
+[; ;string.h: 37: extern char * strncat(char *, const char *, size_t);
+[; ;string.h: 38: extern char * strncpy(char *, const char *, size_t);
+[; ;string.h: 39: extern char * strdup(const char *);
+[; ;string.h: 40: extern char * strtok(char *, const char *);
+[; ;string.h: 43: extern int memcmp(const void *, const void *, size_t);
+[; ;string.h: 44: extern int strcmp(const char *, const char *);
+[; ;string.h: 45: extern int stricmp(const char *, const char *);
+[; ;string.h: 46: extern int strncmp(const char *, const char *, size_t);
+[; ;string.h: 47: extern int strnicmp(const char *, const char *, size_t);
+[; ;string.h: 48: extern void * memchr(const void *, int, size_t);
+[; ;string.h: 49: extern size_t strcspn(const char *, const char *);
+[; ;string.h: 50: extern char * strpbrk(const char *, const char *);
+[; ;string.h: 51: extern size_t strspn(const char *, const char *);
+[; ;string.h: 52: extern char * strstr(const char *, const char *);
+[; ;string.h: 53: extern char * stristr(const char *, const char *);
+[; ;string.h: 54: extern char * strerror(int);
+[; ;string.h: 55: extern size_t strlen(const char *);
+[; ;string.h: 56: extern char * strchr(const char *, int);
+[; ;string.h: 57: extern char * strichr(const char *, int);
+[; ;string.h: 58: extern char * strrchr(const char *, int);
+[; ;string.h: 59: extern char * strrichr(const char *, int);
+[; ;stdarg.h: 7: typedef void * va_list[1];
+[; ;stdarg.h: 10: extern void * __va_start(void);
+[; ;stdarg.h: 13: extern void * __va_arg(void *, ...);
+[; ;stdio.h: 23: extern int errno;
+[; ;stdio.h: 54: struct __prbuf
+[; ;stdio.h: 55: {
+[; ;stdio.h: 56: char * ptr;
+[; ;stdio.h: 57: void (* func)(char);
+[; ;stdio.h: 58: };
+[; ;conio.h: 17: extern int errno;
+[; ;conio.h: 20: extern void init_uart(void);
+[; ;conio.h: 22: extern char getch(void);
+[; ;conio.h: 23: extern char getche(void);
+[; ;conio.h: 24: extern void putch(char);
+[; ;conio.h: 25: extern void ungetch(char);
+[; ;conio.h: 27: extern __bit kbhit(void);
+[; ;conio.h: 31: extern char * cgets(char *);
+[; ;conio.h: 32: extern void cputs(const char *);
+[; ;stdio.h: 99: extern int cprintf(char *, ...);
+[; ;stdio.h: 104: extern int _doprnt(struct __prbuf *, const register char *, register va_list);
+[; ;stdio.h: 194: extern char * gets(char *);
+[; ;stdio.h: 195: extern int puts(const char *);
+[; ;stdio.h: 196: extern int scanf(const char *, ...);
+[; ;stdio.h: 197: extern int sscanf(const char *, const char *, ...);
+[; ;stdio.h: 198: extern int vprintf(const char *, va_list);
+[; ;stdio.h: 199: extern int vsprintf(char *, const char *, va_list) __attribute__((unsupported("vsprintf() is not supported by this compiler")));
+[; ;stdio.h: 200: extern int vscanf(const char *, va_list ap);
+[; ;stdio.h: 201: extern int vsscanf(const char *, const char *, va_list);
+[; ;stdio.h: 205: extern int sprintf(char *, const char *, ...);
+[; ;stdio.h: 206: extern int printf(const char *, ...);
+[; ;fat_types.h: 15: typedef unsigned char uint8;
+[; ;fat_types.h: 16: typedef unsigned short uint16;
+[; ;fat_types.h: 23: typedef unsigned long uint32;
+[; ;fat_defs.h: 111: struct fat_dir_entry 
+[; ;fat_defs.h: 112: {
+[; ;fat_defs.h: 113: uint8 Name[11];
+[; ;fat_defs.h: 114: uint8 Attr;
+[; ;fat_defs.h: 115: uint8 NTRes;
+[; ;fat_defs.h: 116: uint8 CrtTimeTenth;
+[; ;fat_defs.h: 117: uint8 CrtTime[2];
+[; ;fat_defs.h: 118: uint8 CrtDate[2];
+[; ;fat_defs.h: 119: uint8 LstAccDate[2];
+[; ;fat_defs.h: 120: uint16 FstClusHI;
+[; ;fat_defs.h: 121: uint8 WrtTime[2];
+[; ;fat_defs.h: 122: uint8 WrtDate[2];
+[; ;fat_defs.h: 123: uint16 FstClusLO;
+[; ;fat_defs.h: 124: uint32 FileSize;
+[; ;fat_defs.h: 125: } ;
+[; ;fat_access.h: 24: typedef int (*fn_diskio_read) (uint32 sector, uint8 *buffer, uint32 sector_count);
+[; ;fat_access.h: 25: typedef int (*fn_diskio_write)(uint32 sector, uint8 *buffer, uint32 sector_count);
+[; ;fat_access.h: 30: struct disk_if
+[; ;fat_access.h: 31: {
+[; ;fat_access.h: 33: fn_diskio_read read_media;
+[; ;fat_access.h: 34: fn_diskio_write write_media;
+[; ;fat_access.h: 35: };
+[; ;fat_access.h: 38: struct fat_buffer;
+[; ;fat_access.h: 40: struct fat_buffer
+[; ;fat_access.h: 41: {
+[; ;fat_access.h: 42: uint8 sector[512 * 1];
+[; ;fat_access.h: 43: uint32 address;
+[; ;fat_access.h: 44: int dirty;
+[; ;fat_access.h: 45: uint8 * ptr;
+[; ;fat_access.h: 48: struct fat_buffer *next;
+[; ;fat_access.h: 49: };
+[; ;fat_access.h: 51: typedef enum eFatType
+[; ;fat_access.h: 52: {
+[; ;fat_access.h: 53: FAT_TYPE_16,
+[; ;fat_access.h: 54: FAT_TYPE_32
+[; ;fat_access.h: 55: } tFatType;
+[; ;fat_access.h: 57: struct fatfs
+[; ;fat_access.h: 58: {
+[; ;fat_access.h: 60: uint8 sectors_per_cluster;
+[; ;fat_access.h: 61: uint32 cluster_begin_lba;
+[; ;fat_access.h: 62: uint32 rootdir_first_cluster;
+[; ;fat_access.h: 63: uint32 rootdir_first_sector;
+[; ;fat_access.h: 64: uint32 rootdir_sectors;
+[; ;fat_access.h: 65: uint32 fat_begin_lba;
+[; ;fat_access.h: 66: uint16 fs_info_sector;
+[; ;fat_access.h: 67: uint32 lba_begin;
+[; ;fat_access.h: 68: uint32 fat_sectors;
+[; ;fat_access.h: 69: uint32 next_free_cluster;
+[; ;fat_access.h: 70: uint16 root_entry_count;
+[; ;fat_access.h: 71: uint16 reserved_sectors;
+[; ;fat_access.h: 72: uint8 num_of_fats;
+[; ;fat_access.h: 73: tFatType fat_type;
+[; ;fat_access.h: 76: struct disk_if disk_io;
+[; ;fat_access.h: 79: void (*fl_lock)(void);
+[; ;fat_access.h: 80: void (*fl_unlock)(void);
+[; ;fat_access.h: 83: struct fat_buffer currentsector;
+[; ;fat_access.h: 86: struct fat_buffer *fat_buffer_head;
+[; ;fat_access.h: 87: struct fat_buffer fat_buffers[1];
+[; ;fat_access.h: 88: };
+[; ;fat_access.h: 90: struct fs_dir_list_status
+[; ;fat_access.h: 91: {
+[; ;fat_access.h: 92: uint32 sector;
+[; ;fat_access.h: 93: uint32 cluster;
+[; ;fat_access.h: 94: uint8 offset;
+[; ;fat_access.h: 95: };
+[; ;fat_access.h: 97: struct fs_dir_ent
+[; ;fat_access.h: 98: {
+[; ;fat_access.h: 99: char filename[10];
+[; ;fat_access.h: 100: uint8 is_dir;
+[; ;fat_access.h: 101: uint32 cluster;
+[; ;fat_access.h: 102: uint32 size;
+[; ;fat_access.h: 111: };
+[; ;fat_access.h: 116: int fatfs_init(struct fatfs *fs);
+[; ;fat_access.h: 117: uint32 fatfs_lba_of_cluster(struct fatfs *fs, uint32 Cluster_Number);
+[; ;fat_access.h: 118: int fatfs_sector_reader(struct fatfs *fs, uint32 Startcluster, uint32 offset, uint8 *target);
+[; ;fat_access.h: 119: int fatfs_sector_read(struct fatfs *fs, uint32 lba, uint8 *target, uint32 count);
+[; ;fat_access.h: 120: int fatfs_sector_write(struct fatfs *fs, uint32 lba, uint8 *target, uint32 count);
+[; ;fat_access.h: 121: int fatfs_read_sector(struct fatfs *fs, uint32 cluster, uint32 sector, uint8 *target);
+[; ;fat_access.h: 122: int fatfs_write_sector(struct fatfs *fs, uint32 cluster, uint32 sector, uint8 *target);
+[; ;fat_access.h: 123: void fatfs_show_details(struct fatfs *fs);
+[; ;fat_access.h: 124: uint32 fatfs_get_root_cluster(struct fatfs *fs);
+[; ;fat_access.h: 125: uint32 fatfs_get_file_entry(struct fatfs *fs, uint32 Cluster, char *nametofind, struct fat_dir_entry *sfEntry);
+[; ;fat_access.h: 126: int fatfs_sfn_exists(struct fatfs *fs, uint32 Cluster, char *shortname);
+[; ;fat_access.h: 127: int fatfs_update_file_length(struct fatfs *fs, uint32 Cluster, char *shortname, uint32 fileLength);
+[; ;fat_access.h: 128: int fatfs_mark_file_deleted(struct fatfs *fs, uint32 Cluster, char *shortname);
+[; ;fat_access.h: 129: void fatfs_list_directory_start(struct fatfs *fs, struct fs_dir_list_status *dirls, uint32 StartCluster);
+[; ;fat_access.h: 130: int fatfs_list_directory_next(struct fatfs *fs, struct fs_dir_list_status *dirls, struct fs_dir_ent *entry);
+[; ;fat_access.h: 131: int fatfs_update_timestamps(struct fat_dir_entry *directoryEntry, int create, int modify, int access);
+[; ;fat_access.h: 138: void fatfs_show_details_(struct fatfs *fs);
+[; ;fat_list.h: 15: struct fat_list;
+[; ;fat_list.h: 17: struct fat_node
+[; ;fat_list.h: 18: {
+[; ;fat_list.h: 19: struct fat_node *previous;
+[; ;fat_list.h: 20: struct fat_node *next;
+[; ;fat_list.h: 21: };
+[; ;fat_list.h: 23: struct fat_list
+[; ;fat_list.h: 24: {
+[; ;fat_list.h: 25: struct fat_node *head;
+[; ;fat_list.h: 26: struct fat_node *tail;
+[; ;fat_list.h: 27: };
+"47 fat_list.h
+[v _fat_list_init `(v ~T0 @X0 1 sf1`*S8 ]
+{
+[; ;fat_list.h: 46: static  void fat_list_init(struct fat_list *list)
+[; ;fat_list.h: 47: {
+[e :U _fat_list_init ]
+[v _list `*S8 ~T0 @X0 1 r1 ]
+[f ]
+[; ;fat_list.h: 48: ;
+[; ;fat_list.h: 50: list->head = list->tail = 0;
+"50
+[e = . *U _list 0 = . *U _list 1 -> -> 0 `i `*S9 ]
+[; ;fat_list.h: 51: }
+"51
+[e :UE 10 ]
+}
+"56
+[v _fat_list_remove `(v ~T0 @X0 1 sf2`*S8`*S9 ]
+{
+[; ;fat_list.h: 55: static  void fat_list_remove(struct fat_list *list, struct fat_node *node)
+[; ;fat_list.h: 56: {
+[e :U _fat_list_remove ]
+[v _list `*S8 ~T0 @X0 1 r1 ]
+[v _node `*S9 ~T0 @X0 1 r2 ]
+[f ]
+[; ;fat_list.h: 57: ;
+[; ;fat_list.h: 58: ;
+[; ;fat_list.h: 60: if(!node->previous)
+"60
+[e $ ! ! != . *U _node 0 -> -> 0 `i `*S9 12  ]
+[; ;fat_list.h: 61: list->head = node->next;
+"61
+[e = . *U _list 0 . *U _node 1 ]
+[e $U 13  ]
+"62
+[e :U 12 ]
+[; ;fat_list.h: 62: else
+[; ;fat_list.h: 63: node->previous->next = node->next;
+"63
+[e = . *U . *U _node 0 1 . *U _node 1 ]
+[e :U 13 ]
+[; ;fat_list.h: 65: if(!node->next)
+"65
+[e $ ! ! != . *U _node 1 -> -> 0 `i `*S9 14  ]
+[; ;fat_list.h: 66: list->tail = node->previous;
+"66
+[e = . *U _list 1 . *U _node 0 ]
+[e $U 15  ]
+"67
+[e :U 14 ]
+[; ;fat_list.h: 67: else
+[; ;fat_list.h: 68: node->next->previous = node->previous;
+"68
+[e = . *U . *U _node 1 0 . *U _node 0 ]
+[e :U 15 ]
+[; ;fat_list.h: 69: }
+"69
+[e :UE 11 ]
+}
+"74
+[v _fat_list_insert_after `(v ~T0 @X0 1 sf3`*S8`*S9`*S9 ]
+{
+[; ;fat_list.h: 73: static  void fat_list_insert_after(struct fat_list *list, struct fat_node *node, struct fat_node *new_node)
+[; ;fat_list.h: 74: {
+[e :U _fat_list_insert_after ]
+[v _list `*S8 ~T0 @X0 1 r1 ]
+[v _node `*S9 ~T0 @X0 1 r2 ]
+[v _new_node `*S9 ~T0 @X0 1 r3 ]
+[f ]
+[; ;fat_list.h: 75: ;
+[; ;fat_list.h: 76: ;
+[; ;fat_list.h: 77: ;
+[; ;fat_list.h: 79: new_node->previous = node;
+"79
+[e = . *U _new_node 0 _node ]
+[; ;fat_list.h: 80: new_node->next = node->next;
+"80
+[e = . *U _new_node 1 . *U _node 1 ]
+[; ;fat_list.h: 81: if (!node->next)
+"81
+[e $ ! ! != . *U _node 1 -> -> 0 `i `*S9 17  ]
+[; ;fat_list.h: 82: list->tail = new_node;
+"82
+[e = . *U _list 1 _new_node ]
+[e $U 18  ]
+"83
+[e :U 17 ]
+[; ;fat_list.h: 83: else
+[; ;fat_list.h: 84: node->next->previous = new_node;
+"84
+[e = . *U . *U _node 1 0 _new_node ]
+[e :U 18 ]
+[; ;fat_list.h: 85: node->next = new_node;
+"85
+[e = . *U _node 1 _new_node ]
+[; ;fat_list.h: 86: }
+"86
+[e :UE 16 ]
+}
+"91
+[v _fat_list_insert_before `(v ~T0 @X0 1 sf3`*S8`*S9`*S9 ]
+{
+[; ;fat_list.h: 90: static  void fat_list_insert_before(struct fat_list *list, struct fat_node *node, struct fat_node *new_node)
+[; ;fat_list.h: 91: {
+[e :U _fat_list_insert_before ]
+[v _list `*S8 ~T0 @X0 1 r1 ]
+[v _node `*S9 ~T0 @X0 1 r2 ]
+[v _new_node `*S9 ~T0 @X0 1 r3 ]
+[f ]
+[; ;fat_list.h: 92: ;
+[; ;fat_list.h: 93: ;
+[; ;fat_list.h: 94: ;
+[; ;fat_list.h: 96: new_node->previous = node->previous;
+"96
+[e = . *U _new_node 0 . *U _node 0 ]
+[; ;fat_list.h: 97: new_node->next = node;
+"97
+[e = . *U _new_node 1 _node ]
+[; ;fat_list.h: 98: if (!node->previous)
+"98
+[e $ ! ! != . *U _node 0 -> -> 0 `i `*S9 20  ]
+[; ;fat_list.h: 99: list->head = new_node;
+"99
+[e = . *U _list 0 _new_node ]
+[e $U 21  ]
+"100
+[e :U 20 ]
+[; ;fat_list.h: 100: else
+[; ;fat_list.h: 101: node->previous->next = new_node;
+"101
+[e = . *U . *U _node 0 1 _new_node ]
+[e :U 21 ]
+[; ;fat_list.h: 102: node->previous = new_node;
+"102
+[e = . *U _node 0 _new_node ]
+[; ;fat_list.h: 103: }
+"103
+[e :UE 19 ]
+}
+"108
+[v _fat_list_insert_first `(v ~T0 @X0 1 sf2`*S8`*S9 ]
+{
+[; ;fat_list.h: 107: static  void fat_list_insert_first(struct fat_list *list, struct fat_node *node)
+[; ;fat_list.h: 108: {
+[e :U _fat_list_insert_first ]
+[v _list `*S8 ~T0 @X0 1 r1 ]
+[v _node `*S9 ~T0 @X0 1 r2 ]
+[f ]
+[; ;fat_list.h: 109: ;
+[; ;fat_list.h: 110: ;
+[; ;fat_list.h: 112: if (!list->head)
+"112
+[e $ ! ! != . *U _list 0 -> -> 0 `i `*S9 23  ]
+[; ;fat_list.h: 113: {
+"113
+{
+[; ;fat_list.h: 114: list->head = node;
+"114
+[e = . *U _list 0 _node ]
+[; ;fat_list.h: 115: list->tail = node;
+"115
+[e = . *U _list 1 _node ]
+[; ;fat_list.h: 116: node->previous = 0;
+"116
+[e = . *U _node 0 -> -> 0 `i `*S9 ]
+[; ;fat_list.h: 117: node->next = 0;
+"117
+[e = . *U _node 1 -> -> 0 `i `*S9 ]
+"118
+}
+[; ;fat_list.h: 118: }
+[e $U 24  ]
+"119
+[e :U 23 ]
+[; ;fat_list.h: 119: else
+[; ;fat_list.h: 120: fat_list_insert_before(list, list->head, node);
+"120
+[e ( _fat_list_insert_before (3 , , _list . *U _list 0 _node ]
+[e :U 24 ]
+[; ;fat_list.h: 121: }
+"121
+[e :UE 22 ]
+}
+"126
+[v _fat_list_insert_last `(v ~T0 @X0 1 sf2`*S8`*S9 ]
+{
+[; ;fat_list.h: 125: static  void fat_list_insert_last(struct fat_list *list, struct fat_node *node)
+[; ;fat_list.h: 126: {
+[e :U _fat_list_insert_last ]
+[v _list `*S8 ~T0 @X0 1 r1 ]
+[v _node `*S9 ~T0 @X0 1 r2 ]
+[f ]
+[; ;fat_list.h: 127: ;
+[; ;fat_list.h: 128: ;
+[; ;fat_list.h: 130: if (!list->tail)
+"130
+[e $ ! ! != . *U _list 1 -> -> 0 `i `*S9 26  ]
+[; ;fat_list.h: 131: fat_list_insert_first(list, node);
+"131
+[e ( _fat_list_insert_first (2 , _list _node ]
+[e $U 27  ]
+"132
+[e :U 26 ]
+[; ;fat_list.h: 132: else
+[; ;fat_list.h: 133: fat_list_insert_after(list, list->tail, node);
+"133
+[e ( _fat_list_insert_after (3 , , _list . *U _list 1 _node ]
+[e :U 27 ]
+[; ;fat_list.h: 134: }
+"134
+[e :UE 25 ]
+}
+"139
+[v _fat_list_is_empty `(i ~T0 @X0 1 sf1`*S8 ]
+{
+[; ;fat_list.h: 138: static  int fat_list_is_empty(struct fat_list *list)
+[; ;fat_list.h: 139: {
+[e :U _fat_list_is_empty ]
+[v _list `*S8 ~T0 @X0 1 r1 ]
+[f ]
+[; ;fat_list.h: 140: ;
+[; ;fat_list.h: 142: return !list->head;
+"142
+[e ) -> ! != . *U _list 0 -> -> 0 `i `*S9 `i ]
+[e $UE 28  ]
+[; ;fat_list.h: 143: }
+"143
+[e :UE 28 ]
+}
+"148
+[v _fat_list_pop_head `(*S9 ~T0 @X0 1 sf1`*S8 ]
+{
+[; ;fat_list.h: 147: static  struct fat_node * fat_list_pop_head(struct fat_list *list)
+[; ;fat_list.h: 148: {
+[e :U _fat_list_pop_head ]
+[v _list `*S8 ~T0 @X0 1 r1 ]
+[f ]
+"149
+[v _node `*S9 ~T0 @X0 1 a ]
+[; ;fat_list.h: 149: struct fat_node * node;
+[; ;fat_list.h: 151: ;
+[; ;fat_list.h: 153: node = (list)->head;
+"153
+[e = _node . *U _list 0 ]
+[; ;fat_list.h: 154: if (node)
+"154
+[e $ ! != _node -> -> 0 `i `*S9 30  ]
+[; ;fat_list.h: 155: fat_list_remove(list, node);
+"155
+[e ( _fat_list_remove (2 , _list _node ]
+[e :U 30 ]
+[; ;fat_list.h: 157: return node;
+"157
+[e ) _node ]
+[e $UE 29  ]
+[; ;fat_list.h: 158: }
+"158
+[e :UE 29 ]
+}
+[; ;fat_filelib.h: 30: struct sFL_FILE;
+[; ;fat_filelib.h: 32: struct cluster_lookup
+[; ;fat_filelib.h: 33: {
+[; ;fat_filelib.h: 34: uint32 ClusterIdx;
+[; ;fat_filelib.h: 35: uint32 CurrentCluster;
+[; ;fat_filelib.h: 36: };
+[; ;fat_filelib.h: 38: typedef struct sFL_FILE
+[; ;fat_filelib.h: 39: {
+[; ;fat_filelib.h: 40: uint32 parentcluster;
+[; ;fat_filelib.h: 41: uint32 startcluster;
+[; ;fat_filelib.h: 42: uint32 bytenum;
+[; ;fat_filelib.h: 43: uint32 filelength;
+[; ;fat_filelib.h: 44: int filelength_changed;
+[; ;fat_filelib.h: 45: char path[10];
+[; ;fat_filelib.h: 46: char filename[10];
+[; ;fat_filelib.h: 47: uint8 shortfilename[11];
+[; ;fat_filelib.h: 55: struct cluster_lookup last_fat_lookup;
+[; ;fat_filelib.h: 58: uint8 file_data_sector[512];
+[; ;fat_filelib.h: 59: uint32 file_data_address;
+[; ;fat_filelib.h: 60: int file_data_dirty;
+[; ;fat_filelib.h: 63: uint8 flags;
+[; ;fat_filelib.h: 71: struct fat_node list_node;
+[; ;fat_filelib.h: 72: } FL_FILE;
+[; ;fat_filelib.h: 79: void fl_init(void);
+[; ;fat_filelib.h: 80: void fl_attach_locks(void (*lock)(void), void (*unlock)(void));
+[; ;fat_filelib.h: 81: int fl_attach_media(fn_diskio_read rd, fn_diskio_write wr);
+[; ;fat_filelib.h: 82: void fl_shutdown(void);
+[; ;fat_filelib.h: 85: void* fl_fopen(const char *path, const char *modifiers);
+[; ;fat_filelib.h: 86: void fl_fclose(void *file);
+[; ;fat_filelib.h: 87: int fl_fflush(void *file);
+[; ;fat_filelib.h: 88: int fl_fgetc(void *file);
+[; ;fat_filelib.h: 89: char * fl_fgets(char *s, int n, void *f);
+[; ;fat_filelib.h: 90: int fl_fputc(int c, void *file);
+[; ;fat_filelib.h: 91: int fl_fputs(const char * str, void *file);
+[; ;fat_filelib.h: 92: int fl_fwrite(const void * data, int size, int count, void *file );
+[; ;fat_filelib.h: 93: int fl_fread(void * data, int size, int count, void *file );
+[; ;fat_filelib.h: 94: int fl_fseek(void *file , long offset , int origin );
+[; ;fat_filelib.h: 95: int fl_fgetpos(void *file , uint32 * position);
+[; ;fat_filelib.h: 96: long fl_ftell(void *f);
+[; ;fat_filelib.h: 97: int fl_feof(void *f);
+[; ;fat_filelib.h: 98: int fl_remove(const char * filename);
+[; ;fat_filelib.h: 101: typedef struct fs_dir_list_status FL_DIR;
+[; ;fat_filelib.h: 102: typedef struct fs_dir_ent fl_dirent;
+[; ;fat_filelib.h: 104: FL_DIR* fl_opendir(const char* path, FL_DIR *dir);
+[; ;fat_filelib.h: 105: int fl_readdir(FL_DIR *dirls, fl_dirent *entry);
+[; ;fat_filelib.h: 106: int fl_closedir(FL_DIR* dir);
+[; ;fat_filelib.h: 109: void fl_listdirectory(const char *path);
+[; ;fat_filelib.h: 110: int fl_createdirectory(const char *path);
+[; ;fat_filelib.h: 111: int fl_is_dir(const char *path);
+[; ;fat_filelib.h: 113: int fl_format(uint32 volume_sectors, const char *name);
+[; ;fat_cache.h: 9: int fatfs_cache_init(struct fatfs *fs, FL_FILE *file);
+[; ;fat_cache.h: 10: int fatfs_cache_get_next_cluster(struct fatfs *fs, FL_FILE *file, uint32 clusterIdx, uint32 *pNextCluster);
+[; ;fat_cache.h: 11: int fatfs_cache_set_next_cluster(struct fatfs *fs, FL_FILE *file, uint32 clusterIdx, uint32 nextCluster);
+"43 fat_cache.c
+[v _fatfs_cache_init `(i ~T0 @X0 1 ef2`*S5`*S31 ]
+{
+[; ;fat_cache.c: 42: int fatfs_cache_init(struct fatfs *fs, FL_FILE *file)
+[; ;fat_cache.c: 43: {
+[e :U _fatfs_cache_init ]
+[v _fs `*S5 ~T0 @X0 1 r1 ]
+[v _file `*S31 ~T0 @X0 1 r2 ]
+[f ]
+[; ;fat_cache.c: 54: return 1;
+"54
+[e ) -> 1 `i ]
+[e $UE 33  ]
+[; ;fat_cache.c: 55: }
+"55
+[e :UE 33 ]
+}
+"60
+[v _fatfs_cache_get_next_cluster `(i ~T0 @X0 1 ef4`*S5`*S31`ul`*ul ]
+{
+[; ;fat_cache.c: 59: int fatfs_cache_get_next_cluster(struct fatfs *fs, FL_FILE *file, uint32 clusterIdx, uint32 *pNextCluster)
+[; ;fat_cache.c: 60: {
+[e :U _fatfs_cache_get_next_cluster ]
+[v _fs `*S5 ~T0 @X0 1 r1 ]
+[v _file `*S31 ~T0 @X0 1 r2 ]
+[v _clusterIdx `ul ~T0 @X0 1 r3 ]
+[v _pNextCluster `*ul ~T0 @X0 1 r4 ]
+[f ]
+[; ;fat_cache.c: 71: return 0;
+"71
+[e ) -> 0 `i ]
+[e $UE 34  ]
+[; ;fat_cache.c: 72: }
+"72
+[e :UE 34 ]
+}
+"77
+[v _fatfs_cache_set_next_cluster `(i ~T0 @X0 1 ef4`*S5`*S31`ul`ul ]
+{
+[; ;fat_cache.c: 76: int fatfs_cache_set_next_cluster(struct fatfs *fs, FL_FILE *file, uint32 clusterIdx, uint32 nextCluster)
+[; ;fat_cache.c: 77: {
+[e :U _fatfs_cache_set_next_cluster ]
+[v _fs `*S5 ~T0 @X0 1 r1 ]
+[v _file `*S31 ~T0 @X0 1 r2 ]
+[v _clusterIdx `ul ~T0 @X0 1 r3 ]
+[v _nextCluster `ul ~T0 @X0 1 r4 ]
+[f ]
+[; ;fat_cache.c: 90: return 1;
+"90
+[e ) -> 1 `i ]
+[e $UE 35  ]
+[; ;fat_cache.c: 91: }
+"91
+[e :UE 35 ]
+}

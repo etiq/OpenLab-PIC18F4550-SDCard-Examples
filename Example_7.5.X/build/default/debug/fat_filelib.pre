@@ -1,0 +1,1991 @@
+
+# 1 "fat_filelib.c"
+
+# 4 "C:\Program Files (x86)\Microchip\xc8\v1.21\include\stdlib.h"
+typedef int ptrdiff_t;
+typedef unsigned size_t;
+typedef unsigned short wchar_t;
+
+# 16
+extern int errno;
+
+# 27
+typedef struct {
+int rem;
+int quot;
+} div_t;
+typedef struct {
+unsigned rem;
+unsigned quot;
+} udiv_t;
+typedef struct {
+long quot;
+long rem;
+} ldiv_t;
+typedef struct {
+unsigned long quot;
+unsigned long rem;
+} uldiv_t;
+
+# 65
+extern double atof(const char *);
+extern double strtod(const char *, const char **);
+extern int atoi(const char *);
+extern unsigned xtoi(const char *);
+extern long atol(const char *);
+extern long strtol(const char *, char **, int);
+
+extern int rand(void);
+extern void srand(unsigned int);
+extern void * calloc(size_t, size_t);
+extern div_t div(int numer, int denom);
+extern udiv_t udiv(unsigned numer, unsigned denom);
+extern ldiv_t ldiv(long numer, long denom);
+extern uldiv_t uldiv(unsigned long numer,unsigned long denom);
+extern unsigned long _lrotl(unsigned long value, unsigned int shift);
+extern unsigned long _lrotr(unsigned long value, unsigned int shift);
+extern unsigned int _rotl(unsigned int value, unsigned int shift);
+extern unsigned int _rotr(unsigned int value, unsigned int shift);
+
+
+
+
+extern void * malloc(size_t);
+extern void free(void *);
+extern void * realloc(void *, size_t);
+
+extern void abort(void);
+extern void exit(int);
+extern int atexit(void (*)(void));
+extern char * getenv(const char *);
+extern char ** environ;
+extern int system(char *);
+extern void qsort(void *, size_t, size_t, int (*)(const void *, const void *));
+extern void * bsearch(const void *, void *, size_t, size_t, int(*)(const void *, const void *));
+extern int abs(int);
+extern long labs(long);
+
+
+extern char * itoa(char * buf, int val, int base);
+extern char * utoa(char * buf, unsigned val, int base);
+
+
+
+
+extern char * ltoa(char * buf, long val, int base);
+extern char * ultoa(char * buf, unsigned long val, int base);
+
+extern char * ftoa(float f, int * status);
+
+# 22 "C:\Program Files (x86)\Microchip\xc8\v1.21\include\string.h"
+extern void * memcpy(void *, const void *, size_t);
+extern void * memmove(void *, const void *, size_t);
+extern void * memset(void *, int, size_t);
+
+# 35
+extern char * strcat(char *, const char *);
+extern char * strcpy(char *, const char *);
+extern char * strncat(char *, const char *, size_t);
+extern char * strncpy(char *, const char *, size_t);
+extern char * strdup(const char *);
+extern char * strtok(char *, const char *);
+
+
+extern int memcmp(const void *, const void *, size_t);
+extern int strcmp(const char *, const char *);
+extern int stricmp(const char *, const char *);
+extern int strncmp(const char *, const char *, size_t);
+extern int strnicmp(const char *, const char *, size_t);
+extern void * memchr(const void *, int, size_t);
+extern size_t strcspn(const char *, const char *);
+extern char * strpbrk(const char *, const char *);
+extern size_t strspn(const char *, const char *);
+extern char * strstr(const char *, const char *);
+extern char * stristr(const char *, const char *);
+extern char * strerror(int);
+extern size_t strlen(const char *);
+extern char * strchr(const char *, int);
+extern char * strichr(const char *, int);
+extern char * strrchr(const char *, int);
+extern char * strrichr(const char *, int);
+
+# 7 "C:\Program Files (x86)\Microchip\xc8\v1.21\include\stdarg.h"
+typedef void * va_list[1];
+
+#pragma intrinsic(__va_start)
+extern void * __va_start(void);
+
+#pragma intrinsic(__va_arg)
+extern void * __va_arg(void *, ...);
+
+# 23 "C:\Program Files (x86)\Microchip\xc8\v1.21\include\stdio.h"
+extern int errno;
+
+# 54
+struct __prbuf
+{
+char * ptr;
+void (* func)(char);
+};
+
+# 17 "C:\Program Files (x86)\Microchip\xc8\v1.21\include\conio.h"
+extern int errno;
+
+
+extern void init_uart(void);
+
+extern char getch(void);
+extern char getche(void);
+extern void putch(char);
+extern void ungetch(char);
+
+extern __bit kbhit(void);
+
+# 31
+extern char * cgets(char *);
+extern void cputs(const char *);
+
+# 99 "C:\Program Files (x86)\Microchip\xc8\v1.21\include\stdio.h"
+extern int cprintf(char *, ...);
+#pragma printf_check(cprintf)
+
+
+
+extern int _doprnt(struct __prbuf *, const register char *, register va_list);
+
+
+# 191
+#pragma printf_check(vprintf) const
+#pragma printf_check(vsprintf) const
+
+extern char * gets(char *);
+extern int puts(const char *);
+extern int scanf(const char *, ...);
+extern int sscanf(const char *, const char *, ...);
+extern int vprintf(const char *, va_list);
+extern int vsprintf(char *, const char *, va_list) __attribute__((unsupported("vsprintf() is not supported by this compiler")));
+extern int vscanf(const char *, va_list ap);
+extern int vsscanf(const char *, const char *, va_list);
+
+#pragma printf_check(printf) const
+#pragma printf_check(sprintf) const
+extern int sprintf(char *, const char *, ...);
+extern int printf(const char *, ...);
+
+# 15 "fat_types.h"
+typedef unsigned char uint8;
+typedef unsigned short uint16;
+
+# 23
+typedef unsigned long uint32;
+
+# 110 "fat_defs.h"
+
+struct fat_dir_entry 
+{
+uint8 Name[11];
+uint8 Attr;
+uint8 NTRes;
+uint8 CrtTimeTenth;
+uint8 CrtTime[2];
+uint8 CrtDate[2];
+uint8 LstAccDate[2];
+uint16 FstClusHI;
+uint8 WrtTime[2];
+uint8 WrtDate[2];
+uint16 FstClusLO;
+uint32 FileSize;
+} ;
+
+
+# 24 "fat_access.h"
+typedef int (*fn_diskio_read) (uint32 sector, uint8 *buffer, uint32 sector_count);
+typedef int (*fn_diskio_write)(uint32 sector, uint8 *buffer, uint32 sector_count);
+
+
+
+
+struct disk_if
+{
+
+fn_diskio_read read_media;
+fn_diskio_write write_media;
+};
+
+
+struct fat_buffer;
+
+struct fat_buffer
+{
+uint8 sector[512 * 1];
+uint32 address;
+int dirty;
+uint8 * ptr;
+
+
+struct fat_buffer *next;
+};
+
+typedef enum eFatType
+{
+FAT_TYPE_16,
+FAT_TYPE_32
+} tFatType;
+
+struct fatfs
+{
+
+uint8 sectors_per_cluster;
+uint32 cluster_begin_lba;
+uint32 rootdir_first_cluster;
+uint32 rootdir_first_sector;
+uint32 rootdir_sectors;
+uint32 fat_begin_lba;
+uint16 fs_info_sector;
+uint32 lba_begin;
+uint32 fat_sectors;
+uint32 next_free_cluster;
+uint16 root_entry_count;
+uint16 reserved_sectors;
+uint8 num_of_fats;
+tFatType fat_type;
+
+
+struct disk_if disk_io;
+
+
+void (*fl_lock)(void);
+void (*fl_unlock)(void);
+
+
+struct fat_buffer currentsector;
+
+
+struct fat_buffer *fat_buffer_head;
+struct fat_buffer fat_buffers[1];
+};
+
+struct fs_dir_list_status
+{
+uint32 sector;
+uint32 cluster;
+uint8 offset;
+};
+
+struct fs_dir_ent
+{
+char filename[10];
+uint8 is_dir;
+uint32 cluster;
+uint32 size;
+
+# 111
+};
+
+
+
+
+int fatfs_init(struct fatfs *fs);
+uint32 fatfs_lba_of_cluster(struct fatfs *fs, uint32 Cluster_Number);
+int fatfs_sector_reader(struct fatfs *fs, uint32 Startcluster, uint32 offset, uint8 *target);
+int fatfs_sector_read(struct fatfs *fs, uint32 lba, uint8 *target, uint32 count);
+int fatfs_sector_write(struct fatfs *fs, uint32 lba, uint8 *target, uint32 count);
+int fatfs_read_sector(struct fatfs *fs, uint32 cluster, uint32 sector, uint8 *target);
+int fatfs_write_sector(struct fatfs *fs, uint32 cluster, uint32 sector, uint8 *target);
+void fatfs_show_details(struct fatfs *fs);
+uint32 fatfs_get_root_cluster(struct fatfs *fs);
+uint32 fatfs_get_file_entry(struct fatfs *fs, uint32 Cluster, char *nametofind, struct fat_dir_entry *sfEntry);
+int fatfs_sfn_exists(struct fatfs *fs, uint32 Cluster, char *shortname);
+int fatfs_update_file_length(struct fatfs *fs, uint32 Cluster, char *shortname, uint32 fileLength);
+int fatfs_mark_file_deleted(struct fatfs *fs, uint32 Cluster, char *shortname);
+void fatfs_list_directory_start(struct fatfs *fs, struct fs_dir_list_status *dirls, uint32 StartCluster);
+int fatfs_list_directory_next(struct fatfs *fs, struct fs_dir_list_status *dirls, struct fs_dir_ent *entry);
+int fatfs_update_timestamps(struct fat_dir_entry *directoryEntry, int create, int modify, int access);
+
+# 138
+void fatfs_show_details_(struct fatfs *fs);
+
+# 30 "fat_misc.h"
+struct lfn_cache
+{
+
+
+uint8 String[10][5];
+uint8 Null;
+
+uint8 no_of_strings;
+};
+
+
+
+
+void fatfs_lfn_cache_init(struct lfn_cache *lfn, int wipeTable);
+void fatfs_lfn_cache_entry(struct lfn_cache *lfn, uint8 *entryBuffer);
+char* fatfs_lfn_cache_get(struct lfn_cache *lfn);
+int fatfs_entry_lfn_text(struct fat_dir_entry *entry);
+int fatfs_entry_lfn_invalid(struct fat_dir_entry *entry);
+int fatfs_entry_lfn_exists(struct lfn_cache *lfn, struct fat_dir_entry *entry);
+int fatfs_entry_sfn_only(struct fat_dir_entry *entry);
+int fatfs_entry_is_dir(struct fat_dir_entry *entry);
+int fatfs_entry_is_file(struct fat_dir_entry *entry);
+int fatfs_lfn_entries_required(char *filename);
+void fatfs_filename_to_lfn(char *filename, uint8 *buffer, int entry, uint8 sfnChk);
+void fatfs_sfn_create_entry(char *shortfilename, uint32 size, uint32 startCluster, struct fat_dir_entry *entry, int dir);
+int fatfs_lfn_create_sfn(char *sfn_output, char *filename);
+int fatfs_lfn_generate_tail(char *sfn_output, char *sfn_input, uint32 tailNum);
+void fatfs_convert_from_fat_time(uint16 fat_time, int *hours, int *minutes, int *seconds);
+void fatfs_convert_from_fat_date(uint16 fat_date, int *day, int *month, int *year);
+uint16 fatfs_convert_to_fat_time(int hours, int minutes, int seconds);
+uint16 fatfs_convert_to_fat_date(int day, int month, int year);
+void fatfs_print_sector(uint32 sector, uint8 *data);
+
+# 10 "fat_table.h"
+void fatfs_fat_init(struct fatfs *fs);
+int fatfs_fat_purge(struct fatfs *fs);
+uint32 fatfs_find_next_cluster(struct fatfs *fs, uint32 current_cluster);
+void fatfs_set_fs_info_next_free_cluster(struct fatfs *fs, uint32 newValue);
+int fatfs_find_blank_cluster(struct fatfs *fs, uint32 start_cluster, uint32 *free_cluster);
+int fatfs_fat_set_cluster(struct fatfs *fs, uint32 cluster, uint32 next_cluster);
+int fatfs_fat_add_cluster_to_chain(struct fatfs *fs, uint32 start_cluster, uint32 newEntry);
+int fatfs_free_cluster_chain(struct fatfs *fs, uint32 start_cluster);
+uint32 fatfs_count_free_clusters(struct fatfs *fs);
+
+# 10 "fat_write.h"
+int fatfs_add_file_entry(struct fatfs *fs, uint32 dirCluster, char *filename, char *shortfilename, uint32 startCluster, uint32 size, int dir);
+int fatfs_add_free_space(struct fatfs *fs, uint32 *startCluster, uint32 clusters);
+int fatfs_allocate_free_space(struct fatfs *fs, int newFile, uint32 *startCluster, uint32 size);
+
+# 7 "fat_string.h"
+int fatfs_total_path_levels(char *path);
+int fatfs_get_substring(char *Path, int levelreq, char *output, int max_len);
+int fatfs_split_path(char *FullPath, char *Path, int max_path, char *FileName, int max_filename);
+int fatfs_compare_names(char* strA, char* strB);
+int fatfs_string_ends_with_slash(char *path);
+int fatfs_get_sfn_display_name(char* out, char* in);
+int fatfs_get_extension(char* filename, char* out, int maxlen);
+int fatfs_create_path_string(char* path, char *filename, char* out, int maxlen);
+
+# 15 "fat_list.h"
+struct fat_list;
+
+struct fat_node
+{
+struct fat_node *previous;
+struct fat_node *next;
+};
+
+struct fat_list
+{
+struct fat_node *head;
+struct fat_node *tail;
+};
+
+# 46
+static  void fat_list_init(struct fat_list *list)
+{
+;
+
+list->head = list->tail = 0;
+}
+
+
+
+static  void fat_list_remove(struct fat_list *list, struct fat_node *node)
+{
+;
+;
+
+if(!node->previous)
+list->head = node->next;
+else
+node->previous->next = node->next;
+
+if(!node->next)
+list->tail = node->previous;
+else
+node->next->previous = node->previous;
+}
+
+
+
+static  void fat_list_insert_after(struct fat_list *list, struct fat_node *node, struct fat_node *new_node)
+{
+;
+;
+;
+
+new_node->previous = node;
+new_node->next = node->next;
+if (!node->next)
+list->tail = new_node;
+else
+node->next->previous = new_node;
+node->next = new_node;
+}
+
+
+
+static  void fat_list_insert_before(struct fat_list *list, struct fat_node *node, struct fat_node *new_node)
+{
+;
+;
+;
+
+new_node->previous = node->previous;
+new_node->next = node;
+if (!node->previous)
+list->head = new_node;
+else
+node->previous->next = new_node;
+node->previous = new_node;
+}
+
+
+
+static  void fat_list_insert_first(struct fat_list *list, struct fat_node *node)
+{
+;
+;
+
+if (!list->head)
+{
+list->head = node;
+list->tail = node;
+node->previous = 0;
+node->next = 0;
+}
+else
+fat_list_insert_before(list, list->head, node);
+}
+
+
+
+static  void fat_list_insert_last(struct fat_list *list, struct fat_node *node)
+{
+;
+;
+
+if (!list->tail)
+fat_list_insert_first(list, node);
+else
+fat_list_insert_after(list, list->tail, node);
+}
+
+
+
+static  int fat_list_is_empty(struct fat_list *list)
+{
+;
+
+return !list->head;
+}
+
+
+
+static  struct fat_node * fat_list_pop_head(struct fat_list *list)
+{
+struct fat_node * node;
+
+;
+
+node = (list)->head;
+if (node)
+fat_list_remove(list, node);
+
+return node;
+}
+
+# 30 "fat_filelib.h"
+struct sFL_FILE;
+
+struct cluster_lookup
+{
+uint32 ClusterIdx;
+uint32 CurrentCluster;
+};
+
+typedef struct sFL_FILE
+{
+uint32 parentcluster;
+uint32 startcluster;
+uint32 bytenum;
+uint32 filelength;
+int filelength_changed;
+char path[10];
+char filename[10];
+uint8 shortfilename[11];
+
+# 55
+struct cluster_lookup last_fat_lookup;
+
+
+uint8 file_data_sector[512];
+uint32 file_data_address;
+int file_data_dirty;
+
+
+uint8 flags;
+
+# 71
+struct fat_node list_node;
+} FL_FILE;
+
+# 79
+void fl_init(void);
+void fl_attach_locks(void (*lock)(void), void (*unlock)(void));
+int fl_attach_media(fn_diskio_read rd, fn_diskio_write wr);
+void fl_shutdown(void);
+
+
+void* fl_fopen(const char *path, const char *modifiers);
+void fl_fclose(void *file);
+int fl_fflush(void *file);
+int fl_fgetc(void *file);
+char * fl_fgets(char *s, int n, void *f);
+int fl_fputc(int c, void *file);
+int fl_fputs(const char * str, void *file);
+int fl_fwrite(const void * data, int size, int count, void *file );
+int fl_fread(void * data, int size, int count, void *file );
+int fl_fseek(void *file , long offset , int origin );
+int fl_fgetpos(void *file , uint32 * position);
+long fl_ftell(void *f);
+int fl_feof(void *f);
+int fl_remove(const char * filename);
+
+
+typedef struct fs_dir_list_status FL_DIR;
+typedef struct fs_dir_ent fl_dirent;
+
+FL_DIR* fl_opendir(const char* path, FL_DIR *dir);
+int fl_readdir(FL_DIR *dirls, fl_dirent *entry);
+int fl_closedir(FL_DIR* dir);
+
+
+void fl_listdirectory(const char *path);
+int fl_createdirectory(const char *path);
+int fl_is_dir(const char *path);
+
+int fl_format(uint32 volume_sectors, const char *name);
+
+# 9 "fat_cache.h"
+int fatfs_cache_init(struct fatfs *fs, FL_FILE *file);
+int fatfs_cache_get_next_cluster(struct fatfs *fs, FL_FILE *file, uint32 clusterIdx, uint32 *pNextCluster);
+int fatfs_cache_set_next_cluster(struct fatfs *fs, FL_FILE *file, uint32 clusterIdx, uint32 nextCluster);
+
+# 11 "fat_format.h"
+int fatfs_format(struct fatfs *fs, uint32 volume_sectors, const char *name);
+
+int fatfs_format_fat16(struct fatfs *fs, uint32 volume_sectors, const char *name);
+int fatfs_format_fat32(struct fatfs *fs, uint32 volume_sectors, const char *name);
+
+# 46 "fat_filelib.c"
+static FL_FILE _files[2];
+static int _filelib_init = 0;
+static int _filelib_valid = 0;
+static struct fatfs _fs;
+static struct fat_list _open_file_list;
+static struct fat_list _free_file_list;
+
+# 69
+static void _fl_init();
+
+
+
+
+static FL_FILE* _allocate_file(void)
+{
+
+struct fat_node *node = fat_list_pop_head(&_free_file_list);
+
+
+if (node)
+fat_list_insert_last(&_open_file_list, node);
+
+return node ? ((FL_FILE *)((char *)(node)-(char*)(&((FL_FILE *)0)->list_node))) : 0;
+}
+
+
+
+static int _check_file_open(FL_FILE* file)
+{
+struct fat_node *node;
+
+
+for ((node) = (&_open_file_list)->head; (node); (node) = (node)->next)
+{
+FL_FILE* openFile = node ? ((FL_FILE *)((char *)(node)-(char*)(&((FL_FILE *)0)->list_node))) : 0;
+
+
+if (openFile != file)
+{
+
+if ( (fatfs_compare_names(openFile->path,file->path)) && (fatfs_compare_names(openFile->filename,file->filename)) )
+return 1;
+}
+}
+
+return 0;
+}
+
+
+
+static void _free_file(FL_FILE* file)
+{
+
+fat_list_remove(&_open_file_list, &file->list_node);
+
+
+fat_list_insert_last(&_free_file_list, &file->list_node);
+}
+
+# 128
+static int _open_directory(char *path, uint32 *pathCluster)
+{
+int levels;
+int sublevel;
+char currentfolder[10];
+struct fat_dir_entry sfEntry;
+uint32 startcluster;
+
+
+startcluster = fatfs_get_root_cluster(&_fs);
+
+
+levels = fatfs_total_path_levels(path);
+
+
+for (sublevel=0;sublevel<(levels+1);sublevel++)
+{
+if (fatfs_get_substring(path, sublevel, currentfolder, sizeof(currentfolder)) == -1)
+return 0;
+
+
+if (fatfs_get_file_entry(&_fs, startcluster, currentfolder,&sfEntry))
+{
+
+if (fatfs_entry_is_dir(&sfEntry))
+startcluster = ((((uint32)sfEntry.FstClusHI))<<16) + (sfEntry.FstClusLO);
+else
+return 0;
+}
+else
+return 0;
+}
+
+*pathCluster = startcluster;
+return 1;
+}
+
+
+
+
+static int _create_directory(char *path)
+{
+FL_FILE* file;
+struct fat_dir_entry sfEntry;
+char shortFilename[11];
+int tailNum = 0;
+int i;
+
+
+file = _allocate_file();
+if (!file)
+return 0;
+
+
+memset(file->path, '\0', sizeof(file->path));
+memset(file->filename, '\0', sizeof(file->filename));
+
+
+if (fatfs_split_path((char*)path, file->path, sizeof(file->path), file->filename, sizeof(file->filename)) == -1)
+{
+_free_file(file);
+return 0;
+}
+
+
+if (_check_file_open(file))
+{
+_free_file(file);
+return 0;
+}
+
+
+if (file->path[0] == 0)
+file->parentcluster = fatfs_get_root_cluster(&_fs);
+else
+{
+
+if (!_open_directory(file->path, &file->parentcluster))
+{
+_free_file(file);
+return 0;
+}
+}
+
+
+if (fatfs_get_file_entry(&_fs, file->parentcluster, file->filename,&sfEntry) == 1)
+{
+_free_file(file);
+return 0;
+}
+
+file->startcluster = 0;
+
+
+if (!fatfs_allocate_free_space(&_fs, 1, &file->startcluster, 1))
+{
+_free_file(file);
+return 0;
+}
+
+
+memset(file->file_data_sector, 0x00, 512);
+for (i=0;i<_fs.sectors_per_cluster;i++)
+{
+if (!fatfs_write_sector(&_fs, file->startcluster, i, file->file_data_sector))
+{
+_free_file(file);
+return 0;
+}
+}
+
+
+
+
+tailNum = 0;
+do
+{
+
+fatfs_lfn_create_sfn(shortFilename, file->filename);
+
+
+if (tailNum != 0)
+fatfs_lfn_generate_tail((char*)file->shortfilename, shortFilename, tailNum);
+
+else
+memcpy(file->shortfilename, shortFilename, 11);
+
+
+if (fatfs_sfn_exists(&_fs, file->parentcluster, (char*)file->shortfilename) == 0)
+break;
+
+tailNum++;
+}
+while (tailNum < 9999);
+
+
+if (tailNum == 9999)
+{
+
+fatfs_free_cluster_chain(&_fs, file->startcluster);
+
+_free_file(file);
+return 0;
+}
+
+# 298
+if (!fatfs_add_file_entry(&_fs, file->parentcluster, (char*)file->filename, (char*)file->shortfilename, file->startcluster, 0, 1))
+{
+
+fatfs_free_cluster_chain(&_fs, file->startcluster);
+
+_free_file(file);
+return 0;
+}
+
+
+file->filelength = 0;
+file->bytenum = 0;
+file->file_data_address = 0xFFFFFFFF;
+file->file_data_dirty = 0;
+file->filelength_changed = 0;
+
+
+file->last_fat_lookup.ClusterIdx = 0xFFFFFFFF;
+file->last_fat_lookup.CurrentCluster = 0xFFFFFFFF;
+
+fatfs_fat_purge(&_fs);
+
+_free_file(file);
+return 1;
+}
+
+
+
+
+static FL_FILE* _open_file(const char *path)
+{
+FL_FILE* file;
+struct fat_dir_entry sfEntry;
+
+
+file = _allocate_file();
+if (!file)
+return (0);
+
+
+memset(file->path, '\0', sizeof(file->path));
+memset(file->filename, '\0', sizeof(file->filename));
+
+
+if (fatfs_split_path((char*)path, file->path, sizeof(file->path), file->filename, sizeof(file->filename)) == -1)
+{
+_free_file(file);
+return (0);
+}
+
+
+if (_check_file_open(file))
+{
+_free_file(file);
+return (0);
+}
+
+
+if (file->path[0]==0)
+file->parentcluster = fatfs_get_root_cluster(&_fs);
+else
+{
+
+if (!_open_directory(file->path, &file->parentcluster))
+{
+_free_file(file);
+return (0);
+}
+}
+
+
+if (fatfs_get_file_entry(&_fs, file->parentcluster, file->filename,&sfEntry))
+
+if (fatfs_entry_is_file(&sfEntry))
+{
+
+memcpy(file->shortfilename, sfEntry.Name, 11);
+file->filelength = (sfEntry.FileSize);
+file->bytenum = 0;
+file->startcluster = ((((uint32)sfEntry.FstClusHI))<<16) + (sfEntry.FstClusLO);
+file->file_data_address = 0xFFFFFFFF;
+file->file_data_dirty = 0;
+file->filelength_changed = 0;
+
+
+file->last_fat_lookup.ClusterIdx = 0xFFFFFFFF;
+file->last_fat_lookup.CurrentCluster = 0xFFFFFFFF;
+
+fatfs_cache_init(&_fs, file);
+
+fatfs_fat_purge(&_fs);
+
+return file;
+}
+
+_free_file(file);
+return (0);
+}
+
+
+
+
+static FL_FILE* _create_file(const char *filename)
+{
+FL_FILE* file;
+struct fat_dir_entry sfEntry;
+char shortFilename[11];
+int tailNum = 0;
+
+
+if (!_fs.disk_io.write_media)
+return (0);
+
+
+file = _allocate_file();
+if (!file)
+return (0);
+
+
+memset(file->path, '\0', sizeof(file->path));
+memset(file->filename, '\0', sizeof(file->filename));
+
+
+if (fatfs_split_path((char*)filename, file->path, sizeof(file->path), file->filename, sizeof(file->filename)) == -1)
+{
+_free_file(file);
+return (0);
+}
+
+
+if (_check_file_open(file))
+{
+_free_file(file);
+return (0);
+}
+
+
+if (file->path[0] == 0)
+file->parentcluster = fatfs_get_root_cluster(&_fs);
+else
+{
+
+if (!_open_directory(file->path, &file->parentcluster))
+{
+_free_file(file);
+return (0);
+}
+}
+
+
+if (fatfs_get_file_entry(&_fs, file->parentcluster, file->filename,&sfEntry) == 1)
+{
+_free_file(file);
+return (0);
+}
+
+file->startcluster = 0;
+
+
+if (!fatfs_allocate_free_space(&_fs, 1, &file->startcluster, 1))
+{
+_free_file(file);
+return (0);
+}
+
+
+
+tailNum = 0;
+do
+{
+
+fatfs_lfn_create_sfn(shortFilename, file->filename);
+
+
+if (tailNum != 0)
+fatfs_lfn_generate_tail((char*)file->shortfilename, shortFilename, tailNum);
+
+else
+memcpy(file->shortfilename, shortFilename, 11);
+
+
+if (fatfs_sfn_exists(&_fs, file->parentcluster, (char*)file->shortfilename) == 0)
+break;
+
+tailNum++;
+}
+while (tailNum < 9999);
+
+
+if (tailNum == 9999)
+{
+
+fatfs_free_cluster_chain(&_fs, file->startcluster);
+
+_free_file(file);
+return (0);
+}
+
+# 521
+if (!fatfs_add_file_entry(&_fs, file->parentcluster, (char*)file->filename, (char*)file->shortfilename, file->startcluster, 0, 0))
+{
+
+fatfs_free_cluster_chain(&_fs, file->startcluster);
+
+_free_file(file);
+return (0);
+}
+
+
+file->filelength = 0;
+file->bytenum = 0;
+file->file_data_address = 0xFFFFFFFF;
+file->file_data_dirty = 0;
+file->filelength_changed = 0;
+
+
+file->last_fat_lookup.ClusterIdx = 0xFFFFFFFF;
+file->last_fat_lookup.CurrentCluster = 0xFFFFFFFF;
+
+fatfs_cache_init(&_fs, file);
+
+fatfs_fat_purge(&_fs);
+
+return file;
+}
+
+
+
+
+static uint32 _read_sectors(FL_FILE* file, uint32 offset, uint8 *buffer, uint32 count)
+{
+uint32 Sector = 0;
+uint32 ClusterIdx = 0;
+uint32 Cluster = 0;
+uint32 i;
+uint32 lba;
+
+
+ClusterIdx = offset / _fs.sectors_per_cluster;
+Sector = offset - (ClusterIdx * _fs.sectors_per_cluster);
+
+
+if ((Sector + count) > _fs.sectors_per_cluster)
+count = _fs.sectors_per_cluster - Sector;
+
+
+if (ClusterIdx == file->last_fat_lookup.ClusterIdx)
+Cluster = file->last_fat_lookup.CurrentCluster;
+
+else
+{
+
+if (ClusterIdx && ClusterIdx == file->last_fat_lookup.ClusterIdx + 1)
+{
+i = file->last_fat_lookup.ClusterIdx;
+Cluster = file->last_fat_lookup.CurrentCluster;
+}
+
+else
+{
+
+i = 0;
+Cluster = file->startcluster;
+}
+
+
+for ( ;i<ClusterIdx; i++)
+{
+uint32 nextCluster;
+
+
+if (!fatfs_cache_get_next_cluster(&_fs, file, i, &nextCluster))
+{
+
+nextCluster = fatfs_find_next_cluster(&_fs, Cluster);
+
+
+fatfs_cache_set_next_cluster(&_fs, file, i, nextCluster);
+}
+
+Cluster = nextCluster;
+}
+
+
+if (Cluster != 0xFFFFFFFF)
+{
+file->last_fat_lookup.CurrentCluster = Cluster;
+file->last_fat_lookup.ClusterIdx = ClusterIdx;
+}
+}
+
+
+if (Cluster == 0xFFFFFFFF)
+return 0;
+
+
+lba = fatfs_lba_of_cluster(&_fs, Cluster) + Sector;
+
+
+if (fatfs_sector_read(&_fs, lba, buffer, count))
+return count;
+else
+return 0;
+}
+
+# 634
+void fl_init(void)
+{
+int i;
+
+fat_list_init(&_free_file_list);
+fat_list_init(&_open_file_list);
+
+
+for (i=0;i<2;i++)
+fat_list_insert_last(&_free_file_list, &_files[i].list_node);
+
+_filelib_init = 1;
+}
+
+
+
+void fl_attach_locks(void (*lock)(void), void (*unlock)(void))
+{
+_fs.fl_lock = lock;
+_fs.fl_unlock = unlock;
+}
+
+
+
+int fl_attach_media(fn_diskio_read rd, fn_diskio_write wr)
+{
+int res;
+
+
+{ if (_filelib_init==0) fl_init(); };
+
+_fs.disk_io.read_media = rd;
+_fs.disk_io.write_media = wr;
+
+
+if ((res = fatfs_init(&_fs)) != 0)
+{
+printf ("FAT_FS: Error could not load FAT details (%d)!\r\n", res);
+return res;
+}
+
+_filelib_valid = 1;
+return 0;
+}
+
+
+
+void fl_shutdown(void)
+{
+
+{ if (_filelib_init==0) fl_init(); };
+
+do { if ((&_fs)->fl_lock) (&_fs)->fl_lock(); } while (0);
+fatfs_fat_purge(&_fs);
+do { if ((&_fs)->fl_unlock) (&_fs)->fl_unlock(); } while (0);
+}
+
+
+
+void* fl_fopen(const char *path, const char *mode)
+{
+int i;
+FL_FILE* file;
+uint8 flags = 0;
+
+
+{ if (_filelib_init==0) fl_init(); };
+
+if (!_filelib_valid)
+return (0);
+
+if (!path || !mode)
+return (0);
+
+# 726
+for (i=0;i<(int)strlen(mode);i++)
+{
+switch (mode[i])
+{
+case 'r':
+case 'R':
+flags |= (1 << 0);
+break;
+case 'w':
+case 'W':
+flags |= (1 << 1);
+flags |= (1 << 4);
+flags |= (1 << 5);
+break;
+case 'a':
+case 'A':
+flags |= (1 << 1);
+flags |= (1 << 2);
+flags |= (1 << 5);
+break;
+case '+':
+if (flags & (1 << 0))
+flags |= (1 << 1);
+else if (flags & (1 << 1))
+{
+flags |= (1 << 0);
+flags |= (1 << 4);
+flags |= (1 << 5);
+}
+else if (flags & (1 << 2))
+{
+flags |= (1 << 0);
+flags |= (1 << 1);
+flags |= (1 << 2);
+flags |= (1 << 5);
+}
+break;
+case 'b':
+case 'B':
+flags |= (1 << 3);
+break;
+}
+}
+file = (0);
+
+# 777
+if (!_fs.disk_io.write_media)
+flags &= ~((1 << 5) | (1 << 1) | (1 << 2));
+
+do { if ((&_fs)->fl_lock) (&_fs)->fl_lock(); } while (0);
+
+
+if (flags & (1 << 0))
+file = _open_file(path);
+
+
+
+if (!file && (flags & (1 << 5)))
+file = _create_file(path);
+
+
+
+if (!(flags & (1 << 0)))
+if ((flags & (1 << 5)) && !file)
+if (flags & ((1 << 1) | (1 << 2)))
+file = _open_file(path);
+
+if (file)
+file->flags = flags;
+
+do { if ((&_fs)->fl_unlock) (&_fs)->fl_unlock(); } while (0);
+return file;
+}
+
+
+
+
+static uint32 _write_sectors(FL_FILE* file, uint32 offset, uint8 *buf, uint32 count)
+{
+uint32 SectorNumber = 0;
+uint32 ClusterIdx = 0;
+uint32 Cluster = 0;
+uint32 LastCluster = 0xFFFFFFFF;
+uint32 i;
+uint32 lba;
+uint32 TotalWriteCount = count;
+
+
+ClusterIdx = offset / _fs.sectors_per_cluster;
+SectorNumber = offset - (ClusterIdx * _fs.sectors_per_cluster);
+
+
+if ((SectorNumber + count) > _fs.sectors_per_cluster)
+count = _fs.sectors_per_cluster - SectorNumber;
+
+
+if (ClusterIdx == file->last_fat_lookup.ClusterIdx)
+Cluster = file->last_fat_lookup.CurrentCluster;
+
+else
+{
+
+if (ClusterIdx && ClusterIdx == file->last_fat_lookup.ClusterIdx + 1)
+{
+i = file->last_fat_lookup.ClusterIdx;
+Cluster = file->last_fat_lookup.CurrentCluster;
+}
+
+else
+{
+
+i = 0;
+Cluster = file->startcluster;
+}
+
+
+for ( ;i<ClusterIdx; i++)
+{
+uint32 nextCluster;
+
+
+if (!fatfs_cache_get_next_cluster(&_fs, file, i, &nextCluster))
+{
+
+nextCluster = fatfs_find_next_cluster(&_fs, Cluster);
+
+
+fatfs_cache_set_next_cluster(&_fs, file, i, nextCluster);
+}
+
+LastCluster = Cluster;
+Cluster = nextCluster;
+
+
+if (Cluster == 0xFFFFFFFF)
+break;
+}
+
+
+if (Cluster == 0xFFFFFFFF)
+{
+
+if (!fatfs_add_free_space(&_fs, &LastCluster, (TotalWriteCount + _fs.sectors_per_cluster -1) / _fs.sectors_per_cluster))
+return 0;
+
+Cluster = LastCluster;
+}
+
+
+file->last_fat_lookup.CurrentCluster = Cluster;
+file->last_fat_lookup.ClusterIdx = ClusterIdx;
+}
+
+
+lba = fatfs_lba_of_cluster(&_fs, Cluster) + SectorNumber;
+
+if (fatfs_sector_write(&_fs, lba, buf, count))
+return count;
+else
+return 0;
+}
+
+
+
+
+int fl_fflush(void *f)
+{
+
+FL_FILE *file = (FL_FILE *)f;
+
+
+{ if (_filelib_init==0) fl_init(); };
+
+if (file)
+{
+do { if ((&_fs)->fl_lock) (&_fs)->fl_lock(); } while (0);
+
+
+if (file->file_data_dirty)
+{
+
+if (_write_sectors(file, file->file_data_address, file->file_data_sector, 1))
+file->file_data_dirty = 0;
+}
+
+do { if ((&_fs)->fl_unlock) (&_fs)->fl_unlock(); } while (0);
+}
+
+return 0;
+}
+
+
+
+void fl_fclose(void *f)
+{
+FL_FILE *file = (FL_FILE *)f;
+
+
+{ if (_filelib_init==0) fl_init(); };
+
+if (file)
+{
+do { if ((&_fs)->fl_lock) (&_fs)->fl_lock(); } while (0);
+
+
+fl_fflush(f);
+
+
+if (file->filelength_changed)
+{
+
+
+fatfs_update_file_length(&_fs, file->parentcluster, (char*)file->shortfilename, file->filelength);
+
+file->filelength_changed = 0;
+}
+
+file->bytenum = 0;
+file->filelength = 0;
+file->startcluster = 0;
+file->file_data_address = 0xFFFFFFFF;
+file->file_data_dirty = 0;
+file->filelength_changed = 0;
+
+
+_free_file(file);
+
+fatfs_fat_purge(&_fs);
+
+do { if ((&_fs)->fl_unlock) (&_fs)->fl_unlock(); } while (0);
+}
+}
+
+
+
+int fl_fgetc(void *f)
+{
+int res;
+uint8 data = 0;
+
+res = fl_fread(&data, 1, 1, f);
+if (res == 1)
+return (int)data;
+else
+return res;
+}
+
+
+
+char *fl_fgets(char *s, int n, void *f)
+{
+int idx = 0;
+
+
+if (n > 0)
+{
+
+while (idx < (n-1))
+{
+int ch = fl_fgetc(f);
+
+
+if (ch < 0)
+break;
+
+
+s[idx++] = (char)ch;
+
+
+if (ch == '\n')
+break;
+}
+
+if (idx > 0)
+s[idx] = '\0';
+}
+
+return (idx > 0) ? s : 0;
+}
+
+
+
+int fl_fread(void * buffer, int size, int length, void *f )
+{
+uint32 sector;
+uint32 offset;
+int copyCount;
+int count = size * length;
+int bytesRead = 0;
+
+FL_FILE *file = (FL_FILE *)f;
+
+
+{ if (_filelib_init==0) fl_init(); };
+
+if (buffer==(0) || file==(0))
+return -1;
+
+
+if (!(file->flags & (1 << 0)))
+return -1;
+
+
+if (!count)
+return 0;
+
+
+if (file->bytenum >= file->filelength)
+return -1;
+
+
+if ( (file->bytenum + count) > file->filelength )
+count = file->filelength - file->bytenum;
+
+
+sector = file->bytenum / 512;
+
+
+offset = file->bytenum % 512;
+
+while (bytesRead < count)
+{
+
+if ((offset == 0) && ((count - bytesRead) >= 512))
+{
+
+uint32 sectorsRead = _read_sectors(file, sector, (uint8*)((uint8*)buffer + bytesRead), (count - bytesRead) / 512);
+if (sectorsRead)
+{
+
+copyCount = 512 * sectorsRead;
+
+
+sector+= sectorsRead;
+offset = 0;
+}
+else
+break;
+}
+else
+{
+
+if (file->file_data_address != sector)
+{
+
+if (file->file_data_dirty)
+fl_fflush(file);
+
+
+if (!_read_sectors(file, sector, file->file_data_sector, 1))
+
+break;
+
+file->file_data_address = sector;
+file->file_data_dirty = 0;
+}
+
+
+copyCount = 512 - offset;
+
+
+if (copyCount > (count - bytesRead))
+copyCount = (count - bytesRead);
+
+
+memcpy( (uint8*)((uint8*)buffer + bytesRead), (uint8*)(file->file_data_sector + offset), copyCount);
+
+
+sector++;
+offset = 0;
+}
+
+
+bytesRead += copyCount;
+
+
+file->bytenum += copyCount;
+}
+
+return bytesRead;
+}
+
+
+
+int fl_fseek( void *f, long offset, int origin )
+{
+FL_FILE *file = (FL_FILE *)f;
+int res = -1;
+
+
+{ if (_filelib_init==0) fl_init(); };
+
+if (!file)
+return -1;
+
+if (origin == 2 && offset != 0)
+return -1;
+
+do { if ((&_fs)->fl_lock) (&_fs)->fl_lock(); } while (0);
+
+
+file->file_data_address = 0xFFFFFFFF;
+file->file_data_dirty = 0;
+
+if (origin == 0)
+{
+file->bytenum = (uint32)offset;
+
+if (file->bytenum > file->filelength)
+file->bytenum = file->filelength;
+
+res = 0;
+}
+else if (origin == 1)
+{
+
+if (offset >= 0)
+{
+file->bytenum += offset;
+
+if (file->bytenum > file->filelength)
+file->bytenum = file->filelength;
+}
+
+else
+{
+
+offset = -offset;
+
+
+if ((uint32)offset > file->bytenum)
+file->bytenum = 0;
+else
+file->bytenum-= offset;
+}
+
+res = 0;
+}
+else if (origin == 2)
+{
+file->bytenum = file->filelength;
+res = 0;
+}
+else
+res = -1;
+
+do { if ((&_fs)->fl_unlock) (&_fs)->fl_unlock(); } while (0);
+
+return res;
+}
+
+
+
+int fl_fgetpos(void *f , uint32 * position)
+{
+FL_FILE *file = (FL_FILE *)f;
+
+if (!file)
+return -1;
+
+do { if ((&_fs)->fl_lock) (&_fs)->fl_lock(); } while (0);
+
+
+*position = file->bytenum;
+
+do { if ((&_fs)->fl_unlock) (&_fs)->fl_unlock(); } while (0);
+
+return 0;
+}
+
+
+
+long fl_ftell(void *f)
+{
+uint32 pos = 0;
+
+fl_fgetpos(f, &pos);
+
+return (long)pos;
+}
+
+
+
+int fl_feof(void *f)
+{
+FL_FILE *file = (FL_FILE *)f;
+int res;
+
+if (!file)
+return -1;
+
+do { if ((&_fs)->fl_lock) (&_fs)->fl_lock(); } while (0);
+
+if (file->bytenum == file->filelength)
+res = (-1);
+else
+res = 0;
+
+do { if ((&_fs)->fl_unlock) (&_fs)->fl_unlock(); } while (0);
+
+return res;
+}
+
+
+
+
+int fl_fputc(int c, void *f)
+{
+uint8 data = (uint8)c;
+int res;
+
+res = fl_fwrite(&data, 1, 1, f);
+if (res == 1)
+return c;
+else
+return res;
+}
+
+# 1253
+int fl_fwrite(const void * data, int size, int count, void *f )
+{
+FL_FILE *file = (FL_FILE *)f;
+uint32 sector;
+uint32 offset;
+uint32 length = (size*count);
+uint8 *buffer = (uint8 *)data;
+uint32 bytesWritten = 0;
+uint32 copyCount;
+
+
+{ if (_filelib_init==0) fl_init(); };
+
+if (!file)
+return -1;
+
+do { if ((&_fs)->fl_lock) (&_fs)->fl_lock(); } while (0);
+
+
+if (!(file->flags & (1 << 1)))
+{
+do { if ((&_fs)->fl_unlock) (&_fs)->fl_unlock(); } while (0);
+return -1;
+}
+
+
+if (file->flags & (1 << 2))
+file->bytenum = file->filelength;
+
+
+
+sector = file->bytenum / 512;
+
+
+offset = file->bytenum % 512;
+
+while (bytesWritten < length)
+{
+
+if ((offset == 0) && ((length - bytesWritten) >= 512))
+{
+uint32 sectorsWrote;
+
+
+if (file->file_data_address != 0xFFFFFFFF)
+{
+
+if (file->file_data_dirty)
+fl_fflush(file);
+
+file->file_data_address = 0xFFFFFFFF;
+file->file_data_dirty = 0;
+}
+
+
+sectorsWrote = _write_sectors(file, sector, (uint8*)(buffer + bytesWritten), (length - bytesWritten) / 512);
+copyCount = 512 * sectorsWrote;
+
+
+bytesWritten += copyCount;
+
+
+file->bytenum += copyCount;
+
+
+sector+= sectorsWrote;
+offset = 0;
+
+if (!sectorsWrote)
+break;
+}
+else
+{
+
+copyCount = 512 - offset;
+
+
+if (copyCount > (length - bytesWritten))
+copyCount = (length - bytesWritten);
+
+
+if (file->file_data_address != sector)
+{
+
+if (file->file_data_dirty)
+fl_fflush(file);
+
+
+if (copyCount != 512)
+{
+
+# 1348
+if (!_read_sectors(file, sector, file->file_data_sector, 1))
+memset(file->file_data_sector, 0x00, 512);
+}
+
+file->file_data_address = sector;
+file->file_data_dirty = 0;
+}
+
+
+memcpy((uint8*)(file->file_data_sector + offset), (uint8*)(buffer + bytesWritten), copyCount);
+
+
+file->file_data_dirty = 1;
+
+
+bytesWritten += copyCount;
+
+
+file->bytenum += copyCount;
+
+
+sector++;
+offset = 0;
+}
+}
+
+
+if (file->bytenum > file->filelength)
+{
+
+file->filelength = file->bytenum;
+
+
+
+file->filelength_changed = 1;
+}
+
+# 1391
+do { if ((&_fs)->fl_unlock) (&_fs)->fl_unlock(); } while (0);
+
+return (size*count);
+}
+
+# 1400
+int fl_fputs(const char * str, void *f)
+{
+int len = (int)strlen(str);
+int res = fl_fwrite(str, 1, len, f);
+
+if (res == len)
+return len;
+else
+return res;
+}
+
+# 1415
+int fl_remove( const char * filename )
+{
+FL_FILE* file;
+int res = -1;
+
+do { if ((&_fs)->fl_lock) (&_fs)->fl_lock(); } while (0);
+
+
+file = fl_fopen((char*)filename, "r");
+if (file)
+{
+
+if (fatfs_free_cluster_chain(&_fs, file->startcluster))
+{
+
+if (fatfs_mark_file_deleted(&_fs, file->parentcluster, (char*)file->shortfilename))
+{
+
+
+fl_fclose(file);
+
+res = 0;
+}
+}
+}
+
+do { if ((&_fs)->fl_unlock) (&_fs)->fl_unlock(); } while (0);
+
+return res;
+}
+
+# 1450
+int fl_createdirectory(const char *path)
+{
+int res;
+
+
+{ if (_filelib_init==0) fl_init(); };
+
+do { if ((&_fs)->fl_lock) (&_fs)->fl_lock(); } while (0);
+res =_create_directory((char*)path);
+do { if ((&_fs)->fl_unlock) (&_fs)->fl_unlock(); } while (0);
+
+return res;
+}
+
+# 1468
+void fl_listdirectory(const char *path)
+{
+FL_DIR dirstat;
+
+
+{ if (_filelib_init==0) fl_init(); };
+
+do { if ((&_fs)->fl_lock) (&_fs)->fl_lock(); } while (0);
+
+printf ("\r\nDirectory %s\r\n", path);
+
+if (fl_opendir(path, &dirstat))
+{
+struct fs_dir_ent dirent;
+
+while (fl_readdir(&dirstat, &dirent) == 0)
+{
+
+# 1492
+if (dirent.is_dir)
+{
+printf ("%s <DIR>\r\n", dirent.filename);
+}
+else
+{
+printf ("%s [%d bytes]\r\n", dirent.filename, dirent.size);
+}
+}
+
+fl_closedir(&dirstat);
+}
+
+do { if ((&_fs)->fl_unlock) (&_fs)->fl_unlock(); } while (0);
+}
+
+# 1512
+FL_DIR* fl_opendir(const char* path, FL_DIR *dir)
+{
+int levels;
+int res = 1;
+uint32 cluster = 0xFFFFFFFF;
+
+
+{ if (_filelib_init==0) fl_init(); };
+
+do { if ((&_fs)->fl_lock) (&_fs)->fl_lock(); } while (0);
+
+levels = fatfs_total_path_levels((char*)path) + 1;
+
+
+if (levels == 0)
+cluster = fatfs_get_root_cluster(&_fs);
+
+else
+res = _open_directory((char*)path, &cluster);
+
+if (res)
+fatfs_list_directory_start(&_fs, dir, cluster);
+
+do { if ((&_fs)->fl_unlock) (&_fs)->fl_unlock(); } while (0);
+
+return cluster != 0xFFFFFFFF ? dir : 0;
+}
+
+# 1544
+int fl_readdir(FL_DIR *dirls, fl_dirent *entry)
+{
+int res = 0;
+
+
+{ if (_filelib_init==0) fl_init(); };
+
+do { if ((&_fs)->fl_lock) (&_fs)->fl_lock(); } while (0);
+
+res = fatfs_list_directory_next(&_fs, dirls, entry);
+
+do { if ((&_fs)->fl_unlock) (&_fs)->fl_unlock(); } while (0);
+
+return res ? 0 : -1;
+}
+
+# 1564
+int fl_closedir(FL_DIR* dir)
+{
+
+return 0;
+}
+
+# 1574
+int fl_is_dir(const char *path)
+{
+int res = 0;
+FL_DIR dir;
+
+if (fl_opendir(path, &dir))
+{
+res = 1;
+fl_closedir(&dir);
+}
+
+return res;
+}
+
+# 1592
+int fl_format(uint32 volume_sectors, const char *name)
+{
+return fatfs_format(&_fs, volume_sectors, name);
+}
+

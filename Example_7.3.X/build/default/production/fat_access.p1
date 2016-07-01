@@ -1,0 +1,2173 @@
+Version 3.2 HI-TECH Software Intermediate Code
+"43 fat_access.c
+[c E184 0 1 .. ]
+[n E184 eFatType FAT_TYPE_16 FAT_TYPE_32  ]
+[v F166 `(i ~T0 @X0 0 tf3`ul`*uc`ul ]
+[v F171 `(i ~T0 @X0 0 tf3`ul`*uc`ul ]
+"30 fat_access.h
+[s S3 `*F166 1 `*F171 1 ]
+[n S3 disk_if read_media write_media ]
+[v F205 `(v ~T0 @X0 0 tf ]
+[v F208 `(v ~T0 @X0 0 tf ]
+"48
+[s S4 `uc * -> 512 `i -> 1 `i `ul 1 `i 1 `*uc 1 `*S4 1 ]
+[n S4 fat_buffer sector address dirty ptr next ]
+"57
+[s S5 `uc 1 `ul 1 `ul 1 `ul 1 `ul 1 `ul 1 `us 1 `ul 1 `ul 1 `ul 1 `us 1 `us 1 `uc 1 `E184 1 `S3 1 `*F205 1 `*F208 1 `S4 1 `*S4 1 `S4 -> -> 1 `i `ux ]
+[n S5 fatfs sectors_per_cluster cluster_begin_lba rootdir_first_cluster rootdir_first_sector rootdir_sectors fat_begin_lba fs_info_sector lba_begin fat_sectors next_free_cluster root_entry_count reserved_sectors num_of_fats fat_type disk_io fl_lock fl_unlock currentsector fat_buffer_head fat_buffers ]
+"10 fat_table.h
+[v _fatfs_fat_init `(v ~T0 @X0 0 ef1`*S5 ]
+"111 fat_defs.h
+[s S2 `uc -> 11 `i `uc 1 `uc 1 `uc 1 `uc -> 2 `i `uc -> 2 `i `uc -> 2 `i `us 1 `uc -> 2 `i `uc -> 2 `i `us 1 `ul 1 ]
+[n S2 fat_dir_entry Name Attr NTRes CrtTimeTenth CrtTime CrtDate LstAccDate FstClusHI WrtTime WrtDate FstClusLO FileSize ]
+"12 fat_table.h
+[v _fatfs_find_next_cluster `(ul ~T0 @X0 0 ef2`*S5`ul ]
+"206 C:\Program Files (x86)\Microchip\xc8\v1.32\include\stdio.h
+[v _printf `(i ~T0 @X0 0 ev`*Cuc ]
+[v F291 `uc ~T0 @X0 -> 5 `i t ]
+"30 fat_misc.h
+[s S8 `F291 -> 10 `i `uc 1 `uc 1 ]
+[n S8 lfn_cache String Null no_of_strings ]
+"43
+[v _fatfs_lfn_cache_init `(v ~T0 @X0 0 ef2`*S8`i ]
+"46
+[v _fatfs_entry_lfn_text `(i ~T0 @X0 0 ef1`*S2 ]
+"44
+[v _fatfs_lfn_cache_entry `(v ~T0 @X0 0 ef2`*S8`*uc ]
+"47
+[v _fatfs_entry_lfn_invalid `(i ~T0 @X0 0 ef1`*S2 ]
+"48
+[v _fatfs_entry_lfn_exists `(i ~T0 @X0 0 ef2`*S8`*S2 ]
+"45
+[v _fatfs_lfn_cache_get `(*uc ~T0 @X0 0 ef1`*S8 ]
+"10 fat_string.h
+[v _fatfs_compare_names `(i ~T0 @X0 0 ef2`*uc`*uc ]
+"22 C:\Program Files (x86)\Microchip\xc8\v1.32\include\string.h
+[v _memcpy `(*v ~T0 @X0 0 ef3`*v`*Cv`ui ]
+"49 fat_misc.h
+[v _fatfs_entry_sfn_only `(i ~T0 @X0 0 ef1`*S2 ]
+"24 C:\Program Files (x86)\Microchip\xc8\v1.32\include\string.h
+[v _memset `(*v ~T0 @X0 0 ef3`*v`i`ui ]
+"53
+[v _strncmp `(i ~T0 @X0 0 ef3`*Cuc`*Cuc`ui ]
+"90 fat_access.h
+[s S6 `ul 1 `ul 1 `uc 1 ]
+[n S6 fs_dir_list_status sector cluster offset ]
+"97
+[s S7 `uc -> 10 `i `uc 1 `ul 1 `ul 1 ]
+[n S7 fs_dir_ent filename is_dir cluster size ]
+"45 C:\Program Files (x86)\Microchip\xc8\v1.32\include\string.h
+[v _strncpy `(*uc ~T0 @X0 0 ef3`*uc`*Cuc`ui ]
+"50 fat_misc.h
+[v _fatfs_entry_is_dir `(i ~T0 @X0 0 ef1`*S2 ]
+"12 fat_string.h
+[v _fatfs_get_sfn_display_name `(i ~T0 @X0 0 ef2`*uc`*uc ]
+[; ;string.h: 4: typedef int ptrdiff_t;
+[; ;string.h: 5: typedef unsigned size_t;
+[; ;string.h: 6: typedef unsigned short wchar_t;
+[; ;string.h: 9: extern int errno;
+[; ;string.h: 22: extern void * memcpy(void *, const void *, size_t);
+[; ;string.h: 23: extern void * memmove(void *, const void *, size_t);
+[; ;string.h: 24: extern void * memset(void *, int, size_t);
+[; ;string.h: 42: extern char * strcat(char *, const char *);
+[; ;string.h: 43: extern char * strcpy(char *, const char *);
+[; ;string.h: 44: extern char * strncat(char *, const char *, size_t);
+[; ;string.h: 45: extern char * strncpy(char *, const char *, size_t);
+[; ;string.h: 46: extern char * strdup(const char *);
+[; ;string.h: 47: extern char * strtok(char *, const char *);
+[; ;string.h: 50: extern int memcmp(const void *, const void *, size_t);
+[; ;string.h: 51: extern int strcmp(const char *, const char *);
+[; ;string.h: 52: extern int stricmp(const char *, const char *);
+[; ;string.h: 53: extern int strncmp(const char *, const char *, size_t);
+[; ;string.h: 54: extern int strnicmp(const char *, const char *, size_t);
+[; ;string.h: 55: extern void * memchr(const void *, int, size_t);
+[; ;string.h: 56: extern size_t strcspn(const char *, const char *);
+[; ;string.h: 57: extern char * strpbrk(const char *, const char *);
+[; ;string.h: 58: extern size_t strspn(const char *, const char *);
+[; ;string.h: 59: extern char * strstr(const char *, const char *);
+[; ;string.h: 60: extern char * stristr(const char *, const char *);
+[; ;string.h: 61: extern char * strerror(int);
+[; ;string.h: 62: extern size_t strlen(const char *);
+[; ;string.h: 63: extern char * strchr(const char *, int);
+[; ;string.h: 64: extern char * strichr(const char *, int);
+[; ;string.h: 65: extern char * strrchr(const char *, int);
+[; ;string.h: 66: extern char * strrichr(const char *, int);
+[; ;stdarg.h: 7: typedef void * va_list[1];
+[; ;stdarg.h: 10: extern void * __va_start(void);
+[; ;stdarg.h: 13: extern void * __va_arg(void *, ...);
+[; ;stdio.h: 23: extern int errno;
+[; ;stdio.h: 54: struct __prbuf
+[; ;stdio.h: 55: {
+[; ;stdio.h: 56: char * ptr;
+[; ;stdio.h: 57: void (* func)(char);
+[; ;stdio.h: 58: };
+[; ;conio.h: 17: extern int errno;
+[; ;conio.h: 20: extern void init_uart(void);
+[; ;conio.h: 22: extern char getch(void);
+[; ;conio.h: 23: extern char getche(void);
+[; ;conio.h: 24: extern void putch(char);
+[; ;conio.h: 25: extern void ungetch(char);
+[; ;conio.h: 27: extern __bit kbhit(void);
+[; ;conio.h: 31: extern char * cgets(char *);
+[; ;conio.h: 32: extern void cputs(const char *);
+[; ;stdio.h: 99: extern int cprintf(char *, ...);
+[; ;stdio.h: 104: extern int _doprnt(struct __prbuf *, const register char *, register va_list);
+[; ;stdio.h: 194: extern char * gets(char *);
+[; ;stdio.h: 195: extern int puts(const char *);
+[; ;stdio.h: 196: extern int scanf(const char *, ...) __attribute__((unsupported("scanf() is not supported by this compiler")));
+[; ;stdio.h: 197: extern int sscanf(const char *, const char *, ...) __attribute__((unsupported("sscanf() is not supported by this compiler")));
+[; ;stdio.h: 198: extern int vprintf(const char *, va_list) __attribute__((unsupported("vprintf() is not supported by this compiler")));
+[; ;stdio.h: 199: extern int vsprintf(char *, const char *, va_list) __attribute__((unsupported("vsprintf() is not supported by this compiler")));
+[; ;stdio.h: 200: extern int vscanf(const char *, va_list ap) __attribute__((unsupported("vscanf() is not supported by this compiler")));
+[; ;stdio.h: 201: extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupported("vsscanf() is not supported by this compiler")));
+[; ;stdio.h: 205: extern int sprintf(char *, const char *, ...);
+[; ;stdio.h: 206: extern int printf(const char *, ...);
+[; ;fat_types.h: 15: typedef unsigned char uint8;
+[; ;fat_types.h: 16: typedef unsigned short uint16;
+[; ;fat_types.h: 23: typedef unsigned long uint32;
+[; ;fat_defs.h: 111: struct fat_dir_entry 
+[; ;fat_defs.h: 112: {
+[; ;fat_defs.h: 113: uint8 Name[11];
+[; ;fat_defs.h: 114: uint8 Attr;
+[; ;fat_defs.h: 115: uint8 NTRes;
+[; ;fat_defs.h: 116: uint8 CrtTimeTenth;
+[; ;fat_defs.h: 117: uint8 CrtTime[2];
+[; ;fat_defs.h: 118: uint8 CrtDate[2];
+[; ;fat_defs.h: 119: uint8 LstAccDate[2];
+[; ;fat_defs.h: 120: uint16 FstClusHI;
+[; ;fat_defs.h: 121: uint8 WrtTime[2];
+[; ;fat_defs.h: 122: uint8 WrtDate[2];
+[; ;fat_defs.h: 123: uint16 FstClusLO;
+[; ;fat_defs.h: 124: uint32 FileSize;
+[; ;fat_defs.h: 125: } ;
+[; ;fat_access.h: 24: typedef int (*fn_diskio_read) (uint32 sector, uint8 *buffer, uint32 sector_count);
+[; ;fat_access.h: 25: typedef int (*fn_diskio_write)(uint32 sector, uint8 *buffer, uint32 sector_count);
+[; ;fat_access.h: 30: struct disk_if
+[; ;fat_access.h: 31: {
+[; ;fat_access.h: 33: fn_diskio_read read_media;
+[; ;fat_access.h: 34: fn_diskio_write write_media;
+[; ;fat_access.h: 35: };
+[; ;fat_access.h: 38: struct fat_buffer;
+[; ;fat_access.h: 40: struct fat_buffer
+[; ;fat_access.h: 41: {
+[; ;fat_access.h: 42: uint8 sector[512 * 1];
+[; ;fat_access.h: 43: uint32 address;
+[; ;fat_access.h: 44: int dirty;
+[; ;fat_access.h: 45: uint8 * ptr;
+[; ;fat_access.h: 48: struct fat_buffer *next;
+[; ;fat_access.h: 49: };
+[; ;fat_access.h: 51: typedef enum eFatType
+[; ;fat_access.h: 52: {
+[; ;fat_access.h: 53: FAT_TYPE_16,
+[; ;fat_access.h: 54: FAT_TYPE_32
+[; ;fat_access.h: 55: } tFatType;
+[; ;fat_access.h: 57: struct fatfs
+[; ;fat_access.h: 58: {
+[; ;fat_access.h: 60: uint8 sectors_per_cluster;
+[; ;fat_access.h: 61: uint32 cluster_begin_lba;
+[; ;fat_access.h: 62: uint32 rootdir_first_cluster;
+[; ;fat_access.h: 63: uint32 rootdir_first_sector;
+[; ;fat_access.h: 64: uint32 rootdir_sectors;
+[; ;fat_access.h: 65: uint32 fat_begin_lba;
+[; ;fat_access.h: 66: uint16 fs_info_sector;
+[; ;fat_access.h: 67: uint32 lba_begin;
+[; ;fat_access.h: 68: uint32 fat_sectors;
+[; ;fat_access.h: 69: uint32 next_free_cluster;
+[; ;fat_access.h: 70: uint16 root_entry_count;
+[; ;fat_access.h: 71: uint16 reserved_sectors;
+[; ;fat_access.h: 72: uint8 num_of_fats;
+[; ;fat_access.h: 73: tFatType fat_type;
+[; ;fat_access.h: 76: struct disk_if disk_io;
+[; ;fat_access.h: 79: void (*fl_lock)(void);
+[; ;fat_access.h: 80: void (*fl_unlock)(void);
+[; ;fat_access.h: 83: struct fat_buffer currentsector;
+[; ;fat_access.h: 86: struct fat_buffer *fat_buffer_head;
+[; ;fat_access.h: 87: struct fat_buffer fat_buffers[1];
+[; ;fat_access.h: 88: };
+[; ;fat_access.h: 90: struct fs_dir_list_status
+[; ;fat_access.h: 91: {
+[; ;fat_access.h: 92: uint32 sector;
+[; ;fat_access.h: 93: uint32 cluster;
+[; ;fat_access.h: 94: uint8 offset;
+[; ;fat_access.h: 95: };
+[; ;fat_access.h: 97: struct fs_dir_ent
+[; ;fat_access.h: 98: {
+[; ;fat_access.h: 99: char filename[10];
+[; ;fat_access.h: 100: uint8 is_dir;
+[; ;fat_access.h: 101: uint32 cluster;
+[; ;fat_access.h: 102: uint32 size;
+[; ;fat_access.h: 111: };
+[; ;fat_access.h: 116: int fatfs_init(struct fatfs *fs);
+[; ;fat_access.h: 117: uint32 fatfs_lba_of_cluster(struct fatfs *fs, uint32 Cluster_Number);
+[; ;fat_access.h: 118: int fatfs_sector_reader(struct fatfs *fs, uint32 Startcluster, uint32 offset, uint8 *target);
+[; ;fat_access.h: 119: int fatfs_sector_read(struct fatfs *fs, uint32 lba, uint8 *target, uint32 count);
+[; ;fat_access.h: 120: int fatfs_sector_write(struct fatfs *fs, uint32 lba, uint8 *target, uint32 count);
+[; ;fat_access.h: 121: int fatfs_read_sector(struct fatfs *fs, uint32 cluster, uint32 sector, uint8 *target);
+[; ;fat_access.h: 122: int fatfs_write_sector(struct fatfs *fs, uint32 cluster, uint32 sector, uint8 *target);
+[; ;fat_access.h: 123: void fatfs_show_details(struct fatfs *fs);
+[; ;fat_access.h: 124: uint32 fatfs_get_root_cluster(struct fatfs *fs);
+[; ;fat_access.h: 125: uint32 fatfs_get_file_entry(struct fatfs *fs, uint32 Cluster, char *nametofind, struct fat_dir_entry *sfEntry);
+[; ;fat_access.h: 126: int fatfs_sfn_exists(struct fatfs *fs, uint32 Cluster, char *shortname);
+[; ;fat_access.h: 127: int fatfs_update_file_length(struct fatfs *fs, uint32 Cluster, char *shortname, uint32 fileLength);
+[; ;fat_access.h: 128: int fatfs_mark_file_deleted(struct fatfs *fs, uint32 Cluster, char *shortname);
+[; ;fat_access.h: 129: void fatfs_list_directory_start(struct fatfs *fs, struct fs_dir_list_status *dirls, uint32 StartCluster);
+[; ;fat_access.h: 130: int fatfs_list_directory_next(struct fatfs *fs, struct fs_dir_list_status *dirls, struct fs_dir_ent *entry);
+[; ;fat_access.h: 131: int fatfs_update_timestamps(struct fat_dir_entry *directoryEntry, int create, int modify, int access);
+[; ;fat_access.h: 138: void fatfs_show_details_(struct fatfs *fs);
+[; ;fat_misc.h: 30: struct lfn_cache
+[; ;fat_misc.h: 31: {
+[; ;fat_misc.h: 34: uint8 String[10][5];
+[; ;fat_misc.h: 35: uint8 Null;
+[; ;fat_misc.h: 37: uint8 no_of_strings;
+[; ;fat_misc.h: 38: };
+[; ;fat_misc.h: 43: void fatfs_lfn_cache_init(struct lfn_cache *lfn, int wipeTable);
+[; ;fat_misc.h: 44: void fatfs_lfn_cache_entry(struct lfn_cache *lfn, uint8 *entryBuffer);
+[; ;fat_misc.h: 45: char* fatfs_lfn_cache_get(struct lfn_cache *lfn);
+[; ;fat_misc.h: 46: int fatfs_entry_lfn_text(struct fat_dir_entry *entry);
+[; ;fat_misc.h: 47: int fatfs_entry_lfn_invalid(struct fat_dir_entry *entry);
+[; ;fat_misc.h: 48: int fatfs_entry_lfn_exists(struct lfn_cache *lfn, struct fat_dir_entry *entry);
+[; ;fat_misc.h: 49: int fatfs_entry_sfn_only(struct fat_dir_entry *entry);
+[; ;fat_misc.h: 50: int fatfs_entry_is_dir(struct fat_dir_entry *entry);
+[; ;fat_misc.h: 51: int fatfs_entry_is_file(struct fat_dir_entry *entry);
+[; ;fat_misc.h: 52: int fatfs_lfn_entries_required(char *filename);
+[; ;fat_misc.h: 53: void fatfs_filename_to_lfn(char *filename, uint8 *buffer, int entry, uint8 sfnChk);
+[; ;fat_misc.h: 54: void fatfs_sfn_create_entry(char *shortfilename, uint32 size, uint32 startCluster, struct fat_dir_entry *entry, int dir);
+[; ;fat_misc.h: 55: int fatfs_lfn_create_sfn(char *sfn_output, char *filename);
+[; ;fat_misc.h: 56: int fatfs_lfn_generate_tail(char *sfn_output, char *sfn_input, uint32 tailNum);
+[; ;fat_misc.h: 57: void fatfs_convert_from_fat_time(uint16 fat_time, int *hours, int *minutes, int *seconds);
+[; ;fat_misc.h: 58: void fatfs_convert_from_fat_date(uint16 fat_date, int *day, int *month, int *year);
+[; ;fat_misc.h: 59: uint16 fatfs_convert_to_fat_time(int hours, int minutes, int seconds);
+[; ;fat_misc.h: 60: uint16 fatfs_convert_to_fat_date(int day, int month, int year);
+[; ;fat_misc.h: 61: void fatfs_print_sector(uint32 sector, uint8 *data);
+[; ;fat_table.h: 10: void fatfs_fat_init(struct fatfs *fs);
+[; ;fat_table.h: 11: int fatfs_fat_purge(struct fatfs *fs);
+[; ;fat_table.h: 12: uint32 fatfs_find_next_cluster(struct fatfs *fs, uint32 current_cluster);
+[; ;fat_table.h: 13: void fatfs_set_fs_info_next_free_cluster(struct fatfs *fs, uint32 newValue);
+[; ;fat_table.h: 14: int fatfs_find_blank_cluster(struct fatfs *fs, uint32 start_cluster, uint32 *free_cluster);
+[; ;fat_table.h: 15: int fatfs_fat_set_cluster(struct fatfs *fs, uint32 cluster, uint32 next_cluster);
+[; ;fat_table.h: 16: int fatfs_fat_add_cluster_to_chain(struct fatfs *fs, uint32 start_cluster, uint32 newEntry);
+[; ;fat_table.h: 17: int fatfs_free_cluster_chain(struct fatfs *fs, uint32 start_cluster);
+[; ;fat_table.h: 18: uint32 fatfs_count_free_clusters(struct fatfs *fs);
+[; ;fat_write.h: 10: int fatfs_add_file_entry(struct fatfs *fs, uint32 dirCluster, char *filename, char *shortfilename, uint32 startCluster, uint32 size, int dir);
+[; ;fat_write.h: 11: int fatfs_add_free_space(struct fatfs *fs, uint32 *startCluster, uint32 clusters);
+[; ;fat_write.h: 12: int fatfs_allocate_free_space(struct fatfs *fs, int newFile, uint32 *startCluster, uint32 size);
+[; ;fat_string.h: 7: int fatfs_total_path_levels(char *path);
+[; ;fat_string.h: 8: int fatfs_get_substring(char *Path, int levelreq, char *output, int max_len);
+[; ;fat_string.h: 9: int fatfs_split_path(char *FullPath, char *Path, int max_path, char *FileName, int max_filename);
+[; ;fat_string.h: 10: int fatfs_compare_names(char* strA, char* strB);
+[; ;fat_string.h: 11: int fatfs_string_ends_with_slash(char *path);
+[; ;fat_string.h: 12: int fatfs_get_sfn_display_name(char* out, char* in);
+[; ;fat_string.h: 13: int fatfs_get_extension(char* filename, char* out, int maxlen);
+[; ;fat_string.h: 14: int fatfs_create_path_string(char* path, char *filename, char* out, int maxlen);
+"42 fat_access.c
+[v _fatfs_init `(i ~T0 @X0 1 ef1`*S5 ]
+"43
+{
+[; ;fat_access.c: 42: int fatfs_init(struct fatfs *fs)
+[; ;fat_access.c: 43: {
+[e :U _fatfs_init ]
+"42
+[v _fs `*S5 ~T0 @X0 1 r1 ]
+"43
+[f ]
+"44
+[v _num_of_fats `uc ~T0 @X0 1 a ]
+"45
+[v _reserved_sectors `us ~T0 @X0 1 a ]
+"46
+[v _FATSz `ul ~T0 @X0 1 a ]
+"47
+[v _root_dir_sectors `ul ~T0 @X0 1 a ]
+"48
+[v _total_sectors `ul ~T0 @X0 1 a ]
+"49
+[v _data_sectors `ul ~T0 @X0 1 a ]
+"50
+[v _count_of_clusters `ul ~T0 @X0 1 a ]
+"51
+[v _valid_partition `uc ~T0 @X0 1 a ]
+[; ;fat_access.c: 44: uint8 num_of_fats;
+[; ;fat_access.c: 45: uint16 reserved_sectors;
+[; ;fat_access.c: 46: uint32 FATSz;
+[; ;fat_access.c: 47: uint32 root_dir_sectors;
+[; ;fat_access.c: 48: uint32 total_sectors;
+[; ;fat_access.c: 49: uint32 data_sectors;
+[; ;fat_access.c: 50: uint32 count_of_clusters;
+[; ;fat_access.c: 51: uint8 valid_partition = 0;
+[e = _valid_partition -> -> 0 `i `uc ]
+[; ;fat_access.c: 53: fs->currentsector.address = 0xFFFFFFFF;
+"53
+[e = . . *U _fs 17 1 -> -1 `ul ]
+[; ;fat_access.c: 54: fs->currentsector.dirty = 0;
+"54
+[e = . . *U _fs 17 2 -> 0 `i ]
+[; ;fat_access.c: 56: fs->next_free_cluster = 0;
+"56
+[e = . *U _fs 9 -> -> -> 0 `i `l `ul ]
+[; ;fat_access.c: 58: fatfs_fat_init(fs);
+"58
+[e ( _fatfs_fat_init (1 _fs ]
+[; ;fat_access.c: 61: if (!fs->disk_io.read_media)
+"61
+[e $ ! ! != . . *U _fs 14 0 -> -> 0 `i `*F166 10  ]
+[; ;fat_access.c: 62: return (-1);
+"62
+[e ) -U -> 1 `i ]
+[e $UE 9  ]
+[e :U 10 ]
+[; ;fat_access.c: 68: if (!fs->disk_io.read_media(0, fs->currentsector.sector, 1))
+"68
+[e $ ! ! != ( *U . . *U _fs 14 0 (3 , , -> -> -> 0 `i `l `ul &U . . *U _fs 17 0 -> -> -> 1 `i `l `ul -> 0 `i 11  ]
+[; ;fat_access.c: 69: return (-1);
+"69
+[e ) -U -> 1 `i ]
+[e $UE 9  ]
+[e :U 11 ]
+[; ;fat_access.c: 73: if (fs->currentsector.sector[510] != 0x55 || fs->currentsector.sector[510+1] != 0xAA)
+"73
+[e $ ! || != -> *U + &U . . *U _fs 17 0 * -> -> -> 510 `i `ui `ux -> -> # *U &U . . *U _fs 17 0 `ui `ux `i -> 85 `i != -> *U + &U . . *U _fs 17 0 * -> -> + -> 510 `i -> 1 `i `ui `ux -> -> # *U &U . . *U _fs 17 0 `ui `ux `i -> 170 `i 12  ]
+[; ;fat_access.c: 74: return (-3);
+"74
+[e ) -U -> 3 `i ]
+[e $UE 9  ]
+[e :U 12 ]
+[; ;fat_access.c: 77: if (( ((uint16)fs->currentsector.sector[510+1]<<8) + (uint16)fs->currentsector.sector[510+0] ) != 0xAA55)
+"77
+[e $ ! != + << -> -> *U + &U . . *U _fs 17 0 * -> -> + -> 510 `i -> 1 `i `ui `ux -> -> # *U &U . . *U _fs 17 0 `ui `ux `us `ui -> 8 `i -> -> *U + &U . . *U _fs 17 0 * -> -> + -> 510 `i -> 0 `i `ui `ux -> -> # *U &U . . *U _fs 17 0 `ui `ux `us `ui -> 43605 `ui 13  ]
+[; ;fat_access.c: 78: return (-4);
+"78
+[e ) -U -> 4 `i ]
+[e $UE 9  ]
+[e :U 13 ]
+[; ;fat_access.c: 81: if (sizeof(struct fat_dir_entry) != 32)
+"81
+[e $ ! != -> # `S2 `ui -> -> 32 `i `ui 14  ]
+[; ;fat_access.c: 82: return (-7);
+"82
+[e ) -U -> 7 `i ]
+[e $UE 9  ]
+[e :U 14 ]
+[; ;fat_access.c: 85: switch(fs->currentsector.sector[450])
+"85
+[e $U 16  ]
+[; ;fat_access.c: 86: {
+"86
+{
+[; ;fat_access.c: 87: case 0x0B:
+"87
+[e :U 17 ]
+"88
+[e :U 18 ]
+"89
+[e :U 19 ]
+"90
+[e :U 20 ]
+"91
+[e :U 21 ]
+"92
+[e :U 22 ]
+[; ;fat_access.c: 88: case 0x06:
+[; ;fat_access.c: 89: case 0x0C:
+[; ;fat_access.c: 90: case 0x0E:
+[; ;fat_access.c: 91: case 0x0F:
+[; ;fat_access.c: 92: case 0x05:
+[; ;fat_access.c: 93: valid_partition = 1;
+"93
+[e = _valid_partition -> -> 1 `i `uc ]
+[; ;fat_access.c: 94: break;
+"94
+[e $U 15  ]
+[; ;fat_access.c: 95: case 0x00:
+"95
+[e :U 23 ]
+[; ;fat_access.c: 96: valid_partition = 0;
+"96
+[e = _valid_partition -> -> 0 `i `uc ]
+[; ;fat_access.c: 97: break;
+"97
+[e $U 15  ]
+[; ;fat_access.c: 98: default:
+"98
+[e :U 24 ]
+[; ;fat_access.c: 99: if (fs->currentsector.sector[450] <= 0x06)
+"99
+[e $ ! <= -> *U + &U . . *U _fs 17 0 * -> -> -> 450 `i `ui `ux -> -> # *U &U . . *U _fs 17 0 `ui `ux `i -> 6 `i 25  ]
+[; ;fat_access.c: 100: valid_partition = 1;
+"100
+[e = _valid_partition -> -> 1 `i `uc ]
+[e :U 25 ]
+[; ;fat_access.c: 101: break;
+"101
+[e $U 15  ]
+"102
+}
+[; ;fat_access.c: 102: }
+[e $U 15  ]
+"85
+[e :U 16 ]
+[e [\ *U + &U . . *U _fs 17 0 * -> -> -> 450 `i `ui `ux -> -> # *U &U . . *U _fs 17 0 `ui `ux , $ -> -> 11 `i `uc 17
+ , $ -> -> 6 `i `uc 18
+ , $ -> -> 12 `i `uc 19
+ , $ -> -> 14 `i `uc 20
+ , $ -> -> 15 `i `uc 21
+ , $ -> -> 5 `i `uc 22
+ , $ -> -> 0 `i `uc 23
+ 24 ]
+"102
+[e :U 15 ]
+[; ;fat_access.c: 105: if (valid_partition)
+"105
+[e $ ! != -> _valid_partition `i -> -> -> 0 `i `uc `i 26  ]
+[; ;fat_access.c: 106: fs->lba_begin = ( ((uint32)fs->currentsector.sector[454+3]<<24) + ((uint32)fs->currentsector.sector[454+2]<<16) + ((uint32)fs->currentsector.sector[454+1]<<8) + (uint32)fs->currentsector.sector[454+0] );
+"106
+[e = . *U _fs 7 + + + << -> *U + &U . . *U _fs 17 0 * -> -> + -> 454 `i -> 3 `i `ui `ux -> -> # *U &U . . *U _fs 17 0 `ui `ux `ul -> 24 `i << -> *U + &U . . *U _fs 17 0 * -> -> + -> 454 `i -> 2 `i `ui `ux -> -> # *U &U . . *U _fs 17 0 `ui `ux `ul -> 16 `i << -> *U + &U . . *U _fs 17 0 * -> -> + -> 454 `i -> 1 `i `ui `ux -> -> # *U &U . . *U _fs 17 0 `ui `ux `ul -> 8 `i -> *U + &U . . *U _fs 17 0 * -> -> + -> 454 `i -> 0 `i `ui `ux -> -> # *U &U . . *U _fs 17 0 `ui `ux `ul ]
+[e $U 27  ]
+"108
+[e :U 26 ]
+[; ;fat_access.c: 108: else
+[; ;fat_access.c: 109: fs->lba_begin = 0;
+"109
+[e = . *U _fs 7 -> -> -> 0 `i `l `ul ]
+[e :U 27 ]
+[; ;fat_access.c: 113: if (!fs->disk_io.read_media(fs->lba_begin, fs->currentsector.sector, 1))
+"113
+[e $ ! ! != ( *U . . *U _fs 14 0 (3 , , . *U _fs 7 &U . . *U _fs 17 0 -> -> -> 1 `i `l `ul -> 0 `i 28  ]
+[; ;fat_access.c: 114: return (-1);
+"114
+[e ) -U -> 1 `i ]
+[e $UE 9  ]
+[e :U 28 ]
+[; ;fat_access.c: 117: if (( ((uint16)fs->currentsector.sector[0x0B+1]<<8) + (uint16)fs->currentsector.sector[0x0B+0] ) != 512)
+"117
+[e $ ! != + << -> -> *U + &U . . *U _fs 17 0 * -> -> + -> 11 `i -> 1 `i `ui `ux -> -> # *U &U . . *U _fs 17 0 `ui `ux `us `ui -> 8 `i -> -> *U + &U . . *U _fs 17 0 * -> -> + -> 11 `i -> 0 `i `ui `ux -> -> # *U &U . . *U _fs 17 0 `ui `ux `us `ui -> -> 512 `i `ui 29  ]
+[; ;fat_access.c: 118: return (-2);
+"118
+[e ) -U -> 2 `i ]
+[e $UE 9  ]
+[e :U 29 ]
+[; ;fat_access.c: 121: fs->sectors_per_cluster = fs->currentsector.sector[13];
+"121
+[e = . *U _fs 0 *U + &U . . *U _fs 17 0 * -> -> -> 13 `i `ui `ux -> -> # *U &U . . *U _fs 17 0 `ui `ux ]
+[; ;fat_access.c: 122: reserved_sectors = ( ((uint16)fs->currentsector.sector[14+1]<<8) + (uint16)fs->currentsector.sector[14+0] );
+"122
+[e = _reserved_sectors -> + << -> -> *U + &U . . *U _fs 17 0 * -> -> + -> 14 `i -> 1 `i `ui `ux -> -> # *U &U . . *U _fs 17 0 `ui `ux `us `ui -> 8 `i -> -> *U + &U . . *U _fs 17 0 * -> -> + -> 14 `i -> 0 `i `ui `ux -> -> # *U &U . . *U _fs 17 0 `ui `ux `us `ui `us ]
+[; ;fat_access.c: 123: num_of_fats = fs->currentsector.sector[16];
+"123
+[e = _num_of_fats *U + &U . . *U _fs 17 0 * -> -> -> 16 `i `ui `ux -> -> # *U &U . . *U _fs 17 0 `ui `ux ]
+[; ;fat_access.c: 124: fs->root_entry_count = ( ((uint16)fs->currentsector.sector[17+1]<<8) + (uint16)fs->currentsector.sector[17+0] );
+"124
+[e = . *U _fs 10 -> + << -> -> *U + &U . . *U _fs 17 0 * -> -> + -> 17 `i -> 1 `i `ui `ux -> -> # *U &U . . *U _fs 17 0 `ui `ux `us `ui -> 8 `i -> -> *U + &U . . *U _fs 17 0 * -> -> + -> 17 `i -> 0 `i `ui `ux -> -> # *U &U . . *U _fs 17 0 `ui `ux `us `ui `us ]
+[; ;fat_access.c: 126: if(( ((uint16)fs->currentsector.sector[22+1]<<8) + (uint16)fs->currentsector.sector[22+0] ) != 0)
+"126
+[e $ ! != + << -> -> *U + &U . . *U _fs 17 0 * -> -> + -> 22 `i -> 1 `i `ui `ux -> -> # *U &U . . *U _fs 17 0 `ui `ux `us `ui -> 8 `i -> -> *U + &U . . *U _fs 17 0 * -> -> + -> 22 `i -> 0 `i `ui `ux -> -> # *U &U . . *U _fs 17 0 `ui `ux `us `ui -> -> 0 `i `ui 30  ]
+[; ;fat_access.c: 127: fs->fat_sectors = ( ((uint16)fs->currentsector.sector[22+1]<<8) + (uint16)fs->currentsector.sector[22+0] );
+"127
+[e = . *U _fs 8 -> + << -> -> *U + &U . . *U _fs 17 0 * -> -> + -> 22 `i -> 1 `i `ui `ux -> -> # *U &U . . *U _fs 17 0 `ui `ux `us `ui -> 8 `i -> -> *U + &U . . *U _fs 17 0 * -> -> + -> 22 `i -> 0 `i `ui `ux -> -> # *U &U . . *U _fs 17 0 `ui `ux `us `ui `ul ]
+[e $U 31  ]
+"128
+[e :U 30 ]
+[; ;fat_access.c: 128: else
+[; ;fat_access.c: 129: fs->fat_sectors = ( ((uint32)fs->currentsector.sector[36+3]<<24) + ((uint32)fs->currentsector.sector[36+2]<<16) + ((uint32)fs->currentsector.sector[36+1]<<8) + (uint32)fs->currentsector.sector[36+0] );
+"129
+[e = . *U _fs 8 + + + << -> *U + &U . . *U _fs 17 0 * -> -> + -> 36 `i -> 3 `i `ui `ux -> -> # *U &U . . *U _fs 17 0 `ui `ux `ul -> 24 `i << -> *U + &U . . *U _fs 17 0 * -> -> + -> 36 `i -> 2 `i `ui `ux -> -> # *U &U . . *U _fs 17 0 `ui `ux `ul -> 16 `i << -> *U + &U . . *U _fs 17 0 * -> -> + -> 36 `i -> 1 `i `ui `ux -> -> # *U &U . . *U _fs 17 0 `ui `ux `ul -> 8 `i -> *U + &U . . *U _fs 17 0 * -> -> + -> 36 `i -> 0 `i `ui `ux -> -> # *U &U . . *U _fs 17 0 `ui `ux `ul ]
+[e :U 31 ]
+[; ;fat_access.c: 132: fs->rootdir_first_cluster = ( ((uint32)fs->currentsector.sector[44+3]<<24) + ((uint32)fs->currentsector.sector[44+2]<<16) + ((uint32)fs->currentsector.sector[44+1]<<8) + (uint32)fs->currentsector.sector[44+0] );
+"132
+[e = . *U _fs 2 + + + << -> *U + &U . . *U _fs 17 0 * -> -> + -> 44 `i -> 3 `i `ui `ux -> -> # *U &U . . *U _fs 17 0 `ui `ux `ul -> 24 `i << -> *U + &U . . *U _fs 17 0 * -> -> + -> 44 `i -> 2 `i `ui `ux -> -> # *U &U . . *U _fs 17 0 `ui `ux `ul -> 16 `i << -> *U + &U . . *U _fs 17 0 * -> -> + -> 44 `i -> 1 `i `ui `ux -> -> # *U &U . . *U _fs 17 0 `ui `ux `ul -> 8 `i -> *U + &U . . *U _fs 17 0 * -> -> + -> 44 `i -> 0 `i `ui `ux -> -> # *U &U . . *U _fs 17 0 `ui `ux `ul ]
+[; ;fat_access.c: 133: fs->fs_info_sector = ( ((uint16)fs->currentsector.sector[48+1]<<8) + (uint16)fs->currentsector.sector[48+0] );
+"133
+[e = . *U _fs 6 -> + << -> -> *U + &U . . *U _fs 17 0 * -> -> + -> 48 `i -> 1 `i `ui `ux -> -> # *U &U . . *U _fs 17 0 `ui `ux `us `ui -> 8 `i -> -> *U + &U . . *U _fs 17 0 * -> -> + -> 48 `i -> 0 `i `ui `ux -> -> # *U &U . . *U _fs 17 0 `ui `ux `us `ui `us ]
+[; ;fat_access.c: 136: fs->rootdir_first_sector = reserved_sectors + (num_of_fats * fs->fat_sectors);
+"136
+[e = . *U _fs 3 + -> _reserved_sectors `ul * -> _num_of_fats `ul . *U _fs 8 ]
+[; ;fat_access.c: 137: fs->rootdir_sectors = ((fs->root_entry_count * 32) + (512 - 1)) / 512;
+"137
+[e = . *U _fs 4 -> / + * -> . *U _fs 10 `ui -> -> 32 `i `ui -> - -> 512 `i -> 1 `i `ui -> -> 512 `i `ui `ul ]
+[; ;fat_access.c: 140: fs->fat_begin_lba = fs->lba_begin + reserved_sectors;
+"140
+[e = . *U _fs 5 + . *U _fs 7 -> _reserved_sectors `ul ]
+[; ;fat_access.c: 143: fs->cluster_begin_lba = fs->fat_begin_lba + (num_of_fats * fs->fat_sectors);
+"143
+[e = . *U _fs 1 + . *U _fs 5 * -> _num_of_fats `ul . *U _fs 8 ]
+[; ;fat_access.c: 145: if (( ((uint16)fs->currentsector.sector[0x1FE+1]<<8) + (uint16)fs->currentsector.sector[0x1FE+0] ) != 0xAA55)
+"145
+[e $ ! != + << -> -> *U + &U . . *U _fs 17 0 * -> -> + -> 510 `i -> 1 `i `ui `ux -> -> # *U &U . . *U _fs 17 0 `ui `ux `us `ui -> 8 `i -> -> *U + &U . . *U _fs 17 0 * -> -> + -> 510 `i -> 0 `i `ui `ux -> -> # *U &U . . *U _fs 17 0 `ui `ux `us `ui -> 43605 `ui 32  ]
+[; ;fat_access.c: 146: return (-3);
+"146
+[e ) -U -> 3 `i ]
+[e $UE 9  ]
+[e :U 32 ]
+[; ;fat_access.c: 149: root_dir_sectors = ((( ((uint16)fs->currentsector.sector[17+1]<<8) + (uint16)fs->currentsector.sector[17+0] ) * 32) + (( ((uint16)fs->currentsector.sector[11+1]<<8) + (uint16)fs->currentsector.sector[11+0] ) - 1)) / ( ((uint16)fs->currentsector.secto
+"149
+[e = _root_dir_sectors -> / + * + << -> -> *U + &U . . *U _fs 17 0 * -> -> + -> 17 `i -> 1 `i `ui `ux -> -> # *U &U . . *U _fs 17 0 `ui `ux `us `ui -> 8 `i -> -> *U + &U . . *U _fs 17 0 * -> -> + -> 17 `i -> 0 `i `ui `ux -> -> # *U &U . . *U _fs 17 0 `ui `ux `us `ui -> -> 32 `i `ui - + << -> -> *U + &U . . *U _fs 17 0 * -> -> + -> 11 `i -> 1 `i `ui `ux -> -> # *U &U . . *U _fs 17 0 `ui `ux `us `ui -> 8 `i -> -> *U + &U . . *U _fs 17 0 * -> -> + -> 11 `i -> 0 `i `ui `ux -> -> # *U &U . . *U _fs 17 0 `ui `ux `us `ui -> -> 1 `i `ui + << -> -> *U + &U . . *U _fs 17 0 * -> -> + -> 11 `i -> 1 `i `ui `ux -> -> # *U &U . . *U _fs 17 0 `ui `ux `us `ui -> 8 `i -> -> *U + &U . . *U _fs 17 0 * -> -> + -> 11 `i -> 0 `i `ui `ux -> -> # *U &U . . *U _fs 17 0 `ui `ux `us `ui `ul ]
+[; ;fat_access.c: 151: if(( ((uint16)fs->currentsector.sector[22+1]<<8) + (uint16)fs->currentsector.sector[22+0] ) != 0)
+"151
+[e $ ! != + << -> -> *U + &U . . *U _fs 17 0 * -> -> + -> 22 `i -> 1 `i `ui `ux -> -> # *U &U . . *U _fs 17 0 `ui `ux `us `ui -> 8 `i -> -> *U + &U . . *U _fs 17 0 * -> -> + -> 22 `i -> 0 `i `ui `ux -> -> # *U &U . . *U _fs 17 0 `ui `ux `us `ui -> -> 0 `i `ui 33  ]
+[; ;fat_access.c: 152: FATSz = ( ((uint16)fs->currentsector.sector[22+1]<<8) + (uint16)fs->currentsector.sector[22+0] );
+"152
+[e = _FATSz -> + << -> -> *U + &U . . *U _fs 17 0 * -> -> + -> 22 `i -> 1 `i `ui `ux -> -> # *U &U . . *U _fs 17 0 `ui `ux `us `ui -> 8 `i -> -> *U + &U . . *U _fs 17 0 * -> -> + -> 22 `i -> 0 `i `ui `ux -> -> # *U &U . . *U _fs 17 0 `ui `ux `us `ui `ul ]
+[e $U 34  ]
+"153
+[e :U 33 ]
+[; ;fat_access.c: 153: else
+[; ;fat_access.c: 154: FATSz = ( ((uint32)fs->currentsector.sector[36+3]<<24) + ((uint32)fs->currentsector.sector[36+2]<<16) + ((uint32)fs->currentsector.sector[36+1]<<8) + (uint32)fs->currentsector.sector[36+0] );
+"154
+[e = _FATSz + + + << -> *U + &U . . *U _fs 17 0 * -> -> + -> 36 `i -> 3 `i `ui `ux -> -> # *U &U . . *U _fs 17 0 `ui `ux `ul -> 24 `i << -> *U + &U . . *U _fs 17 0 * -> -> + -> 36 `i -> 2 `i `ui `ux -> -> # *U &U . . *U _fs 17 0 `ui `ux `ul -> 16 `i << -> *U + &U . . *U _fs 17 0 * -> -> + -> 36 `i -> 1 `i `ui `ux -> -> # *U &U . . *U _fs 17 0 `ui `ux `ul -> 8 `i -> *U + &U . . *U _fs 17 0 * -> -> + -> 36 `i -> 0 `i `ui `ux -> -> # *U &U . . *U _fs 17 0 `ui `ux `ul ]
+[e :U 34 ]
+[; ;fat_access.c: 156: if(( ((uint16)fs->currentsector.sector[19+1]<<8) + (uint16)fs->currentsector.sector[19+0] ) != 0)
+"156
+[e $ ! != + << -> -> *U + &U . . *U _fs 17 0 * -> -> + -> 19 `i -> 1 `i `ui `ux -> -> # *U &U . . *U _fs 17 0 `ui `ux `us `ui -> 8 `i -> -> *U + &U . . *U _fs 17 0 * -> -> + -> 19 `i -> 0 `i `ui `ux -> -> # *U &U . . *U _fs 17 0 `ui `ux `us `ui -> -> 0 `i `ui 35  ]
+[; ;fat_access.c: 157: total_sectors = ( ((uint16)fs->currentsector.sector[19+1]<<8) + (uint16)fs->currentsector.sector[19+0] );
+"157
+[e = _total_sectors -> + << -> -> *U + &U . . *U _fs 17 0 * -> -> + -> 19 `i -> 1 `i `ui `ux -> -> # *U &U . . *U _fs 17 0 `ui `ux `us `ui -> 8 `i -> -> *U + &U . . *U _fs 17 0 * -> -> + -> 19 `i -> 0 `i `ui `ux -> -> # *U &U . . *U _fs 17 0 `ui `ux `us `ui `ul ]
+[e $U 36  ]
+"158
+[e :U 35 ]
+[; ;fat_access.c: 158: else
+[; ;fat_access.c: 159: total_sectors = ( ((uint32)fs->currentsector.sector[32+3]<<24) + ((uint32)fs->currentsector.sector[32+2]<<16) + ((uint32)fs->currentsector.sector[32+1]<<8) + (uint32)fs->currentsector.sector[32+0] );
+"159
+[e = _total_sectors + + + << -> *U + &U . . *U _fs 17 0 * -> -> + -> 32 `i -> 3 `i `ui `ux -> -> # *U &U . . *U _fs 17 0 `ui `ux `ul -> 24 `i << -> *U + &U . . *U _fs 17 0 * -> -> + -> 32 `i -> 2 `i `ui `ux -> -> # *U &U . . *U _fs 17 0 `ui `ux `ul -> 16 `i << -> *U + &U . . *U _fs 17 0 * -> -> + -> 32 `i -> 1 `i `ui `ux -> -> # *U &U . . *U _fs 17 0 `ui `ux `ul -> 8 `i -> *U + &U . . *U _fs 17 0 * -> -> + -> 32 `i -> 0 `i `ui `ux -> -> # *U &U . . *U _fs 17 0 `ui `ux `ul ]
+[e :U 36 ]
+[; ;fat_access.c: 161: data_sectors = total_sectors - (( ((uint16)fs->currentsector.sector[14+1]<<8) + (uint16)fs->currentsector.sector[14+0] ) + (fs->currentsector.sector[16] * FATSz) + root_dir_sectors);
+"161
+[e = _data_sectors - _total_sectors + + -> + << -> -> *U + &U . . *U _fs 17 0 * -> -> + -> 14 `i -> 1 `i `ui `ux -> -> # *U &U . . *U _fs 17 0 `ui `ux `us `ui -> 8 `i -> -> *U + &U . . *U _fs 17 0 * -> -> + -> 14 `i -> 0 `i `ui `ux -> -> # *U &U . . *U _fs 17 0 `ui `ux `us `ui `ul * -> *U + &U . . *U _fs 17 0 * -> -> -> 16 `i `ui `ux -> -> # *U &U . . *U _fs 17 0 `ui `ux `ul _FATSz _root_dir_sectors ]
+[; ;fat_access.c: 164: if (fs->sectors_per_cluster != 0)
+"164
+[e $ ! != -> . *U _fs 0 `i -> 0 `i 37  ]
+[; ;fat_access.c: 165: {
+"165
+{
+[; ;fat_access.c: 166: count_of_clusters = data_sectors / fs->sectors_per_cluster;
+"166
+[e = _count_of_clusters / _data_sectors -> . *U _fs 0 `ul ]
+[; ;fat_access.c: 168: if(count_of_clusters < 4085)
+"168
+[e $ ! < _count_of_clusters -> -> -> 4085 `i `l `ul 38  ]
+[; ;fat_access.c: 170: return (-5);
+"170
+[e ) -U -> 5 `i ]
+[e $UE 9  ]
+[e $U 39  ]
+"171
+[e :U 38 ]
+[; ;fat_access.c: 171: else if(count_of_clusters < 65525)
+[e $ ! < _count_of_clusters -> -> 65525 `l `ul 40  ]
+[; ;fat_access.c: 172: {
+"172
+{
+[; ;fat_access.c: 174: fs->rootdir_first_cluster = 0;
+"174
+[e = . *U _fs 2 -> -> -> 0 `i `l `ul ]
+[; ;fat_access.c: 177: fs->fat_type = FAT_TYPE_16;
+"177
+[e = . *U _fs 13 -> . `E184 0 `E184 ]
+[; ;fat_access.c: 178: return 0;
+"178
+[e ) -> 0 `i ]
+[e $UE 9  ]
+"179
+}
+[; ;fat_access.c: 179: }
+[e $U 41  ]
+"180
+[e :U 40 ]
+[; ;fat_access.c: 180: else
+[; ;fat_access.c: 181: {
+"181
+{
+[; ;fat_access.c: 183: fs->fat_type = FAT_TYPE_32;
+"183
+[e = . *U _fs 13 -> . `E184 1 `E184 ]
+[; ;fat_access.c: 184: return 0;
+"184
+[e ) -> 0 `i ]
+[e $UE 9  ]
+"185
+}
+[e :U 41 ]
+[e :U 39 ]
+"186
+}
+[; ;fat_access.c: 185: }
+[; ;fat_access.c: 186: }
+[e $U 42  ]
+"187
+[e :U 37 ]
+[; ;fat_access.c: 187: else
+[; ;fat_access.c: 188: return (-5);
+"188
+[e ) -U -> 5 `i ]
+[e $UE 9  ]
+[e :U 42 ]
+[; ;fat_access.c: 189: }
+"189
+[e :UE 9 ]
+}
+"194
+[v _fatfs_lba_of_cluster `(ul ~T0 @X0 1 ef2`*S5`ul ]
+"195
+{
+[; ;fat_access.c: 194: uint32 fatfs_lba_of_cluster(struct fatfs *fs, uint32 Cluster_Number)
+[; ;fat_access.c: 195: {
+[e :U _fatfs_lba_of_cluster ]
+"194
+[v _fs `*S5 ~T0 @X0 1 r1 ]
+[v _Cluster_Number `ul ~T0 @X0 1 r2 ]
+"195
+[f ]
+[; ;fat_access.c: 196: if (fs->fat_type == FAT_TYPE_16)
+"196
+[e $ ! == -> . *U _fs 13 `i -> . `E184 0 `i 44  ]
+[; ;fat_access.c: 197: return (fs->cluster_begin_lba + (fs->root_entry_count * 32 / 512) + ((Cluster_Number-2) * fs->sectors_per_cluster));
+"197
+[e ) + + . *U _fs 1 -> / * -> . *U _fs 10 `ui -> -> 32 `i `ui -> -> 512 `i `ui `ul * - _Cluster_Number -> -> -> 2 `i `l `ul -> . *U _fs 0 `ul ]
+[e $UE 43  ]
+[e $U 45  ]
+"198
+[e :U 44 ]
+[; ;fat_access.c: 198: else
+[; ;fat_access.c: 199: return ((fs->cluster_begin_lba + ((Cluster_Number-2)*fs->sectors_per_cluster)));
+"199
+[e ) + . *U _fs 1 * - _Cluster_Number -> -> -> 2 `i `l `ul -> . *U _fs 0 `ul ]
+[e $UE 43  ]
+[e :U 45 ]
+[; ;fat_access.c: 200: }
+"200
+[e :UE 43 ]
+}
+"204
+[v _fatfs_sector_read `(i ~T0 @X0 1 ef4`*S5`ul`*uc`ul ]
+"205
+{
+[; ;fat_access.c: 204: int fatfs_sector_read(struct fatfs *fs, uint32 lba, uint8 *target, uint32 count)
+[; ;fat_access.c: 205: {
+[e :U _fatfs_sector_read ]
+"204
+[v _fs `*S5 ~T0 @X0 1 r1 ]
+[v _lba `ul ~T0 @X0 1 r2 ]
+[v _target `*uc ~T0 @X0 1 r3 ]
+[v _count `ul ~T0 @X0 1 r4 ]
+"205
+[f ]
+[; ;fat_access.c: 206: return fs->disk_io.read_media(lba, target, count);
+"206
+[e ) ( *U . . *U _fs 14 0 (3 , , _lba _target _count ]
+[e $UE 46  ]
+[; ;fat_access.c: 207: }
+"207
+[e :UE 46 ]
+}
+"211
+[v _fatfs_sector_write `(i ~T0 @X0 1 ef4`*S5`ul`*uc`ul ]
+"212
+{
+[; ;fat_access.c: 211: int fatfs_sector_write(struct fatfs *fs, uint32 lba, uint8 *target, uint32 count)
+[; ;fat_access.c: 212: {
+[e :U _fatfs_sector_write ]
+"211
+[v _fs `*S5 ~T0 @X0 1 r1 ]
+[v _lba `ul ~T0 @X0 1 r2 ]
+[v _target `*uc ~T0 @X0 1 r3 ]
+[v _count `ul ~T0 @X0 1 r4 ]
+"212
+[f ]
+[; ;fat_access.c: 213: return fs->disk_io.write_media(lba, target, count);
+"213
+[e ) ( *U . . *U _fs 14 1 (3 , , _lba _target _count ]
+[e $UE 47  ]
+[; ;fat_access.c: 214: }
+"214
+[e :UE 47 ]
+}
+"219
+[v _fatfs_sector_reader `(i ~T0 @X0 1 ef4`*S5`ul`ul`*uc ]
+"220
+{
+[; ;fat_access.c: 219: int fatfs_sector_reader(struct fatfs *fs, uint32 start_cluster, uint32 offset, uint8 *target)
+[; ;fat_access.c: 220: {
+[e :U _fatfs_sector_reader ]
+"219
+[v _fs `*S5 ~T0 @X0 1 r1 ]
+[v _start_cluster `ul ~T0 @X0 1 r2 ]
+[v _offset `ul ~T0 @X0 1 r3 ]
+[v _target `*uc ~T0 @X0 1 r4 ]
+"220
+[f ]
+"221
+[v _sector_to_read `ul ~T0 @X0 1 a ]
+[; ;fat_access.c: 221: uint32 sector_to_read = 0;
+[e = _sector_to_read -> -> -> 0 `i `l `ul ]
+"222
+[v _cluster_to_read `ul ~T0 @X0 1 a ]
+[; ;fat_access.c: 222: uint32 cluster_to_read = 0;
+[e = _cluster_to_read -> -> -> 0 `i `l `ul ]
+"223
+[v _cluster_chain `ul ~T0 @X0 1 a ]
+[; ;fat_access.c: 223: uint32 cluster_chain = 0;
+[e = _cluster_chain -> -> -> 0 `i `l `ul ]
+"224
+[v _i `ul ~T0 @X0 1 a ]
+"225
+[v _lba `ul ~T0 @X0 1 a ]
+[; ;fat_access.c: 224: uint32 i;
+[; ;fat_access.c: 225: uint32 lba;
+[; ;fat_access.c: 228: if (fs->fat_type == FAT_TYPE_16 && start_cluster == 0)
+"228
+[e $ ! && == -> . *U _fs 13 `i -> . `E184 0 `i == _start_cluster -> -> -> 0 `i `l `ul 49  ]
+[; ;fat_access.c: 229: {
+"229
+{
+[; ;fat_access.c: 230: if (offset < fs->rootdir_sectors)
+"230
+[e $ ! < _offset . *U _fs 4 50  ]
+[; ;fat_access.c: 231: lba = fs->lba_begin + fs->rootdir_first_sector + offset;
+"231
+[e = _lba + + . *U _fs 7 . *U _fs 3 _offset ]
+[e $U 51  ]
+"232
+[e :U 50 ]
+[; ;fat_access.c: 232: else
+[; ;fat_access.c: 233: return 0;
+"233
+[e ) -> 0 `i ]
+[e $UE 48  ]
+[e :U 51 ]
+"234
+}
+[; ;fat_access.c: 234: }
+[e $U 52  ]
+"236
+[e :U 49 ]
+[; ;fat_access.c: 236: else
+[; ;fat_access.c: 237: {
+"237
+{
+[; ;fat_access.c: 239: cluster_chain = start_cluster;
+"239
+[e = _cluster_chain _start_cluster ]
+[; ;fat_access.c: 242: cluster_to_read = offset / fs->sectors_per_cluster;
+"242
+[e = _cluster_to_read / _offset -> . *U _fs 0 `ul ]
+[; ;fat_access.c: 243: sector_to_read = offset - (cluster_to_read*fs->sectors_per_cluster);
+"243
+[e = _sector_to_read - _offset * _cluster_to_read -> . *U _fs 0 `ul ]
+[; ;fat_access.c: 246: for (i=0; i<cluster_to_read; i++)
+"246
+{
+[e = _i -> -> -> 0 `i `l `ul ]
+[e $U 56  ]
+"247
+[e :U 53 ]
+[; ;fat_access.c: 247: cluster_chain = fatfs_find_next_cluster(fs, cluster_chain);
+[e = _cluster_chain ( _fatfs_find_next_cluster (2 , _fs _cluster_chain ]
+"246
+[e ++ _i -> -> -> 1 `i `l `ul ]
+[e :U 56 ]
+[e $ < _i _cluster_to_read 53  ]
+[e :U 54 ]
+"247
+}
+[; ;fat_access.c: 250: if (cluster_chain == 0xFFFFFFFF)
+"250
+[e $ ! == _cluster_chain -> -1 `ul 57  ]
+[; ;fat_access.c: 251: return 0;
+"251
+[e ) -> 0 `i ]
+[e $UE 48  ]
+[e :U 57 ]
+[; ;fat_access.c: 254: lba = fatfs_lba_of_cluster(fs, cluster_chain)+sector_to_read;
+"254
+[e = _lba + ( _fatfs_lba_of_cluster (2 , _fs _cluster_chain _sector_to_read ]
+"255
+}
+[e :U 52 ]
+[; ;fat_access.c: 255: }
+[; ;fat_access.c: 258: if (target)
+"258
+[e $ ! != _target -> -> 0 `i `*uc 58  ]
+[; ;fat_access.c: 259: return fs->disk_io.read_media(lba, target, 1);
+"259
+[e ) ( *U . . *U _fs 14 0 (3 , , _lba _target -> -> -> 1 `i `l `ul ]
+[e $UE 48  ]
+[e $U 59  ]
+"261
+[e :U 58 ]
+[; ;fat_access.c: 261: else if (lba != fs->currentsector.address)
+[e $ ! != _lba . . *U _fs 17 1 60  ]
+[; ;fat_access.c: 262: {
+"262
+{
+[; ;fat_access.c: 263: fs->currentsector.address = lba;
+"263
+[e = . . *U _fs 17 1 _lba ]
+[; ;fat_access.c: 264: return fs->disk_io.read_media(fs->currentsector.address, fs->currentsector.sector, 1);
+"264
+[e ) ( *U . . *U _fs 14 0 (3 , , . . *U _fs 17 1 &U . . *U _fs 17 0 -> -> -> 1 `i `l `ul ]
+[e $UE 48  ]
+"265
+}
+[; ;fat_access.c: 265: }
+[e $U 61  ]
+"266
+[e :U 60 ]
+[; ;fat_access.c: 266: else
+[; ;fat_access.c: 267: return 1;
+"267
+[e ) -> 1 `i ]
+[e $UE 48  ]
+[e :U 61 ]
+[e :U 59 ]
+[; ;fat_access.c: 268: }
+"268
+[e :UE 48 ]
+}
+"273
+[v _fatfs_read_sector `(i ~T0 @X0 1 ef4`*S5`ul`ul`*uc ]
+"274
+{
+[; ;fat_access.c: 273: int fatfs_read_sector(struct fatfs *fs, uint32 cluster, uint32 sector, uint8 *target)
+[; ;fat_access.c: 274: {
+[e :U _fatfs_read_sector ]
+"273
+[v _fs `*S5 ~T0 @X0 1 r1 ]
+[v _cluster `ul ~T0 @X0 1 r2 ]
+[v _sector `ul ~T0 @X0 1 r3 ]
+[v _target `*uc ~T0 @X0 1 r4 ]
+"274
+[f ]
+[; ;fat_access.c: 276: if (fs->fat_type == FAT_TYPE_16 && cluster == 0)
+"276
+[e $ ! && == -> . *U _fs 13 `i -> . `E184 0 `i == _cluster -> -> -> 0 `i `l `ul 63  ]
+[; ;fat_access.c: 277: {
+"277
+{
+"278
+[v _lba `ul ~T0 @X0 1 a ]
+[; ;fat_access.c: 278: uint32 lba;
+[; ;fat_access.c: 281: if (sector < fs->rootdir_sectors)
+"281
+[e $ ! < _sector . *U _fs 4 64  ]
+[; ;fat_access.c: 282: lba = fs->lba_begin + fs->rootdir_first_sector + sector;
+"282
+[e = _lba + + . *U _fs 7 . *U _fs 3 _sector ]
+[e $U 65  ]
+"283
+[e :U 64 ]
+[; ;fat_access.c: 283: else
+[; ;fat_access.c: 284: return 0;
+"284
+[e ) -> 0 `i ]
+[e $UE 62  ]
+[e :U 65 ]
+[; ;fat_access.c: 287: if (target)
+"287
+[e $ ! != _target -> -> 0 `i `*uc 66  ]
+[; ;fat_access.c: 288: {
+"288
+{
+[; ;fat_access.c: 290: return fs->disk_io.read_media(lba, target, 1);
+"290
+[e ) ( *U . . *U _fs 14 0 (3 , , _lba _target -> -> -> 1 `i `l `ul ]
+[e $UE 62  ]
+"291
+}
+[; ;fat_access.c: 291: }
+[e $U 67  ]
+"292
+[e :U 66 ]
+[; ;fat_access.c: 292: else
+[; ;fat_access.c: 293: {
+"293
+{
+[; ;fat_access.c: 295: fs->currentsector.address = lba;
+"295
+[e = . . *U _fs 17 1 _lba ]
+[; ;fat_access.c: 298: return fs->disk_io.read_media(fs->currentsector.address, fs->currentsector.sector, 1);
+"298
+[e ) ( *U . . *U _fs 14 0 (3 , , . . *U _fs 17 1 &U . . *U _fs 17 0 -> -> -> 1 `i `l `ul ]
+[e $UE 62  ]
+"299
+}
+[e :U 67 ]
+"300
+}
+[; ;fat_access.c: 299: }
+[; ;fat_access.c: 300: }
+[e $U 68  ]
+"302
+[e :U 63 ]
+[; ;fat_access.c: 302: else
+[; ;fat_access.c: 303: {
+"303
+{
+[; ;fat_access.c: 305: if (target)
+"305
+[e $ ! != _target -> -> 0 `i `*uc 69  ]
+[; ;fat_access.c: 306: {
+"306
+{
+"308
+[v _lba `ul ~T0 @X0 1 a ]
+[; ;fat_access.c: 308: uint32 lba = fatfs_lba_of_cluster(fs, cluster) + sector;
+[e = _lba + ( _fatfs_lba_of_cluster (2 , _fs _cluster _sector ]
+[; ;fat_access.c: 311: return fs->disk_io.read_media(lba, target, 1);
+"311
+[e ) ( *U . . *U _fs 14 0 (3 , , _lba _target -> -> -> 1 `i `l `ul ]
+[e $UE 62  ]
+"312
+}
+[; ;fat_access.c: 312: }
+[e $U 70  ]
+"313
+[e :U 69 ]
+[; ;fat_access.c: 313: else
+[; ;fat_access.c: 314: {
+"314
+{
+[; ;fat_access.c: 316: fs->currentsector.address = fatfs_lba_of_cluster(fs, cluster)+sector;
+"316
+[e = . . *U _fs 17 1 + ( _fatfs_lba_of_cluster (2 , _fs _cluster _sector ]
+[; ;fat_access.c: 319: return fs->disk_io.read_media(fs->currentsector.address, fs->currentsector.sector, 1);
+"319
+[e ) ( *U . . *U _fs 14 0 (3 , , . . *U _fs 17 1 &U . . *U _fs 17 0 -> -> -> 1 `i `l `ul ]
+[e $UE 62  ]
+"320
+}
+[e :U 70 ]
+"321
+}
+[e :U 68 ]
+[; ;fat_access.c: 320: }
+[; ;fat_access.c: 321: }
+[; ;fat_access.c: 322: }
+"322
+[e :UE 62 ]
+}
+"328
+[v _fatfs_write_sector `(i ~T0 @X0 1 ef4`*S5`ul`ul`*uc ]
+"329
+{
+[; ;fat_access.c: 328: int fatfs_write_sector(struct fatfs *fs, uint32 cluster, uint32 sector, uint8 *target)
+[; ;fat_access.c: 329: {
+[e :U _fatfs_write_sector ]
+"328
+[v _fs `*S5 ~T0 @X0 1 r1 ]
+[v _cluster `ul ~T0 @X0 1 r2 ]
+[v _sector `ul ~T0 @X0 1 r3 ]
+[v _target `*uc ~T0 @X0 1 r4 ]
+"329
+[f ]
+[; ;fat_access.c: 331: if (!fs->disk_io.write_media)
+"331
+[e $ ! ! != . . *U _fs 14 1 -> -> 0 `i `*F171 72  ]
+[; ;fat_access.c: 332: return 0;
+"332
+[e ) -> 0 `i ]
+[e $UE 71  ]
+[e :U 72 ]
+[; ;fat_access.c: 335: if (fs->fat_type == FAT_TYPE_16 && cluster == 0)
+"335
+[e $ ! && == -> . *U _fs 13 `i -> . `E184 0 `i == _cluster -> -> -> 0 `i `l `ul 73  ]
+[; ;fat_access.c: 336: {
+"336
+{
+"337
+[v _lba `ul ~T0 @X0 1 a ]
+[; ;fat_access.c: 337: uint32 lba;
+[; ;fat_access.c: 340: if (sector < fs->rootdir_sectors)
+"340
+[e $ ! < _sector . *U _fs 4 74  ]
+[; ;fat_access.c: 341: lba = fs->lba_begin + fs->rootdir_first_sector + sector;
+"341
+[e = _lba + + . *U _fs 7 . *U _fs 3 _sector ]
+[e $U 75  ]
+"342
+[e :U 74 ]
+[; ;fat_access.c: 342: else
+[; ;fat_access.c: 343: return 0;
+"343
+[e ) -> 0 `i ]
+[e $UE 71  ]
+[e :U 75 ]
+[; ;fat_access.c: 346: if (target)
+"346
+[e $ ! != _target -> -> 0 `i `*uc 76  ]
+[; ;fat_access.c: 347: {
+"347
+{
+[; ;fat_access.c: 349: return fs->disk_io.write_media(lba, target, 1);
+"349
+[e ) ( *U . . *U _fs 14 1 (3 , , _lba _target -> -> -> 1 `i `l `ul ]
+[e $UE 71  ]
+"350
+}
+[; ;fat_access.c: 350: }
+[e $U 77  ]
+"351
+[e :U 76 ]
+[; ;fat_access.c: 351: else
+[; ;fat_access.c: 352: {
+"352
+{
+[; ;fat_access.c: 354: fs->currentsector.address = lba;
+"354
+[e = . . *U _fs 17 1 _lba ]
+[; ;fat_access.c: 357: return fs->disk_io.write_media(fs->currentsector.address, fs->currentsector.sector, 1);
+"357
+[e ) ( *U . . *U _fs 14 1 (3 , , . . *U _fs 17 1 &U . . *U _fs 17 0 -> -> -> 1 `i `l `ul ]
+[e $UE 71  ]
+"358
+}
+[e :U 77 ]
+"359
+}
+[; ;fat_access.c: 358: }
+[; ;fat_access.c: 359: }
+[e $U 78  ]
+"361
+[e :U 73 ]
+[; ;fat_access.c: 361: else
+[; ;fat_access.c: 362: {
+"362
+{
+[; ;fat_access.c: 364: if (target)
+"364
+[e $ ! != _target -> -> 0 `i `*uc 79  ]
+[; ;fat_access.c: 365: {
+"365
+{
+"367
+[v _lba `ul ~T0 @X0 1 a ]
+[; ;fat_access.c: 367: uint32 lba = fatfs_lba_of_cluster(fs, cluster) + sector;
+[e = _lba + ( _fatfs_lba_of_cluster (2 , _fs _cluster _sector ]
+[; ;fat_access.c: 370: return fs->disk_io.write_media(lba, target, 1);
+"370
+[e ) ( *U . . *U _fs 14 1 (3 , , _lba _target -> -> -> 1 `i `l `ul ]
+[e $UE 71  ]
+"371
+}
+[; ;fat_access.c: 371: }
+[e $U 80  ]
+"372
+[e :U 79 ]
+[; ;fat_access.c: 372: else
+[; ;fat_access.c: 373: {
+"373
+{
+[; ;fat_access.c: 375: fs->currentsector.address = fatfs_lba_of_cluster(fs, cluster)+sector;
+"375
+[e = . . *U _fs 17 1 + ( _fatfs_lba_of_cluster (2 , _fs _cluster _sector ]
+[; ;fat_access.c: 378: return fs->disk_io.write_media(fs->currentsector.address, fs->currentsector.sector, 1);
+"378
+[e ) ( *U . . *U _fs 14 1 (3 , , . . *U _fs 17 1 &U . . *U _fs 17 0 -> -> -> 1 `i `l `ul ]
+[e $UE 71  ]
+"379
+}
+[e :U 80 ]
+"380
+}
+[e :U 78 ]
+[; ;fat_access.c: 379: }
+[; ;fat_access.c: 380: }
+[; ;fat_access.c: 381: }
+"381
+[e :UE 71 ]
+}
+"386
+[v _fatfs_show_details `(v ~T0 @X0 1 ef1`*S5 ]
+"387
+{
+[; ;fat_access.c: 386: void fatfs_show_details(struct fatfs *fs)
+[; ;fat_access.c: 387: {
+[e :U _fatfs_show_details ]
+"386
+[v _fs `*S5 ~T0 @X0 1 r1 ]
+"387
+[f ]
+[; ;fat_access.c: 388: printf ("FAT details:\r\n");
+"388
+[e ( _printf :s 1C ]
+[; ;fat_access.c: 389: printf (" Type =%s", (fs->fat_type == FAT_TYPE_32) ? "FAT32": "FAT16");
+"389
+[e ( _printf , (. :s 2C ? == -> . *U _fs 13 `i -> . `E184 1 `i : :s 3C :s 4C ]
+[; ;fat_access.c: 390: printf (" Root Dir First Cluster = %x\r\n", fs->rootdir_first_cluster);
+"390
+[e ( _printf , (. :s 5C . *U _fs 2 ]
+[; ;fat_access.c: 391: printf (" FAT Begin LBA = 0x%x\r\n",fs->fat_begin_lba);
+"391
+[e ( _printf , (. :s 6C . *U _fs 5 ]
+[; ;fat_access.c: 392: printf (" Cluster Begin LBA = 0x%x\r\n",fs->cluster_begin_lba);
+"392
+[e ( _printf , (. :s 7C . *U _fs 1 ]
+[; ;fat_access.c: 393: printf (" Sectors Per Cluster = %d\r\n", fs->sectors_per_cluster);
+"393
+[e ( _printf , (. :s 8C -> . *U _fs 0 `i ]
+[; ;fat_access.c: 394: }
+"394
+[e :UE 81 ]
+}
+"398
+[v _fatfs_get_root_cluster `(ul ~T0 @X0 1 ef1`*S5 ]
+"399
+{
+[; ;fat_access.c: 398: uint32 fatfs_get_root_cluster(struct fatfs *fs)
+[; ;fat_access.c: 399: {
+[e :U _fatfs_get_root_cluster ]
+"398
+[v _fs `*S5 ~T0 @X0 1 r1 ]
+"399
+[f ]
+[; ;fat_access.c: 401: return fs->rootdir_first_cluster;
+"401
+[e ) . *U _fs 2 ]
+[e $UE 82  ]
+[; ;fat_access.c: 402: }
+"402
+[e :UE 82 ]
+}
+"406
+[v _fatfs_get_file_entry `(ul ~T0 @X0 1 ef4`*S5`ul`*uc`*S2 ]
+"407
+{
+[; ;fat_access.c: 406: uint32 fatfs_get_file_entry(struct fatfs *fs, uint32 Cluster, char *name_to_find, struct fat_dir_entry *sfEntry)
+[; ;fat_access.c: 407: {
+[e :U _fatfs_get_file_entry ]
+"406
+[v _fs `*S5 ~T0 @X0 1 r1 ]
+[v _Cluster `ul ~T0 @X0 1 r2 ]
+[v _name_to_find `*uc ~T0 @X0 1 r3 ]
+[v _sfEntry `*S2 ~T0 @X0 1 r4 ]
+"407
+[f ]
+"408
+[v _item `uc ~T0 @X0 1 a ]
+[; ;fat_access.c: 408: uint8 item=0;
+[e = _item -> -> 0 `i `uc ]
+"409
+[v _recordoffset `us ~T0 @X0 1 a ]
+[; ;fat_access.c: 409: uint16 recordoffset = 0;
+[e = _recordoffset -> -> 0 `i `us ]
+"410
+[v _i `uc ~T0 @X0 1 a ]
+[; ;fat_access.c: 410: uint8 i=0;
+[e = _i -> -> 0 `i `uc ]
+"411
+[v _x `i ~T0 @X0 1 a ]
+[; ;fat_access.c: 411: int x=0;
+[e = _x -> 0 `i ]
+"412
+[v _long_filename `*uc ~T0 @X0 1 a ]
+[; ;fat_access.c: 412: char *long_filename = (0);
+[e = _long_filename -> -> 0 `i `*uc ]
+"413
+[v _short_filename `uc ~T0 @X0 -> 13 `i a ]
+"414
+[v _lfn `S8 ~T0 @X0 1 a ]
+"415
+[v _dotRequired `i ~T0 @X0 1 a ]
+[; ;fat_access.c: 413: char short_filename[13];
+[; ;fat_access.c: 414: struct lfn_cache lfn;
+[; ;fat_access.c: 415: int dotRequired = 0;
+[e = _dotRequired -> 0 `i ]
+"416
+[v _directoryEntry `*S2 ~T0 @X0 1 a ]
+[; ;fat_access.c: 416: struct fat_dir_entry *directoryEntry;
+[; ;fat_access.c: 418: fatfs_lfn_cache_init(&lfn, 1);
+"418
+[e ( _fatfs_lfn_cache_init (2 , &U _lfn -> 1 `i ]
+[; ;fat_access.c: 421: while (1)
+"421
+[e :U 85 ]
+[; ;fat_access.c: 422: {
+"422
+{
+[; ;fat_access.c: 424: if (fatfs_sector_reader(fs, Cluster, x++, 0))
+"424
+[e $ ! != ( _fatfs_sector_reader (4 , , , _fs _Cluster -> -> ++ _x -> 1 `i `l `ul -> -> 0 `i `*uc -> 0 `i 87  ]
+[; ;fat_access.c: 425: {
+"425
+{
+[; ;fat_access.c: 427: for (item = 0; item < (512 / 32); item++)
+"427
+{
+[e = _item -> -> 0 `i `uc ]
+[e $ < -> _item `i / -> 512 `i -> 32 `i 88  ]
+[e $U 89  ]
+"428
+[e :U 88 ]
+[; ;fat_access.c: 428: {
+{
+[; ;fat_access.c: 430: recordoffset = 32 * item;
+"430
+[e = _recordoffset -> * -> 32 `i -> _item `i `us ]
+[; ;fat_access.c: 433: directoryEntry = (struct fat_dir_entry*)(fs->currentsector.sector+recordoffset);
+"433
+[e = _directoryEntry -> + &U . . *U _fs 17 0 * -> _recordoffset `ux -> -> # *U &U . . *U _fs 17 0 `ui `ux `*S2 ]
+[; ;fat_access.c: 437: if (fatfs_entry_lfn_text(directoryEntry) )
+"437
+[e $ ! != ( _fatfs_entry_lfn_text (1 _directoryEntry -> 0 `i 91  ]
+[; ;fat_access.c: 438: fatfs_lfn_cache_entry(&lfn, fs->currentsector.sector+recordoffset);
+"438
+[e ( _fatfs_lfn_cache_entry (2 , &U _lfn + &U . . *U _fs 17 0 * -> _recordoffset `ux -> -> # *U &U . . *U _fs 17 0 `ui `ux ]
+[e $U 92  ]
+"441
+[e :U 91 ]
+[; ;fat_access.c: 441: else if (fatfs_entry_lfn_invalid(directoryEntry) )
+[e $ ! != ( _fatfs_entry_lfn_invalid (1 _directoryEntry -> 0 `i 93  ]
+[; ;fat_access.c: 442: fatfs_lfn_cache_init(&lfn, 0);
+"442
+[e ( _fatfs_lfn_cache_init (2 , &U _lfn -> 0 `i ]
+[e $U 94  ]
+"445
+[e :U 93 ]
+[; ;fat_access.c: 445: else if (fatfs_entry_lfn_exists(&lfn, directoryEntry) )
+[e $ ! != ( _fatfs_entry_lfn_exists (2 , &U _lfn _directoryEntry -> 0 `i 95  ]
+[; ;fat_access.c: 446: {
+"446
+{
+[; ;fat_access.c: 447: long_filename = fatfs_lfn_cache_get(&lfn);
+"447
+[e = _long_filename ( _fatfs_lfn_cache_get (1 &U _lfn ]
+[; ;fat_access.c: 450: if (fatfs_compare_names(long_filename, name_to_find))
+"450
+[e $ ! != ( _fatfs_compare_names (2 , _long_filename _name_to_find -> 0 `i 96  ]
+[; ;fat_access.c: 451: {
+"451
+{
+[; ;fat_access.c: 452: memcpy(sfEntry,directoryEntry,sizeof(struct fat_dir_entry));
+"452
+[e ( _memcpy (3 , , -> _sfEntry `*v -> _directoryEntry `*Cv -> # `S2 `ui ]
+[; ;fat_access.c: 453: return 1;
+"453
+[e ) -> -> -> 1 `i `l `ul ]
+[e $UE 83  ]
+"454
+}
+[e :U 96 ]
+[; ;fat_access.c: 454: }
+[; ;fat_access.c: 456: fatfs_lfn_cache_init(&lfn, 0);
+"456
+[e ( _fatfs_lfn_cache_init (2 , &U _lfn -> 0 `i ]
+"457
+}
+[; ;fat_access.c: 457: }
+[e $U 97  ]
+"458
+[e :U 95 ]
+[; ;fat_access.c: 458: else
+[; ;fat_access.c: 461: if (fatfs_entry_sfn_only(directoryEntry) )
+"461
+[e $ ! != ( _fatfs_entry_sfn_only (1 _directoryEntry -> 0 `i 98  ]
+[; ;fat_access.c: 462: {
+"462
+{
+[; ;fat_access.c: 463: memset(short_filename, 0, sizeof(short_filename));
+"463
+[e ( _memset (3 , , -> &U _short_filename `*v -> 0 `i -> # _short_filename `ui ]
+[; ;fat_access.c: 466: for (i=0; i<8; i++)
+"466
+{
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 8 `i 99  ]
+[e $U 100  ]
+"467
+[e :U 99 ]
+[; ;fat_access.c: 467: short_filename[i] = directoryEntry->Name[i];
+[e = *U + &U _short_filename * -> _i `ux -> -> # *U &U _short_filename `ui `ux *U + &U . *U _directoryEntry 0 * -> _i `ux -> -> # *U &U . *U _directoryEntry 0 `ui `ux ]
+"466
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 8 `i 99  ]
+[e :U 100 ]
+"467
+}
+[; ;fat_access.c: 470: dotRequired = 0;
+"470
+[e = _dotRequired -> 0 `i ]
+[; ;fat_access.c: 471: for (i=8; i<11; i++)
+"471
+{
+[e = _i -> -> 8 `i `uc ]
+[e $ < -> _i `i -> 11 `i 102  ]
+[e $U 103  ]
+"472
+[e :U 102 ]
+[; ;fat_access.c: 472: {
+{
+[; ;fat_access.c: 473: short_filename[i+1] = directoryEntry->Name[i];
+"473
+[e = *U + &U _short_filename * -> -> + -> _i `i -> 1 `i `ui `ux -> -> # *U &U _short_filename `ui `ux *U + &U . *U _directoryEntry 0 * -> _i `ux -> -> # *U &U . *U _directoryEntry 0 `ui `ux ]
+[; ;fat_access.c: 474: if (directoryEntry->Name[i] != ' ')
+"474
+[e $ ! != -> *U + &U . *U _directoryEntry 0 * -> _i `ux -> -> # *U &U . *U _directoryEntry 0 `ui `ux `ui -> 32 `ui 105  ]
+[; ;fat_access.c: 475: dotRequired = 1;
+"475
+[e = _dotRequired -> 1 `i ]
+[e :U 105 ]
+"476
+}
+"471
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 11 `i 102  ]
+[e :U 103 ]
+"476
+}
+[; ;fat_access.c: 476: }
+[; ;fat_access.c: 479: if (dotRequired)
+"479
+[e $ ! != _dotRequired -> 0 `i 106  ]
+[; ;fat_access.c: 480: {
+"480
+{
+[; ;fat_access.c: 482: if (short_filename[0]!='.')
+"482
+[e $ ! != -> *U + &U _short_filename * -> -> -> 0 `i `ui `ux -> -> # *U &U _short_filename `ui `ux `ui -> 46 `ui 107  ]
+[; ;fat_access.c: 483: short_filename[8] = '.';
+"483
+[e = *U + &U _short_filename * -> -> -> 8 `i `ui `ux -> -> # *U &U _short_filename `ui `ux -> -> 46 `ui `uc ]
+[e $U 108  ]
+"484
+[e :U 107 ]
+[; ;fat_access.c: 484: else
+[; ;fat_access.c: 485: short_filename[8] = ' ';
+"485
+[e = *U + &U _short_filename * -> -> -> 8 `i `ui `ux -> -> # *U &U _short_filename `ui `ux -> -> 32 `ui `uc ]
+[e :U 108 ]
+"486
+}
+[; ;fat_access.c: 486: }
+[e $U 109  ]
+"487
+[e :U 106 ]
+[; ;fat_access.c: 487: else
+[; ;fat_access.c: 488: short_filename[8] = ' ';
+"488
+[e = *U + &U _short_filename * -> -> -> 8 `i `ui `ux -> -> # *U &U _short_filename `ui `ux -> -> 32 `ui `uc ]
+[e :U 109 ]
+[; ;fat_access.c: 491: if (fatfs_compare_names(short_filename, name_to_find))
+"491
+[e $ ! != ( _fatfs_compare_names (2 , &U _short_filename _name_to_find -> 0 `i 110  ]
+[; ;fat_access.c: 492: {
+"492
+{
+[; ;fat_access.c: 493: memcpy(sfEntry,directoryEntry,sizeof(struct fat_dir_entry));
+"493
+[e ( _memcpy (3 , , -> _sfEntry `*v -> _directoryEntry `*Cv -> # `S2 `ui ]
+[; ;fat_access.c: 494: return 1;
+"494
+[e ) -> -> -> 1 `i `l `ul ]
+[e $UE 83  ]
+"495
+}
+[e :U 110 ]
+[; ;fat_access.c: 495: }
+[; ;fat_access.c: 497: fatfs_lfn_cache_init(&lfn, 0);
+"497
+[e ( _fatfs_lfn_cache_init (2 , &U _lfn -> 0 `i ]
+"498
+}
+[e :U 98 ]
+"499
+[e :U 97 ]
+[e :U 94 ]
+[e :U 92 ]
+}
+"427
+[e ++ _item -> -> 1 `i `uc ]
+[e $ < -> _item `i / -> 512 `i -> 32 `i 88  ]
+[e :U 89 ]
+"499
+}
+"500
+}
+[; ;fat_access.c: 498: }
+[; ;fat_access.c: 499: }
+[; ;fat_access.c: 500: }
+[e $U 111  ]
+"501
+[e :U 87 ]
+[; ;fat_access.c: 501: else
+[; ;fat_access.c: 502: break;
+"502
+[e $U 86  ]
+[e :U 111 ]
+"503
+}
+[e :U 84 ]
+"421
+[e $U 85  ]
+[e :U 86 ]
+[; ;fat_access.c: 503: }
+[; ;fat_access.c: 505: return 0;
+"505
+[e ) -> -> -> 0 `i `l `ul ]
+[e $UE 83  ]
+[; ;fat_access.c: 506: }
+"506
+[e :UE 83 ]
+}
+"512
+[v _fatfs_sfn_exists `(i ~T0 @X0 1 ef3`*S5`ul`*uc ]
+"513
+{
+[; ;fat_access.c: 512: int fatfs_sfn_exists(struct fatfs *fs, uint32 Cluster, char *shortname)
+[; ;fat_access.c: 513: {
+[e :U _fatfs_sfn_exists ]
+"512
+[v _fs `*S5 ~T0 @X0 1 r1 ]
+[v _Cluster `ul ~T0 @X0 1 r2 ]
+[v _shortname `*uc ~T0 @X0 1 r3 ]
+"513
+[f ]
+"514
+[v _item `uc ~T0 @X0 1 a ]
+[; ;fat_access.c: 514: uint8 item=0;
+[e = _item -> -> 0 `i `uc ]
+"515
+[v _recordoffset `us ~T0 @X0 1 a ]
+[; ;fat_access.c: 515: uint16 recordoffset = 0;
+[e = _recordoffset -> -> 0 `i `us ]
+"516
+[v _x `i ~T0 @X0 1 a ]
+[; ;fat_access.c: 516: int x=0;
+[e = _x -> 0 `i ]
+"517
+[v _directoryEntry `*S2 ~T0 @X0 1 a ]
+[; ;fat_access.c: 517: struct fat_dir_entry *directoryEntry;
+[; ;fat_access.c: 520: while (1)
+"520
+[e :U 114 ]
+[; ;fat_access.c: 521: {
+"521
+{
+[; ;fat_access.c: 523: if (fatfs_sector_reader(fs, Cluster, x++, 0))
+"523
+[e $ ! != ( _fatfs_sector_reader (4 , , , _fs _Cluster -> -> ++ _x -> 1 `i `l `ul -> -> 0 `i `*uc -> 0 `i 116  ]
+[; ;fat_access.c: 524: {
+"524
+{
+[; ;fat_access.c: 526: for (item = 0; item < (512 / 32); item++)
+"526
+{
+[e = _item -> -> 0 `i `uc ]
+[e $ < -> _item `i / -> 512 `i -> 32 `i 117  ]
+[e $U 118  ]
+"527
+[e :U 117 ]
+[; ;fat_access.c: 527: {
+{
+[; ;fat_access.c: 529: recordoffset = 32 * item;
+"529
+[e = _recordoffset -> * -> 32 `i -> _item `i `us ]
+[; ;fat_access.c: 532: directoryEntry = (struct fat_dir_entry*)(fs->currentsector.sector+recordoffset);
+"532
+[e = _directoryEntry -> + &U . . *U _fs 17 0 * -> _recordoffset `ux -> -> # *U &U . . *U _fs 17 0 `ui `ux `*S2 ]
+[; ;fat_access.c: 536: if (fatfs_entry_lfn_text(directoryEntry) )
+"536
+[e $ ! != ( _fatfs_entry_lfn_text (1 _directoryEntry -> 0 `i 120  ]
+[; ;fat_access.c: 537: ;
+"537
+[e $U 121  ]
+"540
+[e :U 120 ]
+[; ;fat_access.c: 540: else if (fatfs_entry_lfn_invalid(directoryEntry) )
+[e $ ! != ( _fatfs_entry_lfn_invalid (1 _directoryEntry -> 0 `i 122  ]
+[; ;fat_access.c: 541: ;
+"541
+[e $U 123  ]
+"542
+[e :U 122 ]
+[; ;fat_access.c: 542: else
+[; ;fat_access.c: 545: if (fatfs_entry_sfn_only(directoryEntry) )
+"545
+[e $ ! != ( _fatfs_entry_sfn_only (1 _directoryEntry -> 0 `i 124  ]
+[; ;fat_access.c: 546: {
+"546
+{
+[; ;fat_access.c: 547: if (strncmp((const char*)directoryEntry->Name, shortname, 11)==0)
+"547
+[e $ ! == ( _strncmp (3 , , -> &U . *U _directoryEntry 0 `*Cuc -> _shortname `*Cuc -> -> 11 `i `ui -> 0 `i 125  ]
+[; ;fat_access.c: 548: return 1;
+"548
+[e ) -> 1 `i ]
+[e $UE 112  ]
+[e :U 125 ]
+"549
+}
+[e :U 124 ]
+"550
+[e :U 123 ]
+[e :U 121 ]
+}
+"526
+[e ++ _item -> -> 1 `i `uc ]
+[e $ < -> _item `i / -> 512 `i -> 32 `i 117  ]
+[e :U 118 ]
+"550
+}
+"551
+}
+[; ;fat_access.c: 549: }
+[; ;fat_access.c: 550: }
+[; ;fat_access.c: 551: }
+[e $U 126  ]
+"552
+[e :U 116 ]
+[; ;fat_access.c: 552: else
+[; ;fat_access.c: 553: break;
+"553
+[e $U 115  ]
+[e :U 126 ]
+"554
+}
+[e :U 113 ]
+"520
+[e $U 114  ]
+[e :U 115 ]
+[; ;fat_access.c: 554: }
+[; ;fat_access.c: 556: return 0;
+"556
+[e ) -> 0 `i ]
+[e $UE 112  ]
+[; ;fat_access.c: 557: }
+"557
+[e :UE 112 ]
+}
+"615
+[v _fatfs_update_file_length `(i ~T0 @X0 1 ef4`*S5`ul`*uc`ul ]
+"616
+{
+[; ;fat_access.c: 615: int fatfs_update_file_length(struct fatfs *fs, uint32 Cluster, char *shortname, uint32 fileLength)
+[; ;fat_access.c: 616: {
+[e :U _fatfs_update_file_length ]
+"615
+[v _fs `*S5 ~T0 @X0 1 r1 ]
+[v _Cluster `ul ~T0 @X0 1 r2 ]
+[v _shortname `*uc ~T0 @X0 1 r3 ]
+[v _fileLength `ul ~T0 @X0 1 r4 ]
+"616
+[f ]
+"617
+[v _item `uc ~T0 @X0 1 a ]
+[; ;fat_access.c: 617: uint8 item=0;
+[e = _item -> -> 0 `i `uc ]
+"618
+[v _recordoffset `us ~T0 @X0 1 a ]
+[; ;fat_access.c: 618: uint16 recordoffset = 0;
+[e = _recordoffset -> -> 0 `i `us ]
+"619
+[v _x `i ~T0 @X0 1 a ]
+[; ;fat_access.c: 619: int x=0;
+[e = _x -> 0 `i ]
+"620
+[v _directoryEntry `*S2 ~T0 @X0 1 a ]
+[; ;fat_access.c: 620: struct fat_dir_entry *directoryEntry;
+[; ;fat_access.c: 623: if (!fs->disk_io.write_media)
+"623
+[e $ ! ! != . . *U _fs 14 1 -> -> 0 `i `*F171 128  ]
+[; ;fat_access.c: 624: return 0;
+"624
+[e ) -> 0 `i ]
+[e $UE 127  ]
+[e :U 128 ]
+[; ;fat_access.c: 627: while (1)
+"627
+[e :U 130 ]
+[; ;fat_access.c: 628: {
+"628
+{
+[; ;fat_access.c: 630: if (fatfs_sector_reader(fs, Cluster, x++, 0))
+"630
+[e $ ! != ( _fatfs_sector_reader (4 , , , _fs _Cluster -> -> ++ _x -> 1 `i `l `ul -> -> 0 `i `*uc -> 0 `i 132  ]
+[; ;fat_access.c: 631: {
+"631
+{
+[; ;fat_access.c: 633: for (item = 0; item < (512 / 32); item++)
+"633
+{
+[e = _item -> -> 0 `i `uc ]
+[e $ < -> _item `i / -> 512 `i -> 32 `i 133  ]
+[e $U 134  ]
+"634
+[e :U 133 ]
+[; ;fat_access.c: 634: {
+{
+[; ;fat_access.c: 636: recordoffset = 32 * item;
+"636
+[e = _recordoffset -> * -> 32 `i -> _item `i `us ]
+[; ;fat_access.c: 639: directoryEntry = (struct fat_dir_entry*)(fs->currentsector.sector+recordoffset);
+"639
+[e = _directoryEntry -> + &U . . *U _fs 17 0 * -> _recordoffset `ux -> -> # *U &U . . *U _fs 17 0 `ui `ux `*S2 ]
+[; ;fat_access.c: 643: if (fatfs_entry_lfn_text(directoryEntry) )
+"643
+[e $ ! != ( _fatfs_entry_lfn_text (1 _directoryEntry -> 0 `i 136  ]
+[; ;fat_access.c: 644: ;
+"644
+[e $U 137  ]
+"647
+[e :U 136 ]
+[; ;fat_access.c: 647: else if (fatfs_entry_lfn_invalid(directoryEntry) )
+[e $ ! != ( _fatfs_entry_lfn_invalid (1 _directoryEntry -> 0 `i 138  ]
+[; ;fat_access.c: 648: ;
+"648
+[e $U 139  ]
+"651
+[e :U 138 ]
+[; ;fat_access.c: 651: else
+[; ;fat_access.c: 653: if (fatfs_entry_sfn_only(directoryEntry) )
+"653
+[e $ ! != ( _fatfs_entry_sfn_only (1 _directoryEntry -> 0 `i 140  ]
+[; ;fat_access.c: 654: {
+"654
+{
+[; ;fat_access.c: 655: if (strncmp((const char*)directoryEntry->Name, shortname, 11)==0)
+"655
+[e $ ! == ( _strncmp (3 , , -> &U . *U _directoryEntry 0 `*Cuc -> _shortname `*Cuc -> -> 11 `i `ui -> 0 `i 141  ]
+[; ;fat_access.c: 656: {
+"656
+{
+[; ;fat_access.c: 657: directoryEntry->FileSize = (fileLength);
+"657
+[e = . *U _directoryEntry 11 _fileLength ]
+[; ;fat_access.c: 665: memcpy((uint8*)(fs->currentsector.sector+recordoffset), (uint8*)directoryEntry, sizeof(struct fat_dir_entry));
+"665
+[e ( _memcpy (3 , , -> + &U . . *U _fs 17 0 * -> _recordoffset `ux -> -> # *U &U . . *U _fs 17 0 `ui `ux `*v -> -> _directoryEntry `*uc `*Cv -> # `S2 `ui ]
+[; ;fat_access.c: 668: return fs->disk_io.write_media(fs->currentsector.address, fs->currentsector.sector, 1);
+"668
+[e ) ( *U . . *U _fs 14 1 (3 , , . . *U _fs 17 1 &U . . *U _fs 17 0 -> -> -> 1 `i `l `ul ]
+[e $UE 127  ]
+"669
+}
+[e :U 141 ]
+"670
+}
+[e :U 140 ]
+"671
+[e :U 139 ]
+[e :U 137 ]
+}
+"633
+[e ++ _item -> -> 1 `i `uc ]
+[e $ < -> _item `i / -> 512 `i -> 32 `i 133  ]
+[e :U 134 ]
+"671
+}
+"672
+}
+[; ;fat_access.c: 669: }
+[; ;fat_access.c: 670: }
+[; ;fat_access.c: 671: }
+[; ;fat_access.c: 672: }
+[e $U 142  ]
+"673
+[e :U 132 ]
+[; ;fat_access.c: 673: else
+[; ;fat_access.c: 674: break;
+"674
+[e $U 131  ]
+[e :U 142 ]
+"675
+}
+[e :U 129 ]
+"627
+[e $U 130  ]
+[e :U 131 ]
+[; ;fat_access.c: 675: }
+[; ;fat_access.c: 677: return 0;
+"677
+[e ) -> 0 `i ]
+[e $UE 127  ]
+[; ;fat_access.c: 678: }
+"678
+[e :UE 127 ]
+}
+"685
+[v _fatfs_mark_file_deleted `(i ~T0 @X0 1 ef3`*S5`ul`*uc ]
+"686
+{
+[; ;fat_access.c: 685: int fatfs_mark_file_deleted(struct fatfs *fs, uint32 Cluster, char *shortname)
+[; ;fat_access.c: 686: {
+[e :U _fatfs_mark_file_deleted ]
+"685
+[v _fs `*S5 ~T0 @X0 1 r1 ]
+[v _Cluster `ul ~T0 @X0 1 r2 ]
+[v _shortname `*uc ~T0 @X0 1 r3 ]
+"686
+[f ]
+"687
+[v _item `uc ~T0 @X0 1 a ]
+[; ;fat_access.c: 687: uint8 item=0;
+[e = _item -> -> 0 `i `uc ]
+"688
+[v _recordoffset `us ~T0 @X0 1 a ]
+[; ;fat_access.c: 688: uint16 recordoffset = 0;
+[e = _recordoffset -> -> 0 `i `us ]
+"689
+[v _x `i ~T0 @X0 1 a ]
+[; ;fat_access.c: 689: int x=0;
+[e = _x -> 0 `i ]
+"690
+[v _directoryEntry `*S2 ~T0 @X0 1 a ]
+[; ;fat_access.c: 690: struct fat_dir_entry *directoryEntry;
+[; ;fat_access.c: 693: if (!fs->disk_io.write_media)
+"693
+[e $ ! ! != . . *U _fs 14 1 -> -> 0 `i `*F171 144  ]
+[; ;fat_access.c: 694: return 0;
+"694
+[e ) -> 0 `i ]
+[e $UE 143  ]
+[e :U 144 ]
+[; ;fat_access.c: 697: while (1)
+"697
+[e :U 146 ]
+[; ;fat_access.c: 698: {
+"698
+{
+[; ;fat_access.c: 700: if (fatfs_sector_reader(fs, Cluster, x++, 0))
+"700
+[e $ ! != ( _fatfs_sector_reader (4 , , , _fs _Cluster -> -> ++ _x -> 1 `i `l `ul -> -> 0 `i `*uc -> 0 `i 148  ]
+[; ;fat_access.c: 701: {
+"701
+{
+[; ;fat_access.c: 703: for (item = 0; item < (512 / 32); item++)
+"703
+{
+[e = _item -> -> 0 `i `uc ]
+[e $ < -> _item `i / -> 512 `i -> 32 `i 149  ]
+[e $U 150  ]
+"704
+[e :U 149 ]
+[; ;fat_access.c: 704: {
+{
+[; ;fat_access.c: 706: recordoffset = 32 * item;
+"706
+[e = _recordoffset -> * -> 32 `i -> _item `i `us ]
+[; ;fat_access.c: 709: directoryEntry = (struct fat_dir_entry*)(fs->currentsector.sector+recordoffset);
+"709
+[e = _directoryEntry -> + &U . . *U _fs 17 0 * -> _recordoffset `ux -> -> # *U &U . . *U _fs 17 0 `ui `ux `*S2 ]
+[; ;fat_access.c: 713: if (fatfs_entry_lfn_text(directoryEntry) )
+"713
+[e $ ! != ( _fatfs_entry_lfn_text (1 _directoryEntry -> 0 `i 152  ]
+[; ;fat_access.c: 714: ;
+"714
+[e $U 153  ]
+"717
+[e :U 152 ]
+[; ;fat_access.c: 717: else if (fatfs_entry_lfn_invalid(directoryEntry) )
+[e $ ! != ( _fatfs_entry_lfn_invalid (1 _directoryEntry -> 0 `i 154  ]
+[; ;fat_access.c: 718: ;
+"718
+[e $U 155  ]
+"721
+[e :U 154 ]
+[; ;fat_access.c: 721: else
+[; ;fat_access.c: 723: if (fatfs_entry_sfn_only(directoryEntry) )
+"723
+[e $ ! != ( _fatfs_entry_sfn_only (1 _directoryEntry -> 0 `i 156  ]
+[; ;fat_access.c: 724: {
+"724
+{
+[; ;fat_access.c: 725: if (strncmp((const char *)directoryEntry->Name, shortname, 11)==0)
+"725
+[e $ ! == ( _strncmp (3 , , -> &U . *U _directoryEntry 0 `*Cuc -> _shortname `*Cuc -> -> 11 `i `ui -> 0 `i 157  ]
+[; ;fat_access.c: 726: {
+"726
+{
+[; ;fat_access.c: 728: directoryEntry->Name[0] = 0xE5;
+"728
+[e = *U + &U . *U _directoryEntry 0 * -> -> -> 0 `i `ui `ux -> -> # *U &U . *U _directoryEntry 0 `ui `ux -> -> 229 `i `uc ]
+[; ;fat_access.c: 736: memcpy((uint8*)(fs->currentsector.sector+recordoffset), (uint8*)directoryEntry, sizeof(struct fat_dir_entry));
+"736
+[e ( _memcpy (3 , , -> + &U . . *U _fs 17 0 * -> _recordoffset `ux -> -> # *U &U . . *U _fs 17 0 `ui `ux `*v -> -> _directoryEntry `*uc `*Cv -> # `S2 `ui ]
+[; ;fat_access.c: 739: return fs->disk_io.write_media(fs->currentsector.address, fs->currentsector.sector, 1);
+"739
+[e ) ( *U . . *U _fs 14 1 (3 , , . . *U _fs 17 1 &U . . *U _fs 17 0 -> -> -> 1 `i `l `ul ]
+[e $UE 143  ]
+"740
+}
+[e :U 157 ]
+"741
+}
+[e :U 156 ]
+"742
+[e :U 155 ]
+[e :U 153 ]
+}
+"703
+[e ++ _item -> -> 1 `i `uc ]
+[e $ < -> _item `i / -> 512 `i -> 32 `i 149  ]
+[e :U 150 ]
+"742
+}
+"743
+}
+[; ;fat_access.c: 740: }
+[; ;fat_access.c: 741: }
+[; ;fat_access.c: 742: }
+[; ;fat_access.c: 743: }
+[e $U 158  ]
+"744
+[e :U 148 ]
+[; ;fat_access.c: 744: else
+[; ;fat_access.c: 745: break;
+"745
+[e $U 147  ]
+[e :U 158 ]
+"746
+}
+[e :U 145 ]
+"697
+[e $U 146  ]
+[e :U 147 ]
+[; ;fat_access.c: 746: }
+[; ;fat_access.c: 748: return 0;
+"748
+[e ) -> 0 `i ]
+[e $UE 143  ]
+[; ;fat_access.c: 749: }
+"749
+[e :UE 143 ]
+}
+"755
+[v _fatfs_list_directory_start `(v ~T0 @X0 1 ef3`*S5`*S6`ul ]
+"756
+{
+[; ;fat_access.c: 755: void fatfs_list_directory_start(struct fatfs *fs, struct fs_dir_list_status *dirls, uint32 StartCluster)
+[; ;fat_access.c: 756: {
+[e :U _fatfs_list_directory_start ]
+"755
+[v _fs `*S5 ~T0 @X0 1 r1 ]
+[v _dirls `*S6 ~T0 @X0 1 r2 ]
+[v _StartCluster `ul ~T0 @X0 1 r3 ]
+"756
+[f ]
+[; ;fat_access.c: 757: dirls->cluster = StartCluster;
+"757
+[e = . *U _dirls 1 _StartCluster ]
+[; ;fat_access.c: 758: dirls->sector = 0;
+"758
+[e = . *U _dirls 0 -> -> -> 0 `i `l `ul ]
+[; ;fat_access.c: 759: dirls->offset = 0;
+"759
+[e = . *U _dirls 2 -> -> 0 `i `uc ]
+[; ;fat_access.c: 760: }
+"760
+[e :UE 159 ]
+}
+"767
+[v _fatfs_list_directory_next `(i ~T0 @X0 1 ef3`*S5`*S6`*S7 ]
+"768
+{
+[; ;fat_access.c: 767: int fatfs_list_directory_next(struct fatfs *fs, struct fs_dir_list_status *dirls, struct fs_dir_ent *entry)
+[; ;fat_access.c: 768: {
+[e :U _fatfs_list_directory_next ]
+"767
+[v _fs `*S5 ~T0 @X0 1 r1 ]
+[v _dirls `*S6 ~T0 @X0 1 r2 ]
+[v _entry `*S7 ~T0 @X0 1 r3 ]
+"768
+[f ]
+"769
+[v _i `uc ~T0 @X0 1 a ]
+[v _item `uc ~T0 @X0 1 a ]
+"770
+[v _recordoffset `us ~T0 @X0 1 a ]
+"771
+[v _directoryEntry `*S2 ~T0 @X0 1 a ]
+"772
+[v _long_filename `*uc ~T0 @X0 1 a ]
+[; ;fat_access.c: 769: uint8 i,item;
+[; ;fat_access.c: 770: uint16 recordoffset;
+[; ;fat_access.c: 771: struct fat_dir_entry *directoryEntry;
+[; ;fat_access.c: 772: char *long_filename = (0);
+[e = _long_filename -> -> 0 `i `*uc ]
+"773
+[v _short_filename `uc ~T0 @X0 -> 13 `i a ]
+"774
+[v _lfn `S8 ~T0 @X0 1 a ]
+"775
+[v _dotRequired `i ~T0 @X0 1 a ]
+[; ;fat_access.c: 773: char short_filename[13];
+[; ;fat_access.c: 774: struct lfn_cache lfn;
+[; ;fat_access.c: 775: int dotRequired = 0;
+[e = _dotRequired -> 0 `i ]
+"776
+[v _result `i ~T0 @X0 1 a ]
+[; ;fat_access.c: 776: int result = 0;
+[e = _result -> 0 `i ]
+[; ;fat_access.c: 779: fatfs_lfn_cache_init(&lfn, 0);
+"779
+[e ( _fatfs_lfn_cache_init (2 , &U _lfn -> 0 `i ]
+[; ;fat_access.c: 781: while (1)
+"781
+[e :U 162 ]
+[; ;fat_access.c: 782: {
+"782
+{
+[; ;fat_access.c: 784: if (fatfs_sector_reader(fs, dirls->cluster, dirls->sector, 0))
+"784
+[e $ ! != ( _fatfs_sector_reader (4 , , , _fs . *U _dirls 1 . *U _dirls 0 -> -> 0 `i `*uc -> 0 `i 164  ]
+[; ;fat_access.c: 785: {
+"785
+{
+[; ;fat_access.c: 787: for (item = dirls->offset; item < (512 / 32); item++)
+"787
+{
+[e = _item . *U _dirls 2 ]
+[e $ < -> _item `i / -> 512 `i -> 32 `i 165  ]
+[e $U 166  ]
+"788
+[e :U 165 ]
+[; ;fat_access.c: 788: {
+{
+[; ;fat_access.c: 790: recordoffset = 32 * item;
+"790
+[e = _recordoffset -> * -> 32 `i -> _item `i `us ]
+[; ;fat_access.c: 793: directoryEntry = (struct fat_dir_entry*)(fs->currentsector.sector+recordoffset);
+"793
+[e = _directoryEntry -> + &U . . *U _fs 17 0 * -> _recordoffset `ux -> -> # *U &U . . *U _fs 17 0 `ui `ux `*S2 ]
+[; ;fat_access.c: 797: if ( fatfs_entry_lfn_text(directoryEntry) )
+"797
+[e $ ! != ( _fatfs_entry_lfn_text (1 _directoryEntry -> 0 `i 168  ]
+[; ;fat_access.c: 798: fatfs_lfn_cache_entry(&lfn, fs->currentsector.sector+recordoffset);
+"798
+[e ( _fatfs_lfn_cache_entry (2 , &U _lfn + &U . . *U _fs 17 0 * -> _recordoffset `ux -> -> # *U &U . . *U _fs 17 0 `ui `ux ]
+[e $U 169  ]
+"801
+[e :U 168 ]
+[; ;fat_access.c: 801: else if ( fatfs_entry_lfn_invalid(directoryEntry) )
+[e $ ! != ( _fatfs_entry_lfn_invalid (1 _directoryEntry -> 0 `i 170  ]
+[; ;fat_access.c: 802: fatfs_lfn_cache_init(&lfn, 0);
+"802
+[e ( _fatfs_lfn_cache_init (2 , &U _lfn -> 0 `i ]
+[e $U 171  ]
+"805
+[e :U 170 ]
+[; ;fat_access.c: 805: else if (fatfs_entry_lfn_exists(&lfn, directoryEntry) )
+[e $ ! != ( _fatfs_entry_lfn_exists (2 , &U _lfn _directoryEntry -> 0 `i 172  ]
+[; ;fat_access.c: 806: {
+"806
+{
+[; ;fat_access.c: 808: long_filename = fatfs_lfn_cache_get(&lfn);
+"808
+[e = _long_filename ( _fatfs_lfn_cache_get (1 &U _lfn ]
+[; ;fat_access.c: 809: strncpy(entry->filename, long_filename, 10-1);
+"809
+[e ( _strncpy (3 , , &U . *U _entry 0 -> _long_filename `*Cuc -> - -> 10 `i -> 1 `i `ui ]
+[; ;fat_access.c: 811: if (fatfs_entry_is_dir(directoryEntry))
+"811
+[e $ ! != ( _fatfs_entry_is_dir (1 _directoryEntry -> 0 `i 173  ]
+[; ;fat_access.c: 812: entry->is_dir = 1;
+"812
+[e = . *U _entry 1 -> -> 1 `i `uc ]
+[e $U 174  ]
+"813
+[e :U 173 ]
+[; ;fat_access.c: 813: else
+[; ;fat_access.c: 814: entry->is_dir = 0;
+"814
+[e = . *U _entry 1 -> -> 0 `i `uc ]
+[e :U 174 ]
+[; ;fat_access.c: 825: entry->size = (directoryEntry->FileSize);
+"825
+[e = . *U _entry 3 . *U _directoryEntry 11 ]
+[; ;fat_access.c: 826: entry->cluster = ((directoryEntry->FstClusHI)<<16) | (directoryEntry->FstClusLO);
+"826
+[e = . *U _entry 2 -> | << -> . *U _directoryEntry 7 `ui -> 16 `i -> . *U _directoryEntry 10 `ui `ul ]
+[; ;fat_access.c: 829: dirls->offset = item + 1;
+"829
+[e = . *U _dirls 2 -> + -> _item `i -> 1 `i `uc ]
+[; ;fat_access.c: 830: result = 1;
+"830
+[e = _result -> 1 `i ]
+[; ;fat_access.c: 831: return 1;
+"831
+[e ) -> 1 `i ]
+[e $UE 160  ]
+"832
+}
+[; ;fat_access.c: 832: }
+[e $U 175  ]
+"834
+[e :U 172 ]
+[; ;fat_access.c: 834: else
+[; ;fat_access.c: 836: if ( fatfs_entry_sfn_only(directoryEntry) )
+"836
+[e $ ! != ( _fatfs_entry_sfn_only (1 _directoryEntry -> 0 `i 176  ]
+[; ;fat_access.c: 837: {
+"837
+{
+[; ;fat_access.c: 838: fatfs_lfn_cache_init(&lfn, 0);
+"838
+[e ( _fatfs_lfn_cache_init (2 , &U _lfn -> 0 `i ]
+[; ;fat_access.c: 840: memset(short_filename, 0, sizeof(short_filename));
+"840
+[e ( _memset (3 , , -> &U _short_filename `*v -> 0 `i -> # _short_filename `ui ]
+[; ;fat_access.c: 843: for (i=0; i<8; i++)
+"843
+{
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 8 `i 177  ]
+[e $U 178  ]
+"844
+[e :U 177 ]
+[; ;fat_access.c: 844: short_filename[i] = directoryEntry->Name[i];
+[e = *U + &U _short_filename * -> _i `ux -> -> # *U &U _short_filename `ui `ux *U + &U . *U _directoryEntry 0 * -> _i `ux -> -> # *U &U . *U _directoryEntry 0 `ui `ux ]
+"843
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 8 `i 177  ]
+[e :U 178 ]
+"844
+}
+[; ;fat_access.c: 847: dotRequired = 0;
+"847
+[e = _dotRequired -> 0 `i ]
+[; ;fat_access.c: 848: for (i=8; i<11; i++)
+"848
+{
+[e = _i -> -> 8 `i `uc ]
+[e $ < -> _i `i -> 11 `i 180  ]
+[e $U 181  ]
+"849
+[e :U 180 ]
+[; ;fat_access.c: 849: {
+{
+[; ;fat_access.c: 850: short_filename[i+1] = directoryEntry->Name[i];
+"850
+[e = *U + &U _short_filename * -> -> + -> _i `i -> 1 `i `ui `ux -> -> # *U &U _short_filename `ui `ux *U + &U . *U _directoryEntry 0 * -> _i `ux -> -> # *U &U . *U _directoryEntry 0 `ui `ux ]
+[; ;fat_access.c: 851: if (directoryEntry->Name[i] != ' ')
+"851
+[e $ ! != -> *U + &U . *U _directoryEntry 0 * -> _i `ux -> -> # *U &U . *U _directoryEntry 0 `ui `ux `ui -> 32 `ui 183  ]
+[; ;fat_access.c: 852: dotRequired = 1;
+"852
+[e = _dotRequired -> 1 `i ]
+[e :U 183 ]
+"853
+}
+"848
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 11 `i 180  ]
+[e :U 181 ]
+"853
+}
+[; ;fat_access.c: 853: }
+[; ;fat_access.c: 856: if (dotRequired)
+"856
+[e $ ! != _dotRequired -> 0 `i 184  ]
+[; ;fat_access.c: 857: {
+"857
+{
+[; ;fat_access.c: 859: if (short_filename[0]!='.')
+"859
+[e $ ! != -> *U + &U _short_filename * -> -> -> 0 `i `ui `ux -> -> # *U &U _short_filename `ui `ux `ui -> 46 `ui 185  ]
+[; ;fat_access.c: 860: short_filename[8] = '.';
+"860
+[e = *U + &U _short_filename * -> -> -> 8 `i `ui `ux -> -> # *U &U _short_filename `ui `ux -> -> 46 `ui `uc ]
+[e $U 186  ]
+"861
+[e :U 185 ]
+[; ;fat_access.c: 861: else
+[; ;fat_access.c: 862: short_filename[8] = ' ';
+"862
+[e = *U + &U _short_filename * -> -> -> 8 `i `ui `ux -> -> # *U &U _short_filename `ui `ux -> -> 32 `ui `uc ]
+[e :U 186 ]
+"863
+}
+[; ;fat_access.c: 863: }
+[e $U 187  ]
+"864
+[e :U 184 ]
+[; ;fat_access.c: 864: else
+[; ;fat_access.c: 865: short_filename[8] = ' ';
+"865
+[e = *U + &U _short_filename * -> -> -> 8 `i `ui `ux -> -> # *U &U _short_filename `ui `ux -> -> 32 `ui `uc ]
+[e :U 187 ]
+[; ;fat_access.c: 867: fatfs_get_sfn_display_name(entry->filename, short_filename);
+"867
+[e ( _fatfs_get_sfn_display_name (2 , &U . *U _entry 0 &U _short_filename ]
+[; ;fat_access.c: 869: if (fatfs_entry_is_dir(directoryEntry))
+"869
+[e $ ! != ( _fatfs_entry_is_dir (1 _directoryEntry -> 0 `i 188  ]
+[; ;fat_access.c: 870: entry->is_dir = 1;
+"870
+[e = . *U _entry 1 -> -> 1 `i `uc ]
+[e $U 189  ]
+"871
+[e :U 188 ]
+[; ;fat_access.c: 871: else
+[; ;fat_access.c: 872: entry->is_dir = 0;
+"872
+[e = . *U _entry 1 -> -> 0 `i `uc ]
+[e :U 189 ]
+[; ;fat_access.c: 883: entry->size = (directoryEntry->FileSize);
+"883
+[e = . *U _entry 3 . *U _directoryEntry 11 ]
+[; ;fat_access.c: 884: entry->cluster = ((directoryEntry->FstClusHI)<<16) | (directoryEntry->FstClusLO);
+"884
+[e = . *U _entry 2 -> | << -> . *U _directoryEntry 7 `ui -> 16 `i -> . *U _directoryEntry 10 `ui `ul ]
+[; ;fat_access.c: 887: dirls->offset = item + 1;
+"887
+[e = . *U _dirls 2 -> + -> _item `i -> 1 `i `uc ]
+[; ;fat_access.c: 888: result = 1;
+"888
+[e = _result -> 1 `i ]
+[; ;fat_access.c: 889: return 1;
+"889
+[e ) -> 1 `i ]
+[e $UE 160  ]
+"890
+}
+[e :U 176 ]
+"891
+[e :U 175 ]
+[e :U 171 ]
+[e :U 169 ]
+}
+"787
+[e ++ _item -> -> 1 `i `uc ]
+[e $ < -> _item `i / -> 512 `i -> 32 `i 165  ]
+[e :U 166 ]
+"891
+}
+[; ;fat_access.c: 890: }
+[; ;fat_access.c: 891: }
+[; ;fat_access.c: 894: dirls->sector++;
+"894
+[e ++ . *U _dirls 0 -> -> -> 1 `i `l `ul ]
+[; ;fat_access.c: 895: dirls->offset = 0;
+"895
+[e = . *U _dirls 2 -> -> 0 `i `uc ]
+"896
+}
+[; ;fat_access.c: 896: }
+[e $U 190  ]
+"897
+[e :U 164 ]
+[; ;fat_access.c: 897: else
+[; ;fat_access.c: 898: break;
+"898
+[e $U 163  ]
+[e :U 190 ]
+"899
+}
+[e :U 161 ]
+"781
+[e $U 162  ]
+[e :U 163 ]
+[; ;fat_access.c: 899: }
+[; ;fat_access.c: 901: return result;
+"901
+[e ) _result ]
+[e $UE 160  ]
+[; ;fat_access.c: 902: }
+"902
+[e :UE 160 ]
+}
+[p f _printf 12845184 ]
+[a 2C 32 84 121 112 101 32 61 37 115 0 ]
+[a 4C 70 65 84 49 54 0 ]
+[a 3C 70 65 84 51 50 0 ]
+[a 7C 32 67 108 117 115 116 101 114 32 66 101 103 105 110 32 76 66 65 32 61 32 48 120 37 120 13 10 0 ]
+[a 6C 32 70 65 84 32 66 101 103 105 110 32 76 66 65 32 61 32 48 120 37 120 13 10 0 ]
+[a 5C 32 82 111 111 116 32 68 105 114 32 70 105 114 115 116 32 67 108 117 115 116 101 114 32 61 32 37 120 13 10 0 ]
+[a 8C 32 83 101 99 116 111 114 115 32 80 101 114 32 67 108 117 115 116 101 114 32 61 32 37 100 13 10 0 ]
+[a 1C 70 65 84 32 100 101 116 97 105 108 115 58 13 10 0 ]

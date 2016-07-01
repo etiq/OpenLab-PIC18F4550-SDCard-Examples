@@ -1,0 +1,39 @@
+
+# 1 "time.c"
+
+
+
+
+typedef int ptrdiff_t;
+typedef unsigned size_t;
+typedef unsigned short wchar_t;
+
+
+
+
+typedef long time_t;
+struct tm {
+int tm_sec;
+int tm_min;
+int tm_hour;
+int tm_mday;
+int tm_mon;
+int tm_year;
+int tm_wday;
+int tm_yday;
+int tm_isdst;
+};
+
+# 31
+extern int time_zone;
+
+# 36
+extern time_t time(time_t *);
+extern int stime(time_t *);
+extern char * asctime(const struct tm *);
+extern char * ctime(const time_t *);
+extern struct tm * gmtime(const time_t *);
+extern struct tm * localtime(const time_t *);
+extern time_t mktime(struct tm *);
+extern size_t strftime(char *, size_t, const char *, const struct tm *);
+

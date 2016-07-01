@@ -1,0 +1,25 @@
+Version 3.2 HI-TECH Software Intermediate Code
+[; ;time.c: 5: typedef int ptrdiff_t;
+[; ;time.c: 6: typedef unsigned size_t;
+[; ;time.c: 7: typedef unsigned short wchar_t;
+[; ;time.c: 12: typedef long time_t;
+[; ;time.c: 13: struct tm {
+[; ;time.c: 14: int tm_sec;
+[; ;time.c: 15: int tm_min;
+[; ;time.c: 16: int tm_hour;
+[; ;time.c: 17: int tm_mday;
+[; ;time.c: 18: int tm_mon;
+[; ;time.c: 19: int tm_year;
+[; ;time.c: 20: int tm_wday;
+[; ;time.c: 21: int tm_yday;
+[; ;time.c: 22: int tm_isdst;
+[; ;time.c: 23: };
+[; ;time.c: 31: extern int time_zone;
+[; ;time.c: 36: extern time_t time(time_t *);
+[; ;time.c: 37: extern int stime(time_t *);
+[; ;time.c: 38: extern char * asctime(const struct tm *);
+[; ;time.c: 39: extern char * ctime(const time_t *);
+[; ;time.c: 40: extern struct tm * gmtime(const time_t *);
+[; ;time.c: 41: extern struct tm * localtime(const time_t *);
+[; ;time.c: 42: extern time_t mktime(struct tm *);
+[; ;time.c: 43: extern size_t strftime(char *, size_t, const char *, const struct tm *);

@@ -1,0 +1,569 @@
+
+# 1 "fat_misc.c"
+
+# 4 "C:\Program Files (x86)\Microchip\xc8\v1.32\include\stdlib.h"
+typedef int ptrdiff_t;
+typedef unsigned size_t;
+typedef unsigned short wchar_t;
+
+# 16
+extern int errno;
+
+# 27
+typedef struct {
+int rem;
+int quot;
+} div_t;
+typedef struct {
+unsigned rem;
+unsigned quot;
+} udiv_t;
+typedef struct {
+long quot;
+long rem;
+} ldiv_t;
+typedef struct {
+unsigned long quot;
+unsigned long rem;
+} uldiv_t;
+
+# 65
+extern double atof(const char *);
+extern double strtod(const char *, const char **);
+extern int atoi(const char *);
+extern unsigned xtoi(const char *);
+extern long atol(const char *);
+extern long strtol(const char *, char **, int);
+
+extern int rand(void);
+extern void srand(unsigned int);
+extern void * calloc(size_t, size_t);
+extern div_t div(int numer, int denom);
+extern udiv_t udiv(unsigned numer, unsigned denom);
+extern ldiv_t ldiv(long numer, long denom);
+extern uldiv_t uldiv(unsigned long numer,unsigned long denom);
+extern unsigned long _lrotl(unsigned long value, unsigned int shift);
+extern unsigned long _lrotr(unsigned long value, unsigned int shift);
+extern unsigned int _rotl(unsigned int value, unsigned int shift);
+extern unsigned int _rotr(unsigned int value, unsigned int shift);
+
+
+
+
+extern void * malloc(size_t);
+extern void free(void *);
+extern void * realloc(void *, size_t);
+
+extern void abort(void);
+extern void exit(int);
+extern int atexit(void (*)(void));
+extern char * getenv(const char *);
+extern char ** environ;
+extern int system(char *);
+extern void qsort(void *, size_t, size_t, int (*)(const void *, const void *));
+extern void * bsearch(const void *, void *, size_t, size_t, int(*)(const void *, const void *));
+extern int abs(int);
+extern long labs(long);
+
+
+extern char * itoa(char * buf, int val, int base);
+extern char * utoa(char * buf, unsigned val, int base);
+
+
+
+
+extern char * ltoa(char * buf, long val, int base);
+extern char * ultoa(char * buf, unsigned long val, int base);
+
+extern char * ftoa(float f, int * status);
+
+# 22 "C:\Program Files (x86)\Microchip\xc8\v1.32\include\string.h"
+extern void * memcpy(void *, const void *, size_t);
+extern void * memmove(void *, const void *, size_t);
+extern void * memset(void *, int, size_t);
+
+# 42
+extern char * strcat(char *, const char *);
+extern char * strcpy(char *, const char *);
+extern char * strncat(char *, const char *, size_t);
+extern char * strncpy(char *, const char *, size_t);
+extern char * strdup(const char *);
+extern char * strtok(char *, const char *);
+
+
+extern int memcmp(const void *, const void *, size_t);
+extern int strcmp(const char *, const char *);
+extern int stricmp(const char *, const char *);
+extern int strncmp(const char *, const char *, size_t);
+extern int strnicmp(const char *, const char *, size_t);
+extern void * memchr(const void *, int, size_t);
+extern size_t strcspn(const char *, const char *);
+extern char * strpbrk(const char *, const char *);
+extern size_t strspn(const char *, const char *);
+extern char * strstr(const char *, const char *);
+extern char * stristr(const char *, const char *);
+extern char * strerror(int);
+extern size_t strlen(const char *);
+extern char * strchr(const char *, int);
+extern char * strichr(const char *, int);
+extern char * strrchr(const char *, int);
+extern char * strrichr(const char *, int);
+
+# 7 "C:\Program Files (x86)\Microchip\xc8\v1.32\include\stdarg.h"
+typedef void * va_list[1];
+
+#pragma intrinsic(__va_start)
+extern void * __va_start(void);
+
+#pragma intrinsic(__va_arg)
+extern void * __va_arg(void *, ...);
+
+# 23 "C:\Program Files (x86)\Microchip\xc8\v1.32\include\stdio.h"
+extern int errno;
+
+# 54
+struct __prbuf
+{
+char * ptr;
+void (* func)(char);
+};
+
+# 17 "C:\Program Files (x86)\Microchip\xc8\v1.32\include\conio.h"
+extern int errno;
+
+
+extern void init_uart(void);
+
+extern char getch(void);
+extern char getche(void);
+extern void putch(char);
+extern void ungetch(char);
+
+extern __bit kbhit(void);
+
+# 31
+extern char * cgets(char *);
+extern void cputs(const char *);
+
+# 99 "C:\Program Files (x86)\Microchip\xc8\v1.32\include\stdio.h"
+extern int cprintf(char *, ...);
+#pragma printf_check(cprintf)
+
+
+
+extern int _doprnt(struct __prbuf *, const register char *, register va_list);
+
+
+# 191
+#pragma printf_check(vprintf) const
+#pragma printf_check(vsprintf) const
+
+extern char * gets(char *);
+extern int puts(const char *);
+extern int scanf(const char *, ...) __attribute__((unsupported("scanf() is not supported by this compiler")));
+extern int sscanf(const char *, const char *, ...) __attribute__((unsupported("sscanf() is not supported by this compiler")));
+extern int vprintf(const char *, va_list) __attribute__((unsupported("vprintf() is not supported by this compiler")));
+extern int vsprintf(char *, const char *, va_list) __attribute__((unsupported("vsprintf() is not supported by this compiler")));
+extern int vscanf(const char *, va_list ap) __attribute__((unsupported("vscanf() is not supported by this compiler")));
+extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupported("vsscanf() is not supported by this compiler")));
+
+#pragma printf_check(printf) const
+#pragma printf_check(sprintf) const
+extern int sprintf(char *, const char *, ...);
+extern int printf(const char *, ...);
+
+# 15 "fat_types.h"
+typedef unsigned char uint8;
+typedef unsigned short uint16;
+
+# 23
+typedef unsigned long uint32;
+
+# 110 "fat_defs.h"
+
+struct fat_dir_entry 
+{
+uint8 Name[11];
+uint8 Attr;
+uint8 NTRes;
+uint8 CrtTimeTenth;
+uint8 CrtTime[2];
+uint8 CrtDate[2];
+uint8 LstAccDate[2];
+uint16 FstClusHI;
+uint8 WrtTime[2];
+uint8 WrtDate[2];
+uint16 FstClusLO;
+uint32 FileSize;
+} ;
+
+
+# 30 "fat_misc.h"
+struct lfn_cache
+{
+
+
+uint8 String[10][5];
+uint8 Null;
+
+uint8 no_of_strings;
+};
+
+
+
+
+void fatfs_lfn_cache_init(struct lfn_cache *lfn, int wipeTable);
+void fatfs_lfn_cache_entry(struct lfn_cache *lfn, uint8 *entryBuffer);
+char* fatfs_lfn_cache_get(struct lfn_cache *lfn);
+int fatfs_entry_lfn_text(struct fat_dir_entry *entry);
+int fatfs_entry_lfn_invalid(struct fat_dir_entry *entry);
+int fatfs_entry_lfn_exists(struct lfn_cache *lfn, struct fat_dir_entry *entry);
+int fatfs_entry_sfn_only(struct fat_dir_entry *entry);
+int fatfs_entry_is_dir(struct fat_dir_entry *entry);
+int fatfs_entry_is_file(struct fat_dir_entry *entry);
+int fatfs_lfn_entries_required(char *filename);
+void fatfs_filename_to_lfn(char *filename, uint8 *buffer, int entry, uint8 sfnChk);
+void fatfs_sfn_create_entry(char *shortfilename, uint32 size, uint32 startCluster, struct fat_dir_entry *entry, int dir);
+int fatfs_lfn_create_sfn(char *sfn_output, char *filename);
+int fatfs_lfn_generate_tail(char *sfn_output, char *sfn_input, uint32 tailNum);
+void fatfs_convert_from_fat_time(uint16 fat_time, int *hours, int *minutes, int *seconds);
+void fatfs_convert_from_fat_date(uint16 fat_date, int *day, int *month, int *year);
+uint16 fatfs_convert_to_fat_time(int hours, int minutes, int seconds);
+uint16 fatfs_convert_to_fat_date(int day, int month, int year);
+void fatfs_print_sector(uint32 sector, uint8 *data);
+
+# 39 "fat_misc.c"
+void fatfs_lfn_cache_init(struct lfn_cache *lfn, int wipeTable)
+{
+int i = 0;
+
+lfn->no_of_strings = 0;
+
+
+
+
+if (wipeTable)
+for (i=0;i<10;i++)
+memset(lfn->String[i], 0x00, 5);
+
+}
+
+# 58
+void fatfs_lfn_cache_entry(struct lfn_cache *lfn, uint8 *entryBuffer)
+{
+uint8 LFNIndex, i;
+LFNIndex = entryBuffer[0] & 0x1F;
+
+
+if (LFNIndex > 10)
+return ;
+
+
+if (LFNIndex == 0)
+return ;
+
+if (lfn->no_of_strings == 0)
+lfn->no_of_strings = LFNIndex;
+
+lfn->String[LFNIndex-1][0] = entryBuffer[1];
+lfn->String[LFNIndex-1][1] = entryBuffer[3];
+lfn->String[LFNIndex-1][2] = entryBuffer[5];
+lfn->String[LFNIndex-1][3] = entryBuffer[7];
+lfn->String[LFNIndex-1][4] = entryBuffer[9];
+lfn->String[LFNIndex-1][5] = entryBuffer[0x0E];
+lfn->String[LFNIndex-1][6] = entryBuffer[0x10];
+lfn->String[LFNIndex-1][7] = entryBuffer[0x12];
+lfn->String[LFNIndex-1][8] = entryBuffer[0x14];
+lfn->String[LFNIndex-1][9] = entryBuffer[0x16];
+lfn->String[LFNIndex-1][10] = entryBuffer[0x18];
+lfn->String[LFNIndex-1][11] = entryBuffer[0x1C];
+lfn->String[LFNIndex-1][12] = entryBuffer[0x1E];
+
+for (i=0; i<5; i++)
+if (lfn->String[LFNIndex-1][i]==0xFF)
+lfn->String[LFNIndex-1][i] = 0x20;
+}
+
+# 97
+char* fatfs_lfn_cache_get(struct lfn_cache *lfn)
+{
+
+if (lfn->no_of_strings == 10)
+lfn->Null = '\0';
+else if (lfn->no_of_strings)
+lfn->String[lfn->no_of_strings][0] = '\0';
+else
+lfn->String[0][0] = '\0';
+
+return (char*)&lfn->String[0][0];
+}
+
+# 114
+int fatfs_entry_lfn_text(struct fat_dir_entry *entry)
+{
+if ((entry->Attr & 0x0F) == 0x0F)
+return 1;
+else
+return 0;
+}
+
+# 126
+int fatfs_entry_lfn_invalid(struct fat_dir_entry *entry)
+{
+if ( (entry->Name[0]==0x00) ||
+(entry->Name[0]==0xE5)||
+(entry->Attr==0x08) ||
+(entry->Attr & 0x06) )
+return 1;
+else
+return 0;
+}
+
+# 141
+int fatfs_entry_lfn_exists(struct lfn_cache *lfn, struct fat_dir_entry *entry)
+{
+if ( (entry->Attr!=0x0F) &&
+(entry->Name[0]!=0x00) &&
+(entry->Name[0]!=0xE5) &&
+(entry->Attr!=0x08) &&
+(!(entry->Attr&0x06)) &&
+(lfn->no_of_strings) )
+return 1;
+else
+return 0;
+}
+
+
+
+
+int fatfs_entry_sfn_only(struct fat_dir_entry *entry)
+{
+if ( (entry->Attr!=0x0F) &&
+(entry->Name[0]!=0x00) &&
+(entry->Name[0]!=0xE5) &&
+(entry->Attr!=0x08) &&
+(!(entry->Attr&0x06)) )
+return 1;
+else
+return 0;
+}
+
+
+
+
+int fatfs_entry_is_dir(struct fat_dir_entry *entry)
+{
+if (entry->Attr & 0x10)
+return 1;
+else
+return 0;
+}
+
+
+
+int fatfs_entry_is_file(struct fat_dir_entry *entry)
+{
+if (entry->Attr & 0x20)
+return 1;
+else
+return 0;
+}
+
+
+
+
+int fatfs_lfn_entries_required(char *filename)
+{
+int length = (int)strlen(filename);
+
+if (length)
+return (length + 5 - 1) / 5;
+else
+return 0;
+}
+
+# 207
+void fatfs_filename_to_lfn(char *filename, uint8 *buffer, int entry, uint8 sfnChk)
+{
+int i;
+int nameIndexes[5] = {1,3,5,7,9};
+
+
+int length = (int)strlen(filename);
+int entriesRequired = fatfs_lfn_entries_required(filename);
+
+
+int start = entry * 5;
+
+
+memset(buffer, 0x00, 32);
+
+
+buffer[0] = (uint8)(((entriesRequired-1)==entry)?(0x40|(entry+1)):(entry+1));
+
+
+buffer[11] = 0x0F;
+
+
+buffer[13] = sfnChk;
+
+
+for (i=0;i<5;i++)
+{
+if ( (start+i) < length )
+buffer[nameIndexes[i]] = filename[start+i];
+else if ( (start+i) == length )
+buffer[nameIndexes[i]] = 0x00;
+else
+{
+buffer[nameIndexes[i]] = 0xFF;
+buffer[nameIndexes[i]+1] = 0xFF;
+}
+}
+}
+
+# 250
+void fatfs_sfn_create_entry(char *shortfilename, uint32 size, uint32 startCluster, struct fat_dir_entry *entry, int dir)
+{
+int i;
+
+
+for (i=0;i<11;i++)
+entry->Name[i] = shortfilename[i];
+
+
+entry->CrtTimeTenth = 0x00;
+entry->CrtTime[1] = entry->CrtTime[0] = 0x00;
+entry->CrtDate[1] = 0x00;
+entry->CrtDate[0] = 0x20;
+entry->LstAccDate[1] = 0x00;
+entry->LstAccDate[0] = 0x20;
+entry->WrtTime[1] = entry->WrtTime[0] = 0x00;
+entry->WrtDate[1] = 0x00;
+entry->WrtDate[0] = 0x20;
+
+if (!dir)
+entry->Attr = 0x20;
+else
+entry->Attr = 0x10;
+
+entry->NTRes = 0x00;
+
+entry->FstClusHI = ((uint16)((startCluster>>16) & 0xFFFF));
+entry->FstClusLO = ((uint16)((startCluster>>0) & 0xFFFF));
+entry->FileSize = (size);
+}
+
+# 285
+int fatfs_lfn_create_sfn(char *sfn_output, char *filename)
+{
+int i;
+int dotPos = -1;
+char ext[3];
+int pos;
+int len = (int)strlen(filename);
+
+
+if (filename[0]=='.')
+return 0;
+
+memset(sfn_output, ' ', 11);
+memset(ext, ' ', 3);
+
+
+for (i = 0; i< len; i++)
+{
+if (filename[i]=='.')
+dotPos = i;
+}
+
+
+if (dotPos!=-1)
+{
+
+for (i = (dotPos+1); i < (dotPos+1+3); i++)
+if (i<len)
+ext[i-(dotPos+1)] = filename[i];
+
+
+len = dotPos;
+}
+
+
+pos = 0;
+for (i=0;i<len;i++)
+{
+if ( (filename[i]!=' ') && (filename[i]!='.') )
+{
+if (filename[i] >= 'a' && filename[i] <= 'z')
+sfn_output[pos++] = filename[i] - 'a' + 'A';
+else
+sfn_output[pos++] = filename[i];
+}
+
+
+if (pos==8)
+break;
+}
+
+
+for (i=8;i<11;i++)
+{
+if (ext[i-8] >= 'a' && ext[i-8] <= 'z')
+sfn_output[i] = ext[i-8] - 'a' + 'A';
+else
+sfn_output[i] = ext[i-8];
+}
+
+return 1;
+}
+
+
+
+static void fatfs_itoa(uint32 num, char *s)
+{
+char* cp;
+char outbuf[12];
+const char digits[] = "0123456789ABCDEF";
+
+
+cp = outbuf;
+do
+{
+*cp++ = digits[(int)(num % 10)];
+}
+while ((num /= 10) > 0);
+
+*cp-- = 0;
+
+
+while (cp >= outbuf)
+*s++ = *cp--;
+
+*s = 0;
+}
+
+# 380
+int fatfs_lfn_generate_tail(char *sfn_output, char *sfn_input, uint32 tailNum)
+{
+int tail_chars;
+char tail_str[12];
+
+if (tailNum > 99999)
+return 0;
+
+
+memset(tail_str, 0x00, sizeof(tail_str));
+tail_str[0] = '~';
+fatfs_itoa(tailNum, tail_str+1);
+
+
+memcpy(sfn_output, sfn_input, 11);
+
+
+tail_chars = (int)strlen(tail_str);
+memcpy(sfn_output+(8-tail_chars), tail_str, tail_chars);
+
+return 1;
+}
+

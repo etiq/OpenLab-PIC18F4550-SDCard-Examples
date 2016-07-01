@@ -1,0 +1,440 @@
+
+# 1 "fat_string.c"
+
+# 4 "C:\Program Files (x86)\Microchip\xc8\v1.32\include\string.h"
+typedef int ptrdiff_t;
+typedef unsigned size_t;
+typedef unsigned short wchar_t;
+
+
+extern int errno;
+
+# 22
+extern void * memcpy(void *, const void *, size_t);
+extern void * memmove(void *, const void *, size_t);
+extern void * memset(void *, int, size_t);
+
+# 42
+extern char * strcat(char *, const char *);
+extern char * strcpy(char *, const char *);
+extern char * strncat(char *, const char *, size_t);
+extern char * strncpy(char *, const char *, size_t);
+extern char * strdup(const char *);
+extern char * strtok(char *, const char *);
+
+
+extern int memcmp(const void *, const void *, size_t);
+extern int strcmp(const char *, const char *);
+extern int stricmp(const char *, const char *);
+extern int strncmp(const char *, const char *, size_t);
+extern int strnicmp(const char *, const char *, size_t);
+extern void * memchr(const void *, int, size_t);
+extern size_t strcspn(const char *, const char *);
+extern char * strpbrk(const char *, const char *);
+extern size_t strspn(const char *, const char *);
+extern char * strstr(const char *, const char *);
+extern char * stristr(const char *, const char *);
+extern char * strerror(int);
+extern size_t strlen(const char *);
+extern char * strchr(const char *, int);
+extern char * strichr(const char *, int);
+extern char * strrchr(const char *, int);
+extern char * strrichr(const char *, int);
+
+# 16 "C:\Program Files (x86)\Microchip\xc8\v1.32\include\assert.h"
+extern void _fassert(int, const char *, const char *);
+
+# 7 "fat_string.h"
+int fatfs_total_path_levels(char *path);
+int fatfs_get_substring(char *Path, int levelreq, char *output, int max_len);
+int fatfs_split_path(char *FullPath, char *Path, int max_path, char *FileName, int max_filename);
+int fatfs_compare_names(char* strA, char* strB);
+int fatfs_string_ends_with_slash(char *path);
+int fatfs_get_sfn_display_name(char* out, char* in);
+int fatfs_get_extension(char* filename, char* out, int maxlen);
+int fatfs_create_path_string(char* path, char *filename, char* out, int maxlen);
+
+# 44 "fat_string.c"
+int fatfs_total_path_levels(char *path)
+{
+int levels = 0;
+char expectedchar;
+
+if (!path)
+return -1;
+
+
+
+
+if (*path == '/')
+{
+expectedchar = '/';
+path++;
+}
+else if (path[1] == ':' || path[2] == '\\')
+{
+expectedchar = '\\';
+path += 3;
+}
+else
+return -1;
+
+
+while (*path)
+{
+
+for (; *path; )
+{
+
+if (*path == expectedchar) { path++; break; }
+path++;
+}
+
+
+levels++;
+}
+
+
+return levels-1;
+}
+
+# 92
+int fatfs_get_substring(char *path, int levelreq, char *output, int max_len)
+{
+int i;
+int pathlen=0;
+int levels=0;
+int copypnt=0;
+char expectedchar;
+
+if (!path || max_len <= 0)
+return -1;
+
+
+
+
+if (*path == '/')
+{
+expectedchar = '/';
+path++;
+}
+else if (path[1] == ':' || path[2] == '\\')
+{
+expectedchar = '\\';
+path += 3;
+}
+else
+return -1;
+
+
+pathlen = (int)strlen (path);
+
+
+for (i = 0; i<pathlen; i++)
+{
+
+if (*path == expectedchar) levels++;
+
+
+if ( (levels == levelreq) && (*path != expectedchar) && (copypnt < (max_len-1)))
+output[copypnt++] = *path;
+
+
+path++;
+}
+
+
+output[copypnt] = '\0';
+
+
+if (output[0] != '\0')
+return 0;
+else
+return -1;
+}
+
+# 151
+int fatfs_split_path(char *full_path, char *path, int max_path, char *filename, int max_filename)
+{
+int strindex;
+
+
+int levels = fatfs_total_path_levels(full_path);
+if (levels == -1)
+return -1;
+
+
+if (fatfs_get_substring(full_path, levels, filename, max_filename) != 0)
+return -1;
+
+
+if (levels == 0)
+path[0] = '\0';
+else
+{
+strindex = (int)strlen(full_path) - (int)strlen(filename);
+if (strindex > max_path)
+strindex = max_path;
+
+memcpy(path, full_path, strindex);
+path[strindex-1] = '\0';
+}
+
+return 0;
+}
+
+
+
+static int FileString_StrCmpNoCase(char *s1, char *s2, int n)
+{
+int diff;
+char a,b;
+
+while (n--)
+{
+a = *s1;
+b = *s2;
+
+
+if ((a>='A') && (a<='Z'))
+a+= 32;
+if ((b>='A') && (b<='Z'))
+b+= 32;
+
+diff = a - b;
+
+
+if (diff)
+return diff;
+
+
+if ( (*s1 == 0) || (*s2 == 0) )
+break;
+
+s1++;
+s2++;
+}
+return 0;
+}
+
+
+
+
+static int FileString_GetExtension(char *str)
+{
+int dotPos = -1;
+char *strSrc = str;
+
+
+while (*strSrc)
+{
+if (*strSrc=='.')
+dotPos = (int)(strSrc-str);
+
+strSrc++;
+}
+
+return dotPos;
+}
+
+
+
+
+static int FileString_TrimLength(char *str, int strLen)
+{
+int length = strLen;
+char *strSrc = str+strLen-1;
+
+
+while (strLen != 0)
+{
+if (*strSrc == ' ')
+length = (int)(strSrc - str);
+else
+break;
+
+strSrc--;
+strLen--;
+}
+
+return length;
+}
+
+
+
+
+int fatfs_compare_names(char* strA, char* strB)
+{
+char *ext1 = (0);
+char *ext2 = (0);
+int ext1Pos, ext2Pos;
+int file1Len, file2Len;
+
+
+ext1Pos = FileString_GetExtension(strA);
+ext2Pos = FileString_GetExtension(strB);
+
+
+
+
+if ((ext1Pos==-1) && (ext2Pos!=-1))
+return 0;
+if ((ext2Pos==-1) && (ext1Pos!=-1))
+return 0;
+
+
+if (ext1Pos!=-1)
+{
+
+ext1 = strA+ext1Pos+1;
+ext2 = strB+ext2Pos+1;
+
+
+if (strlen(ext1) != strlen(ext2))
+return 0;
+
+
+if (FileString_StrCmpNoCase(ext1, ext2, (int)strlen(ext1))!=0)
+return 0;
+
+
+file1Len = ext1Pos;
+file2Len = ext2Pos;
+}
+
+else
+{
+
+file1Len = (int)strlen(strA);
+file2Len = (int)strlen(strB);
+}
+
+
+file1Len = FileString_TrimLength(strA, file1Len);
+file2Len = FileString_TrimLength(strB, file2Len);
+
+
+if (file1Len!=file2Len)
+return 0;
+
+
+if (FileString_StrCmpNoCase(strA, strB, file1Len)!=0)
+return 0;
+else
+return 1;
+}
+
+
+
+int fatfs_string_ends_with_slash(char *path)
+{
+if (path)
+{
+while (*path)
+{
+
+if (!(*(path+1)))
+{
+if (*path == '\\' || *path == '/')
+return 1;
+}
+
+path++;
+}
+}
+
+return 0;
+}
+
+
+
+int fatfs_get_sfn_display_name(char* out, char* in)
+{
+int len = 0;
+while (*in && len <= 11)
+{
+char a = *in++;
+
+if (a == ' ')
+continue;
+
+else if ((a>='A') && (a<='Z'))
+a+= 32;
+
+*out++ = a;
+len++;
+}
+
+*out = '\0';
+return 1;
+}
+
+# 370
+int fatfs_get_extension(char* filename, char* out, int maxlen)
+{
+int len = 0;
+
+
+int ext_pos = FileString_GetExtension(filename);
+
+if (ext_pos > 0 && out && maxlen)
+{
+filename += ext_pos + 1;
+
+while (*filename && len < (maxlen-1))
+{
+char a = *filename++;
+
+
+if ((a>='A') && (a<='Z'))
+a+= 32;
+
+*out++ = a;
+len++;
+}
+
+*out = '\0';
+return 1;
+}
+
+return 0;
+}
+
+
+
+
+int fatfs_create_path_string(char* path, char *filename, char* out, int maxlen)
+{
+int len = 0;
+char last = 0;
+char seperator = '/';
+
+if (path && filename && out && maxlen > 0)
+{
+while (*path && len < (maxlen-2))
+{
+last = *path++;
+if (last == '\\')
+seperator = '\\';
+*out++ = last;
+len++;
+}
+
+
+if (last != '\\' && last != '/')
+*out++ = seperator;
+
+while (*filename && len < (maxlen-1))
+{
+*out++ = *filename++;
+len++;
+}
+
+*out = '\0';
+
+return 1;
+}
+
+return 0;
+}
+

@@ -1,0 +1,471 @@
+
+# 1 "fat_cache.c"
+
+# 4 "C:\Program Files (x86)\Microchip\xc8\v1.32\include\string.h"
+typedef int ptrdiff_t;
+typedef unsigned size_t;
+typedef unsigned short wchar_t;
+
+
+extern int errno;
+
+# 22
+extern void * memcpy(void *, const void *, size_t);
+extern void * memmove(void *, const void *, size_t);
+extern void * memset(void *, int, size_t);
+
+# 42
+extern char * strcat(char *, const char *);
+extern char * strcpy(char *, const char *);
+extern char * strncat(char *, const char *, size_t);
+extern char * strncpy(char *, const char *, size_t);
+extern char * strdup(const char *);
+extern char * strtok(char *, const char *);
+
+
+extern int memcmp(const void *, const void *, size_t);
+extern int strcmp(const char *, const char *);
+extern int stricmp(const char *, const char *);
+extern int strncmp(const char *, const char *, size_t);
+extern int strnicmp(const char *, const char *, size_t);
+extern void * memchr(const void *, int, size_t);
+extern size_t strcspn(const char *, const char *);
+extern char * strpbrk(const char *, const char *);
+extern size_t strspn(const char *, const char *);
+extern char * strstr(const char *, const char *);
+extern char * stristr(const char *, const char *);
+extern char * strerror(int);
+extern size_t strlen(const char *);
+extern char * strchr(const char *, int);
+extern char * strichr(const char *, int);
+extern char * strrchr(const char *, int);
+extern char * strrichr(const char *, int);
+
+# 7 "C:\Program Files (x86)\Microchip\xc8\v1.32\include\stdarg.h"
+typedef void * va_list[1];
+
+#pragma intrinsic(__va_start)
+extern void * __va_start(void);
+
+#pragma intrinsic(__va_arg)
+extern void * __va_arg(void *, ...);
+
+# 23 "C:\Program Files (x86)\Microchip\xc8\v1.32\include\stdio.h"
+extern int errno;
+
+# 54
+struct __prbuf
+{
+char * ptr;
+void (* func)(char);
+};
+
+# 17 "C:\Program Files (x86)\Microchip\xc8\v1.32\include\conio.h"
+extern int errno;
+
+
+extern void init_uart(void);
+
+extern char getch(void);
+extern char getche(void);
+extern void putch(char);
+extern void ungetch(char);
+
+extern __bit kbhit(void);
+
+# 31
+extern char * cgets(char *);
+extern void cputs(const char *);
+
+# 99 "C:\Program Files (x86)\Microchip\xc8\v1.32\include\stdio.h"
+extern int cprintf(char *, ...);
+#pragma printf_check(cprintf)
+
+
+
+extern int _doprnt(struct __prbuf *, const register char *, register va_list);
+
+
+# 191
+#pragma printf_check(vprintf) const
+#pragma printf_check(vsprintf) const
+
+extern char * gets(char *);
+extern int puts(const char *);
+extern int scanf(const char *, ...) __attribute__((unsupported("scanf() is not supported by this compiler")));
+extern int sscanf(const char *, const char *, ...) __attribute__((unsupported("sscanf() is not supported by this compiler")));
+extern int vprintf(const char *, va_list) __attribute__((unsupported("vprintf() is not supported by this compiler")));
+extern int vsprintf(char *, const char *, va_list) __attribute__((unsupported("vsprintf() is not supported by this compiler")));
+extern int vscanf(const char *, va_list ap) __attribute__((unsupported("vscanf() is not supported by this compiler")));
+extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupported("vsscanf() is not supported by this compiler")));
+
+#pragma printf_check(printf) const
+#pragma printf_check(sprintf) const
+extern int sprintf(char *, const char *, ...);
+extern int printf(const char *, ...);
+
+# 15 "fat_types.h"
+typedef unsigned char uint8;
+typedef unsigned short uint16;
+
+# 23
+typedef unsigned long uint32;
+
+# 110 "fat_defs.h"
+
+struct fat_dir_entry 
+{
+uint8 Name[11];
+uint8 Attr;
+uint8 NTRes;
+uint8 CrtTimeTenth;
+uint8 CrtTime[2];
+uint8 CrtDate[2];
+uint8 LstAccDate[2];
+uint16 FstClusHI;
+uint8 WrtTime[2];
+uint8 WrtDate[2];
+uint16 FstClusLO;
+uint32 FileSize;
+} ;
+
+
+# 24 "fat_access.h"
+typedef int (*fn_diskio_read) (uint32 sector, uint8 *buffer, uint32 sector_count);
+typedef int (*fn_diskio_write)(uint32 sector, uint8 *buffer, uint32 sector_count);
+
+
+
+
+struct disk_if
+{
+
+fn_diskio_read read_media;
+fn_diskio_write write_media;
+};
+
+
+struct fat_buffer;
+
+struct fat_buffer
+{
+uint8 sector[512 * 1];
+uint32 address;
+int dirty;
+uint8 * ptr;
+
+
+struct fat_buffer *next;
+};
+
+typedef enum eFatType
+{
+FAT_TYPE_16,
+FAT_TYPE_32
+} tFatType;
+
+struct fatfs
+{
+
+uint8 sectors_per_cluster;
+uint32 cluster_begin_lba;
+uint32 rootdir_first_cluster;
+uint32 rootdir_first_sector;
+uint32 rootdir_sectors;
+uint32 fat_begin_lba;
+uint16 fs_info_sector;
+uint32 lba_begin;
+uint32 fat_sectors;
+uint32 next_free_cluster;
+uint16 root_entry_count;
+uint16 reserved_sectors;
+uint8 num_of_fats;
+tFatType fat_type;
+
+
+struct disk_if disk_io;
+
+
+void (*fl_lock)(void);
+void (*fl_unlock)(void);
+
+
+struct fat_buffer currentsector;
+
+
+struct fat_buffer *fat_buffer_head;
+struct fat_buffer fat_buffers[1];
+};
+
+struct fs_dir_list_status
+{
+uint32 sector;
+uint32 cluster;
+uint8 offset;
+};
+
+struct fs_dir_ent
+{
+char filename[10];
+uint8 is_dir;
+uint32 cluster;
+uint32 size;
+
+# 111
+};
+
+
+
+
+int fatfs_init(struct fatfs *fs);
+uint32 fatfs_lba_of_cluster(struct fatfs *fs, uint32 Cluster_Number);
+int fatfs_sector_reader(struct fatfs *fs, uint32 Startcluster, uint32 offset, uint8 *target);
+int fatfs_sector_read(struct fatfs *fs, uint32 lba, uint8 *target, uint32 count);
+int fatfs_sector_write(struct fatfs *fs, uint32 lba, uint8 *target, uint32 count);
+int fatfs_read_sector(struct fatfs *fs, uint32 cluster, uint32 sector, uint8 *target);
+int fatfs_write_sector(struct fatfs *fs, uint32 cluster, uint32 sector, uint8 *target);
+void fatfs_show_details(struct fatfs *fs);
+uint32 fatfs_get_root_cluster(struct fatfs *fs);
+uint32 fatfs_get_file_entry(struct fatfs *fs, uint32 Cluster, char *nametofind, struct fat_dir_entry *sfEntry);
+int fatfs_sfn_exists(struct fatfs *fs, uint32 Cluster, char *shortname);
+int fatfs_update_file_length(struct fatfs *fs, uint32 Cluster, char *shortname, uint32 fileLength);
+int fatfs_mark_file_deleted(struct fatfs *fs, uint32 Cluster, char *shortname);
+void fatfs_list_directory_start(struct fatfs *fs, struct fs_dir_list_status *dirls, uint32 StartCluster);
+int fatfs_list_directory_next(struct fatfs *fs, struct fs_dir_list_status *dirls, struct fs_dir_ent *entry);
+int fatfs_update_timestamps(struct fat_dir_entry *directoryEntry, int create, int modify, int access);
+
+# 138
+void fatfs_show_details_(struct fatfs *fs);
+
+# 15 "fat_list.h"
+struct fat_list;
+
+struct fat_node
+{
+struct fat_node *previous;
+struct fat_node *next;
+};
+
+struct fat_list
+{
+struct fat_node *head;
+struct fat_node *tail;
+};
+
+# 46
+static  void fat_list_init(struct fat_list *list)
+{
+;
+
+list->head = list->tail = 0;
+}
+
+
+
+static  void fat_list_remove(struct fat_list *list, struct fat_node *node)
+{
+;
+;
+
+if(!node->previous)
+list->head = node->next;
+else
+node->previous->next = node->next;
+
+if(!node->next)
+list->tail = node->previous;
+else
+node->next->previous = node->previous;
+}
+
+
+
+static  void fat_list_insert_after(struct fat_list *list, struct fat_node *node, struct fat_node *new_node)
+{
+;
+;
+;
+
+new_node->previous = node;
+new_node->next = node->next;
+if (!node->next)
+list->tail = new_node;
+else
+node->next->previous = new_node;
+node->next = new_node;
+}
+
+
+
+static  void fat_list_insert_before(struct fat_list *list, struct fat_node *node, struct fat_node *new_node)
+{
+;
+;
+;
+
+new_node->previous = node->previous;
+new_node->next = node;
+if (!node->previous)
+list->head = new_node;
+else
+node->previous->next = new_node;
+node->previous = new_node;
+}
+
+
+
+static  void fat_list_insert_first(struct fat_list *list, struct fat_node *node)
+{
+;
+;
+
+if (!list->head)
+{
+list->head = node;
+list->tail = node;
+node->previous = 0;
+node->next = 0;
+}
+else
+fat_list_insert_before(list, list->head, node);
+}
+
+
+
+static  void fat_list_insert_last(struct fat_list *list, struct fat_node *node)
+{
+;
+;
+
+if (!list->tail)
+fat_list_insert_first(list, node);
+else
+fat_list_insert_after(list, list->tail, node);
+}
+
+
+
+static  int fat_list_is_empty(struct fat_list *list)
+{
+;
+
+return !list->head;
+}
+
+
+
+static  struct fat_node * fat_list_pop_head(struct fat_list *list)
+{
+struct fat_node * node;
+
+;
+
+node = (list)->head;
+if (node)
+fat_list_remove(list, node);
+
+return node;
+}
+
+# 30 "fat_filelib.h"
+struct sFL_FILE;
+
+struct cluster_lookup
+{
+uint32 ClusterIdx;
+uint32 CurrentCluster;
+};
+
+typedef struct sFL_FILE
+{
+uint32 parentcluster;
+uint32 startcluster;
+uint32 bytenum;
+uint32 filelength;
+int filelength_changed;
+char path[10];
+char filename[10];
+uint8 shortfilename[11];
+
+# 55
+struct cluster_lookup last_fat_lookup;
+
+
+uint8 file_data_sector[512];
+uint32 file_data_address;
+int file_data_dirty;
+
+
+uint8 flags;
+
+# 71
+struct fat_node list_node;
+} FL_FILE;
+
+# 79
+void fl_init(void);
+void fl_attach_locks(void (*lock)(void), void (*unlock)(void));
+int fl_attach_media(fn_diskio_read rd, fn_diskio_write wr);
+void fl_shutdown(void);
+
+
+void* fl_fopen(const char *path, const char *modifiers);
+void fl_fclose(void *file);
+int fl_fflush(void *file);
+int fl_fgetc(void *file);
+char * fl_fgets(char *s, int n, void *f);
+int fl_fputc(int c, void *file);
+int fl_fputs(const char * str, void *file);
+int fl_fwrite(const void * data, int size, int count, void *file );
+int fl_fread(void * data, int size, int count, void *file );
+int fl_fseek(void *file , long offset , int origin );
+int fl_fgetpos(void *file , uint32 * position);
+long fl_ftell(void *f);
+int fl_feof(void *f);
+int fl_remove(const char * filename);
+
+
+typedef struct fs_dir_list_status FL_DIR;
+typedef struct fs_dir_ent fl_dirent;
+
+FL_DIR* fl_opendir(const char* path, FL_DIR *dir);
+int fl_readdir(FL_DIR *dirls, fl_dirent *entry);
+int fl_closedir(FL_DIR* dir);
+
+
+void fl_listdirectory(const char *path);
+int fl_createdirectory(const char *path);
+int fl_is_dir(const char *path);
+
+int fl_format(uint32 volume_sectors, const char *name);
+
+# 9 "fat_cache.h"
+int fatfs_cache_init(struct fatfs *fs, FL_FILE *file);
+int fatfs_cache_get_next_cluster(struct fatfs *fs, FL_FILE *file, uint32 clusterIdx, uint32 *pNextCluster);
+int fatfs_cache_set_next_cluster(struct fatfs *fs, FL_FILE *file, uint32 clusterIdx, uint32 nextCluster);
+
+# 42 "fat_cache.c"
+int fatfs_cache_init(struct fatfs *fs, FL_FILE *file)
+{
+
+# 54
+return 1;
+}
+
+
+
+int fatfs_cache_get_next_cluster(struct fatfs *fs, FL_FILE *file, uint32 clusterIdx, uint32 *pNextCluster)
+{
+
+# 71
+return 0;
+}
+
+
+
+int fatfs_cache_set_next_cluster(struct fatfs *fs, FL_FILE *file, uint32 clusterIdx, uint32 nextCluster)
+{
+
+# 90
+return 1;
+}

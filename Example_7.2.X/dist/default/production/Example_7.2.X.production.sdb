@@ -1,0 +1,2388 @@
+[p LITE_MODE AUTOSTATIC LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F4620 ]
+"44 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_access.c
+[e E184 eFatType `uc
+FAT_TYPE_16 0
+FAT_TYPE_32 1
+]
+"43 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_cache.c
+[e E184 eFatType `uc
+FAT_TYPE_16 0
+FAT_TYPE_32 1
+]
+"49 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_filelib.c
+[e E306 eFatType `uc
+FAT_TYPE_16 0
+FAT_TYPE_32 1
+]
+"100 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_format.c
+[e E184 eFatType `uc
+FAT_TYPE_16 0
+FAT_TYPE_32 1
+]
+"61 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_table.c
+[e E184 eFatType `uc
+FAT_TYPE_16 0
+FAT_TYPE_32 1
+]
+"46 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_write.c
+[e E184 eFatType `uc
+FAT_TYPE_16 0
+FAT_TYPE_32 1
+]
+"333 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\mmc_pic24f.c
+[e E4021 . `uc
+RES_OK 0
+RES_ERROR 1
+RES_WRPRT 2
+RES_NOTRDY 3
+RES_PARERR 4
+]
+"5 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\abdiv.c
+[v ___abdiv __abdiv `(c  1 e 1 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\abmod.c
+[v ___abmod __abmod `(c  1 e 1 0 ]
+"32 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\abtofl.c
+[v ___abtofl __abtofl `(d  1 e 3 0 ]
+"34 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\abtoft.c
+[v ___abtoft __abtoft `(f  1 e 3 0 ]
+"10 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\aldiv.c
+[v ___aldiv __aldiv `(l  1 e 4 0 ]
+"10 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\almod.c
+[v ___almod __almod `(l  1 e 4 0 ]
+"37 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\altofl.c
+[v ___altofl __altofl `(d  1 e 3 0 ]
+"43 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\altoft.c
+[v ___altoft __altoft `(f  1 e 3 0 ]
+"10 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\atdiv.c
+[v ___atdiv __atdiv `(m  1 e 3 0 ]
+"10 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\atmod.c
+[v ___atmod __atmod `(m  1 e 3 0 ]
+"38 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\attofl.c
+[v ___attofl __attofl `(d  1 e 3 0 ]
+"38 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\attoft.c
+[v ___attoft __attoft `(f  1 e 3 0 ]
+"10 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"10 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"32 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\awtofl.c
+[v ___awtofl __awtofl `(d  1 e 3 0 ]
+"33 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\awtoft.c
+[v ___awtoft __awtoft `(f  1 e 3 0 ]
+"3 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\bmul.c
+[v ___bmul __bmul `(uc  1 e 1 0 ]
+"459 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\doprnt.c
+[v __doprnt _doprnt `(i  1 e 2 0 ]
+"64 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\double.c
+[v ___flpack __flpack `(d  1 e 3 0 ]
+"89 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\fladd.c
+[v ___fladd __fladd `(d  1 e 3 0 ]
+"50 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\fldiv.c
+[v ___fldiv __fldiv `(d  1 e 3 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\flge.c
+[v ___flge __flge `(b  1 e 0 0 ]
+"51 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\flmul.c
+[v ___flmul __flmul `(d  1 e 3 0 ]
+"16 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\flneg.c
+[v ___flneg __flneg `(d  1 e 3 0 ]
+"63 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"22 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\flsub.c
+[v ___flsub __flsub `(d  1 e 3 0 ]
+"44 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\fltol.c
+[v ___fltol __fltol `(l  1 e 4 0 ]
+"87 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"50 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 3 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\ftge.c
+[v ___ftge __ftge `(b  1 e 0 0 ]
+"52 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+"16 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\ftneg.c
+[v ___ftneg __ftneg `(f  1 e 3 0 ]
+"22 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 3 0 ]
+"45 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\fttol.c
+[v ___fttol __fttol `(l  1 e 4 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\lbdiv.c
+[v ___lbdiv __lbdiv `(uc  1 e 1 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\lbmod.c
+[v ___lbmod __lbmod `(uc  1 e 1 0 ]
+"28 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\lbtofl.c
+[v ___lbtofl __lbtofl `(d  1 e 3 0 ]
+"28 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\lbtoft.c
+[v ___lbtoft __lbtoft `(f  1 e 3 0 ]
+"10 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+"10 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\llmod.c
+[v ___llmod __llmod `(ul  1 e 4 0 ]
+"31 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\lltofl.c
+[v ___lltofl __lltofl `(d  1 e 3 0 ]
+"36 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\lltoft.c
+[v ___lltoft __lltoft `(f  1 e 3 0 ]
+"3 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\lmul.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"10 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\ltdiv.c
+[v ___ltdiv __ltdiv `(um  1 e 3 0 ]
+"10 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\ltmod.c
+[v ___ltmod __ltmod `(um  1 e 3 0 ]
+"31 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\lttofl.c
+[v ___lttofl __lttofl `(d  1 e 3 0 ]
+"31 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\lttoft.c
+[v ___lttoft __lttoft `(f  1 e 3 0 ]
+"10 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+"10 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+"29 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\lwtofl.c
+[v ___lwtofl __lwtofl `(d  1 e 3 0 ]
+"29 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\lwtoft.c
+[v ___lwtoft __lwtoft `(f  1 e 3 0 ]
+"13 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\memcpy.c
+[v _memcpy memcpy `(*.39v  1 e 2 0 ]
+"10 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\memset.c
+[v _memset memset `(*.39v  1 e 2 0 ]
+"14 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\printf.c
+[v _printf printf `(i  1 e 2 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\putch.c
+[v _putch putch `(v  1 e 0 0 ]
+"14 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\sprintf.c
+[v _sprintf sprintf `(i  1 e 2 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\strlen.c
+[v _strlen strlen `(ui  1 e 2 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\strncmp.c
+[v _strncmp strncmp `(i  1 e 2 0 ]
+"10 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\strncpy.c
+[v _strncpy strncpy `(*.39uc  1 e 2 0 ]
+"3 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\tmul.c
+[v ___tmul __tmul `(um  1 e 3 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\wmul.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic18\asfladd.c
+[v ___asfladd __asfladd `(d  1 e 3 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic18\asfldiv.c
+[v ___asfldiv __asfldiv `(d  1 e 3 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic18\asflmul.c
+[v ___asflmul __asflmul `(d  1 e 3 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic18\asflsub.c
+[v ___asflsub __asflsub `(d  1 e 3 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic18\asftadd.c
+[v ___asftadd __asftadd `(f  1 e 3 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic18\asftdiv.c
+[v ___asftdiv __asftdiv `(f  1 e 3 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic18\asftmul.c
+[v ___asftmul __asftmul `(f  1 e 3 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic18\asftsub.c
+[v ___asftsub __asftsub `(f  1 e 3 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic18\aslmul.c
+[v ___aslmul __aslmul `(ul  1 e 4 0 ]
+"9 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic18\d10ktcyx.c
+[v _Delay10KTCYx Delay10KTCYx `(v  1 e 0 0 ]
+"9 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic18\d10tcyx.c
+[v _Delay10TCYx Delay10TCYx `(v  1 e 0 0 ]
+"9 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic18\d1ktcyx.c
+[v _Delay1KTCYx Delay1KTCYx `(v  1 e 0 0 ]
+"74 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic18\plib\USART\uopen.c
+[v _OpenUSART OpenUSART `(v  1 e 0 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic18\plib\USART\uputs.c
+[v _putsUSART putsUSART `(v  1 e 0 0 ]
+"16 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic18\plib\USART\uread.c
+[v _ReadUSART ReadUSART `(uc  1 e 1 0 ]
+"14 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic18\plib\USART\uwrite.c
+[v _WriteUSART WriteUSART `(v  1 e 0 0 ]
+"18 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\delay.c
+[v _delay_ms delay_ms `(v  1 e 0 0 ]
+"28
+[v _delay_us delay_us `(v  1 e 0 0 ]
+"37
+[v _Delay_s Delay_s `(v  1 e 0 0 ]
+"46
+[v _DelayFor18TCY DelayFor18TCY `(v  1 e 0 0 ]
+"54
+[v _DelayPORXLCD DelayPORXLCD `(v  1 e 0 0 ]
+"62
+[v _DelayXLCD DelayXLCD `(v  1 e 0 0 ]
+"70
+[v _Delay_s_ Delay_s_ `(v  1 e 0 0 ]
+"44 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_access.c
+[v _fatfs_init fatfs_init `(i  1 e 2 0 ]
+"196
+[v _fatfs_lba_of_cluster fatfs_lba_of_cluster `(ul  1 e 4 0 ]
+"206
+[v _fatfs_sector_read fatfs_sector_read `(i  1 e 2 0 ]
+"213
+[v _fatfs_sector_write fatfs_sector_write `(i  1 e 2 0 ]
+"221
+[v _fatfs_sector_reader fatfs_sector_reader `(i  1 e 2 0 ]
+"275
+[v _fatfs_read_sector fatfs_read_sector `(i  1 e 2 0 ]
+"330
+[v _fatfs_write_sector fatfs_write_sector `(i  1 e 2 0 ]
+"388
+[v _fatfs_show_details fatfs_show_details `(v  1 e 0 0 ]
+"398
+[v _fatfs_show_details_ fatfs_show_details_ `(v  1 e 0 0 ]
+"417
+[v _fatfs_get_root_cluster fatfs_get_root_cluster `(ul  1 e 4 0 ]
+"425
+[v _fatfs_get_file_entry fatfs_get_file_entry `(ul  1 e 4 0 ]
+"531
+[v _fatfs_sfn_exists fatfs_sfn_exists `(i  1 e 2 0 ]
+"634
+[v _fatfs_update_file_length fatfs_update_file_length `(i  1 e 2 0 ]
+"704
+[v _fatfs_mark_file_deleted fatfs_mark_file_deleted `(i  1 e 2 0 ]
+"774
+[v _fatfs_list_directory_start fatfs_list_directory_start `(v  1 e 0 0 ]
+"786
+[v _fatfs_list_directory_next fatfs_list_directory_next `(i  1 e 2 0 ]
+"43 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_cache.c
+[v _fatfs_cache_init fatfs_cache_init `(i  1 e 2 0 ]
+"60
+[v _fatfs_cache_get_next_cluster fatfs_cache_get_next_cluster `(i  1 e 2 0 ]
+"77
+[v _fatfs_cache_set_next_cluster fatfs_cache_set_next_cluster `(i  1 e 2 0 ]
+"72 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_filelib.h
+"36
+[s S881 cluster_lookup 8 `ul 1 ClusterIdx 4 0 `ul 1 CurrentCluster 4 4 ]
+"75 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_filelib.c
+"21 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_list.h
+"75 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_filelib.c
+[s S826 fat_node 4 `*.39S826 1 previous 2 0 `*.39S826 1 next 2 2 ]
+[s S884 sFL_FILE 580 `ul 1 parentcluster 4 0 `ul 1 startcluster 4 4 `ul 1 bytenum 4 8 `ul 1 filelength 4 12 `i 1 filelength_changed 2 16 `[10]uc 1 path 10 18 `[10]uc 1 filename 10 28 `[11]uc 1 shortfilename 11 38 `S881 1 last_fat_lookup 8 49 `[512]uc 1 file_data_sector 512 57 `ul 1 file_data_address 4 569 `i 1 file_data_dirty 2 573 `uc 1 flags 1 575 `S826 1 list_node 4 576 ]
+[v __allocate_file _allocate_file `(*.39S884  1 s 2 _allocate_file ]
+"89
+[v __check_file_open _check_file_open `(i  1 s 2 _check_file_open ]
+"112
+[v __free_file _free_file `(v  1 s 0 _free_file ]
+"129
+[v __open_directory _open_directory `(i  1 s 2 _open_directory ]
+"169
+[v __create_directory _create_directory `(i  1 s 2 _create_directory ]
+"72 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_filelib.h
+"36
+[s S881 cluster_lookup 8 `ul 1 ClusterIdx 4 0 `ul 1 CurrentCluster 4 4 ]
+"328 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_filelib.c
+"21 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_list.h
+"328 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_filelib.c
+[s S826 fat_node 4 `*.39S826 1 previous 2 0 `*.39S826 1 next 2 2 ]
+[s S884 sFL_FILE 580 `ul 1 parentcluster 4 0 `ul 1 startcluster 4 4 `ul 1 bytenum 4 8 `ul 1 filelength 4 12 `i 1 filelength_changed 2 16 `[10]uc 1 path 10 18 `[10]uc 1 filename 10 28 `[11]uc 1 shortfilename 11 38 `S881 1 last_fat_lookup 8 49 `[512]uc 1 file_data_sector 512 57 `ul 1 file_data_address 4 569 `i 1 file_data_dirty 2 573 `uc 1 flags 1 575 `S826 1 list_node 4 576 ]
+[v __open_file _open_file `(*.39S884  1 s 2 _open_file ]
+"72 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_filelib.h
+"36
+[s S881 cluster_lookup 8 `ul 1 ClusterIdx 4 0 `ul 1 CurrentCluster 4 4 ]
+"401 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_filelib.c
+"21 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_list.h
+"401 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_filelib.c
+[s S826 fat_node 4 `*.39S826 1 previous 2 0 `*.39S826 1 next 2 2 ]
+[s S884 sFL_FILE 580 `ul 1 parentcluster 4 0 `ul 1 startcluster 4 4 `ul 1 bytenum 4 8 `ul 1 filelength 4 12 `i 1 filelength_changed 2 16 `[10]uc 1 path 10 18 `[10]uc 1 filename 10 28 `[11]uc 1 shortfilename 11 38 `S881 1 last_fat_lookup 8 49 `[512]uc 1 file_data_sector 512 57 `ul 1 file_data_address 4 569 `i 1 file_data_dirty 2 573 `uc 1 flags 1 575 `S826 1 list_node 4 576 ]
+[v __create_file _create_file `(*.39S884  1 s 2 _create_file ]
+"552
+[v __read_sectors _read_sectors `(ul  1 s 4 _read_sectors ]
+"635
+[v _fl_init fl_init `(v  1 e 0 0 ]
+"651
+[v _fl_attach_locks fl_attach_locks `(v  1 e 0 0 ]
+"659
+[v _fl_attach_media fl_attach_media `(i  1 e 2 0 ]
+"682
+[v _fl_shutdown fl_shutdown `(v  1 e 0 0 ]
+"694
+[v _fl_fopen fl_fopen `(*.39v  1 e 2 0 ]
+"810
+[v __write_sectors _write_sectors `(ul  1 s 4 _write_sectors ]
+"898
+[v _fl_fflush fl_fflush `(i  1 e 2 0 ]
+"926
+[v _fl_fclose fl_fclose `(v  1 e 0 0 ]
+"968
+[v _fl_fgetc fl_fgetc `(i  1 e 2 0 ]
+"982
+[v _fl_fgets fl_fgets `(*.39uc  1 e 2 0 ]
+"1015
+[v _fl_fread fl_fread `(i  1 e 2 0 ]
+"1117
+[v _fl_fseek fl_fseek `(i  1 e 2 0 ]
+"1186
+[v _fl_fgetpos fl_fgetpos `(i  1 e 2 0 ]
+"1205
+[v _fl_ftell fl_ftell `(l  1 e 4 0 ]
+"1216
+[v _fl_feof fl_feof `(i  1 e 2 0 ]
+"1239
+[v _fl_fputc fl_fputc `(i  1 e 2 0 ]
+"1255
+[v _fl_fwrite fl_fwrite `(i  1 e 2 0 ]
+"1402
+[v _fl_fputs fl_fputs `(i  1 e 2 0 ]
+"1417
+[v _fl_remove fl_remove `(i  1 e 2 0 ]
+"1452
+[v _fl_createdirectory fl_createdirectory `(i  1 e 2 0 ]
+"1470
+[v _fl_listdirectory fl_listdirectory `(v  1 e 0 0 ]
+"95 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_access.h
+[s S180 fs_dir_list_status 9 `ul 1 sector 4 0 `ul 1 cluster 4 4 `uc 1 offset 1 8 ]
+"1514 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_filelib.c
+[v _fl_opendir fl_opendir `(*.39S180  1 e 2 0 ]
+"1546
+[v _fl_readdir fl_readdir `(i  1 e 2 0 ]
+"1566
+[v _fl_closedir fl_closedir `(i  1 e 2 0 ]
+"1576
+[v _fl_is_dir fl_is_dir `(i  1 e 2 0 ]
+"1594
+[v _fl_format fl_format `(i  1 e 2 0 ]
+"78 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_format.c
+[v _fatfs_calc_cluster_size fatfs_calc_cluster_size `(uc  1 s 1 fatfs_calc_cluster_size ]
+"100
+[v _fatfs_erase_sectors fatfs_erase_sectors `(i  1 s 2 fatfs_erase_sectors ]
+"116
+[v _fatfs_create_boot_sector fatfs_create_boot_sector `(i  1 s 2 fatfs_create_boot_sector ]
+"352
+[v _fatfs_create_fsinfo_sector fatfs_create_fsinfo_sector `(i  1 s 2 fatfs_create_fsinfo_sector ]
+"393
+[v _fatfs_erase_fat fatfs_erase_fat `(i  1 s 2 fatfs_erase_fat ]
+"427
+[v _fatfs_format_fat16 fatfs_format_fat16 `(i  1 e 2 0 ]
+"476
+[v _fatfs_format_fat32 fatfs_format_fat32 `(i  1 e 2 0 ]
+"525
+[v _fatfs_format fatfs_format `(i  1 e 2 0 ]
+"47 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_list.h
+[v _fat_list_init fat_list_init `(v  1 s 0 fat_list_init ]
+[v fat_list@fat_list_init fat_list_init `(v  1 s 0 fat_list_init ]
+[v fat_list@fat_list_init fat_list_init `(v  1 s 0 fat_list_init ]
+"56
+[v _fat_list_remove fat_list_remove `(v  1 s 0 fat_list_remove ]
+[v fat_list@fat_list_remove fat_list_remove `(v  1 s 0 fat_list_remove ]
+[v fat_list@fat_list_remove fat_list_remove `(v  1 s 0 fat_list_remove ]
+"74
+[v _fat_list_insert_after fat_list_insert_after `(v  1 s 0 fat_list_insert_after ]
+[v fat_list@fat_list_insert_after fat_list_insert_after `(v  1 s 0 fat_list_insert_after ]
+[v fat_list@fat_list_insert_after fat_list_insert_after `(v  1 s 0 fat_list_insert_after ]
+"91
+[v _fat_list_insert_before fat_list_insert_before `(v  1 s 0 fat_list_insert_before ]
+[v fat_list@fat_list_insert_before fat_list_insert_before `(v  1 s 0 fat_list_insert_before ]
+[v fat_list@fat_list_insert_before fat_list_insert_before `(v  1 s 0 fat_list_insert_before ]
+"108
+[v _fat_list_insert_first fat_list_insert_first `(v  1 s 0 fat_list_insert_first ]
+[v fat_list@fat_list_insert_first fat_list_insert_first `(v  1 s 0 fat_list_insert_first ]
+[v fat_list@fat_list_insert_first fat_list_insert_first `(v  1 s 0 fat_list_insert_first ]
+"126
+[v _fat_list_insert_last fat_list_insert_last `(v  1 s 0 fat_list_insert_last ]
+[v fat_list@fat_list_insert_last fat_list_insert_last `(v  1 s 0 fat_list_insert_last ]
+[v fat_list@fat_list_insert_last fat_list_insert_last `(v  1 s 0 fat_list_insert_last ]
+"139
+[v _fat_list_is_empty fat_list_is_empty `(i  1 s 2 fat_list_is_empty ]
+[v fat_list@fat_list_is_empty fat_list_is_empty `(i  1 s 2 fat_list_is_empty ]
+[v fat_list@fat_list_is_empty fat_list_is_empty `(i  1 s 2 fat_list_is_empty ]
+"21
+"148
+[s S826 fat_node 4 `*.39S826 1 previous 2 0 `*.39S826 1 next 2 2 ]
+[v _fat_list_pop_head fat_list_pop_head `(*.39S826  1 s 2 fat_list_pop_head ]
+"21
+"148
+[s S826 fat_node 4 `*.39S826 1 previous 2 0 `*.39S826 1 next 2 2 ]
+[v fat_list@fat_list_pop_head fat_list_pop_head `(*.39S826  1 s 2 fat_list_pop_head ]
+"21
+"148
+[s S826 fat_node 4 `*.39S826 1 previous 2 0 `*.39S826 1 next 2 2 ]
+[v fat_list@fat_list_pop_head fat_list_pop_head `(*.39S826  1 s 2 fat_list_pop_head ]
+"40 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_misc.c
+[v _fatfs_lfn_cache_init fatfs_lfn_cache_init `(v  1 e 0 0 ]
+"59
+[v _fatfs_lfn_cache_entry fatfs_lfn_cache_entry `(v  1 e 0 0 ]
+"98
+[v _fatfs_lfn_cache_get fatfs_lfn_cache_get `(*.39uc  1 e 2 0 ]
+"115
+[v _fatfs_entry_lfn_text fatfs_entry_lfn_text `(i  1 e 2 0 ]
+"127
+[v _fatfs_entry_lfn_invalid fatfs_entry_lfn_invalid `(i  1 e 2 0 ]
+"142
+[v _fatfs_entry_lfn_exists fatfs_entry_lfn_exists `(i  1 e 2 0 ]
+"158
+[v _fatfs_entry_sfn_only fatfs_entry_sfn_only `(i  1 e 2 0 ]
+"173
+[v _fatfs_entry_is_dir fatfs_entry_is_dir `(i  1 e 2 0 ]
+"183
+[v _fatfs_entry_is_file fatfs_entry_is_file `(i  1 e 2 0 ]
+"194
+[v _fatfs_lfn_entries_required fatfs_lfn_entries_required `(i  1 e 2 0 ]
+"208
+[v _fatfs_filename_to_lfn fatfs_filename_to_lfn `(v  1 e 0 0 ]
+"251
+[v _fatfs_sfn_create_entry fatfs_sfn_create_entry `(v  1 e 0 0 ]
+"286
+[v _fatfs_lfn_create_sfn fatfs_lfn_create_sfn `(i  1 e 2 0 ]
+"351
+[v _fatfs_itoa fatfs_itoa `(v  1 s 0 fatfs_itoa ]
+"381
+[v _fatfs_lfn_generate_tail fatfs_lfn_generate_tail `(i  1 e 2 0 ]
+"45 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_string.c
+[v _fatfs_total_path_levels fatfs_total_path_levels `(i  1 e 2 0 ]
+"93
+[v _fatfs_get_substring fatfs_get_substring `(i  1 e 2 0 ]
+"152
+[v _fatfs_split_path fatfs_split_path `(i  1 e 2 0 ]
+"183
+[v _FileString_StrCmpNoCase FileString_StrCmpNoCase `(i  1 s 2 FileString_StrCmpNoCase ]
+"218
+[v _FileString_GetExtension FileString_GetExtension `(i  1 s 2 FileString_GetExtension ]
+"238
+[v _FileString_TrimLength FileString_TrimLength `(i  1 s 2 FileString_TrimLength ]
+"261
+[v _fatfs_compare_names fatfs_compare_names `(i  1 e 2 0 ]
+"324
+[v _fatfs_string_ends_with_slash fatfs_string_ends_with_slash `(i  1 e 2 0 ]
+"346
+[v _fatfs_get_sfn_display_name fatfs_get_sfn_display_name `(i  1 e 2 0 ]
+"371
+[v _fatfs_get_extension fatfs_get_extension `(i  1 e 2 0 ]
+"404
+[v _fatfs_create_path_string fatfs_create_path_string `(i  1 e 2 0 ]
+"61 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_table.c
+[v _fatfs_fat_init fatfs_fat_init `(v  1 e 0 0 ]
+"84
+[v _fatfs_fat_writeback fatfs_fat_writeback `(i  1 s 2 fatfs_fat_writeback ]
+"49 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_access.h
+"117 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_table.c
+[s S43 fat_buffer 522 `[512]uc 1 sector 512 0 `ul 1 address 4 512 `i 1 dirty 2 516 `*.39uc 1 ptr 2 518 `*.39S43 1 next 2 520 ]
+[v _fatfs_fat_read_sector fatfs_fat_read_sector `(*.39S43  1 s 2 fatfs_fat_read_sector ]
+"180
+[v _fatfs_fat_purge fatfs_fat_purge `(i  1 e 2 0 ]
+"206
+[v _fatfs_find_next_cluster fatfs_find_next_cluster `(ul  1 e 4 0 ]
+"261
+[v _fatfs_set_fs_info_next_free_cluster fatfs_set_fs_info_next_free_cluster `(v  1 e 0 0 ]
+"289
+[v _fatfs_find_blank_cluster fatfs_find_blank_cluster `(i  1 e 2 0 ]
+"350
+[v _fatfs_fat_set_cluster fatfs_fat_set_cluster `(i  1 e 2 0 ]
+"390
+[v _fatfs_free_cluster_chain fatfs_free_cluster_chain `(i  1 e 2 0 ]
+"415
+[v _fatfs_fat_add_cluster_to_chain fatfs_fat_add_cluster_to_chain `(i  1 e 2 0 ]
+"446
+[v _fatfs_count_free_clusters fatfs_count_free_clusters `(ul  1 e 4 0 ]
+"46 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_write.c
+[v _fatfs_add_free_space fatfs_add_free_space `(i  1 e 2 0 ]
+"83
+[v _fatfs_allocate_free_space fatfs_allocate_free_space `(i  1 e 2 0 ]
+"131
+[v _fatfs_find_free_dir_offset fatfs_find_free_dir_offset `(i  1 s 2 fatfs_find_free_dir_offset ]
+"267
+[v _fatfs_add_file_entry fatfs_add_file_entry `(i  1 e 2 0 ]
+"64 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\main.c
+[v _command command `(v  1 e 0 0 ]
+"81
+[v _mmc_init mmc_init `(uc  1 e 1 0 ]
+"138
+[v _media_read media_read `(i  1 e 2 0 ]
+"194
+[v _media_write media_write `(i  1 e 2 0 ]
+"242
+[v _Clear_str Clear_str `(v  1 e 0 0 ]
+"250
+[v _main main `(v  1 e 0 0 ]
+"100 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\mmc_pic24f.c
+[v _wait_ready wait_ready `(i  1 s 2 wait_ready ]
+"119
+[v _deselect deselect `(v  1 s 0 deselect ]
+"132
+[v _select select `(i  1 s 2 select ]
+"152
+[v _rcvr_datablock rcvr_datablock `(i  1 s 2 rcvr_datablock ]
+"182
+[v _xmit_datablock xmit_datablock `(i  1 s 2 xmit_datablock ]
+"213
+[v _send_cmd send_cmd `(uc  1 s 1 send_cmd ]
+"262
+[v _disk_initialize disk_initialize `(uc  1 e 1 0 ]
+"316
+[v _disk_status disk_status `(uc  1 e 1 0 ]
+"333
+[v _disk_read disk_read `(E4021  1 e 1 0 ]
+"376
+[v _disk_write disk_write `(E4021  1 e 1 0 ]
+"421
+[v _disk_ioctl disk_ioctl `(E4021  1 e 1 0 ]
+"522
+[v _disk_timerproc disk_timerproc `(v  1 e 0 0 ]
+"17 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\spi_1.c
+[v _ReadBUF ReadBUF `(v  1 e 0 0 ]
+"24
+[v _spi_read spi_read `(v  1 e 0 0 ]
+"34
+[v _spi_init spi_init `(v  1 e 0 0 ]
+"50
+[v _OpenSPI_ OpenSPI_ `(v  1 e 0 0 ]
+"65
+[v _WriteSPI_ WriteSPI_ `(c  1 e 1 0 ]
+"79
+[v _ReadSPI_ ReadSPI_ `(uc  1 e 1 0 ]
+"89
+[v _DataRdySPI_ DataRdySPI_ `(uc  1 e 1 0 ]
+"20 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\uart.c
+[v _ConfigUSART ConfigUSART `(v  1 e 0 0 ]
+"24
+[v _ReadUART ReadUART `(uc  1 e 1 0 ]
+"52
+[v _Write_str Write_str `(v  1 e 0 0 ]
+"58
+[v _Read_str Read_str `(v  1 e 0 0 ]
+"79
+[v _Write Write `(v  1 e 0 0 ]
+"182 C:\Program Files (x86)\Microchip\xc8\v1.21\include\pic18f4620.h
+[v _PORTB PORTB `VEuc  1 e 1 @3969 ]
+[s S3097 . 1 `uc 1 LATB0 1 0 :1:0 
+`uc 1 LATB1 1 0 :1:1 
+`uc 1 LATB2 1 0 :1:2 
+`uc 1 LATB3 1 0 :1:3 
+`uc 1 LATB4 1 0 :1:4 
+`uc 1 LATB5 1 0 :1:5 
+`uc 1 LATB6 1 0 :1:6 
+`uc 1 LATB7 1 0 :1:7 
+]
+"1178
+[s S3106 . 1 `uc 1 LB0 1 0 :1:0 
+]
+[s S3108 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 LB1 1 0 :1:1 
+]
+[s S3111 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 LB2 1 0 :1:2 
+]
+[s S3114 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 LB3 1 0 :1:3 
+]
+[s S3117 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 LB4 1 0 :1:4 
+]
+[s S3120 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 LB5 1 0 :1:5 
+]
+[s S3123 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 LB6 1 0 :1:6 
+]
+[s S3126 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 LB7 1 0 :1:7 
+]
+[u S3129 . 1 `S3097 1 . 1 0 `S3106 1 . 1 0 `S3108 1 . 1 0 `S3111 1 . 1 0 `S3114 1 . 1 0 `S3117 1 . 1 0 `S3120 1 . 1 0 `S3123 1 . 1 0 `S3126 1 . 1 0 ]
+[v _LATBbits LATBbits `VES3129  1 e 1 @3978 ]
+"1310
+[v _LATCbits LATCbits `VES3129  1 e 1 @3979 ]
+"1394
+[v _LATD LATD `VEuc  1 e 1 @3980 ]
+[s S3529 . 1 `uc 1 TRISC0 1 0 :1:0 
+`uc 1 TRISC1 1 0 :1:1 
+`uc 1 TRISC2 1 0 :1:2 
+`uc 1 TRISC3 1 0 :1:3 
+`uc 1 TRISC4 1 0 :1:4 
+`uc 1 TRISC5 1 0 :1:5 
+`uc 1 TRISC6 1 0 :1:6 
+`uc 1 TRISC7 1 0 :1:7 
+]
+"1881
+[s S3538 . 1 `uc 1 RC0 1 0 :1:0 
+`uc 1 RC1 1 0 :1:1 
+`uc 1 RC2 1 0 :1:2 
+`uc 1 RC3 1 0 :1:3 
+`uc 1 RC4 1 0 :1:4 
+`uc 1 RC5 1 0 :1:5 
+`uc 1 RC6 1 0 :1:6 
+`uc 1 RC7 1 0 :1:7 
+]
+[u S3547 . 1 `S3529 1 . 1 0 `S3538 1 . 1 0 ]
+[v _TRISBbits TRISBbits `VES3547  1 e 1 @3987 ]
+"2102
+[v _TRISCbits TRISCbits `VES3547  1 e 1 @3988 ]
+"2291
+[v _TRISD TRISD `VEuc  1 e 1 @3989 ]
+[s S3887 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSPIF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+`uc 1 PSPIF 1 0 :1:7 
+]
+"2764
+[s S3896 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 RC1IF 1 0 :1:5 
+]
+[s S3899 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 TX1IF 1 0 :1:4 
+]
+[u S3902 . 1 `S3887 1 . 1 0 `S3896 1 . 1 0 `S3899 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES3902  1 e 1 @3997 ]
+"2843
+[v _PIR1bits PIR1bits `VES3902  1 e 1 @3998 ]
+"3260
+[v _RCSTA RCSTA `VEuc  1 e 1 @4011 ]
+[s S4212 . 1 `uc 1 RX9D 1 0 :1:0 
+`uc 1 OERR 1 0 :1:1 
+`uc 1 FERR 1 0 :1:2 
+`uc 1 ADDEN 1 0 :1:3 
+`uc 1 CREN 1 0 :1:4 
+`uc 1 SREN 1 0 :1:5 
+`uc 1 RX9 1 0 :1:6 
+`uc 1 SPEN 1 0 :1:7 
+]
+"3301
+[s S4221 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 ADEN 1 0 :1:3 
+]
+[s S4224 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 SRENA 1 0 :1:5 
+]
+[s S4227 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 RC8_9 1 0 :1:6 
+]
+[s S4230 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 RC9 1 0 :1:6 
+]
+[s S4233 . 1 `uc 1 RCD8 1 0 :1:0 
+]
+[u S4235 . 1 `S4212 1 . 1 0 `S4221 1 . 1 0 `S4224 1 . 1 0 `S4227 1 . 1 0 `S4230 1 . 1 0 `S4233 1 . 1 0 ]
+[v _RCSTAbits RCSTAbits `VES4235  1 e 1 @4011 ]
+"3469
+[v _TXSTA TXSTA `VEuc  1 e 1 @4012 ]
+[s S3979 . 1 `uc 1 TX9D 1 0 :1:0 
+`uc 1 TRMT 1 0 :1:1 
+`uc 1 BRGH 1 0 :1:2 
+`uc 1 SENDB 1 0 :1:3 
+`uc 1 SYNC 1 0 :1:4 
+`uc 1 TXEN 1 0 :1:5 
+`uc 1 TX9 1 0 :1:6 
+`uc 1 CSRC 1 0 :1:7 
+]
+"3529
+[s S3988 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 BRGH1 1 0 :1:2 
+]
+[s S3991 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 CSRC1 1 0 :1:7 
+]
+[s S3994 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 SENDB1 1 0 :1:3 
+]
+[s S3997 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 SYNC1 1 0 :1:4 
+]
+[s S4000 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 TRMT1 1 0 :1:1 
+]
+[s S4003 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 TX91 1 0 :1:6 
+]
+[s S4006 . 1 `uc 1 TX9D1 1 0 :1:0 
+]
+[s S4008 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 TXEN1 1 0 :1:5 
+]
+[s S4011 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 TX8_9 1 0 :1:6 
+]
+[s S4014 . 1 `uc 1 TXD8 1 0 :1:0 
+]
+[u S4016 . 1 `S3979 1 . 1 0 `S3988 1 . 1 0 `S3991 1 . 1 0 `S3994 1 . 1 0 `S3997 1 . 1 0 `S4000 1 . 1 0 `S4003 1 . 1 0 `S4006 1 . 1 0 `S4008 1 . 1 0 `S4011 1 . 1 0 `S4014 1 . 1 0 ]
+[v _TXSTAbits TXSTAbits `VES4016  1 e 1 @4012 ]
+"3766
+[v _TXREG TXREG `VEuc  1 e 1 @4013 ]
+"3777
+[v _RCREG RCREG `VEuc  1 e 1 @4014 ]
+"3788
+[v _SPBRG SPBRG `VEuc  1 e 1 @4015 ]
+"3799
+[v _SPBRGH SPBRGH `VEuc  1 e 1 @4016 ]
+"3936
+[v _CMCON CMCON `VEuc  1 e 1 @4020 ]
+"4710
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @4033 ]
+"5001
+[v _SSPCON1 SSPCON1 `VEuc  1 e 1 @4038 ]
+[s S3861 . 1 `uc 1 SSPM 1 0 :4:0 
+`uc 1 CKP 1 0 :1:4 
+`uc 1 SSPEN 1 0 :1:5 
+`uc 1 SSPOV 1 0 :1:6 
+`uc 1 WCOL 1 0 :1:7 
+]
+"5021
+[s S3867 . 1 `uc 1 SSPM0 1 0 :1:0 
+`uc 1 SSPM1 1 0 :1:1 
+`uc 1 SSPM2 1 0 :1:2 
+`uc 1 SSPM3 1 0 :1:3 
+]
+[u S3872 . 1 `S3861 1 . 1 0 `S3867 1 . 1 0 ]
+[v _SSPCON1bits SSPCON1bits `VES3872  1 e 1 @4038 ]
+"5070
+[v _SSPSTAT SSPSTAT `VEuc  1 e 1 @4039 ]
+[s S3701 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R_NOT_W 1 0 :1:2 
+]
+"5165
+[s S3704 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 D_NOT_A 1 0 :1:5 
+]
+[s S3707 . 1 `uc 1 BF 1 0 :1:0 
+`uc 1 UA 1 0 :1:1 
+`uc 1 R_nW 1 0 :1:2 
+`uc 1 S 1 0 :1:3 
+`uc 1 P 1 0 :1:4 
+`uc 1 D_nA 1 0 :1:5 
+`uc 1 CKE 1 0 :1:6 
+`uc 1 SMP 1 0 :1:7 
+]
+[s S3722 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 D 1 0 :1:5 
+]
+[s S3727 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 W 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 A 1 0 :1:5 
+]
+[s S3732 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nW 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 nA 1 0 :1:5 
+]
+[s S3737 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R_W 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 D_A 1 0 :1:5 
+]
+[s S3742 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 NOT_WRITE 1 0 :1:2 
+]
+[s S3745 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 NOT_ADDRESS 1 0 :1:5 
+]
+[s S3748 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nWRITE 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 nADDRESS 1 0 :1:5 
+]
+[s S3753 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 DA 1 0 :1:5 
+]
+[s S3756 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 RW 1 0 :1:2 
+]
+[s S3759 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 START 1 0 :1:3 
+]
+[s S3762 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 STOP 1 0 :1:4 
+]
+[s S3765 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 NOT_W 1 0 :1:2 
+]
+[s S3768 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 NOT_A 1 0 :1:5 
+]
+[u S3771 . 1 `S3701 1 . 1 0 `S3704 1 . 1 0 `S3707 1 . 1 0 `S3701 1 . 1 0 `S3704 1 . 1 0 `S3722 1 . 1 0 `S3727 1 . 1 0 `S3732 1 . 1 0 `S3737 1 . 1 0 `S3742 1 . 1 0 `S3745 1 . 1 0 `S3748 1 . 1 0 `S3753 1 . 1 0 `S3756 1 . 1 0 `S3759 1 . 1 0 `S3762 1 . 1 0 `S3765 1 . 1 0 `S3768 1 . 1 0 ]
+[v _SSPSTATbits SSPSTATbits `VES3771  1 e 1 @4039 ]
+"5315
+[v _SSPBUF SSPBUF `VEuc  1 e 1 @4041 ]
+"7039
+[v _BF BF `VEb  1 e 0 @32312 ]
+"7129
+[v _CKE CKE `VEb  1 e 0 @32318 ]
+"7131
+[v _CKP CKP `VEb  1 e 0 @32308 ]
+"7375
+[v _LATB4 LATB4 `VEb  1 e 0 @31828 ]
+"7399
+[v _LATD0 LATD0 `VEb  1 e 0 @31840 ]
+"7401
+[v _LATD1 LATD1 `VEb  1 e 0 @31841 ]
+"7403
+[v _LATD2 LATD2 `VEb  1 e 0 @31842 ]
+"7839
+[v _SMP SMP `VEb  1 e 0 @32319 ]
+"7865
+[v _SSPEN SSPEN `VEb  1 e 0 @32309 ]
+"354 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\doprnt.c
+[v _dpowers dpowers `C[5]ui  1 s 10 dpowers ]
+"362
+[v _hexpowers hexpowers `C[4]ui  1 s 8 hexpowers ]
+[s S4419 . 1 `uc 1 RX_NINE 1 0 :1:0 
+`uc 1 TX_NINE 1 0 :1:1 
+`uc 1 FRAME_ERROR 1 0 :1:2 
+`uc 1 OVERRUN_ERROR 1 0 :1:3 
+`uc 1 fill 1 0 :4:4 
+]
+"5 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic18\plib\USART\udefs.c
+[u S4425 USART 1 `uc 1 val 1 0 `S4419 1 . 1 0 ]
+[v _USART_Status USART_Status `S4425  1 e 1 0 ]
+[s S881 cluster_lookup 8 `ul 1 ClusterIdx 4 0 `ul 1 CurrentCluster 4 4 ]
+"46 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_filelib.c
+[s S826 fat_node 4 `*.39S826 1 previous 2 0 `*.39S826 1 next 2 2 ]
+[s S884 sFL_FILE 580 `ul 1 parentcluster 4 0 `ul 1 startcluster 4 4 `ul 1 bytenum 4 8 `ul 1 filelength 4 12 `i 1 filelength_changed 2 16 `[10]uc 1 path 10 18 `[10]uc 1 filename 10 28 `[11]uc 1 shortfilename 11 38 `S881 1 last_fat_lookup 8 49 `[512]uc 1 file_data_sector 512 57 `ul 1 file_data_address 4 569 `i 1 file_data_dirty 2 573 `uc 1 flags 1 575 `S826 1 list_node 4 576 ]
+[v __files _files `[2]S884  1 s 1160 _files ]
+"47
+[v __filelib_init _filelib_init `i  1 s 2 _filelib_init ]
+"48
+[v __filelib_valid _filelib_valid `i  1 s 2 _filelib_valid ]
+[s S26 disk_if 4 `*.37(i 1 read_media 2 0 `*.37(i 1 write_media 2 2 ]
+"49
+[s S43 fat_buffer 522 `[512]uc 1 sector 512 0 `ul 1 address 4 512 `i 1 dirty 2 516 `*.39uc 1 ptr 2 518 `*.39S43 1 next 2 520 ]
+[s S49 fatfs 1095 `uc 1 sectors_per_cluster 1 0 `ul 1 cluster_begin_lba 4 1 `ul 1 rootdir_first_cluster 4 5 `ul 1 rootdir_first_sector 4 9 `ul 1 rootdir_sectors 4 13 `ul 1 fat_begin_lba 4 17 `us 1 fs_info_sector 2 21 `ul 1 lba_begin 4 23 `ul 1 fat_sectors 4 27 `ul 1 next_free_cluster 4 31 `us 1 root_entry_count 2 35 `us 1 reserved_sectors 2 37 `uc 1 num_of_fats 1 39 `E184 1 fat_type 1 40 `S26 1 disk_io 4 41 `*.37(v 1 fl_lock 2 45 `*.37(v 1 fl_unlock 2 47 `S43 1 currentsector 522 49 `*.39S43 1 fat_buffer_head 2 571 `[1]S43 1 fat_buffers 522 573 ]
+[v __fs _fs `S49  1 s 1095 _fs ]
+"50
+[s S829 fat_list 4 `*.39S826 1 head 2 0 `*.39S826 1 tail 2 2 ]
+[v __open_file_list _open_file_list `S829  1 s 4 _open_file_list ]
+"51
+[v __free_file_list _free_file_list `S829  1 s 4 _free_file_list ]
+[s S1914 sec_per_clus_table 5 `ul 1 sectors 4 0 `uc 1 sectors_per_cluster 1 4 ]
+"52 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_format.c
+[v __cluster_size_table16 _cluster_size_table16 `[8]S1914  1 e 40 0 ]
+"64
+[v __cluster_size_table32 _cluster_size_table32 `[6]S1914  1 e 30 0 ]
+"48 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\main.c
+[v _config_1 config_1 `uc  1 e 1 0 ]
+"49
+[v _str str `[120]uc  1 e 120 0 ]
+"50
+[v _str_1 str_1 `[200]uc  1 e 200 0 ]
+"51
+[v _str_2 str_2 `[200]uc  1 e 200 0 ]
+"59
+[v _readdata readdata `uc  1 e 1 0 ]
+"60
+[v _array array `[41]uc  1 e 41 0 ]
+"61
+[v _count count `i  1 e 2 0 ]
+[v _i i `i  1 e 2 0 ]
+[v _n n `i  1 e 2 0 ]
+"54 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\mmc_pic24f.c
+[v _Stat Stat `VEuc  1 s 1 Stat ]
+"57
+[v _Timer1 Timer1 `VEui  1 s 2 Timer1 ]
+[v _Timer2 Timer2 `VEui  1 s 2 Timer2 ]
+"60
+[v _CardType CardType `ui  1 s 2 CardType ]
+"250 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\main.c
+[v _main main `(v  1 e 0 0 ]
+{
+[s S881 cluster_lookup 8 `ul 1 ClusterIdx 4 0 `ul 1 CurrentCluster 4 4 ]
+"261
+[s S826 fat_node 4 `*.39S826 1 previous 2 0 `*.39S826 1 next 2 2 ]
+[s S884 sFL_FILE 580 `ul 1 parentcluster 4 0 `ul 1 startcluster 4 4 `ul 1 bytenum 4 8 `ul 1 filelength 4 12 `i 1 filelength_changed 2 16 `[10]uc 1 path 10 18 `[10]uc 1 filename 10 28 `[11]uc 1 shortfilename 11 38 `S881 1 last_fat_lookup 8 49 `[512]uc 1 file_data_sector 512 57 `ul 1 file_data_address 4 569 `i 1 file_data_dirty 2 573 `uc 1 flags 1 575 `S826 1 list_node 4 576 ]
+[v main@file file `*.39S884  1 a 2 136 ]
+"308
+} 0
+"37 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\delay.c
+[v _Delay_s Delay_s `(v  1 e 0 0 ]
+{
+"38
+[v Delay_s@j j `uc  1 a 1 7 ]
+[v Delay_s@i i `uc  1 a 1 6 ]
+"37
+[v Delay_s@t t `uc  1 p 1 4 ]
+"42
+} 0
+"18
+[v _delay_ms delay_ms `(v  1 e 0 0 ]
+{
+"19
+[v delay_ms@i i `uc  1 a 1 3 ]
+"18
+[v delay_ms@t t `uc  1 p 1 1 ]
+"26
+} 0
+"9 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic18\d1ktcyx.c
+[v _Delay1KTCYx Delay1KTCYx `(v  1 e 0 0 ]
+{
+[v Delay1KTCYx@unit unit `uc  1 p 1 0 ]
+"13
+} 0
+"34 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\spi_1.c
+[v _spi_init spi_init `(v  1 e 0 0 ]
+{
+"47
+} 0
+"20 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\uart.c
+[v _ConfigUSART ConfigUSART `(v  1 e 0 0 ]
+{
+[v ConfigUSART@config_1 config_1 `uc  1 p 1 3 ]
+[v ConfigUSART@config_2 config_2 `uc  1 p 1 4 ]
+"22
+} 0
+"74 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic18\plib\USART\uopen.c
+[v _OpenUSART OpenUSART `(v  1 e 0 0 ]
+{
+[v OpenUSART@config config `uc  1 p 1 0 ]
+[v OpenUSART@spbrg spbrg `ui  1 p 2 1 ]
+"143
+} 0
+"242 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\main.c
+[v _Clear_str Clear_str `(v  1 e 0 0 ]
+{
+[v Clear_str@buffer buffer `*.39uc  1 p 2 0 ]
+"248
+} 0
+"81
+[v _mmc_init mmc_init `(uc  1 e 1 0 ]
+{
+"82
+[v mmc_init@u u `uc  1 a 1 12 ]
+[v mmc_init@i i `uc  1 a 1 11 ]
+"118
+} 0
+"1470 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_filelib.c
+[v _fl_listdirectory fl_listdirectory `(v  1 e 0 0 ]
+{
+[s S184 fs_dir_ent 19 `[10]uc 1 filename 10 0 `uc 1 is_dir 1 10 `ul 1 cluster 4 11 `ul 1 size 4 15 ]
+"1482
+[v fl_listdirectory@dirent dirent `S184  1 a 19 86 ]
+[s S180 fs_dir_list_status 9 `ul 1 sector 4 0 `ul 1 cluster 4 4 `uc 1 offset 1 8 ]
+"1471
+[v fl_listdirectory@dirstat dirstat `S180  1 a 9 77 ]
+"1470
+[v fl_listdirectory@path path `*.32Cuc  1 p 2 126 ]
+"1507
+} 0
+"1566
+[v _fl_closedir fl_closedir `(i  1 e 2 0 ]
+{
+[s S180 fs_dir_list_status 9 `ul 1 sector 4 0 `ul 1 cluster 4 4 `uc 1 offset 1 8 ]
+[v fl_closedir@dir dir `*.39S180  1 p 2 0 ]
+"1569
+} 0
+"1546
+[v _fl_readdir fl_readdir `(i  1 e 2 0 ]
+{
+"1547
+[v fl_readdir@res res `i  1 a 2 62 ]
+[s S180 fs_dir_list_status 9 `ul 1 sector 4 0 `ul 1 cluster 4 4 `uc 1 offset 1 8 ]
+"1546
+[v fl_readdir@dirls dirls `*.39S180  1 p 2 58 ]
+[s S184 fs_dir_ent 19 `[10]uc 1 filename 10 0 `uc 1 is_dir 1 10 `ul 1 cluster 4 11 `ul 1 size 4 15 ]
+[v fl_readdir@entry entry `*.39S184  1 p 2 60 ]
+"1559
+} 0
+"786 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_access.c
+[v _fatfs_list_directory_next fatfs_list_directory_next `(i  1 e 2 0 ]
+{
+[s S111 lfn_cache 52 `[10][5]uc 1 String 50 0 `uc 1 Null 1 50 `uc 1 no_of_strings 1 51 ]
+"792
+[v fatfs_list_directory_next@lfn lfn `S111  1 a 52 25 ]
+"791
+[v fatfs_list_directory_next@short_filename short_filename `[13]uc  1 a 13 0 ]
+[s S75 fat_dir_entry 32 `[11]uc 1 Name 11 0 `uc 1 Attr 1 11 `uc 1 NTRes 1 12 `uc 1 CrtTimeTenth 1 13 `[2]uc 1 CrtTime 2 14 `[2]uc 1 CrtDate 2 16 `[2]uc 1 LstAccDate 2 18 `us 1 FstClusHI 2 20 `[2]uc 1 WrtTime 2 22 `[2]uc 1 WrtDate 2 24 `us 1 FstClusLO 2 26 `ul 1 FileSize 4 28 ]
+"789
+[v fatfs_list_directory_next@directoryEntry directoryEntry `*.39S75  1 a 2 23 ]
+"788
+[v fatfs_list_directory_next@recordoffset recordoffset `us  1 a 2 19 ]
+"794
+[v fatfs_list_directory_next@result result `i  1 a 2 17 ]
+"793
+[v fatfs_list_directory_next@dotRequired dotRequired `i  1 a 2 15 ]
+"790
+[v fatfs_list_directory_next@long_filename long_filename `*.39uc  1 a 2 13 ]
+"787
+[v fatfs_list_directory_next@i i `uc  1 a 1 22 ]
+[v fatfs_list_directory_next@item item `uc  1 a 1 21 ]
+[s S26 disk_if 4 `*.37(i 1 read_media 2 0 `*.37(i 1 write_media 2 2 ]
+"786
+[s S43 fat_buffer 522 `[512]uc 1 sector 512 0 `ul 1 address 4 512 `i 1 dirty 2 516 `*.39uc 1 ptr 2 518 `*.39S43 1 next 2 520 ]
+[s S49 fatfs 1095 `uc 1 sectors_per_cluster 1 0 `ul 1 cluster_begin_lba 4 1 `ul 1 rootdir_first_cluster 4 5 `ul 1 rootdir_first_sector 4 9 `ul 1 rootdir_sectors 4 13 `ul 1 fat_begin_lba 4 17 `us 1 fs_info_sector 2 21 `ul 1 lba_begin 4 23 `ul 1 fat_sectors 4 27 `ul 1 next_free_cluster 4 31 `us 1 root_entry_count 2 35 `us 1 reserved_sectors 2 37 `uc 1 num_of_fats 1 39 `E184 1 fat_type 1 40 `S26 1 disk_io 4 41 `*.37(v 1 fl_lock 2 45 `*.37(v 1 fl_unlock 2 47 `S43 1 currentsector 522 49 `*.39S43 1 fat_buffer_head 2 571 `[1]S43 1 fat_buffers 522 573 ]
+[v fatfs_list_directory_next@fs fs `*.39S49  1 p 2 44 ]
+[s S180 fs_dir_list_status 9 `ul 1 sector 4 0 `ul 1 cluster 4 4 `uc 1 offset 1 8 ]
+[v fatfs_list_directory_next@dirls dirls `*.39S180  1 p 2 46 ]
+[s S184 fs_dir_ent 19 `[10]uc 1 filename 10 0 `uc 1 is_dir 1 10 `ul 1 cluster 4 11 `ul 1 size 4 15 ]
+[v fatfs_list_directory_next@entry entry `*.39S184  1 p 2 48 ]
+"920
+} 0
+"346 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_string.c
+[v _fatfs_get_sfn_display_name fatfs_get_sfn_display_name `(i  1 e 2 0 ]
+{
+"350
+[v fatfs_get_sfn_display_name@a a `uc  1 a 1 6 ]
+"347
+[v fatfs_get_sfn_display_name@len len `i  1 a 2 4 ]
+"346
+[v fatfs_get_sfn_display_name@out out `*.39uc  1 p 2 0 ]
+[v fatfs_get_sfn_display_name@in in `*.39uc  1 p 2 2 ]
+"364
+} 0
+"10 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\strncpy.c
+[v _strncpy strncpy `(*.39uc  1 e 2 0 ]
+{
+"15
+[v strncpy@cp cp `*.39uc  1 a 2 6 ]
+"10
+[v strncpy@to to `*.39uc  1 p 2 0 ]
+[v strncpy@from from `*.39Cuc  1 p 2 2 ]
+[v strncpy@size size `ui  1 p 2 4 ]
+"27
+} 0
+"95 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_access.h
+[s S180 fs_dir_list_status 9 `ul 1 sector 4 0 `ul 1 cluster 4 4 `uc 1 offset 1 8 ]
+"1514 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_filelib.c
+[v _fl_opendir fl_opendir `(*.39S180  1 e 2 0 ]
+{
+"1517
+[v fl_opendir@cluster cluster `ul  1 a 4 122 ]
+"1516
+[v fl_opendir@res res `i  1 a 2 120 ]
+"1515
+[v fl_opendir@levels levels `i  1 a 2 118 ]
+"1514
+[v fl_opendir@path path `*.32Cuc  1 p 2 114 ]
+[v fl_opendir@dir dir `*.39S180  1 p 2 116 ]
+"1539
+} 0
+"774 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_access.c
+[v _fatfs_list_directory_start fatfs_list_directory_start `(v  1 e 0 0 ]
+{
+[s S26 disk_if 4 `*.37(i 1 read_media 2 0 `*.37(i 1 write_media 2 2 ]
+[s S43 fat_buffer 522 `[512]uc 1 sector 512 0 `ul 1 address 4 512 `i 1 dirty 2 516 `*.39uc 1 ptr 2 518 `*.39S43 1 next 2 520 ]
+[s S49 fatfs 1095 `uc 1 sectors_per_cluster 1 0 `ul 1 cluster_begin_lba 4 1 `ul 1 rootdir_first_cluster 4 5 `ul 1 rootdir_first_sector 4 9 `ul 1 rootdir_sectors 4 13 `ul 1 fat_begin_lba 4 17 `us 1 fs_info_sector 2 21 `ul 1 lba_begin 4 23 `ul 1 fat_sectors 4 27 `ul 1 next_free_cluster 4 31 `us 1 root_entry_count 2 35 `us 1 reserved_sectors 2 37 `uc 1 num_of_fats 1 39 `E184 1 fat_type 1 40 `S26 1 disk_io 4 41 `*.37(v 1 fl_lock 2 45 `*.37(v 1 fl_unlock 2 47 `S43 1 currentsector 522 49 `*.39S43 1 fat_buffer_head 2 571 `[1]S43 1 fat_buffers 522 573 ]
+[v fatfs_list_directory_start@fs fs `*.39S49  1 p 2 0 ]
+[s S180 fs_dir_list_status 9 `ul 1 sector 4 0 `ul 1 cluster 4 4 `uc 1 offset 1 8 ]
+[v fatfs_list_directory_start@dirls dirls `*.39S180  1 p 2 2 ]
+[v fatfs_list_directory_start@StartCluster StartCluster `ul  1 p 4 4 ]
+"778
+} 0
+"1255 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_filelib.c
+[v _fl_fwrite fl_fwrite `(i  1 e 2 0 ]
+{
+"1295
+[v fl_fwrite@sectorsWrote sectorsWrote `ul  1 a 4 2 ]
+"1262
+[v fl_fwrite@copyCount copyCount `ul  1 a 4 22 ]
+"1261
+[v fl_fwrite@bytesWritten bytesWritten `ul  1 a 4 18 ]
+"1259
+[v fl_fwrite@length length `ul  1 a 4 14 ]
+"1257
+[v fl_fwrite@sector sector `ul  1 a 4 10 ]
+"1258
+[v fl_fwrite@offset offset `ul  1 a 4 6 ]
+[s S881 cluster_lookup 8 `ul 1 ClusterIdx 4 0 `ul 1 CurrentCluster 4 4 ]
+"1256
+[s S826 fat_node 4 `*.39S826 1 previous 2 0 `*.39S826 1 next 2 2 ]
+[s S884 sFL_FILE 580 `ul 1 parentcluster 4 0 `ul 1 startcluster 4 4 `ul 1 bytenum 4 8 `ul 1 filelength 4 12 `i 1 filelength_changed 2 16 `[10]uc 1 path 10 18 `[10]uc 1 filename 10 28 `[11]uc 1 shortfilename 11 38 `S881 1 last_fat_lookup 8 49 `[512]uc 1 file_data_sector 512 57 `ul 1 file_data_address 4 569 `i 1 file_data_dirty 2 573 `uc 1 flags 1 575 `S826 1 list_node 4 576 ]
+[v fl_fwrite@file file `*.39S884  1 a 2 26 ]
+"1260
+[v fl_fwrite@buffer buffer `*.39uc  1 a 2 0 ]
+"1255
+[v fl_fwrite@data data `*.39Cv  1 p 2 87 ]
+[v fl_fwrite@size size `i  1 p 2 89 ]
+[v fl_fwrite@count count `i  1 p 2 91 ]
+[v fl_fwrite@f f `*.39v  1 p 2 93 ]
+"1395
+} 0
+"1015
+[v _fl_fread fl_fread `(i  1 e 2 0 ]
+{
+"1058
+[v fl_fread@sectorsRead sectorsRead `ul  1 a 4 0 ]
+"1016
+[v fl_fread@sector sector `ul  1 a 4 8 ]
+"1017
+[v fl_fread@offset offset `ul  1 a 4 4 ]
+[s S881 cluster_lookup 8 `ul 1 ClusterIdx 4 0 `ul 1 CurrentCluster 4 4 ]
+"1022
+[s S826 fat_node 4 `*.39S826 1 previous 2 0 `*.39S826 1 next 2 2 ]
+[s S884 sFL_FILE 580 `ul 1 parentcluster 4 0 `ul 1 startcluster 4 4 `ul 1 bytenum 4 8 `ul 1 filelength 4 12 `i 1 filelength_changed 2 16 `[10]uc 1 path 10 18 `[10]uc 1 filename 10 28 `[11]uc 1 shortfilename 11 38 `S881 1 last_fat_lookup 8 49 `[512]uc 1 file_data_sector 512 57 `ul 1 file_data_address 4 569 `i 1 file_data_dirty 2 573 `uc 1 flags 1 575 `S826 1 list_node 4 576 ]
+[v fl_fread@file file `*.39S884  1 a 2 18 ]
+"1020
+[v fl_fread@bytesRead bytesRead `i  1 a 2 16 ]
+"1019
+[v fl_fread@count count `i  1 a 2 14 ]
+"1018
+[v fl_fread@copyCount copyCount `i  1 a 2 12 ]
+"1015
+[v fl_fread@buffer buffer `*.39v  1 p 2 87 ]
+[v fl_fread@size size `i  1 p 2 89 ]
+[v fl_fread@length length `i  1 p 2 91 ]
+[v fl_fread@f f `*.39v  1 p 2 93 ]
+"1112
+} 0
+"552
+[v __read_sectors _read_sectors `(ul  1 s 4 _read_sectors ]
+{
+"590
+[v __read_sectors@nextCluster nextCluster `ul  1 a 4 25 ]
+"554
+[v __read_sectors@ClusterIdx ClusterIdx `ul  1 a 4 41 ]
+"555
+[v __read_sectors@Cluster Cluster `ul  1 a 4 37 ]
+"556
+[v __read_sectors@i i `ul  1 a 4 33 ]
+"553
+[v __read_sectors@Sector Sector `ul  1 a 4 29 ]
+"557
+[v __read_sectors@lba lba `ul  1 a 4 21 ]
+[s S881 cluster_lookup 8 `ul 1 ClusterIdx 4 0 `ul 1 CurrentCluster 4 4 ]
+"552
+[s S826 fat_node 4 `*.39S826 1 previous 2 0 `*.39S826 1 next 2 2 ]
+[s S884 sFL_FILE 580 `ul 1 parentcluster 4 0 `ul 1 startcluster 4 4 `ul 1 bytenum 4 8 `ul 1 filelength 4 12 `i 1 filelength_changed 2 16 `[10]uc 1 path 10 18 `[10]uc 1 filename 10 28 `[11]uc 1 shortfilename 11 38 `S881 1 last_fat_lookup 8 49 `[512]uc 1 file_data_sector 512 57 `ul 1 file_data_address 4 569 `i 1 file_data_dirty 2 573 `uc 1 flags 1 575 `S826 1 list_node 4 576 ]
+[v __read_sectors@file file `*.39S884  1 p 2 0 ]
+[v __read_sectors@offset offset `ul  1 p 4 2 ]
+[v __read_sectors@buffer buffer `*.39uc  1 p 2 6 ]
+[v __read_sectors@count count `ul  1 p 4 8 ]
+"625
+} 0
+"206 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_access.c
+[v _fatfs_sector_read fatfs_sector_read `(i  1 e 2 0 ]
+{
+[s S26 disk_if 4 `*.37(i 1 read_media 2 0 `*.37(i 1 write_media 2 2 ]
+[s S43 fat_buffer 522 `[512]uc 1 sector 512 0 `ul 1 address 4 512 `i 1 dirty 2 516 `*.39uc 1 ptr 2 518 `*.39S43 1 next 2 520 ]
+[s S49 fatfs 1095 `uc 1 sectors_per_cluster 1 0 `ul 1 cluster_begin_lba 4 1 `ul 1 rootdir_first_cluster 4 5 `ul 1 rootdir_first_sector 4 9 `ul 1 rootdir_sectors 4 13 `ul 1 fat_begin_lba 4 17 `us 1 fs_info_sector 2 21 `ul 1 lba_begin 4 23 `ul 1 fat_sectors 4 27 `ul 1 next_free_cluster 4 31 `us 1 root_entry_count 2 35 `us 1 reserved_sectors 2 37 `uc 1 num_of_fats 1 39 `E184 1 fat_type 1 40 `S26 1 disk_io 4 41 `*.37(v 1 fl_lock 2 45 `*.37(v 1 fl_unlock 2 47 `S43 1 currentsector 522 49 `*.39S43 1 fat_buffer_head 2 571 `[1]S43 1 fat_buffers 522 573 ]
+[v fatfs_sector_read@fs fs `*.39S49  1 p 2 31 ]
+[v fatfs_sector_read@lba lba `ul  1 p 4 33 ]
+[v fatfs_sector_read@target target `*.39uc  1 p 2 37 ]
+[v fatfs_sector_read@count count `ul  1 p 4 39 ]
+"208
+} 0
+"926 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_filelib.c
+[v _fl_fclose fl_fclose `(v  1 e 0 0 ]
+{
+[s S881 cluster_lookup 8 `ul 1 ClusterIdx 4 0 `ul 1 CurrentCluster 4 4 ]
+"927
+[s S826 fat_node 4 `*.39S826 1 previous 2 0 `*.39S826 1 next 2 2 ]
+[s S884 sFL_FILE 580 `ul 1 parentcluster 4 0 `ul 1 startcluster 4 4 `ul 1 bytenum 4 8 `ul 1 filelength 4 12 `i 1 filelength_changed 2 16 `[10]uc 1 path 10 18 `[10]uc 1 filename 10 28 `[11]uc 1 shortfilename 11 38 `S881 1 last_fat_lookup 8 49 `[512]uc 1 file_data_sector 512 57 `ul 1 file_data_address 4 569 `i 1 file_data_dirty 2 573 `uc 1 flags 1 575 `S826 1 list_node 4 576 ]
+[v fl_fclose@file file `*.39S884  1 a 2 89 ]
+"926
+[v fl_fclose@f f `*.39v  1 p 2 87 ]
+"963
+} 0
+"898
+[v _fl_fflush fl_fflush `(i  1 e 2 0 ]
+{
+[s S881 cluster_lookup 8 `ul 1 ClusterIdx 4 0 `ul 1 CurrentCluster 4 4 ]
+"900
+[s S826 fat_node 4 `*.39S826 1 previous 2 0 `*.39S826 1 next 2 2 ]
+[s S884 sFL_FILE 580 `ul 1 parentcluster 4 0 `ul 1 startcluster 4 4 `ul 1 bytenum 4 8 `ul 1 filelength 4 12 `i 1 filelength_changed 2 16 `[10]uc 1 path 10 18 `[10]uc 1 filename 10 28 `[11]uc 1 shortfilename 11 38 `S881 1 last_fat_lookup 8 49 `[512]uc 1 file_data_sector 512 57 `ul 1 file_data_address 4 569 `i 1 file_data_dirty 2 573 `uc 1 flags 1 575 `S826 1 list_node 4 576 ]
+[v fl_fflush@file file `*.39S884  1 a 2 85 ]
+"898
+[v fl_fflush@f f `*.39v  1 p 2 83 ]
+"921
+} 0
+"810
+[v __write_sectors _write_sectors `(ul  1 s 4 _write_sectors ]
+{
+"850
+[v __write_sectors@nextCluster nextCluster `ul  1 a 4 63 ]
+"813
+[v __write_sectors@Cluster Cluster `ul  1 a 4 79 ]
+"812
+[v __write_sectors@ClusterIdx ClusterIdx `ul  1 a 4 75 ]
+"815
+[v __write_sectors@i i `ul  1 a 4 71 ]
+"811
+[v __write_sectors@SectorNumber SectorNumber `ul  1 a 4 67 ]
+"814
+[v __write_sectors@LastCluster LastCluster `ul  1 a 4 59 ]
+"817
+[v __write_sectors@TotalWriteCount TotalWriteCount `ul  1 a 4 55 ]
+"816
+[v __write_sectors@lba lba `ul  1 a 4 51 ]
+[s S881 cluster_lookup 8 `ul 1 ClusterIdx 4 0 `ul 1 CurrentCluster 4 4 ]
+"810
+[s S826 fat_node 4 `*.39S826 1 previous 2 0 `*.39S826 1 next 2 2 ]
+[s S884 sFL_FILE 580 `ul 1 parentcluster 4 0 `ul 1 startcluster 4 4 `ul 1 bytenum 4 8 `ul 1 filelength 4 12 `i 1 filelength_changed 2 16 `[10]uc 1 path 10 18 `[10]uc 1 filename 10 28 `[11]uc 1 shortfilename 11 38 `S881 1 last_fat_lookup 8 49 `[512]uc 1 file_data_sector 512 57 `ul 1 file_data_address 4 569 `i 1 file_data_dirty 2 573 `uc 1 flags 1 575 `S826 1 list_node 4 576 ]
+[v __write_sectors@file file `*.39S884  1 p 2 30 ]
+[v __write_sectors@offset offset `ul  1 p 4 32 ]
+[v __write_sectors@buf buf `*.39uc  1 p 2 36 ]
+[v __write_sectors@count count `ul  1 p 4 38 ]
+"892
+} 0
+"77 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_cache.c
+[v _fatfs_cache_set_next_cluster fatfs_cache_set_next_cluster `(i  1 e 2 0 ]
+{
+[s S26 disk_if 4 `*.37(i 1 read_media 2 0 `*.37(i 1 write_media 2 2 ]
+[s S43 fat_buffer 522 `[512]uc 1 sector 512 0 `ul 1 address 4 512 `i 1 dirty 2 516 `*.39uc 1 ptr 2 518 `*.39S43 1 next 2 520 ]
+[s S49 fatfs 1095 `uc 1 sectors_per_cluster 1 0 `ul 1 cluster_begin_lba 4 1 `ul 1 rootdir_first_cluster 4 5 `ul 1 rootdir_first_sector 4 9 `ul 1 rootdir_sectors 4 13 `ul 1 fat_begin_lba 4 17 `us 1 fs_info_sector 2 21 `ul 1 lba_begin 4 23 `ul 1 fat_sectors 4 27 `ul 1 next_free_cluster 4 31 `us 1 root_entry_count 2 35 `us 1 reserved_sectors 2 37 `uc 1 num_of_fats 1 39 `E184 1 fat_type 1 40 `S26 1 disk_io 4 41 `*.37(v 1 fl_lock 2 45 `*.37(v 1 fl_unlock 2 47 `S43 1 currentsector 522 49 `*.39S43 1 fat_buffer_head 2 571 `[1]S43 1 fat_buffers 522 573 ]
+[v fatfs_cache_set_next_cluster@fs fs `*.39S49  1 p 2 0 ]
+[s S881 cluster_lookup 8 `ul 1 ClusterIdx 4 0 `ul 1 CurrentCluster 4 4 ]
+[s S826 fat_node 4 `*.39S826 1 previous 2 0 `*.39S826 1 next 2 2 ]
+[s S884 sFL_FILE 580 `ul 1 parentcluster 4 0 `ul 1 startcluster 4 4 `ul 1 bytenum 4 8 `ul 1 filelength 4 12 `i 1 filelength_changed 2 16 `[10]uc 1 path 10 18 `[10]uc 1 filename 10 28 `[11]uc 1 shortfilename 11 38 `S881 1 last_fat_lookup 8 49 `[512]uc 1 file_data_sector 512 57 `ul 1 file_data_address 4 569 `i 1 file_data_dirty 2 573 `uc 1 flags 1 575 `S826 1 list_node 4 576 ]
+[v fatfs_cache_set_next_cluster@file file `*.39S884  1 p 2 2 ]
+[v fatfs_cache_set_next_cluster@clusterIdx clusterIdx `ul  1 p 4 4 ]
+[v fatfs_cache_set_next_cluster@nextCluster nextCluster `ul  1 p 4 8 ]
+"91
+} 0
+"60
+[v _fatfs_cache_get_next_cluster fatfs_cache_get_next_cluster `(i  1 e 2 0 ]
+{
+[s S26 disk_if 4 `*.37(i 1 read_media 2 0 `*.37(i 1 write_media 2 2 ]
+[s S43 fat_buffer 522 `[512]uc 1 sector 512 0 `ul 1 address 4 512 `i 1 dirty 2 516 `*.39uc 1 ptr 2 518 `*.39S43 1 next 2 520 ]
+[s S49 fatfs 1095 `uc 1 sectors_per_cluster 1 0 `ul 1 cluster_begin_lba 4 1 `ul 1 rootdir_first_cluster 4 5 `ul 1 rootdir_first_sector 4 9 `ul 1 rootdir_sectors 4 13 `ul 1 fat_begin_lba 4 17 `us 1 fs_info_sector 2 21 `ul 1 lba_begin 4 23 `ul 1 fat_sectors 4 27 `ul 1 next_free_cluster 4 31 `us 1 root_entry_count 2 35 `us 1 reserved_sectors 2 37 `uc 1 num_of_fats 1 39 `E184 1 fat_type 1 40 `S26 1 disk_io 4 41 `*.37(v 1 fl_lock 2 45 `*.37(v 1 fl_unlock 2 47 `S43 1 currentsector 522 49 `*.39S43 1 fat_buffer_head 2 571 `[1]S43 1 fat_buffers 522 573 ]
+[v fatfs_cache_get_next_cluster@fs fs `*.39S49  1 p 2 0 ]
+[s S881 cluster_lookup 8 `ul 1 ClusterIdx 4 0 `ul 1 CurrentCluster 4 4 ]
+[s S826 fat_node 4 `*.39S826 1 previous 2 0 `*.39S826 1 next 2 2 ]
+[s S884 sFL_FILE 580 `ul 1 parentcluster 4 0 `ul 1 startcluster 4 4 `ul 1 bytenum 4 8 `ul 1 filelength 4 12 `i 1 filelength_changed 2 16 `[10]uc 1 path 10 18 `[10]uc 1 filename 10 28 `[11]uc 1 shortfilename 11 38 `S881 1 last_fat_lookup 8 49 `[512]uc 1 file_data_sector 512 57 `ul 1 file_data_address 4 569 `i 1 file_data_dirty 2 573 `uc 1 flags 1 575 `S826 1 list_node 4 576 ]
+[v fatfs_cache_get_next_cluster@file file `*.39S884  1 p 2 2 ]
+[v fatfs_cache_get_next_cluster@clusterIdx clusterIdx `ul  1 p 4 4 ]
+[v fatfs_cache_get_next_cluster@pNextCluster pNextCluster `*.39ul  1 p 2 8 ]
+"72
+} 0
+"213 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_access.c
+[v _fatfs_sector_write fatfs_sector_write `(i  1 e 2 0 ]
+{
+[s S26 disk_if 4 `*.37(i 1 read_media 2 0 `*.37(i 1 write_media 2 2 ]
+[s S43 fat_buffer 522 `[512]uc 1 sector 512 0 `ul 1 address 4 512 `i 1 dirty 2 516 `*.39uc 1 ptr 2 518 `*.39S43 1 next 2 520 ]
+[s S49 fatfs 1095 `uc 1 sectors_per_cluster 1 0 `ul 1 cluster_begin_lba 4 1 `ul 1 rootdir_first_cluster 4 5 `ul 1 rootdir_first_sector 4 9 `ul 1 rootdir_sectors 4 13 `ul 1 fat_begin_lba 4 17 `us 1 fs_info_sector 2 21 `ul 1 lba_begin 4 23 `ul 1 fat_sectors 4 27 `ul 1 next_free_cluster 4 31 `us 1 root_entry_count 2 35 `us 1 reserved_sectors 2 37 `uc 1 num_of_fats 1 39 `E184 1 fat_type 1 40 `S26 1 disk_io 4 41 `*.37(v 1 fl_lock 2 45 `*.37(v 1 fl_unlock 2 47 `S43 1 currentsector 522 49 `*.39S43 1 fat_buffer_head 2 571 `[1]S43 1 fat_buffers 522 573 ]
+[v fatfs_sector_write@fs fs `*.39S49  1 p 2 31 ]
+[v fatfs_sector_write@lba lba `ul  1 p 4 33 ]
+[v fatfs_sector_write@target target `*.39uc  1 p 2 37 ]
+[v fatfs_sector_write@count count `ul  1 p 4 39 ]
+"215
+} 0
+"634
+[v _fatfs_update_file_length fatfs_update_file_length `(i  1 e 2 0 ]
+{
+[s S75 fat_dir_entry 32 `[11]uc 1 Name 11 0 `uc 1 Attr 1 11 `uc 1 NTRes 1 12 `uc 1 CrtTimeTenth 1 13 `[2]uc 1 CrtTime 2 14 `[2]uc 1 CrtDate 2 16 `[2]uc 1 LstAccDate 2 18 `us 1 FstClusHI 2 20 `[2]uc 1 WrtTime 2 22 `[2]uc 1 WrtDate 2 24 `us 1 FstClusLO 2 26 `ul 1 FileSize 4 28 ]
+"638
+[v fatfs_update_file_length@directoryEntry directoryEntry `*.39S75  1 a 2 63 ]
+"636
+[v fatfs_update_file_length@recordoffset recordoffset `us  1 a 2 60 ]
+"637
+[v fatfs_update_file_length@x x `i  1 a 2 58 ]
+"635
+[v fatfs_update_file_length@item item `uc  1 a 1 62 ]
+[s S26 disk_if 4 `*.37(i 1 read_media 2 0 `*.37(i 1 write_media 2 2 ]
+"634
+[s S43 fat_buffer 522 `[512]uc 1 sector 512 0 `ul 1 address 4 512 `i 1 dirty 2 516 `*.39uc 1 ptr 2 518 `*.39S43 1 next 2 520 ]
+[s S49 fatfs 1095 `uc 1 sectors_per_cluster 1 0 `ul 1 cluster_begin_lba 4 1 `ul 1 rootdir_first_cluster 4 5 `ul 1 rootdir_first_sector 4 9 `ul 1 rootdir_sectors 4 13 `ul 1 fat_begin_lba 4 17 `us 1 fs_info_sector 2 21 `ul 1 lba_begin 4 23 `ul 1 fat_sectors 4 27 `ul 1 next_free_cluster 4 31 `us 1 root_entry_count 2 35 `us 1 reserved_sectors 2 37 `uc 1 num_of_fats 1 39 `E184 1 fat_type 1 40 `S26 1 disk_io 4 41 `*.37(v 1 fl_lock 2 45 `*.37(v 1 fl_unlock 2 47 `S43 1 currentsector 522 49 `*.39S43 1 fat_buffer_head 2 571 `[1]S43 1 fat_buffers 522 573 ]
+[v fatfs_update_file_length@fs fs `*.39S49  1 p 2 44 ]
+[v fatfs_update_file_length@Cluster Cluster `ul  1 p 4 46 ]
+[v fatfs_update_file_length@shortname shortname `*.39uc  1 p 2 50 ]
+[v fatfs_update_file_length@fileLength fileLength `ul  1 p 4 52 ]
+"696
+} 0
+"694 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_filelib.c
+[v _fl_fopen fl_fopen `(*.39v  1 e 2 0 ]
+{
+[s S881 cluster_lookup 8 `ul 1 ClusterIdx 4 0 `ul 1 CurrentCluster 4 4 ]
+"696
+[s S826 fat_node 4 `*.39S826 1 previous 2 0 `*.39S826 1 next 2 2 ]
+[s S884 sFL_FILE 580 `ul 1 parentcluster 4 0 `ul 1 startcluster 4 4 `ul 1 bytenum 4 8 `ul 1 filelength 4 12 `i 1 filelength_changed 2 16 `[10]uc 1 path 10 18 `[10]uc 1 filename 10 28 `[11]uc 1 shortfilename 11 38 `S881 1 last_fat_lookup 8 49 `[512]uc 1 file_data_sector 512 57 `ul 1 file_data_address 4 569 `i 1 file_data_dirty 2 573 `uc 1 flags 1 575 `S826 1 list_node 4 576 ]
+[v fl_fopen@file file `*.39S884  1 a 2 132 ]
+"695
+[v fl_fopen@i i `i  1 a 2 130 ]
+"697
+[v fl_fopen@flags flags `uc  1 a 1 134 ]
+"694
+[v fl_fopen@path path `*.32Cuc  1 p 2 126 ]
+[v fl_fopen@mode mode `*.32Cuc  1 p 2 128 ]
+"804
+} 0
+"72 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_filelib.h
+"36
+[s S881 cluster_lookup 8 `ul 1 ClusterIdx 4 0 `ul 1 CurrentCluster 4 4 ]
+"401 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_filelib.c
+"21 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_list.h
+"401 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_filelib.c
+[s S826 fat_node 4 `*.39S826 1 previous 2 0 `*.39S826 1 next 2 2 ]
+[s S884 sFL_FILE 580 `ul 1 parentcluster 4 0 `ul 1 startcluster 4 4 `ul 1 bytenum 4 8 `ul 1 filelength 4 12 `i 1 filelength_changed 2 16 `[10]uc 1 path 10 18 `[10]uc 1 filename 10 28 `[11]uc 1 shortfilename 11 38 `S881 1 last_fat_lookup 8 49 `[512]uc 1 file_data_sector 512 57 `ul 1 file_data_address 4 569 `i 1 file_data_dirty 2 573 `uc 1 flags 1 575 `S826 1 list_node 4 576 ]
+[v __create_file _create_file `(*.39S884  1 s 2 _create_file ]
+{
+[s S75 fat_dir_entry 32 `[11]uc 1 Name 11 0 `uc 1 Attr 1 11 `uc 1 NTRes 1 12 `uc 1 CrtTimeTenth 1 13 `[2]uc 1 CrtTime 2 14 `[2]uc 1 CrtDate 2 16 `[2]uc 1 LstAccDate 2 18 `us 1 FstClusHI 2 20 `[2]uc 1 WrtTime 2 22 `[2]uc 1 WrtDate 2 24 `us 1 FstClusLO 2 26 `ul 1 FileSize 4 28 ]
+"403
+[v __create_file@sfEntry sfEntry `S75  1 a 32 90 ]
+"404
+[v __create_file@shortFilename shortFilename `[11]uc  1 a 11 79 ]
+"402
+[v __create_file@file file `*.39S884  1 a 2 124 ]
+"405
+[v __create_file@tailNum tailNum `i  1 a 2 122 ]
+"401
+[v __create_file@filename filename `*.32Cuc  1 p 2 77 ]
+"546
+} 0
+"267 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_write.c
+[v _fatfs_add_file_entry fatfs_add_file_entry `(i  1 e 2 0 ]
+{
+[s S75 fat_dir_entry 32 `[11]uc 1 Name 11 0 `uc 1 Attr 1 11 `uc 1 NTRes 1 12 `uc 1 CrtTimeTenth 1 13 `[2]uc 1 CrtTime 2 14 `[2]uc 1 CrtDate 2 16 `[2]uc 1 LstAccDate 2 18 `us 1 FstClusHI 2 20 `[2]uc 1 WrtTime 2 22 `[2]uc 1 WrtDate 2 24 `us 1 FstClusLO 2 26 `ul 1 FileSize 4 28 ]
+"273
+[v fatfs_add_file_entry@shortEntry shortEntry `S75  1 a 32 24 ]
+"276
+[v fatfs_add_file_entry@dirSector dirSector `ul  1 a 4 20 ]
+"271
+[v fatfs_add_file_entry@x x `ul  1 a 4 6 ]
+"272
+[v fatfs_add_file_entry@entryCount entryCount `i  1 a 2 16 ]
+"278
+[v fatfs_add_file_entry@foundEnd foundEnd `i  1 a 2 12 ]
+"269
+[v fatfs_add_file_entry@recordoffset recordoffset `us  1 a 2 10 ]
+"274
+[v fatfs_add_file_entry@dirtySector dirtySector `i  1 a 2 4 ]
+"281
+[v fatfs_add_file_entry@pSname pSname `*.39uc  1 a 2 0 ]
+"268
+[v fatfs_add_file_entry@item item `uc  1 a 1 19 ]
+"277
+[v fatfs_add_file_entry@dirOffset dirOffset `uc  1 a 1 18 ]
+"280
+[v fatfs_add_file_entry@checksum checksum `uc  1 a 1 15 ]
+"270
+[v fatfs_add_file_entry@i i `uc  1 a 1 14 ]
+[s S26 disk_if 4 `*.37(i 1 read_media 2 0 `*.37(i 1 write_media 2 2 ]
+"267
+[s S43 fat_buffer 522 `[512]uc 1 sector 512 0 `ul 1 address 4 512 `i 1 dirty 2 516 `*.39uc 1 ptr 2 518 `*.39S43 1 next 2 520 ]
+[s S49 fatfs 1095 `uc 1 sectors_per_cluster 1 0 `ul 1 cluster_begin_lba 4 1 `ul 1 rootdir_first_cluster 4 5 `ul 1 rootdir_first_sector 4 9 `ul 1 rootdir_sectors 4 13 `ul 1 fat_begin_lba 4 17 `us 1 fs_info_sector 2 21 `ul 1 lba_begin 4 23 `ul 1 fat_sectors 4 27 `ul 1 next_free_cluster 4 31 `us 1 root_entry_count 2 35 `us 1 reserved_sectors 2 37 `uc 1 num_of_fats 1 39 `E184 1 fat_type 1 40 `S26 1 disk_io 4 41 `*.37(v 1 fl_lock 2 45 `*.37(v 1 fl_unlock 2 47 `S43 1 currentsector 522 49 `*.39S43 1 fat_buffer_head 2 571 `[1]S43 1 fat_buffers 522 573 ]
+[v fatfs_add_file_entry@fs fs `*.39S49  1 p 2 76 ]
+[v fatfs_add_file_entry@dirCluster dirCluster `ul  1 p 4 78 ]
+[v fatfs_add_file_entry@filename filename `*.39uc  1 p 2 82 ]
+[v fatfs_add_file_entry@shortfilename shortfilename `*.39uc  1 p 2 84 ]
+[v fatfs_add_file_entry@startCluster startCluster `ul  1 p 4 86 ]
+[v fatfs_add_file_entry@size size `ul  1 p 4 90 ]
+[v fatfs_add_file_entry@dir dir `i  1 p 2 94 ]
+"372
+} 0
+"131
+[v _fatfs_find_free_dir_offset fatfs_find_free_dir_offset `(i  1 s 2 fatfs_find_free_dir_offset ]
+{
+"230
+[v fatfs_find_free_dir_offset@newCluster newCluster `ul  1 a 4 65 ]
+"137
+[v fatfs_find_free_dir_offset@possible_spaces possible_spaces `i  1 a 2 73 ]
+"136
+[v fatfs_find_free_dir_offset@x x `i  1 a 2 71 ]
+"134
+[v fatfs_find_free_dir_offset@recordoffset recordoffset `us  1 a 2 69 ]
+"138
+[v fatfs_find_free_dir_offset@start_recorded start_recorded `i  1 a 2 62 ]
+[s S75 fat_dir_entry 32 `[11]uc 1 Name 11 0 `uc 1 Attr 1 11 `uc 1 NTRes 1 12 `uc 1 CrtTimeTenth 1 13 `[2]uc 1 CrtTime 2 14 `[2]uc 1 CrtDate 2 16 `[2]uc 1 LstAccDate 2 18 `us 1 FstClusHI 2 20 `[2]uc 1 WrtTime 2 22 `[2]uc 1 WrtDate 2 24 `us 1 FstClusLO 2 26 `ul 1 FileSize 4 28 ]
+"132
+[v fatfs_find_free_dir_offset@directoryEntry directoryEntry `*.39S75  1 a 2 60 ]
+"133
+[v fatfs_find_free_dir_offset@item item `uc  1 a 1 75 ]
+"135
+[v fatfs_find_free_dir_offset@i i `uc  1 a 1 64 ]
+[s S26 disk_if 4 `*.37(i 1 read_media 2 0 `*.37(i 1 write_media 2 2 ]
+"131
+[s S43 fat_buffer 522 `[512]uc 1 sector 512 0 `ul 1 address 4 512 `i 1 dirty 2 516 `*.39uc 1 ptr 2 518 `*.39S43 1 next 2 520 ]
+[s S49 fatfs 1095 `uc 1 sectors_per_cluster 1 0 `ul 1 cluster_begin_lba 4 1 `ul 1 rootdir_first_cluster 4 5 `ul 1 rootdir_first_sector 4 9 `ul 1 rootdir_sectors 4 13 `ul 1 fat_begin_lba 4 17 `us 1 fs_info_sector 2 21 `ul 1 lba_begin 4 23 `ul 1 fat_sectors 4 27 `ul 1 next_free_cluster 4 31 `us 1 root_entry_count 2 35 `us 1 reserved_sectors 2 37 `uc 1 num_of_fats 1 39 `E184 1 fat_type 1 40 `S26 1 disk_io 4 41 `*.37(v 1 fl_lock 2 45 `*.37(v 1 fl_unlock 2 47 `S43 1 currentsector 522 49 `*.39S43 1 fat_buffer_head 2 571 `[1]S43 1 fat_buffers 522 573 ]
+[v fatfs_find_free_dir_offset@fs fs `*.39S49  1 p 2 44 ]
+[v fatfs_find_free_dir_offset@dirCluster dirCluster `ul  1 p 4 46 ]
+[v fatfs_find_free_dir_offset@entryCount entryCount `i  1 p 2 50 ]
+[v fatfs_find_free_dir_offset@pSector pSector `*.39ul  1 p 2 52 ]
+[v fatfs_find_free_dir_offset@pOffset pOffset `*.39uc  1 p 2 54 ]
+"262
+} 0
+"415 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_table.c
+[v _fatfs_fat_add_cluster_to_chain fatfs_fat_add_cluster_to_chain `(i  1 e 2 0 ]
+{
+"417
+[v fatfs_fat_add_cluster_to_chain@next_cluster next_cluster `ul  1 a 4 14 ]
+"416
+[v fatfs_fat_add_cluster_to_chain@last_cluster last_cluster `ul  1 a 4 10 ]
+[s S26 disk_if 4 `*.37(i 1 read_media 2 0 `*.37(i 1 write_media 2 2 ]
+"415
+[s S43 fat_buffer 522 `[512]uc 1 sector 512 0 `ul 1 address 4 512 `i 1 dirty 2 516 `*.39uc 1 ptr 2 518 `*.39S43 1 next 2 520 ]
+[s S49 fatfs 1095 `uc 1 sectors_per_cluster 1 0 `ul 1 cluster_begin_lba 4 1 `ul 1 rootdir_first_cluster 4 5 `ul 1 rootdir_first_sector 4 9 `ul 1 rootdir_sectors 4 13 `ul 1 fat_begin_lba 4 17 `us 1 fs_info_sector 2 21 `ul 1 lba_begin 4 23 `ul 1 fat_sectors 4 27 `ul 1 next_free_cluster 4 31 `us 1 root_entry_count 2 35 `us 1 reserved_sectors 2 37 `uc 1 num_of_fats 1 39 `E184 1 fat_type 1 40 `S26 1 disk_io 4 41 `*.37(v 1 fl_lock 2 45 `*.37(v 1 fl_unlock 2 47 `S43 1 currentsector 522 49 `*.39S43 1 fat_buffer_head 2 571 `[1]S43 1 fat_buffers 522 573 ]
+[v fatfs_fat_add_cluster_to_chain@fs fs `*.39S49  1 p 2 0 ]
+[v fatfs_fat_add_cluster_to_chain@start_cluster start_cluster `ul  1 p 4 2 ]
+[v fatfs_fat_add_cluster_to_chain@newEntry newEntry `ul  1 p 4 6 ]
+"440
+} 0
+"330 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_access.c
+[v _fatfs_write_sector fatfs_write_sector `(i  1 e 2 0 ]
+{
+"368
+[v fatfs_write_sector@lba_450 lba `ul  1 a 4 55 ]
+"338
+[v fatfs_write_sector@lba lba `ul  1 a 4 59 ]
+[s S26 disk_if 4 `*.37(i 1 read_media 2 0 `*.37(i 1 write_media 2 2 ]
+"330
+[s S43 fat_buffer 522 `[512]uc 1 sector 512 0 `ul 1 address 4 512 `i 1 dirty 2 516 `*.39uc 1 ptr 2 518 `*.39S43 1 next 2 520 ]
+[s S49 fatfs 1095 `uc 1 sectors_per_cluster 1 0 `ul 1 cluster_begin_lba 4 1 `ul 1 rootdir_first_cluster 4 5 `ul 1 rootdir_first_sector 4 9 `ul 1 rootdir_sectors 4 13 `ul 1 fat_begin_lba 4 17 `us 1 fs_info_sector 2 21 `ul 1 lba_begin 4 23 `ul 1 fat_sectors 4 27 `ul 1 next_free_cluster 4 31 `us 1 root_entry_count 2 35 `us 1 reserved_sectors 2 37 `uc 1 num_of_fats 1 39 `E184 1 fat_type 1 40 `S26 1 disk_io 4 41 `*.37(v 1 fl_lock 2 45 `*.37(v 1 fl_unlock 2 47 `S43 1 currentsector 522 49 `*.39S43 1 fat_buffer_head 2 571 `[1]S43 1 fat_buffers 522 573 ]
+[v fatfs_write_sector@fs fs `*.39S49  1 p 2 31 ]
+[v fatfs_write_sector@cluster cluster `ul  1 p 4 33 ]
+[v fatfs_write_sector@sector sector `ul  1 p 4 37 ]
+[v fatfs_write_sector@target target `*.39uc  1 p 2 41 ]
+"382
+} 0
+"251 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_misc.c
+[v _fatfs_sfn_create_entry fatfs_sfn_create_entry `(v  1 e 0 0 ]
+{
+"252
+[v fatfs_sfn_create_entry@i i `i  1 a 2 14 ]
+"251
+[v fatfs_sfn_create_entry@shortfilename shortfilename `*.39uc  1 p 2 0 ]
+[v fatfs_sfn_create_entry@size size `ul  1 p 4 2 ]
+[v fatfs_sfn_create_entry@startCluster startCluster `ul  1 p 4 6 ]
+[s S75 fat_dir_entry 32 `[11]uc 1 Name 11 0 `uc 1 Attr 1 11 `uc 1 NTRes 1 12 `uc 1 CrtTimeTenth 1 13 `[2]uc 1 CrtTime 2 14 `[2]uc 1 CrtDate 2 16 `[2]uc 1 LstAccDate 2 18 `us 1 FstClusHI 2 20 `[2]uc 1 WrtTime 2 22 `[2]uc 1 WrtDate 2 24 `us 1 FstClusLO 2 26 `ul 1 FileSize 4 28 ]
+[v fatfs_sfn_create_entry@entry entry `*.39S75  1 p 2 10 ]
+[v fatfs_sfn_create_entry@dir dir `i  1 p 2 12 ]
+"279
+} 0
+"208
+[v _fatfs_filename_to_lfn fatfs_filename_to_lfn `(v  1 e 0 0 ]
+{
+"210
+[v fatfs_filename_to_lfn@nameIndexes nameIndexes `[5]i  1 a 10 27 ]
+"209
+[v fatfs_filename_to_lfn@i i `i  1 a 2 45 ]
+"217
+[v fatfs_filename_to_lfn@start start `i  1 a 2 43 ]
+"213
+[v fatfs_filename_to_lfn@length length `i  1 a 2 41 ]
+"214
+[v fatfs_filename_to_lfn@entriesRequired entriesRequired `i  1 a 2 37 ]
+"208
+[v fatfs_filename_to_lfn@filename filename `*.39uc  1 p 2 14 ]
+[v fatfs_filename_to_lfn@buffer buffer `*.39uc  1 p 2 16 ]
+[v fatfs_filename_to_lfn@entry entry `i  1 p 2 18 ]
+[v fatfs_filename_to_lfn@sfnChk sfnChk `uc  1 p 1 20 ]
+"210
+[v fatfs_filename_to_lfn@F379 F379 `[5]i  1 s 10 F379 ]
+"244
+} 0
+"194
+[v _fatfs_lfn_entries_required fatfs_lfn_entries_required `(i  1 e 2 0 ]
+{
+"195
+[v fatfs_lfn_entries_required@length length `i  1 a 2 11 ]
+"194
+[v fatfs_lfn_entries_required@filename filename `*.39uc  1 p 2 9 ]
+"201
+} 0
+"390 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_table.c
+[v _fatfs_free_cluster_chain fatfs_free_cluster_chain `(i  1 e 2 0 ]
+{
+"392
+[v fatfs_free_cluster_chain@next_cluster next_cluster `ul  1 a 4 10 ]
+"391
+[v fatfs_free_cluster_chain@last_cluster last_cluster `ul  1 a 4 6 ]
+[s S26 disk_if 4 `*.37(i 1 read_media 2 0 `*.37(i 1 write_media 2 2 ]
+"390
+[s S43 fat_buffer 522 `[512]uc 1 sector 512 0 `ul 1 address 4 512 `i 1 dirty 2 516 `*.39uc 1 ptr 2 518 `*.39S43 1 next 2 520 ]
+[s S49 fatfs 1095 `uc 1 sectors_per_cluster 1 0 `ul 1 cluster_begin_lba 4 1 `ul 1 rootdir_first_cluster 4 5 `ul 1 rootdir_first_sector 4 9 `ul 1 rootdir_sectors 4 13 `ul 1 fat_begin_lba 4 17 `us 1 fs_info_sector 2 21 `ul 1 lba_begin 4 23 `ul 1 fat_sectors 4 27 `ul 1 next_free_cluster 4 31 `us 1 root_entry_count 2 35 `us 1 reserved_sectors 2 37 `uc 1 num_of_fats 1 39 `E184 1 fat_type 1 40 `S26 1 disk_io 4 41 `*.37(v 1 fl_lock 2 45 `*.37(v 1 fl_unlock 2 47 `S43 1 currentsector 522 49 `*.39S43 1 fat_buffer_head 2 571 `[1]S43 1 fat_buffers 522 573 ]
+[v fatfs_free_cluster_chain@fs fs `*.39S49  1 p 2 0 ]
+[v fatfs_free_cluster_chain@start_cluster start_cluster `ul  1 p 4 2 ]
+"407
+} 0
+"381 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_misc.c
+[v _fatfs_lfn_generate_tail fatfs_lfn_generate_tail `(i  1 e 2 0 ]
+{
+"383
+[v fatfs_lfn_generate_tail@tail_str tail_str `[12]uc  1 a 12 61 ]
+"382
+[v fatfs_lfn_generate_tail@tail_chars tail_chars `i  1 a 2 73 ]
+"381
+[v fatfs_lfn_generate_tail@sfn_output sfn_output `*.39uc  1 p 2 51 ]
+[v fatfs_lfn_generate_tail@sfn_input sfn_input `*.39uc  1 p 2 53 ]
+[v fatfs_lfn_generate_tail@tailNum tailNum `ul  1 p 4 55 ]
+"401
+} 0
+"351
+[v _fatfs_itoa fatfs_itoa `(v  1 s 0 fatfs_itoa ]
+{
+"354
+[v fatfs_itoa@digits digits `C[17]uc  1 a 17 20 ]
+"353
+[v fatfs_itoa@outbuf outbuf `[12]uc  1 a 12 37 ]
+"352
+[v fatfs_itoa@cp cp `*.39uc  1 a 2 49 ]
+"351
+[v fatfs_itoa@num num `ul  1 p 4 14 ]
+[v fatfs_itoa@s s `*.39uc  1 p 2 18 ]
+"354
+[v fatfs_itoa@F407 F407 `C[17]uc  1 s 17 F407 ]
+"371
+} 0
+"10 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\llmod.c
+[v ___llmod __llmod `(ul  1 e 4 0 ]
+{
+"11
+[v ___llmod@counter counter `uc  1 a 1 9 ]
+"10
+[v ___llmod@dividend dividend `ul  1 p 4 0 ]
+[v ___llmod@divisor divisor `ul  1 p 4 4 ]
+"26
+} 0
+"286 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_misc.c
+[v _fatfs_lfn_create_sfn fatfs_lfn_create_sfn `(i  1 e 2 0 ]
+{
+"289
+[v fatfs_lfn_create_sfn@ext ext `[3]uc  1 a 3 21 ]
+"287
+[v fatfs_lfn_create_sfn@i i `i  1 a 2 30 ]
+"288
+[v fatfs_lfn_create_sfn@dotPos dotPos `i  1 a 2 28 ]
+"290
+[v fatfs_lfn_create_sfn@pos pos `i  1 a 2 26 ]
+"291
+[v fatfs_lfn_create_sfn@len len `i  1 a 2 24 ]
+"286
+[v fatfs_lfn_create_sfn@sfn_output sfn_output `*.39uc  1 p 2 14 ]
+[v fatfs_lfn_create_sfn@filename filename `*.39uc  1 p 2 16 ]
+"346
+} 0
+"83 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_write.c
+[v _fatfs_allocate_free_space fatfs_allocate_free_space `(i  1 e 2 0 ]
+{
+"86
+[v fatfs_allocate_free_space@nextcluster nextcluster `ul  1 a 4 52 ]
+"85
+[v fatfs_allocate_free_space@clusterCount clusterCount `ul  1 a 4 48 ]
+"84
+[v fatfs_allocate_free_space@clusterSize clusterSize `ul  1 a 4 44 ]
+[s S26 disk_if 4 `*.37(i 1 read_media 2 0 `*.37(i 1 write_media 2 2 ]
+"83
+[s S43 fat_buffer 522 `[512]uc 1 sector 512 0 `ul 1 address 4 512 `i 1 dirty 2 516 `*.39uc 1 ptr 2 518 `*.39S43 1 next 2 520 ]
+[s S49 fatfs 1095 `uc 1 sectors_per_cluster 1 0 `ul 1 cluster_begin_lba 4 1 `ul 1 rootdir_first_cluster 4 5 `ul 1 rootdir_first_sector 4 9 `ul 1 rootdir_sectors 4 13 `ul 1 fat_begin_lba 4 17 `us 1 fs_info_sector 2 21 `ul 1 lba_begin 4 23 `ul 1 fat_sectors 4 27 `ul 1 next_free_cluster 4 31 `us 1 root_entry_count 2 35 `us 1 reserved_sectors 2 37 `uc 1 num_of_fats 1 39 `E184 1 fat_type 1 40 `S26 1 disk_io 4 41 `*.37(v 1 fl_lock 2 45 `*.37(v 1 fl_unlock 2 47 `S43 1 currentsector 522 49 `*.39S43 1 fat_buffer_head 2 571 `[1]S43 1 fat_buffers 522 573 ]
+[v fatfs_allocate_free_space@fs fs `*.39S49  1 p 2 30 ]
+[v fatfs_allocate_free_space@newFile newFile `i  1 p 2 32 ]
+[v fatfs_allocate_free_space@startCluster startCluster `*.39ul  1 p 2 34 ]
+[v fatfs_allocate_free_space@size size `ul  1 p 4 36 ]
+"125
+} 0
+"46
+[v _fatfs_add_free_space fatfs_add_free_space `(i  1 e 2 0 ]
+{
+"48
+[v fatfs_add_free_space@nextcluster nextcluster `ul  1 a 4 26 ]
+"47
+[v fatfs_add_free_space@i i `ul  1 a 4 22 ]
+"49
+[v fatfs_add_free_space@start start `ul  1 a 4 18 ]
+[s S26 disk_if 4 `*.37(i 1 read_media 2 0 `*.37(i 1 write_media 2 2 ]
+"46
+[s S43 fat_buffer 522 `[512]uc 1 sector 512 0 `ul 1 address 4 512 `i 1 dirty 2 516 `*.39uc 1 ptr 2 518 `*.39S43 1 next 2 520 ]
+[s S49 fatfs 1095 `uc 1 sectors_per_cluster 1 0 `ul 1 cluster_begin_lba 4 1 `ul 1 rootdir_first_cluster 4 5 `ul 1 rootdir_first_sector 4 9 `ul 1 rootdir_sectors 4 13 `ul 1 fat_begin_lba 4 17 `us 1 fs_info_sector 2 21 `ul 1 lba_begin 4 23 `ul 1 fat_sectors 4 27 `ul 1 next_free_cluster 4 31 `us 1 root_entry_count 2 35 `us 1 reserved_sectors 2 37 `uc 1 num_of_fats 1 39 `E184 1 fat_type 1 40 `S26 1 disk_io 4 41 `*.37(v 1 fl_lock 2 45 `*.37(v 1 fl_unlock 2 47 `S43 1 currentsector 522 49 `*.39S43 1 fat_buffer_head 2 571 `[1]S43 1 fat_buffers 522 573 ]
+[v fatfs_add_free_space@fs fs `*.39S49  1 p 2 115 ]
+[v fatfs_add_free_space@startCluster startCluster `*.39ul  1 p 2 117 ]
+[v fatfs_add_free_space@clusters clusters `ul  1 p 4 119 ]
+"76
+} 0
+"350 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_table.c
+[v _fatfs_fat_set_cluster fatfs_fat_set_cluster `(i  1 e 2 0 ]
+{
+"352
+[v fatfs_fat_set_cluster@position position `ul  1 a 4 91 ]
+[v fatfs_fat_set_cluster@fat_sector_offset fat_sector_offset `ul  1 a 4 87 ]
+"351
+[s S43 fat_buffer 522 `[512]uc 1 sector 512 0 `ul 1 address 4 512 `i 1 dirty 2 516 `*.39uc 1 ptr 2 518 `*.39S43 1 next 2 520 ]
+[v fatfs_fat_set_cluster@pbuf pbuf `*.39S43  1 a 2 95 ]
+[s S26 disk_if 4 `*.37(i 1 read_media 2 0 `*.37(i 1 write_media 2 2 ]
+"350
+[s S49 fatfs 1095 `uc 1 sectors_per_cluster 1 0 `ul 1 cluster_begin_lba 4 1 `ul 1 rootdir_first_cluster 4 5 `ul 1 rootdir_first_sector 4 9 `ul 1 rootdir_sectors 4 13 `ul 1 fat_begin_lba 4 17 `us 1 fs_info_sector 2 21 `ul 1 lba_begin 4 23 `ul 1 fat_sectors 4 27 `ul 1 next_free_cluster 4 31 `us 1 root_entry_count 2 35 `us 1 reserved_sectors 2 37 `uc 1 num_of_fats 1 39 `E184 1 fat_type 1 40 `S26 1 disk_io 4 41 `*.37(v 1 fl_lock 2 45 `*.37(v 1 fl_unlock 2 47 `S43 1 currentsector 522 49 `*.39S43 1 fat_buffer_head 2 571 `[1]S43 1 fat_buffers 522 573 ]
+[v fatfs_fat_set_cluster@fs fs `*.39S49  1 p 2 69 ]
+[v fatfs_fat_set_cluster@cluster cluster `ul  1 p 4 71 ]
+[v fatfs_fat_set_cluster@next_cluster next_cluster `ul  1 p 4 75 ]
+"383
+} 0
+"289
+[v _fatfs_find_blank_cluster fatfs_find_blank_cluster `(i  1 e 2 0 ]
+{
+"290
+[v fatfs_find_blank_cluster@position position `ul  1 a 4 12 ]
+"292
+[v fatfs_find_blank_cluster@current_cluster current_cluster `ul  1 a 4 8 ]
+"290
+[v fatfs_find_blank_cluster@fat_sector_offset fat_sector_offset `ul  1 a 4 4 ]
+"291
+[v fatfs_find_blank_cluster@nextcluster nextcluster `ul  1 a 4 0 ]
+"293
+[s S43 fat_buffer 522 `[512]uc 1 sector 512 0 `ul 1 address 4 512 `i 1 dirty 2 516 `*.39uc 1 ptr 2 518 `*.39S43 1 next 2 520 ]
+[v fatfs_find_blank_cluster@pbuf pbuf `*.39S43  1 a 2 16 ]
+[s S26 disk_if 4 `*.37(i 1 read_media 2 0 `*.37(i 1 write_media 2 2 ]
+"289
+[s S49 fatfs 1095 `uc 1 sectors_per_cluster 1 0 `ul 1 cluster_begin_lba 4 1 `ul 1 rootdir_first_cluster 4 5 `ul 1 rootdir_first_sector 4 9 `ul 1 rootdir_sectors 4 13 `ul 1 fat_begin_lba 4 17 `us 1 fs_info_sector 2 21 `ul 1 lba_begin 4 23 `ul 1 fat_sectors 4 27 `ul 1 next_free_cluster 4 31 `us 1 root_entry_count 2 35 `us 1 reserved_sectors 2 37 `uc 1 num_of_fats 1 39 `E184 1 fat_type 1 40 `S26 1 disk_io 4 41 `*.37(v 1 fl_lock 2 45 `*.37(v 1 fl_unlock 2 47 `S43 1 currentsector 522 49 `*.39S43 1 fat_buffer_head 2 571 `[1]S43 1 fat_buffers 522 573 ]
+[v fatfs_find_blank_cluster@fs fs `*.39S49  1 p 2 69 ]
+[v fatfs_find_blank_cluster@start_cluster start_cluster `ul  1 p 4 71 ]
+[v fatfs_find_blank_cluster@free_cluster free_cluster `*.39ul  1 p 2 75 ]
+"342
+} 0
+"261
+[v _fatfs_set_fs_info_next_free_cluster fatfs_set_fs_info_next_free_cluster `(v  1 e 0 0 ]
+{
+"267
+[s S43 fat_buffer 522 `[512]uc 1 sector 512 0 `ul 1 address 4 512 `i 1 dirty 2 516 `*.39uc 1 ptr 2 518 `*.39S43 1 next 2 520 ]
+[v fatfs_set_fs_info_next_free_cluster@pbuf pbuf `*.39S43  1 a 2 81 ]
+[s S26 disk_if 4 `*.37(i 1 read_media 2 0 `*.37(i 1 write_media 2 2 ]
+"261
+[s S43 fat_buffer 522 `[512]uc 1 sector 512 0 `ul 1 address 4 512 `i 1 dirty 2 516 `*.39uc 1 ptr 2 518 `*.39S43 1 next 2 520 ]
+[s S49 fatfs 1095 `uc 1 sectors_per_cluster 1 0 `ul 1 cluster_begin_lba 4 1 `ul 1 rootdir_first_cluster 4 5 `ul 1 rootdir_first_sector 4 9 `ul 1 rootdir_sectors 4 13 `ul 1 fat_begin_lba 4 17 `us 1 fs_info_sector 2 21 `ul 1 lba_begin 4 23 `ul 1 fat_sectors 4 27 `ul 1 next_free_cluster 4 31 `us 1 root_entry_count 2 35 `us 1 reserved_sectors 2 37 `uc 1 num_of_fats 1 39 `E184 1 fat_type 1 40 `S26 1 disk_io 4 41 `*.37(v 1 fl_lock 2 45 `*.37(v 1 fl_unlock 2 47 `S43 1 currentsector 522 49 `*.39S43 1 fat_buffer_head 2 571 `[1]S43 1 fat_buffers 522 573 ]
+[v fatfs_set_fs_info_next_free_cluster@fs fs `*.39S49  1 p 2 69 ]
+[v fatfs_set_fs_info_next_free_cluster@newValue newValue `ul  1 p 4 71 ]
+"283
+} 0
+"531 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_access.c
+[v _fatfs_sfn_exists fatfs_sfn_exists `(i  1 e 2 0 ]
+{
+[s S75 fat_dir_entry 32 `[11]uc 1 Name 11 0 `uc 1 Attr 1 11 `uc 1 NTRes 1 12 `uc 1 CrtTimeTenth 1 13 `[2]uc 1 CrtTime 2 14 `[2]uc 1 CrtDate 2 16 `[2]uc 1 LstAccDate 2 18 `us 1 FstClusHI 2 20 `[2]uc 1 WrtTime 2 22 `[2]uc 1 WrtDate 2 24 `us 1 FstClusLO 2 26 `ul 1 FileSize 4 28 ]
+"535
+[v fatfs_sfn_exists@directoryEntry directoryEntry `*.39S75  1 a 2 59 ]
+"533
+[v fatfs_sfn_exists@recordoffset recordoffset `us  1 a 2 56 ]
+"534
+[v fatfs_sfn_exists@x x `i  1 a 2 54 ]
+"532
+[v fatfs_sfn_exists@item item `uc  1 a 1 58 ]
+[s S26 disk_if 4 `*.37(i 1 read_media 2 0 `*.37(i 1 write_media 2 2 ]
+"531
+[s S43 fat_buffer 522 `[512]uc 1 sector 512 0 `ul 1 address 4 512 `i 1 dirty 2 516 `*.39uc 1 ptr 2 518 `*.39S43 1 next 2 520 ]
+[s S49 fatfs 1095 `uc 1 sectors_per_cluster 1 0 `ul 1 cluster_begin_lba 4 1 `ul 1 rootdir_first_cluster 4 5 `ul 1 rootdir_first_sector 4 9 `ul 1 rootdir_sectors 4 13 `ul 1 fat_begin_lba 4 17 `us 1 fs_info_sector 2 21 `ul 1 lba_begin 4 23 `ul 1 fat_sectors 4 27 `ul 1 next_free_cluster 4 31 `us 1 root_entry_count 2 35 `us 1 reserved_sectors 2 37 `uc 1 num_of_fats 1 39 `E184 1 fat_type 1 40 `S26 1 disk_io 4 41 `*.37(v 1 fl_lock 2 45 `*.37(v 1 fl_unlock 2 47 `S43 1 currentsector 522 49 `*.39S43 1 fat_buffer_head 2 571 `[1]S43 1 fat_buffers 522 573 ]
+[v fatfs_sfn_exists@fs fs `*.39S49  1 p 2 44 ]
+[v fatfs_sfn_exists@Cluster Cluster `ul  1 p 4 46 ]
+[v fatfs_sfn_exists@shortname shortname `*.39uc  1 p 2 50 ]
+"575
+} 0
+"5 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\strncmp.c
+[v _strncmp strncmp `(i  1 e 2 0 ]
+{
+[v strncmp@s1 s1 `*.39Cuc  1 p 2 0 ]
+[v strncmp@s2 s2 `*.39Cuc  1 p 2 2 ]
+[v strncmp@len len `ui  1 p 2 4 ]
+"14
+} 0
+"72 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_filelib.h
+"36
+[s S881 cluster_lookup 8 `ul 1 ClusterIdx 4 0 `ul 1 CurrentCluster 4 4 ]
+"328 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_filelib.c
+"21 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_list.h
+"328 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_filelib.c
+[s S826 fat_node 4 `*.39S826 1 previous 2 0 `*.39S826 1 next 2 2 ]
+[s S884 sFL_FILE 580 `ul 1 parentcluster 4 0 `ul 1 startcluster 4 4 `ul 1 bytenum 4 8 `ul 1 filelength 4 12 `i 1 filelength_changed 2 16 `[10]uc 1 path 10 18 `[10]uc 1 filename 10 28 `[11]uc 1 shortfilename 11 38 `S881 1 last_fat_lookup 8 49 `[512]uc 1 file_data_sector 512 57 `ul 1 file_data_address 4 569 `i 1 file_data_dirty 2 573 `uc 1 flags 1 575 `S826 1 list_node 4 576 ]
+[v __open_file _open_file `(*.39S884  1 s 2 _open_file ]
+{
+[s S75 fat_dir_entry 32 `[11]uc 1 Name 11 0 `uc 1 Attr 1 11 `uc 1 NTRes 1 12 `uc 1 CrtTimeTenth 1 13 `[2]uc 1 CrtTime 2 14 `[2]uc 1 CrtDate 2 16 `[2]uc 1 LstAccDate 2 18 `us 1 FstClusHI 2 20 `[2]uc 1 WrtTime 2 22 `[2]uc 1 WrtDate 2 24 `us 1 FstClusLO 2 26 `ul 1 FileSize 4 28 ]
+"330
+[v __open_file@sfEntry sfEntry `S75  1 a 32 77 ]
+"329
+[v __open_file@file file `*.39S884  1 a 2 109 ]
+"328
+[v __open_file@path path `*.32Cuc  1 p 2 114 ]
+"395
+} 0
+"183 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_misc.c
+[v _fatfs_entry_is_file fatfs_entry_is_file `(i  1 e 2 0 ]
+{
+[s S75 fat_dir_entry 32 `[11]uc 1 Name 11 0 `uc 1 Attr 1 11 `uc 1 NTRes 1 12 `uc 1 CrtTimeTenth 1 13 `[2]uc 1 CrtTime 2 14 `[2]uc 1 CrtDate 2 16 `[2]uc 1 LstAccDate 2 18 `us 1 FstClusHI 2 20 `[2]uc 1 WrtTime 2 22 `[2]uc 1 WrtDate 2 24 `us 1 FstClusLO 2 26 `ul 1 FileSize 4 28 ]
+[v fatfs_entry_is_file@entry entry `*.39S75  1 p 2 0 ]
+"188
+} 0
+"152 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_string.c
+[v _fatfs_split_path fatfs_split_path `(i  1 e 2 0 ]
+{
+"153
+[v fatfs_split_path@strindex strindex `i  1 a 2 40 ]
+"156
+[v fatfs_split_path@levels levels `i  1 a 2 38 ]
+"152
+[v fatfs_split_path@full_path full_path `*.32uc  1 p 2 26 ]
+[v fatfs_split_path@path path `*.39uc  1 p 2 28 ]
+[v fatfs_split_path@max_path max_path `i  1 p 2 30 ]
+[v fatfs_split_path@filename filename `*.39uc  1 p 2 32 ]
+[v fatfs_split_path@max_filename max_filename `i  1 p 2 34 ]
+"178
+} 0
+"129 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_filelib.c
+[v __open_directory _open_directory `(i  1 s 2 _open_directory ]
+{
+[s S75 fat_dir_entry 32 `[11]uc 1 Name 11 0 `uc 1 Attr 1 11 `uc 1 NTRes 1 12 `uc 1 CrtTimeTenth 1 13 `[2]uc 1 CrtTime 2 14 `[2]uc 1 CrtDate 2 16 `[2]uc 1 LstAccDate 2 18 `us 1 FstClusHI 2 20 `[2]uc 1 WrtTime 2 22 `[2]uc 1 WrtDate 2 24 `us 1 FstClusLO 2 26 `ul 1 FileSize 4 28 ]
+"133
+[v __open_directory@sfEntry sfEntry `S75  1 a 32 82 ]
+"132
+[v __open_directory@currentfolder currentfolder `[10]uc  1 a 10 64 ]
+"134
+[v __open_directory@startcluster startcluster `ul  1 a 4 76 ]
+"131
+[v __open_directory@sublevel sublevel `i  1 a 2 80 ]
+"130
+[v __open_directory@levels levels `i  1 a 2 74 ]
+"129
+[v __open_directory@path path `*.34uc  1 p 2 56 ]
+[v __open_directory@pathCluster pathCluster `*.39ul  1 p 2 58 ]
+"163
+} 0
+"93 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_string.c
+[v _fatfs_get_substring fatfs_get_substring `(i  1 e 2 0 ]
+{
+"97
+[v fatfs_get_substring@copypnt copypnt `i  1 a 2 24 ]
+"96
+[v fatfs_get_substring@levels levels `i  1 a 2 21 ]
+"95
+[v fatfs_get_substring@pathlen pathlen `i  1 a 2 19 ]
+"94
+[v fatfs_get_substring@i i `i  1 a 2 17 ]
+"98
+[v fatfs_get_substring@expectedchar expectedchar `uc  1 a 1 23 ]
+"93
+[v fatfs_get_substring@path path `*.34uc  1 p 2 6 ]
+[v fatfs_get_substring@levelreq levelreq `i  1 p 2 8 ]
+[v fatfs_get_substring@output output `*.39uc  1 p 2 10 ]
+[v fatfs_get_substring@max_len max_len `i  1 p 2 12 ]
+"144
+} 0
+"45
+[v _fatfs_total_path_levels fatfs_total_path_levels `(i  1 e 2 0 ]
+{
+"46
+[v fatfs_total_path_levels@levels levels `i  1 a 2 4 ]
+"47
+[v fatfs_total_path_levels@expectedchar expectedchar `uc  1 a 1 6 ]
+"45
+[v fatfs_total_path_levels@path path `*.34uc  1 p 2 0 ]
+"85
+} 0
+"173 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_misc.c
+[v _fatfs_entry_is_dir fatfs_entry_is_dir `(i  1 e 2 0 ]
+{
+[s S75 fat_dir_entry 32 `[11]uc 1 Name 11 0 `uc 1 Attr 1 11 `uc 1 NTRes 1 12 `uc 1 CrtTimeTenth 1 13 `[2]uc 1 CrtTime 2 14 `[2]uc 1 CrtDate 2 16 `[2]uc 1 LstAccDate 2 18 `us 1 FstClusHI 2 20 `[2]uc 1 WrtTime 2 22 `[2]uc 1 WrtDate 2 24 `us 1 FstClusLO 2 26 `ul 1 FileSize 4 28 ]
+[v fatfs_entry_is_dir@entry entry `*.39S75  1 p 2 0 ]
+"178
+} 0
+"425 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_access.c
+[v _fatfs_get_file_entry fatfs_get_file_entry `(ul  1 e 4 0 ]
+{
+[s S111 lfn_cache 52 `[10][5]uc 1 String 50 0 `uc 1 Null 1 50 `uc 1 no_of_strings 1 51 ]
+"432
+[v fatfs_get_file_entry@lfn lfn `S111  1 a 52 25 ]
+"431
+[v fatfs_get_file_entry@short_filename short_filename `[13]uc  1 a 13 0 ]
+[s S75 fat_dir_entry 32 `[11]uc 1 Name 11 0 `uc 1 Attr 1 11 `uc 1 NTRes 1 12 `uc 1 CrtTimeTenth 1 13 `[2]uc 1 CrtTime 2 14 `[2]uc 1 CrtDate 2 16 `[2]uc 1 LstAccDate 2 18 `us 1 FstClusHI 2 20 `[2]uc 1 WrtTime 2 22 `[2]uc 1 WrtDate 2 24 `us 1 FstClusLO 2 26 `ul 1 FileSize 4 28 ]
+"434
+[v fatfs_get_file_entry@directoryEntry directoryEntry `*.39S75  1 a 2 22 ]
+"427
+[v fatfs_get_file_entry@recordoffset recordoffset `us  1 a 2 19 ]
+"433
+[v fatfs_get_file_entry@dotRequired dotRequired `i  1 a 2 17 ]
+"430
+[v fatfs_get_file_entry@long_filename long_filename `*.39uc  1 a 2 15 ]
+"429
+[v fatfs_get_file_entry@x x `i  1 a 2 13 ]
+"428
+[v fatfs_get_file_entry@i i `uc  1 a 1 24 ]
+"426
+[v fatfs_get_file_entry@item item `uc  1 a 1 21 ]
+[s S26 disk_if 4 `*.37(i 1 read_media 2 0 `*.37(i 1 write_media 2 2 ]
+"425
+[s S43 fat_buffer 522 `[512]uc 1 sector 512 0 `ul 1 address 4 512 `i 1 dirty 2 516 `*.39uc 1 ptr 2 518 `*.39S43 1 next 2 520 ]
+[s S49 fatfs 1095 `uc 1 sectors_per_cluster 1 0 `ul 1 cluster_begin_lba 4 1 `ul 1 rootdir_first_cluster 4 5 `ul 1 rootdir_first_sector 4 9 `ul 1 rootdir_sectors 4 13 `ul 1 fat_begin_lba 4 17 `us 1 fs_info_sector 2 21 `ul 1 lba_begin 4 23 `ul 1 fat_sectors 4 27 `ul 1 next_free_cluster 4 31 `us 1 root_entry_count 2 35 `us 1 reserved_sectors 2 37 `uc 1 num_of_fats 1 39 `E184 1 fat_type 1 40 `S26 1 disk_io 4 41 `*.37(v 1 fl_lock 2 45 `*.37(v 1 fl_unlock 2 47 `S43 1 currentsector 522 49 `*.39S43 1 fat_buffer_head 2 571 `[1]S43 1 fat_buffers 522 573 ]
+[v fatfs_get_file_entry@fs fs `*.39S49  1 p 2 44 ]
+[v fatfs_get_file_entry@Cluster Cluster `ul  1 p 4 46 ]
+[v fatfs_get_file_entry@name_to_find name_to_find `*.39uc  1 p 2 50 ]
+[v fatfs_get_file_entry@sfEntry sfEntry `*.39S75  1 p 2 52 ]
+"524
+} 0
+"158 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_misc.c
+[v _fatfs_entry_sfn_only fatfs_entry_sfn_only `(i  1 e 2 0 ]
+{
+[s S75 fat_dir_entry 32 `[11]uc 1 Name 11 0 `uc 1 Attr 1 11 `uc 1 NTRes 1 12 `uc 1 CrtTimeTenth 1 13 `[2]uc 1 CrtTime 2 14 `[2]uc 1 CrtDate 2 16 `[2]uc 1 LstAccDate 2 18 `us 1 FstClusHI 2 20 `[2]uc 1 WrtTime 2 22 `[2]uc 1 WrtDate 2 24 `us 1 FstClusLO 2 26 `ul 1 FileSize 4 28 ]
+[v fatfs_entry_sfn_only@entry entry `*.39S75  1 p 2 0 ]
+"167
+} 0
+"13 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\memcpy.c
+[v _memcpy memcpy `(*.39v  1 e 2 0 ]
+{
+"20
+[v memcpy@s s `*.34Cuc  1 a 2 8 ]
+"18
+[v memcpy@d d `*.39uc  1 a 2 6 ]
+"13
+[v memcpy@d1 d1 `*.39v  1 p 2 0 ]
+[v memcpy@s1 s1 `*.34Cv  1 p 2 2 ]
+[v memcpy@n n `ui  1 p 2 4 ]
+"32
+} 0
+"98 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_misc.c
+[v _fatfs_lfn_cache_get fatfs_lfn_cache_get `(*.39uc  1 e 2 0 ]
+{
+[s S111 lfn_cache 52 `[10][5]uc 1 String 50 0 `uc 1 Null 1 50 `uc 1 no_of_strings 1 51 ]
+[v fatfs_lfn_cache_get@lfn lfn `*.39S111  1 p 2 0 ]
+"108
+} 0
+"142
+[v _fatfs_entry_lfn_exists fatfs_entry_lfn_exists `(i  1 e 2 0 ]
+{
+[s S111 lfn_cache 52 `[10][5]uc 1 String 50 0 `uc 1 Null 1 50 `uc 1 no_of_strings 1 51 ]
+[v fatfs_entry_lfn_exists@lfn lfn `*.39S111  1 p 2 0 ]
+[s S75 fat_dir_entry 32 `[11]uc 1 Name 11 0 `uc 1 Attr 1 11 `uc 1 NTRes 1 12 `uc 1 CrtTimeTenth 1 13 `[2]uc 1 CrtTime 2 14 `[2]uc 1 CrtDate 2 16 `[2]uc 1 LstAccDate 2 18 `us 1 FstClusHI 2 20 `[2]uc 1 WrtTime 2 22 `[2]uc 1 WrtDate 2 24 `us 1 FstClusLO 2 26 `ul 1 FileSize 4 28 ]
+[v fatfs_entry_lfn_exists@entry entry `*.39S75  1 p 2 2 ]
+"152
+} 0
+"127
+[v _fatfs_entry_lfn_invalid fatfs_entry_lfn_invalid `(i  1 e 2 0 ]
+{
+[s S75 fat_dir_entry 32 `[11]uc 1 Name 11 0 `uc 1 Attr 1 11 `uc 1 NTRes 1 12 `uc 1 CrtTimeTenth 1 13 `[2]uc 1 CrtTime 2 14 `[2]uc 1 CrtDate 2 16 `[2]uc 1 LstAccDate 2 18 `us 1 FstClusHI 2 20 `[2]uc 1 WrtTime 2 22 `[2]uc 1 WrtDate 2 24 `us 1 FstClusLO 2 26 `ul 1 FileSize 4 28 ]
+[v fatfs_entry_lfn_invalid@entry entry `*.39S75  1 p 2 0 ]
+"135
+} 0
+"59
+[v _fatfs_lfn_cache_entry fatfs_lfn_cache_entry `(v  1 e 0 0 ]
+{
+"60
+[v fatfs_lfn_cache_entry@LFNIndex LFNIndex `uc  1 a 1 13 ]
+[v fatfs_lfn_cache_entry@i i `uc  1 a 1 12 ]
+[s S111 lfn_cache 52 `[10][5]uc 1 String 50 0 `uc 1 Null 1 50 `uc 1 no_of_strings 1 51 ]
+"59
+[v fatfs_lfn_cache_entry@lfn lfn `*.39S111  1 p 2 6 ]
+[v fatfs_lfn_cache_entry@entryBuffer entryBuffer `*.39uc  1 p 2 8 ]
+"91
+} 0
+"115
+[v _fatfs_entry_lfn_text fatfs_entry_lfn_text `(i  1 e 2 0 ]
+{
+[s S75 fat_dir_entry 32 `[11]uc 1 Name 11 0 `uc 1 Attr 1 11 `uc 1 NTRes 1 12 `uc 1 CrtTimeTenth 1 13 `[2]uc 1 CrtTime 2 14 `[2]uc 1 CrtDate 2 16 `[2]uc 1 LstAccDate 2 18 `us 1 FstClusHI 2 20 `[2]uc 1 WrtTime 2 22 `[2]uc 1 WrtDate 2 24 `us 1 FstClusLO 2 26 `ul 1 FileSize 4 28 ]
+[v fatfs_entry_lfn_text@entry entry `*.39S75  1 p 2 0 ]
+"120
+} 0
+"40
+[v _fatfs_lfn_cache_init fatfs_lfn_cache_init `(v  1 e 0 0 ]
+{
+"41
+[v fatfs_lfn_cache_init@i i `i  1 a 2 18 ]
+[s S111 lfn_cache 52 `[10][5]uc 1 String 50 0 `uc 1 Null 1 50 `uc 1 no_of_strings 1 51 ]
+"40
+[v fatfs_lfn_cache_init@lfn lfn `*.39S111  1 p 2 14 ]
+[v fatfs_lfn_cache_init@wipeTable wipeTable `i  1 p 2 16 ]
+"52
+} 0
+"221 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_access.c
+[v _fatfs_sector_reader fatfs_sector_reader `(i  1 e 2 0 ]
+{
+"224
+[v fatfs_sector_reader@cluster_chain cluster_chain `ul  1 a 4 40 ]
+"226
+[v fatfs_sector_reader@lba lba `ul  1 a 4 36 ]
+"223
+[v fatfs_sector_reader@cluster_to_read cluster_to_read `ul  1 a 4 32 ]
+"225
+[v fatfs_sector_reader@i i `ul  1 a 4 28 ]
+"222
+[v fatfs_sector_reader@sector_to_read sector_to_read `ul  1 a 4 24 ]
+[s S26 disk_if 4 `*.37(i 1 read_media 2 0 `*.37(i 1 write_media 2 2 ]
+"221
+[s S43 fat_buffer 522 `[512]uc 1 sector 512 0 `ul 1 address 4 512 `i 1 dirty 2 516 `*.39uc 1 ptr 2 518 `*.39S43 1 next 2 520 ]
+[s S49 fatfs 1095 `uc 1 sectors_per_cluster 1 0 `ul 1 cluster_begin_lba 4 1 `ul 1 rootdir_first_cluster 4 5 `ul 1 rootdir_first_sector 4 9 `ul 1 rootdir_sectors 4 13 `ul 1 fat_begin_lba 4 17 `us 1 fs_info_sector 2 21 `ul 1 lba_begin 4 23 `ul 1 fat_sectors 4 27 `ul 1 next_free_cluster 4 31 `us 1 root_entry_count 2 35 `us 1 reserved_sectors 2 37 `uc 1 num_of_fats 1 39 `E184 1 fat_type 1 40 `S26 1 disk_io 4 41 `*.37(v 1 fl_lock 2 45 `*.37(v 1 fl_unlock 2 47 `S43 1 currentsector 522 49 `*.39S43 1 fat_buffer_head 2 571 `[1]S43 1 fat_buffers 522 573 ]
+[v fatfs_sector_reader@fs fs `*.39S49  1 p 2 0 ]
+[v fatfs_sector_reader@start_cluster start_cluster `ul  1 p 4 2 ]
+[v fatfs_sector_reader@offset offset `ul  1 p 4 6 ]
+[v fatfs_sector_reader@target target `*.39uc  1 p 2 10 ]
+"269
+} 0
+"10 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+{
+"11
+[v ___lldiv@quotient quotient `ul  1 a 4 9 ]
+"12
+[v ___lldiv@counter counter `uc  1 a 1 13 ]
+"10
+[v ___lldiv@dividend dividend `ul  1 p 4 0 ]
+[v ___lldiv@divisor divisor `ul  1 p 4 4 ]
+"31
+} 0
+"206 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_table.c
+[v _fatfs_find_next_cluster fatfs_find_next_cluster `(ul  1 e 4 0 ]
+{
+"208
+[v fatfs_find_next_cluster@nextcluster nextcluster `ul  1 a 4 121 ]
+"207
+[v fatfs_find_next_cluster@position position `ul  1 a 4 117 ]
+[v fatfs_find_next_cluster@fat_sector_offset fat_sector_offset `ul  1 a 4 113 ]
+"209
+[s S43 fat_buffer 522 `[512]uc 1 sector 512 0 `ul 1 address 4 512 `i 1 dirty 2 516 `*.39uc 1 ptr 2 518 `*.39S43 1 next 2 520 ]
+[v fatfs_find_next_cluster@pbuf pbuf `*.39S43  1 a 2 125 ]
+[s S26 disk_if 4 `*.37(i 1 read_media 2 0 `*.37(i 1 write_media 2 2 ]
+"206
+[s S49 fatfs 1095 `uc 1 sectors_per_cluster 1 0 `ul 1 cluster_begin_lba 4 1 `ul 1 rootdir_first_cluster 4 5 `ul 1 rootdir_first_sector 4 9 `ul 1 rootdir_sectors 4 13 `ul 1 fat_begin_lba 4 17 `us 1 fs_info_sector 2 21 `ul 1 lba_begin 4 23 `ul 1 fat_sectors 4 27 `ul 1 next_free_cluster 4 31 `us 1 root_entry_count 2 35 `us 1 reserved_sectors 2 37 `uc 1 num_of_fats 1 39 `E184 1 fat_type 1 40 `S26 1 disk_io 4 41 `*.37(v 1 fl_lock 2 45 `*.37(v 1 fl_unlock 2 47 `S43 1 currentsector 522 49 `*.39S43 1 fat_buffer_head 2 571 `[1]S43 1 fat_buffers 522 573 ]
+[v fatfs_find_next_cluster@fs fs `*.39S49  1 p 2 69 ]
+[v fatfs_find_next_cluster@current_cluster current_cluster `ul  1 p 4 71 ]
+"256
+} 0
+"49 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_access.h
+"117 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_table.c
+[s S43 fat_buffer 522 `[512]uc 1 sector 512 0 `ul 1 address 4 512 `i 1 dirty 2 516 `*.39uc 1 ptr 2 518 `*.39S43 1 next 2 520 ]
+[v _fatfs_fat_read_sector fatfs_fat_read_sector `(*.39S43  1 s 2 fatfs_fat_read_sector ]
+{
+"119
+[v fatfs_fat_read_sector@pcur pcur `*.39S43  1 a 2 67 ]
+"118
+[v fatfs_fat_read_sector@last last `*.39S43  1 a 2 65 ]
+[s S26 disk_if 4 `*.37(i 1 read_media 2 0 `*.37(i 1 write_media 2 2 ]
+"117
+[s S49 fatfs 1095 `uc 1 sectors_per_cluster 1 0 `ul 1 cluster_begin_lba 4 1 `ul 1 rootdir_first_cluster 4 5 `ul 1 rootdir_first_sector 4 9 `ul 1 rootdir_sectors 4 13 `ul 1 fat_begin_lba 4 17 `us 1 fs_info_sector 2 21 `ul 1 lba_begin 4 23 `ul 1 fat_sectors 4 27 `ul 1 next_free_cluster 4 31 `us 1 root_entry_count 2 35 `us 1 reserved_sectors 2 37 `uc 1 num_of_fats 1 39 `E184 1 fat_type 1 40 `S26 1 disk_io 4 41 `*.37(v 1 fl_lock 2 45 `*.37(v 1 fl_unlock 2 47 `S43 1 currentsector 522 49 `*.39S43 1 fat_buffer_head 2 571 `[1]S43 1 fat_buffers 522 573 ]
+[v fatfs_fat_read_sector@fs fs `*.39S49  1 p 2 51 ]
+[v fatfs_fat_read_sector@sector sector `ul  1 p 4 53 ]
+"175
+} 0
+"196 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_access.c
+[v _fatfs_lba_of_cluster fatfs_lba_of_cluster `(ul  1 e 4 0 ]
+{
+[s S26 disk_if 4 `*.37(i 1 read_media 2 0 `*.37(i 1 write_media 2 2 ]
+[s S43 fat_buffer 522 `[512]uc 1 sector 512 0 `ul 1 address 4 512 `i 1 dirty 2 516 `*.39uc 1 ptr 2 518 `*.39S43 1 next 2 520 ]
+[s S49 fatfs 1095 `uc 1 sectors_per_cluster 1 0 `ul 1 cluster_begin_lba 4 1 `ul 1 rootdir_first_cluster 4 5 `ul 1 rootdir_first_sector 4 9 `ul 1 rootdir_sectors 4 13 `ul 1 fat_begin_lba 4 17 `us 1 fs_info_sector 2 21 `ul 1 lba_begin 4 23 `ul 1 fat_sectors 4 27 `ul 1 next_free_cluster 4 31 `us 1 root_entry_count 2 35 `us 1 reserved_sectors 2 37 `uc 1 num_of_fats 1 39 `E184 1 fat_type 1 40 `S26 1 disk_io 4 41 `*.37(v 1 fl_lock 2 45 `*.37(v 1 fl_unlock 2 47 `S43 1 currentsector 522 49 `*.39S43 1 fat_buffer_head 2 571 `[1]S43 1 fat_buffers 522 573 ]
+[v fatfs_lba_of_cluster@fs fs `*.39S49  1 p 2 12 ]
+[v fatfs_lba_of_cluster@Cluster_Number Cluster_Number `ul  1 p 4 14 ]
+"201
+} 0
+"417
+[v _fatfs_get_root_cluster fatfs_get_root_cluster `(ul  1 e 4 0 ]
+{
+[s S26 disk_if 4 `*.37(i 1 read_media 2 0 `*.37(i 1 write_media 2 2 ]
+[s S43 fat_buffer 522 `[512]uc 1 sector 512 0 `ul 1 address 4 512 `i 1 dirty 2 516 `*.39uc 1 ptr 2 518 `*.39S43 1 next 2 520 ]
+[s S49 fatfs 1095 `uc 1 sectors_per_cluster 1 0 `ul 1 cluster_begin_lba 4 1 `ul 1 rootdir_first_cluster 4 5 `ul 1 rootdir_first_sector 4 9 `ul 1 rootdir_sectors 4 13 `ul 1 fat_begin_lba 4 17 `us 1 fs_info_sector 2 21 `ul 1 lba_begin 4 23 `ul 1 fat_sectors 4 27 `ul 1 next_free_cluster 4 31 `us 1 root_entry_count 2 35 `us 1 reserved_sectors 2 37 `uc 1 num_of_fats 1 39 `E184 1 fat_type 1 40 `S26 1 disk_io 4 41 `*.37(v 1 fl_lock 2 45 `*.37(v 1 fl_unlock 2 47 `S43 1 currentsector 522 49 `*.39S43 1 fat_buffer_head 2 571 `[1]S43 1 fat_buffers 522 573 ]
+[v fatfs_get_root_cluster@fs fs `*.39S49  1 p 2 0 ]
+"420
+} 0
+"112 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_filelib.c
+[v __free_file _free_file `(v  1 s 0 _free_file ]
+{
+[s S881 cluster_lookup 8 `ul 1 ClusterIdx 4 0 `ul 1 CurrentCluster 4 4 ]
+[s S826 fat_node 4 `*.39S826 1 previous 2 0 `*.39S826 1 next 2 2 ]
+[s S884 sFL_FILE 580 `ul 1 parentcluster 4 0 `ul 1 startcluster 4 4 `ul 1 bytenum 4 8 `ul 1 filelength 4 12 `i 1 filelength_changed 2 16 `[10]uc 1 path 10 18 `[10]uc 1 filename 10 28 `[11]uc 1 shortfilename 11 38 `S881 1 last_fat_lookup 8 49 `[512]uc 1 file_data_sector 512 57 `ul 1 file_data_address 4 569 `i 1 file_data_dirty 2 573 `uc 1 flags 1 575 `S826 1 list_node 4 576 ]
+[v __free_file@file file `*.39S884  1 p 2 16 ]
+"118
+} 0
+"89
+[v __check_file_open _check_file_open `(i  1 s 2 _check_file_open ]
+{
+[s S881 cluster_lookup 8 `ul 1 ClusterIdx 4 0 `ul 1 CurrentCluster 4 4 ]
+"95
+[s S826 fat_node 4 `*.39S826 1 previous 2 0 `*.39S826 1 next 2 2 ]
+[s S884 sFL_FILE 580 `ul 1 parentcluster 4 0 `ul 1 startcluster 4 4 `ul 1 bytenum 4 8 `ul 1 filelength 4 12 `i 1 filelength_changed 2 16 `[10]uc 1 path 10 18 `[10]uc 1 filename 10 28 `[11]uc 1 shortfilename 11 38 `S881 1 last_fat_lookup 8 49 `[512]uc 1 file_data_sector 512 57 `ul 1 file_data_address 4 569 `i 1 file_data_dirty 2 573 `uc 1 flags 1 575 `S826 1 list_node 4 576 ]
+[v __check_file_open@openFile openFile `*.39S884  1 a 2 38 ]
+"90
+[s S826 fat_node 4 `*.39S826 1 previous 2 0 `*.39S826 1 next 2 2 ]
+[v __check_file_open@node node `*.39S826  1 a 2 40 ]
+[s S881 cluster_lookup 8 `ul 1 ClusterIdx 4 0 `ul 1 CurrentCluster 4 4 ]
+"89
+[s S884 sFL_FILE 580 `ul 1 parentcluster 4 0 `ul 1 startcluster 4 4 `ul 1 bytenum 4 8 `ul 1 filelength 4 12 `i 1 filelength_changed 2 16 `[10]uc 1 path 10 18 `[10]uc 1 filename 10 28 `[11]uc 1 shortfilename 11 38 `S881 1 last_fat_lookup 8 49 `[512]uc 1 file_data_sector 512 57 `ul 1 file_data_address 4 569 `i 1 file_data_dirty 2 573 `uc 1 flags 1 575 `S826 1 list_node 4 576 ]
+[v __check_file_open@file file `*.39S884  1 p 2 36 ]
+"107
+} 0
+"261 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_string.c
+[v _fatfs_compare_names fatfs_compare_names `(i  1 e 2 0 ]
+{
+"264
+[v fatfs_compare_names@ext1Pos ext1Pos `i  1 a 2 34 ]
+[v fatfs_compare_names@ext2Pos ext2Pos `i  1 a 2 32 ]
+"265
+[v fatfs_compare_names@file1Len file1Len `i  1 a 2 30 ]
+"262
+[v fatfs_compare_names@ext1 ext1 `*.39uc  1 a 2 28 ]
+"265
+[v fatfs_compare_names@file2Len file2Len `i  1 a 2 26 ]
+"263
+[v fatfs_compare_names@ext2 ext2 `*.39uc  1 a 2 24 ]
+"261
+[v fatfs_compare_names@strA strA `*.39uc  1 p 2 18 ]
+[v fatfs_compare_names@strB strB `*.39uc  1 p 2 20 ]
+"319
+} 0
+"238
+[v _FileString_TrimLength FileString_TrimLength `(i  1 s 2 FileString_TrimLength ]
+{
+"240
+[v FileString_TrimLength@strSrc strSrc `*.39uc  1 a 2 8 ]
+"239
+[v FileString_TrimLength@length length `i  1 a 2 6 ]
+"238
+[v FileString_TrimLength@str str `*.39uc  1 p 2 0 ]
+[v FileString_TrimLength@strLen strLen `i  1 p 2 2 ]
+"255
+} 0
+"218
+[v _FileString_GetExtension FileString_GetExtension `(i  1 s 2 FileString_GetExtension ]
+{
+"220
+[v FileString_GetExtension@strSrc strSrc `*.39uc  1 a 2 6 ]
+"219
+[v FileString_GetExtension@dotPos dotPos `i  1 a 2 4 ]
+"218
+[v FileString_GetExtension@str str `*.39uc  1 p 2 0 ]
+"232
+} 0
+"183
+[v _FileString_StrCmpNoCase FileString_StrCmpNoCase `(i  1 s 2 FileString_StrCmpNoCase ]
+{
+"184
+[v FileString_StrCmpNoCase@diff diff `i  1 a 2 14 ]
+"185
+[v FileString_StrCmpNoCase@b b `uc  1 a 1 17 ]
+[v FileString_StrCmpNoCase@a a `uc  1 a 1 16 ]
+"183
+[v FileString_StrCmpNoCase@s1 s1 `*.39uc  1 p 2 6 ]
+[v FileString_StrCmpNoCase@s2 s2 `*.39uc  1 p 2 8 ]
+[v FileString_StrCmpNoCase@n n `i  1 p 2 10 ]
+"212
+} 0
+"5 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\strlen.c
+[v _strlen strlen `(ui  1 e 2 0 ]
+{
+"6
+[v strlen@cp cp `*.34Cuc  1 a 2 4 ]
+"5
+[v strlen@s s `*.34Cuc  1 p 2 0 ]
+"13
+} 0
+"72 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_filelib.h
+"36
+[s S881 cluster_lookup 8 `ul 1 ClusterIdx 4 0 `ul 1 CurrentCluster 4 4 ]
+"75 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_filelib.c
+"21 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_list.h
+"75 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_filelib.c
+[s S826 fat_node 4 `*.39S826 1 previous 2 0 `*.39S826 1 next 2 2 ]
+[s S884 sFL_FILE 580 `ul 1 parentcluster 4 0 `ul 1 startcluster 4 4 `ul 1 bytenum 4 8 `ul 1 filelength 4 12 `i 1 filelength_changed 2 16 `[10]uc 1 path 10 18 `[10]uc 1 filename 10 28 `[11]uc 1 shortfilename 11 38 `S881 1 last_fat_lookup 8 49 `[512]uc 1 file_data_sector 512 57 `ul 1 file_data_address 4 569 `i 1 file_data_dirty 2 573 `uc 1 flags 1 575 `S826 1 list_node 4 576 ]
+[v __allocate_file _allocate_file `(*.39S884  1 s 2 _allocate_file ]
+{
+"77
+[v __allocate_file@node node `*.39S826  1 a 2 18 ]
+"84
+} 0
+"21 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_list.h
+"148
+[s S826 fat_node 4 `*.39S826 1 previous 2 0 `*.39S826 1 next 2 2 ]
+[v fat_list@fat_list_pop_head fat_list_pop_head `(*.39S826  1 s 2 fat_list_pop_head ]
+{
+"149
+[v fat_list@fat_list_pop_head@node node `*.39S826  1 a 2 8 ]
+"148
+[s S829 fat_list 4 `*.39S826 1 head 2 0 `*.39S826 1 tail 2 2 ]
+[v fat_list@fat_list_pop_head@list list `*.39S829  1 p 2 6 ]
+"158
+} 0
+"56
+[v fat_list@fat_list_remove fat_list_remove `(v  1 s 0 fat_list_remove ]
+{
+[s S826 fat_node 4 `*.39S826 1 previous 2 0 `*.39S826 1 next 2 2 ]
+[s S829 fat_list 4 `*.39S826 1 head 2 0 `*.39S826 1 tail 2 2 ]
+[v fat_list@fat_list_remove@list list `*.39S829  1 p 2 0 ]
+[v fat_list@fat_list_remove@node node `*.39S826  1 p 2 2 ]
+"69
+} 0
+"43 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_cache.c
+[v _fatfs_cache_init fatfs_cache_init `(i  1 e 2 0 ]
+{
+[s S26 disk_if 4 `*.37(i 1 read_media 2 0 `*.37(i 1 write_media 2 2 ]
+[s S43 fat_buffer 522 `[512]uc 1 sector 512 0 `ul 1 address 4 512 `i 1 dirty 2 516 `*.39uc 1 ptr 2 518 `*.39S43 1 next 2 520 ]
+[s S49 fatfs 1095 `uc 1 sectors_per_cluster 1 0 `ul 1 cluster_begin_lba 4 1 `ul 1 rootdir_first_cluster 4 5 `ul 1 rootdir_first_sector 4 9 `ul 1 rootdir_sectors 4 13 `ul 1 fat_begin_lba 4 17 `us 1 fs_info_sector 2 21 `ul 1 lba_begin 4 23 `ul 1 fat_sectors 4 27 `ul 1 next_free_cluster 4 31 `us 1 root_entry_count 2 35 `us 1 reserved_sectors 2 37 `uc 1 num_of_fats 1 39 `E184 1 fat_type 1 40 `S26 1 disk_io 4 41 `*.37(v 1 fl_lock 2 45 `*.37(v 1 fl_unlock 2 47 `S43 1 currentsector 522 49 `*.39S43 1 fat_buffer_head 2 571 `[1]S43 1 fat_buffers 522 573 ]
+[v fatfs_cache_init@fs fs `*.39S49  1 p 2 0 ]
+[s S881 cluster_lookup 8 `ul 1 ClusterIdx 4 0 `ul 1 CurrentCluster 4 4 ]
+[s S826 fat_node 4 `*.39S826 1 previous 2 0 `*.39S826 1 next 2 2 ]
+[s S884 sFL_FILE 580 `ul 1 parentcluster 4 0 `ul 1 startcluster 4 4 `ul 1 bytenum 4 8 `ul 1 filelength 4 12 `i 1 filelength_changed 2 16 `[10]uc 1 path 10 18 `[10]uc 1 filename 10 28 `[11]uc 1 shortfilename 11 38 `S881 1 last_fat_lookup 8 49 `[512]uc 1 file_data_sector 512 57 `ul 1 file_data_address 4 569 `i 1 file_data_dirty 2 573 `uc 1 flags 1 575 `S826 1 list_node 4 576 ]
+[v fatfs_cache_init@file file `*.39S884  1 p 2 2 ]
+"55
+} 0
+"682 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_filelib.c
+[v _fl_shutdown fl_shutdown `(v  1 e 0 0 ]
+{
+"689
+} 0
+"180 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_table.c
+[v _fatfs_fat_purge fatfs_fat_purge `(i  1 e 2 0 ]
+{
+"181
+[s S43 fat_buffer 522 `[512]uc 1 sector 512 0 `ul 1 address 4 512 `i 1 dirty 2 516 `*.39uc 1 ptr 2 518 `*.39S43 1 next 2 520 ]
+[v fatfs_fat_purge@pcur pcur `*.39S43  1 a 2 53 ]
+[s S26 disk_if 4 `*.37(i 1 read_media 2 0 `*.37(i 1 write_media 2 2 ]
+"180
+[s S49 fatfs 1095 `uc 1 sectors_per_cluster 1 0 `ul 1 cluster_begin_lba 4 1 `ul 1 rootdir_first_cluster 4 5 `ul 1 rootdir_first_sector 4 9 `ul 1 rootdir_sectors 4 13 `ul 1 fat_begin_lba 4 17 `us 1 fs_info_sector 2 21 `ul 1 lba_begin 4 23 `ul 1 fat_sectors 4 27 `ul 1 next_free_cluster 4 31 `us 1 root_entry_count 2 35 `us 1 reserved_sectors 2 37 `uc 1 num_of_fats 1 39 `E184 1 fat_type 1 40 `S26 1 disk_io 4 41 `*.37(v 1 fl_lock 2 45 `*.37(v 1 fl_unlock 2 47 `S43 1 currentsector 522 49 `*.39S43 1 fat_buffer_head 2 571 `[1]S43 1 fat_buffers 522 573 ]
+[v fatfs_fat_purge@fs fs `*.39S49  1 p 2 51 ]
+"195
+} 0
+"84
+[v _fatfs_fat_writeback fatfs_fat_writeback `(i  1 s 2 fatfs_fat_writeback ]
+{
+"93
+[v fatfs_fat_writeback@offset offset `ul  1 a 4 47 ]
+"92
+[v fatfs_fat_writeback@sectors sectors `ul  1 a 4 43 ]
+[s S26 disk_if 4 `*.37(i 1 read_media 2 0 `*.37(i 1 write_media 2 2 ]
+"84
+[s S43 fat_buffer 522 `[512]uc 1 sector 512 0 `ul 1 address 4 512 `i 1 dirty 2 516 `*.39uc 1 ptr 2 518 `*.39S43 1 next 2 520 ]
+[s S49 fatfs 1095 `uc 1 sectors_per_cluster 1 0 `ul 1 cluster_begin_lba 4 1 `ul 1 rootdir_first_cluster 4 5 `ul 1 rootdir_first_sector 4 9 `ul 1 rootdir_sectors 4 13 `ul 1 fat_begin_lba 4 17 `us 1 fs_info_sector 2 21 `ul 1 lba_begin 4 23 `ul 1 fat_sectors 4 27 `ul 1 next_free_cluster 4 31 `us 1 root_entry_count 2 35 `us 1 reserved_sectors 2 37 `uc 1 num_of_fats 1 39 `E184 1 fat_type 1 40 `S26 1 disk_io 4 41 `*.37(v 1 fl_lock 2 45 `*.37(v 1 fl_unlock 2 47 `S43 1 currentsector 522 49 `*.39S43 1 fat_buffer_head 2 571 `[1]S43 1 fat_buffers 522 573 ]
+[v fatfs_fat_writeback@fs fs `*.39S49  1 p 2 31 ]
+[v fatfs_fat_writeback@pcur pcur `*.39S43  1 p 2 33 ]
+"112
+} 0
+"194 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\main.c
+[v _media_write media_write `(i  1 e 2 0 ]
+{
+"195
+[v media_write@i i `ul  1 a 4 27 ]
+[v media_write@Start_Addr Start_Addr `ul  1 a 4 23 ]
+"194
+[v media_write@sector sector `ul  1 p 4 9 ]
+[v media_write@buffer buffer `*.39uc  1 p 2 13 ]
+[v media_write@sector_count sector_count `ul  1 p 4 15 ]
+"236
+} 0
+"659 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_filelib.c
+[v _fl_attach_media fl_attach_media `(i  1 e 2 0 ]
+{
+"660
+[v fl_attach_media@res res `i  1 a 2 89 ]
+"659
+[v fl_attach_media@rd rd `*.37(i  1 p 2 85 ]
+[v fl_attach_media@wr wr `*.37(i  1 p 2 87 ]
+"677
+} 0
+"635
+[v _fl_init fl_init `(v  1 e 0 0 ]
+{
+"636
+[v fl_init@i i `i  1 a 2 18 ]
+"646
+} 0
+"126 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_list.h
+[v fat_list@fat_list_insert_last fat_list_insert_last `(v  1 s 0 fat_list_insert_last ]
+{
+[s S826 fat_node 4 `*.39S826 1 previous 2 0 `*.39S826 1 next 2 2 ]
+[s S829 fat_list 4 `*.39S826 1 head 2 0 `*.39S826 1 tail 2 2 ]
+[v fat_list@fat_list_insert_last@list list `*.39S829  1 p 2 12 ]
+[v fat_list@fat_list_insert_last@node node `*.39S826  1 p 2 14 ]
+"134
+} 0
+"108
+[v fat_list@fat_list_insert_first fat_list_insert_first `(v  1 s 0 fat_list_insert_first ]
+{
+[s S826 fat_node 4 `*.39S826 1 previous 2 0 `*.39S826 1 next 2 2 ]
+[s S829 fat_list 4 `*.39S826 1 head 2 0 `*.39S826 1 tail 2 2 ]
+[v fat_list@fat_list_insert_first@list list `*.39S829  1 p 2 8 ]
+[v fat_list@fat_list_insert_first@node node `*.39S826  1 p 2 10 ]
+"121
+} 0
+"91
+[v fat_list@fat_list_insert_before fat_list_insert_before `(v  1 s 0 fat_list_insert_before ]
+{
+[s S826 fat_node 4 `*.39S826 1 previous 2 0 `*.39S826 1 next 2 2 ]
+[s S829 fat_list 4 `*.39S826 1 head 2 0 `*.39S826 1 tail 2 2 ]
+[v fat_list@fat_list_insert_before@list list `*.39S829  1 p 2 0 ]
+[v fat_list@fat_list_insert_before@node node `*.39S826  1 p 2 2 ]
+[v fat_list@fat_list_insert_before@new_node new_node `*.39S826  1 p 2 4 ]
+"103
+} 0
+"74
+[v fat_list@fat_list_insert_after fat_list_insert_after `(v  1 s 0 fat_list_insert_after ]
+{
+[s S826 fat_node 4 `*.39S826 1 previous 2 0 `*.39S826 1 next 2 2 ]
+[s S829 fat_list 4 `*.39S826 1 head 2 0 `*.39S826 1 tail 2 2 ]
+[v fat_list@fat_list_insert_after@list list `*.39S829  1 p 2 0 ]
+[v fat_list@fat_list_insert_after@node node `*.39S826  1 p 2 2 ]
+[v fat_list@fat_list_insert_after@new_node new_node `*.39S826  1 p 2 4 ]
+"86
+} 0
+"47
+[v fat_list@fat_list_init fat_list_init `(v  1 s 0 fat_list_init ]
+{
+[s S826 fat_node 4 `*.39S826 1 previous 2 0 `*.39S826 1 next 2 2 ]
+[s S829 fat_list 4 `*.39S826 1 head 2 0 `*.39S826 1 tail 2 2 ]
+[v fat_list@fat_list_init@list list `*.39S829  1 p 2 0 ]
+"51
+} 0
+"14 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\printf.c
+[v _printf printf `(i  1 e 2 0 ]
+{
+[s S4121 __prbuf 4 `*.39uc 1 ptr 2 0 `*.37(v 1 func 2 2 ]
+"21
+[v printf@pb pb `S4121  1 a 4 41 ]
+"15
+[v printf@ap ap `[1]*.39v  1 a 2 39 ]
+"14
+[v printf@f f `*.32Cuc  1 p 2 31 ]
+"28
+} 0
+"459 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\doprnt.c
+[v __doprnt _doprnt `(i  1 e 2 0 ]
+{
+"1507
+[v __doprnt@idx idx `uc  1 a 1 23 ]
+[s S4142 . 4 `*.34Cuc 1 _cp 2 0 `ui 1 _len 2 2 ]
+"533
+[u S4145 . 4 `ui 1 _val 2 0 `S4142 1 _str 4 0 ]
+[v __doprnt@_val _val `S4145  1 a 4 26 ]
+"499
+[v __doprnt@c c `c  1 a 1 30 ]
+"508
+[v __doprnt@flag flag `uc  1 a 1 25 ]
+"506
+[v __doprnt@prec prec `c  1 a 1 24 ]
+[s S4121 __prbuf 4 `*.39uc 1 ptr 2 0 `*.37(v 1 func 2 2 ]
+"459
+[v __doprnt@pb pb `*.39S4121  1 p 2 14 ]
+[v __doprnt@f f `*.32Cuc  1 p 2 16 ]
+[v __doprnt@ap ap `*.39*.39v  1 p 2 18 ]
+"1548
+} 0
+"8 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\putch.c
+[v _putch putch `(v  1 e 0 0 ]
+{
+[v putch@c c `uc  1 p 1 0 ]
+"9
+} 0
+"10 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+{
+"11
+[v ___lwmod@counter counter `uc  1 a 1 13 ]
+"10
+[v ___lwmod@dividend dividend `ui  1 p 2 8 ]
+[v ___lwmod@divisor divisor `ui  1 p 2 10 ]
+"26
+} 0
+"44 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_access.c
+[v _fatfs_init fatfs_init `(i  1 e 2 0 ]
+{
+"51
+[v fatfs_init@count_of_clusters count_of_clusters `ul  1 a 4 77 ]
+"49
+[v fatfs_init@total_sectors total_sectors `ul  1 a 4 73 ]
+"47
+[v fatfs_init@FATSz FATSz `ul  1 a 4 69 ]
+"50
+[v fatfs_init@data_sectors data_sectors `ul  1 a 4 65 ]
+"48
+[v fatfs_init@root_dir_sectors root_dir_sectors `ul  1 a 4 61 ]
+"46
+[v fatfs_init@reserved_sectors reserved_sectors `us  1 a 2 81 ]
+"45
+[v fatfs_init@num_of_fats num_of_fats `uc  1 a 1 84 ]
+"52
+[v fatfs_init@valid_partition valid_partition `uc  1 a 1 83 ]
+[s S26 disk_if 4 `*.37(i 1 read_media 2 0 `*.37(i 1 write_media 2 2 ]
+"44
+[s S43 fat_buffer 522 `[512]uc 1 sector 512 0 `ul 1 address 4 512 `i 1 dirty 2 516 `*.39uc 1 ptr 2 518 `*.39S43 1 next 2 520 ]
+[s S49 fatfs 1095 `uc 1 sectors_per_cluster 1 0 `ul 1 cluster_begin_lba 4 1 `ul 1 rootdir_first_cluster 4 5 `ul 1 rootdir_first_sector 4 9 `ul 1 rootdir_sectors 4 13 `ul 1 fat_begin_lba 4 17 `us 1 fs_info_sector 2 21 `ul 1 lba_begin 4 23 `ul 1 fat_sectors 4 27 `ul 1 next_free_cluster 4 31 `us 1 root_entry_count 2 35 `us 1 reserved_sectors 2 37 `uc 1 num_of_fats 1 39 `E184 1 fat_type 1 40 `S26 1 disk_io 4 41 `*.37(v 1 fl_lock 2 45 `*.37(v 1 fl_unlock 2 47 `S43 1 currentsector 522 49 `*.39S43 1 fat_buffer_head 2 571 `[1]S43 1 fat_buffers 522 573 ]
+[v fatfs_init@fs fs `*.39S49  1 p 2 31 ]
+"190
+} 0
+"3 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\lmul.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+{
+"4
+[v ___lmul@product product `ul  1 a 4 8 ]
+"3
+[v ___lmul@multiplier multiplier `ul  1 p 4 0 ]
+[v ___lmul@multiplicand multiplicand `ul  1 p 4 4 ]
+"13
+} 0
+"138 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\main.c
+[v _media_read media_read `(i  1 e 2 0 ]
+{
+"139
+[v media_read@i i `ul  1 a 4 27 ]
+[v media_read@Start_Addr Start_Addr `ul  1 a 4 23 ]
+"138
+[v media_read@sector sector `ul  1 p 4 9 ]
+[v media_read@buffer buffer `*.39uc  1 p 2 13 ]
+[v media_read@sector_count sector_count `ul  1 p 4 15 ]
+"175
+} 0
+"64
+[v _command command `(v  1 e 0 0 ]
+{
+[v command@command command `uc  1 p 1 2 ]
+[v command@fourbyte_arg fourbyte_arg `ul  1 p 4 3 ]
+[v command@CRCbits CRCbits `uc  1 p 1 7 ]
+"79
+} 0
+"24 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\spi_1.c
+[v _spi_read spi_read `(v  1 e 0 0 ]
+{
+"28
+} 0
+"17
+[v _ReadBUF ReadBUF `(v  1 e 0 0 ]
+{
+"18
+[v ReadBUF@u u `uc  1 a 1 0 ]
+"21
+} 0
+"65
+[v _WriteSPI_ WriteSPI_ `(c  1 e 1 0 ]
+{
+"66
+[v WriteSPI_@TempVar TempVar `uc  1 a 1 1 ]
+"65
+[v WriteSPI_@data_out data_out `uc  1 p 1 0 ]
+"76
+} 0
+"61 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\fat_table.c
+[v _fatfs_fat_init fatfs_fat_init `(v  1 e 0 0 ]
+{
+"62
+[v fatfs_fat_init@i i `i  1 a 2 20 ]
+[s S26 disk_if 4 `*.37(i 1 read_media 2 0 `*.37(i 1 write_media 2 2 ]
+"61
+[s S43 fat_buffer 522 `[512]uc 1 sector 512 0 `ul 1 address 4 512 `i 1 dirty 2 516 `*.39uc 1 ptr 2 518 `*.39S43 1 next 2 520 ]
+[s S49 fatfs 1095 `uc 1 sectors_per_cluster 1 0 `ul 1 cluster_begin_lba 4 1 `ul 1 rootdir_first_cluster 4 5 `ul 1 rootdir_first_sector 4 9 `ul 1 rootdir_sectors 4 13 `ul 1 fat_begin_lba 4 17 `us 1 fs_info_sector 2 21 `ul 1 lba_begin 4 23 `ul 1 fat_sectors 4 27 `ul 1 next_free_cluster 4 31 `us 1 root_entry_count 2 35 `us 1 reserved_sectors 2 37 `uc 1 num_of_fats 1 39 `E184 1 fat_type 1 40 `S26 1 disk_io 4 41 `*.37(v 1 fl_lock 2 45 `*.37(v 1 fl_unlock 2 47 `S43 1 currentsector 522 49 `*.39S43 1 fat_buffer_head 2 571 `[1]S43 1 fat_buffers 522 573 ]
+[v fatfs_fat_init@fs fs `*.39S49  1 p 2 14 ]
+"79
+} 0
+"10 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\memset.c
+[v _memset memset `(*.39v  1 e 2 0 ]
+{
+"15
+[v memset@p p `*.39uc  1 a 2 12 ]
+"10
+[v memset@p1 p1 `*.39v  1 p 2 6 ]
+[v memset@c c `i  1 p 2 8 ]
+[v memset@n n `ui  1 p 2 10 ]
+"22
+} 0
+"52 C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SD\Example_7.2.X\uart.c
+[v _Write_str Write_str `(v  1 e 0 0 ]
+{
+[v Write_str@str str `*.34uc  1 p 2 5 ]
+"55
+} 0
+"15 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic18\plib\USART\uputs.c
+[v _putsUSART putsUSART `(v  1 e 0 0 ]
+{
+[v putsUSART@data data `*.34uc  1 p 2 1 ]
+"21
+} 0
+"14 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic18\plib\USART\uwrite.c
+[v _WriteUSART WriteUSART `(v  1 e 0 0 ]
+{
+[v WriteUSART@data data `uc  1 p 1 0 ]
+"23
+} 0
+"5 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\wmul.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+{
+"6
+[v ___wmul@product product `ui  1 a 2 4 ]
+"5
+[v ___wmul@multiplier multiplier `ui  1 p 2 0 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
+"31
+} 0
+"10 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+{
+"11
+[v ___lwdiv@quotient quotient `ui  1 a 2 5 ]
+"12
+[v ___lwdiv@counter counter `uc  1 a 1 7 ]
+"10
+[v ___lwdiv@dividend dividend `ui  1 p 2 0 ]
+[v ___lwdiv@divisor divisor `ui  1 p 2 2 ]
+"31
+} 0
+"10 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+{
+"11
+[v ___awdiv@quotient quotient `i  1 a 2 7 ]
+"12
+[v ___awdiv@sign sign `uc  1 a 1 6 ]
+[v ___awdiv@counter counter `uc  1 a 1 5 ]
+"10
+[v ___awdiv@dividend dividend `i  1 p 2 0 ]
+[v ___awdiv@divisor divisor `i  1 p 2 2 ]
+"42
+} 0
