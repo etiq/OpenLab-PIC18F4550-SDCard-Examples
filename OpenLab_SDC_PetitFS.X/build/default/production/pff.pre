@@ -1,0 +1,769 @@
+
+# 1 "pff.c"
+
+# 16 "integer.h"
+typedef int INT;
+typedef unsigned int UINT;
+
+
+typedef char CHAR;
+typedef unsigned char UCHAR;
+typedef unsigned char BYTE;
+
+
+typedef short SHORT;
+typedef unsigned short USHORT;
+typedef unsigned short WORD;
+typedef unsigned short WCHAR;
+
+
+typedef long LONG;
+typedef unsigned long ULONG;
+typedef unsigned long DWORD;
+
+# 40 "pff.h"
+typedef struct {
+BYTE fs_type;
+BYTE flag;
+BYTE csize;
+BYTE pad1;
+WORD n_rootdir;
+DWORD n_fatent;
+DWORD fatbase;
+DWORD dirbase;
+DWORD database;
+DWORD fptr;
+DWORD fsize;
+DWORD org_clust;
+DWORD curr_clust;
+DWORD dsect;
+} FATFS;
+
+# 61
+typedef struct {
+WORD index;
+BYTE* fn;
+DWORD sclust;
+DWORD clust;
+DWORD sect;
+} DIR;
+
+# 73
+typedef struct {
+DWORD fsize;
+WORD fdate;
+WORD ftime;
+BYTE fattrib;
+char fname[13];
+} FILINFO;
+
+# 85
+typedef enum {
+FR_OK = 0,
+FR_DISK_ERR,
+FR_NOT_READY,
+FR_NO_FILE,
+FR_NOT_OPENED,
+FR_NOT_ENABLED,
+FR_NO_FILESYSTEM
+} FRESULT;
+
+# 100
+FRESULT pf_mount (FATFS* fs);
+FRESULT pf_open (const char* path);
+FRESULT pf_read (void* buff, UINT btr, UINT* br);
+FRESULT pf_write (const void* buff, UINT btw, UINT* bw);
+FRESULT pf_lseek (DWORD ofs);
+FRESULT pf_opendir (DIR* dj, const char* path);
+FRESULT pf_readdir (DIR* dj, FILINFO* fno);
+
+# 16 "diskio.h"
+typedef BYTE DSTATUS;
+
+
+typedef enum {
+RES_OK = 0,
+RES_ERROR,
+RES_NOTRDY,
+RES_PARERR
+} DRESULT;
+
+# 30
+DSTATUS disk_initialize (void);
+DRESULT disk_readp (BYTE* buff, DWORD sector, UINT offset, UINT count);
+DRESULT disk_writep (const BYTE* buff, DWORD sc);
+
+# 321 "pff.c"
+extern void proceed();
+
+static
+FATFS *FatFs;
+
+
+
+static
+void mem_set (void* dst, int val, int cnt) {
+char *d = (char*)dst;
+while (cnt--) *d++ = (char)val;
+}
+
+
+static
+int mem_cmp (const void* dst, const void* src, int cnt) {
+const char *d = (const char *)dst, *s = (const char *)src;
+int r = 0;
+while (cnt-- && (r = *d++ - *s++) == 0) ;
+return r;
+}
+
+# 349
+static
+DWORD get_fat (
+DWORD clst
+)
+{
+BYTE buf[4];
+FATFS *fs = FatFs;
+
+if (clst < 2 || clst >= fs->n_fatent)
+return 1;
+
+switch (fs->fs_type) {
+
+case 1 : {
+UINT wc, bc, ofs;
+
+bc = (UINT)clst; bc += bc / 2;
+ofs = bc % 512; bc /= 512;
+if (ofs != 511) {
+if (disk_readp(buf, fs->fatbase + bc, ofs, 2)) break;
+} else {
+if (disk_readp(buf, fs->fatbase + bc, 511, 1)) break;
+if (disk_readp(buf+1, fs->fatbase + bc + 1, 0, 1)) break;
+}
+wc = (WORD)(((WORD)*((BYTE*)(buf)+1)<<8)|(WORD)*(BYTE*)(buf));
+return (clst & 1) ? (wc >> 4) : (wc & 0xFFF);
+}
+
+
+case 2 :
+if (disk_readp(buf, fs->fatbase + clst / 256, ((UINT)clst % 256) * 2, 2)) break;
+return (WORD)(((WORD)*((BYTE*)(buf)+1)<<8)|(WORD)*(BYTE*)(buf));
+
+
+case 3 :
+if (disk_readp(buf, fs->fatbase + clst / 128, ((UINT)clst % 128) * 4, 4)) break;
+return (DWORD)(((DWORD)*((BYTE*)(buf)+3)<<24)|((DWORD)*((BYTE*)(buf)+2)<<16)|((WORD)*((BYTE*)(buf)+1)<<8)|*(BYTE*)(buf)) & 0x0FFFFFFF;
+
+}
+
+return 1;
+}
+
+# 399
+static
+DWORD clust2sect (
+DWORD clst
+)
+{
+FATFS *fs = FatFs;
+
+
+clst -= 2;
+if (clst >= (fs->n_fatent - 2)) return 0;
+return (DWORD)clst * fs->csize + fs->database;
+}
+
+
+static
+DWORD get_clust (
+BYTE* dir
+)
+{
+FATFS *fs = FatFs;
+DWORD clst = 0;
+
+
+if (0 || (1 && fs->fs_type == 3)) {
+clst = (WORD)(((WORD)*((BYTE*)(dir+20)+1)<<8)|(WORD)*(BYTE*)(dir+20));
+clst <<= 16;
+}
+clst |= (WORD)(((WORD)*((BYTE*)(dir+26)+1)<<8)|(WORD)*(BYTE*)(dir+26));
+
+return clst;
+}
+
+# 436
+static
+FRESULT dir_rewind (
+DIR *dj
+)
+{
+DWORD clst;
+FATFS *fs = FatFs;
+
+
+dj->index = 0;
+clst = dj->sclust;
+if (clst == 1 || clst >= fs->n_fatent)
+return FR_DISK_ERR;
+if (1 && !clst && (0 || fs->fs_type == 3))
+clst = (DWORD)fs->dirbase;
+dj->clust = clst;
+dj->sect = (0 || clst) ? clust2sect(clst) : fs->dirbase;
+
+return FR_OK;
+}
+
+# 464
+static
+FRESULT dir_next (
+DIR *dj
+)
+{
+DWORD clst;
+WORD i;
+FATFS *fs = FatFs;
+
+
+i = dj->index + 1;
+if (!i || !dj->sect)
+return FR_NO_FILE;
+
+if (!(i % 16)) {
+dj->sect++;
+
+if (dj->clust == 0) {
+if (i >= fs->n_rootdir)
+return FR_NO_FILE;
+}
+else {
+if (((i / 16) & (fs->csize - 1)) == 0) {
+clst = get_fat(dj->clust);
+if (clst <= 1) return FR_DISK_ERR;
+if (clst >= fs->n_fatent)
+return FR_NO_FILE;
+dj->clust = clst;
+dj->sect = clust2sect(clst);
+}
+}
+}
+
+dj->index = i;
+
+return FR_OK;
+}
+
+# 509
+static
+FRESULT dir_find (
+DIR *dj,
+BYTE *dir
+)
+{
+FRESULT res;
+BYTE c;
+
+
+res = dir_rewind(dj);
+if (res != FR_OK) return res;
+
+do {
+res = disk_readp(dir, dj->sect, (dj->index % 16) * 32, 32)
+? FR_DISK_ERR : FR_OK;
+if (res != FR_OK) break;
+c = dir[0];
+if (c == 0) { res = FR_NO_FILE; break; }
+if (!(dir[11] & 0x08) && !mem_cmp(dir, dj->fn, 11))
+break;
+res = dir_next(dj);
+} while (res == FR_OK);
+
+return res;
+}
+
+# 543
+static
+FRESULT dir_read (
+DIR *dj,
+BYTE *dir
+)
+{
+FRESULT res;
+BYTE a, c;
+
+
+res = FR_NO_FILE;
+while (dj->sect) {
+res = disk_readp(dir, dj->sect, (dj->index % 16) * 32, 32)
+? FR_DISK_ERR : FR_OK;
+if (res != FR_OK) break;
+c = dir[0];
+if (c == 0) { res = FR_NO_FILE; break; }
+a = dir[11] & 0x3F;
+if (c != 0xE5 && c != '.' && !(a & 0x08))
+break;
+res = dir_next(dj);
+if (res != FR_OK) break;
+}
+
+if (res != FR_OK) dj->sect = 0;
+
+return res;
+}
+
+# 580
+static
+FRESULT create_name (
+DIR *dj,
+const char **path
+)
+{
+BYTE c, ni, si, i, *sfn;
+const char *p;
+
+
+static const BYTE cvt[] = {0x80,0x9A,0x90,0x41,0x8E,0x41,0x8F,0x80,0x45,0x45,0x45,0x49,0x49,0x49,0x8E,0x8F,0x90,0x92,0x92,0x4F,0x99,0x4F,0x55,0x55,0x59,0x99,0x9A,0x9B,0x9C,0x9D,0x9E,0x9F, 0x41,0x49,0x4F,0x55,0xA5,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0x21,0xAE,0xAF,0xB0,0xB1,0xB2,0xB3,0xB4,0xB5,0xB6,0xB7,0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF, 0xC0,0xC1,0xC2,0xC3,0xC4,0xC5,0xC6,0xC7,0xC8,0xC9,0xCA,0xCB,0xCC,0xCD,0xCE,0xCF,0xD0,0xD1,0xD2,0xD3,0xD4,0xD5,0xD6,0xD7,0xD8,0xD9,0xDA,0xDB,0xDC,0xDD,0xDE,0xDF, 0xE0,0xE1,0xE2,0xE3,0xE4,0xE5,0xE6,0xE7,0xE8,0xE9,0xEA,0xEB,0xEC,0xED,0xEE,0xEF,0xF0,0xF1,0xF2,0xF3,0xF4,0xF5,0xF6,0xF7,0xF8,0xF9,0xFA,0xFB,0xFC,0xFD,0xFE,0xFF};
+
+
+
+
+sfn = dj->fn;
+mem_set(sfn, ' ', 11);
+si = i = 0; ni = 8;
+p = *path;
+for (;;) {
+c = p[si++];
+if (c <= ' ' || c == '/') break;
+if (c == '.' || i >= ni) {
+if (ni != 8 || c != '.') break;
+i = 8; ni = 11;
+continue;
+}
+
+
+if (c >= 0x80)
+c = cvt[c - 0x80];
+
+if (0 && i < ni - 1) {
+BYTE d = p[si++];
+sfn[i++] = c;
+sfn[i++] = d;
+} else
+
+{
+if (1 && (((c)>='a')&&((c)<='z'))) c -= 0x20;
+sfn[i++] = c;
+}
+}
+*path = &p[si];
+
+sfn[11] = (c <= ' ') ? 1 : 0;
+
+return FR_OK;
+}
+
+# 637
+static
+void get_fileinfo (
+DIR *dj,
+BYTE *dir,
+FILINFO *fno
+)
+{
+BYTE i, c;
+char *p;
+
+
+p = fno->fname;
+if (dj->sect) {
+for (i = 0; i < 8; i++) {
+c = dir[i];
+if (c == ' ') break;
+if (c == 0x05) c = 0xE5;
+*p++ = c;
+}
+if (dir[8] != ' ') {
+*p++ = '.';
+for (i = 8; i < 11; i++) {
+c = dir[i];
+if (c == ' ') break;
+*p++ = c;
+}
+}
+fno->fattrib = dir[11];
+fno->fsize = (DWORD)(((DWORD)*((BYTE*)(dir+28)+3)<<24)|((DWORD)*((BYTE*)(dir+28)+2)<<16)|((WORD)*((BYTE*)(dir+28)+1)<<8)|*(BYTE*)(dir+28));
+fno->fdate = (WORD)(((WORD)*((BYTE*)(dir+24)+1)<<8)|(WORD)*(BYTE*)(dir+24));
+fno->ftime = (WORD)(((WORD)*((BYTE*)(dir+22)+1)<<8)|(WORD)*(BYTE*)(dir+22));
+}
+*p = 0;
+}
+
+# 679
+static
+FRESULT follow_path (
+DIR *dj,
+BYTE *dir,
+const char *path
+)
+{
+FRESULT res;
+
+
+while (*path == ' ') path++;
+if (*path == '/') path++;
+dj->sclust = 0;
+
+if ((BYTE)*path < ' ') {
+res = dir_rewind(dj);
+dir[0] = 0;
+
+} else {
+for (;;) {
+res = create_name(dj, &path);
+if (res != FR_OK) break;
+res = dir_find(dj, dir);
+if (res != FR_OK) break;
+if (dj->fn[11]) break;
+if (!(dir[11] & 0x10)) {
+res = FR_NO_FILE; break;
+}
+dj->sclust = get_clust(dir);
+}
+}
+
+return res;
+}
+
+# 721
+static
+BYTE check_fs (
+BYTE *buf,
+DWORD sect
+)
+{
+if (disk_readp(buf, sect, 510, 2))
+return 3;
+if ( (WORD)(((WORD)*((BYTE*)(buf)+1)<<8)|(WORD)*(BYTE*)(buf)) != 0xAA55)
+{
+return 2;
+}
+if (!0 && !disk_readp(buf, sect, 54 , 2) && (WORD)(((WORD)*((BYTE*)(buf)+1)<<8)|(WORD)*(BYTE*)(buf)) == 0x4146)
+return 0;
+if (1 && !disk_readp(buf, sect, 82 , 2) && (WORD)(((WORD)*((BYTE*)(buf)+1)<<8)|(WORD)*(BYTE*)(buf)) == 0x4146)
+return 0;
+return 1;
+}
+
+# 755
+FRESULT pf_mount (
+FATFS *fs
+)
+{
+BYTE fmt, buf[36];
+DWORD bsect, fsize, tsect, mclst;
+
+
+FatFs = 0;
+if (disk_initialize() & 0x01)
+return FR_NOT_READY;
+
+bsect = 0;
+fmt = check_fs(buf, bsect);
+if (fmt == 1) {
+
+if (disk_readp(buf, bsect, 446, 16)) {
+fmt = 3;
+} else {
+if (buf[4]) {
+bsect = (DWORD)(((DWORD)*((BYTE*)(&buf[8])+3)<<24)|((DWORD)*((BYTE*)(&buf[8])+2)<<16)|((WORD)*((BYTE*)(&buf[8])+1)<<8)|*(BYTE*)(&buf[8]));
+fmt = check_fs(buf, bsect);
+}
+}
+}
+if (fmt == 3) return FR_DISK_ERR;
+if (fmt) return FR_NO_FILESYSTEM;
+
+
+if (disk_readp(buf, bsect, 13, sizeof (buf))) return FR_DISK_ERR;
+
+fsize = (WORD)(((WORD)*((BYTE*)(buf+22-13)+1)<<8)|(WORD)*(BYTE*)(buf+22-13));
+if (!fsize) fsize = (DWORD)(((DWORD)*((BYTE*)(buf+36-13)+3)<<24)|((DWORD)*((BYTE*)(buf+36-13)+2)<<16)|((WORD)*((BYTE*)(buf+36-13)+1)<<8)|*(BYTE*)(buf+36-13));
+
+fsize *= buf[16-13];
+fs->fatbase = bsect + (WORD)(((WORD)*((BYTE*)(buf+14-13)+1)<<8)|(WORD)*(BYTE*)(buf+14-13));
+fs->csize = buf[13-13];
+fs->n_rootdir = (WORD)(((WORD)*((BYTE*)(buf+17-13)+1)<<8)|(WORD)*(BYTE*)(buf+17-13));
+tsect = (WORD)(((WORD)*((BYTE*)(buf+19-13)+1)<<8)|(WORD)*(BYTE*)(buf+19-13));
+if (!tsect) tsect = (DWORD)(((DWORD)*((BYTE*)(buf+32-13)+3)<<24)|((DWORD)*((BYTE*)(buf+32-13)+2)<<16)|((WORD)*((BYTE*)(buf+32-13)+1)<<8)|*(BYTE*)(buf+32-13));
+mclst = (tsect
+- (WORD)(((WORD)*((BYTE*)(buf+14-13)+1)<<8)|(WORD)*(BYTE*)(buf+14-13)) - fsize - fs->n_rootdir / 16
+) / fs->csize + 2;
+fs->n_fatent = (DWORD)mclst;
+
+fmt = 0;
+if (1 && mclst < 0xFF7)
+fmt = 1;
+if (1 && mclst >= 0xFF8 && mclst < 0xFFF7)
+fmt = 2;
+if (1 && mclst >= 0xFFF7)
+fmt = 3;
+if (!fmt) return FR_NO_FILESYSTEM;
+fs->fs_type = fmt;
+
+if (0 || (1 && fmt == 3))
+fs->dirbase = (DWORD)(((DWORD)*((BYTE*)(buf+(44-13))+3)<<24)|((DWORD)*((BYTE*)(buf+(44-13))+2)<<16)|((WORD)*((BYTE*)(buf+(44-13))+1)<<8)|*(BYTE*)(buf+(44-13)));
+else
+fs->dirbase = fs->fatbase + fsize;
+fs->database = fs->fatbase + fsize + fs->n_rootdir / 16;
+
+fs->flag = 0;
+FatFs = fs;
+
+return FR_OK;
+}
+
+# 829
+FRESULT pf_open (
+const char *path
+)
+{
+FRESULT res;
+DIR dj;
+BYTE sp[12], dir[32];
+FATFS *fs = FatFs;
+
+if (!fs) return FR_NOT_ENABLED;
+
+fs->flag = 0;
+dj.fn = sp;
+res = follow_path(&dj, dir, "check.txt" );
+if (res != FR_OK) return res;
+if (!dir[0] || (dir[11] & 0x10))
+return FR_NO_FILE;
+
+fs->org_clust = get_clust(dir);
+fs->fsize = (DWORD)(((DWORD)*((BYTE*)(dir+28)+3)<<24)|((DWORD)*((BYTE*)(dir+28)+2)<<16)|((WORD)*((BYTE*)(dir+28)+1)<<8)|*(BYTE*)(dir+28));
+fs->fptr = 0;
+fs->flag = 0x01;
+
+return FR_OK;
+}
+
+# 863
+FRESULT pf_read (
+void* buff,
+UINT btr,
+UINT* br
+)
+{
+DRESULT dr;
+DWORD clst;
+DWORD sect, remain;
+UINT rcnt;
+BYTE cs, *rbuff = buff;
+FATFS *fs = FatFs;
+
+
+*br = 0;
+if (!fs) return FR_NOT_ENABLED;
+if (!(fs->flag & 0x01))
+return FR_NOT_OPENED;
+
+remain = fs->fsize - fs->fptr;
+if (btr > remain) btr = (UINT)remain;
+
+while (btr) {
+if ((fs->fptr % 512) == 0) {
+cs = (BYTE)(fs->fptr / 512 & (fs->csize - 1));
+if (!cs) {
+if (fs->fptr == 0)
+clst = fs->org_clust;
+else
+clst = get_fat(fs->curr_clust);
+if (clst <= 1) {fs->flag = 0; return FR_DISK_ERR;};
+fs->curr_clust = clst;
+}
+sect = clust2sect(fs->curr_clust);
+if (!sect) {fs->flag = 0; return FR_DISK_ERR;};
+fs->dsect = sect + cs;
+}
+rcnt = 512 - (UINT)fs->fptr % 512;
+if (rcnt > btr) rcnt = btr;
+dr = disk_readp(!buff ? 0 : rbuff, fs->dsect, (UINT)fs->fptr % 512, rcnt);
+if (dr) {fs->flag = 0; return FR_DISK_ERR;};
+fs->fptr += rcnt; rbuff += rcnt;
+btr -= rcnt; *br += rcnt;
+}
+
+return FR_OK;
+}
+
+# 919
+FRESULT pf_write (
+const void* buff,
+UINT btw,
+UINT* bw
+)
+{
+DWORD clst;
+DWORD sect, remain;
+const BYTE *p = buff;
+BYTE cs;
+UINT wcnt;
+FATFS *fs = FatFs;
+
+
+*bw = 0;
+if (!fs) return FR_NOT_ENABLED;
+if (!(fs->flag & 0x01))
+return FR_NOT_OPENED;
+
+if (!btw) {
+if ((fs->flag & 0x40) && disk_writep(0, 0)) {fs->flag = 0; return FR_DISK_ERR;};
+fs->flag &= ~0x40;
+return FR_OK;
+} else {
+if (!(fs->flag & 0x40))
+fs->fptr &= 0xFFFFFE00;
+}
+remain = fs->fsize - fs->fptr;
+if (btw > remain) btw = (UINT)remain;
+
+while (btw) {
+if ((UINT)fs->fptr % 512 == 0) {
+cs = (BYTE)(fs->fptr / 512 & (fs->csize - 1));
+if (!cs) {
+if (fs->fptr == 0)
+clst = fs->org_clust;
+else
+clst = get_fat(fs->curr_clust);
+if (clst <= 1) {fs->flag = 0; return FR_DISK_ERR;};
+fs->curr_clust = clst;
+}
+sect = clust2sect(fs->curr_clust);
+if (!sect) {fs->flag = 0; return FR_DISK_ERR;};
+fs->dsect = sect + cs;
+if (disk_writep(0, fs->dsect)) {fs->flag = 0; return FR_DISK_ERR;};
+fs->flag |= 0x40;
+}
+wcnt = 512 - (UINT)fs->fptr % 512;
+if (wcnt > btw)wcnt = btw;
+if (disk_writep(p, fs->dsect )) {fs->flag = 0; return FR_DISK_ERR;};
+fs->fptr += wcnt; p += wcnt;
+btw -= wcnt; *bw += wcnt;
+if ((UINT)fs->fptr % 512 == 0) {
+if (disk_writep(0, 0)) {fs->flag = 0; return FR_DISK_ERR;};
+fs->flag &= ~0x40;
+}
+}
+
+return FR_OK;
+}
+
+# 988
+FRESULT pf_lseek (
+DWORD ofs
+)
+{
+DWORD clst;
+DWORD bcs, sect, ifptr;
+FATFS *fs = FatFs;
+
+
+if (!fs) return FR_NOT_ENABLED;
+if (!(fs->flag & 0x01))
+return FR_NOT_OPENED;
+
+if (ofs > fs->fsize) ofs = fs->fsize;
+ifptr = fs->fptr;
+fs->fptr = 0;
+if (ofs > 0) {
+bcs = (DWORD)fs->csize * 512;
+if (ifptr > 0 &&
+(ofs - 1) / bcs >= (ifptr - 1) / bcs) {
+fs->fptr = (ifptr - 1) & ~(bcs - 1);
+ofs -= fs->fptr;
+clst = fs->curr_clust;
+} else {
+clst = fs->org_clust;
+fs->curr_clust = clst;
+}
+while (ofs > bcs) {
+clst = get_fat(clst);
+if (clst <= 1 || clst >= fs->n_fatent) {fs->flag = 0; return FR_DISK_ERR;};
+fs->curr_clust = clst;
+fs->fptr += bcs;
+ofs -= bcs;
+}
+fs->fptr += ofs;
+sect = clust2sect(clst);
+if (!sect) {fs->flag = 0; return FR_DISK_ERR;};
+fs->dsect = sect + (fs->fptr / 512 & (fs->csize - 1));
+}
+
+return FR_OK;
+}
+
+# 1039
+FRESULT pf_opendir (
+DIR *dj,
+const char *path
+)
+{
+FRESULT res;
+BYTE sp[12], dir[32];
+FATFS *fs = FatFs;
+
+
+if (!fs) {
+res = FR_NOT_ENABLED;
+} else {
+dj->fn = sp;
+res = follow_path(dj, dir, path);
+if (res == FR_OK) {
+if (dir[0]) {
+if (dir[11] & 0x10)
+dj->sclust = get_clust(dir);
+else
+res = FR_NO_FILE;
+}
+if (res == FR_OK)
+res = dir_rewind(dj);
+}
+}
+
+return res;
+}
+
+# 1076
+FRESULT pf_readdir (
+DIR *dj,
+FILINFO *fno
+)
+{
+FRESULT res;
+BYTE sp[12], dir[32];
+FATFS *fs = FatFs;
+
+
+if (!fs) {
+res = FR_NOT_ENABLED;
+} else {
+dj->fn = sp;
+if (!fno) {
+res = dir_rewind(dj);
+} else {
+res = dir_read(dj, dir);
+if (res == FR_NO_FILE) res = FR_OK;
+if (res == FR_OK) {
+get_fileinfo(dj, dir, fno);
+res = dir_next(dj);
+if (res == FR_NO_FILE) res = FR_OK;
+}
+}
+}
+
+return res;
+}
+

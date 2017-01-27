@@ -1,0 +1,1495 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$C:\Users\ETIQLA~1\AppData\Local\Temp\s3ts.obj
+end_init CODE 0 0 0 4 1
+idloc IDLOC 0 200000 200000 8 1
+config CONFIG 0 300000 300000 E 1
+$dist/default/production\SDC_FILE_SYS.X.production.obj
+mediumconst MEDIUMCONST 0 7D50 7D50 2B0 1
+text39 CODE 0 4FD0 4FD0 A 1
+text38 CODE 0 541E 541E 82 1
+text37 CODE 0 51D8 51D8 56 1
+text36 CODE 0 5038 5038 18 1
+text35 CODE 0 50F0 50F0 30 1
+text34 CODE 0 5008 5008 10 1
+text33 CODE 0 5068 5068 1A 1
+text32 CODE 0 509C 509C 28 1
+text31 CODE 0 5050 5050 18 1
+text30 CODE 0 515A 515A 3E 1
+text29 CODE 0 4FEE 4FEE C 1
+text28 CODE 0 5018 5018 10 1
+text27 CODE 0 5082 5082 1A 1
+text26 CODE 0 5120 5120 3A 1
+text25 CODE 0 52DA 52DA 58 1
+text24 CODE 0 5028 5028 10 1
+text23 CODE 0 4FFA 4FFA E 1
+text22 CODE 0 6574 6574 2F6 1
+text21 CODE 0 5AD4 5AD4 14E 1
+text20 CODE 0 53A2 53A2 7C 1
+text19 CODE 0 5D9C 5D9C 1D0 1
+text18 CODE 0 75FA 75FA 756 1
+text17 CODE 0 50C4 50C4 2C 1
+text16 CODE 0 5990 5990 144 1
+text15 CODE 0 556A 556A D4 1
+text14 CODE 0 686A 686A 3D2 1
+text13 CODE 0 6366 6366 20E 1
+text12 CODE 0 5858 5858 138 1
+text11 CODE 0 5332 5332 70 1
+text10 CODE 0 563E 563E F6 1
+text9 CODE 0 54A0 54A0 CA 1
+text8 CODE 0 5C22 5C22 17A 1
+text7 CODE 0 5F6C 5F6C 1F4 1
+text6 CODE 0 6C3C 6C3C 45C 1
+text5 CODE 0 5734 5734 124 1
+text4 CODE 0 7098 7098 562 1
+text3 CODE 0 4FDA 4FDA A 1
+text2 CODE 0 522E 522E 56 1
+text1 CODE 0 5198 5198 40 1
+text0 CODE 0 6160 6160 206 1
+cstackCOMRAM COMRAM 1 1 1 5F 1
+cstackBANK0 BANK0 1 60 60 8F 1
+bssBIGRAM BIGRAM 1 16E 16E 600 1
+dataBANK1 BANK1 1 164 164 A 1
+bssBANK1 BANK1 1 100 100 64 1
+bssBANK0 BANK0 1 EF EF E 1
+cinit CODE 0 5284 5284 56 1
+idataBANK1 CODE 0 4FE4 4FE4 A 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+BANK0 0000FD-0000FF 1
+BANK7 00076E-0007FF 1
+BIGRAM 0000FD-0000FF 1
+BIGRAM 00076E-0007FF 1
+CODE 000004-004FCF 1
+CONST 000004-004FCF 1
+EEDATA F00000-F000FF 1
+MEDIUMCONST 000800-004FCF 1
+RAM 0000FD-0000FF 1
+RAM 00076E-0007FF 1
+SFR 000F60-000FFF 1
+SMALLCONST 000800-004FCF 1
+STACK 00076E-0007FF 1
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <file name>:<line number> <address> <psect name> <class name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/default/production\SDC_FILE_SYS.X.production.obj
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\openuart.c":30 4FD0 text39 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\openuart.c":32 4FD0 text39 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\openuart.c":33 4FD2 text39 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\openuart.c":35 4FD4 text39 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\openuart.c":36 4FD6 text39 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\openuart.c":37 4FD8 text39 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":19 4FDA text3 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":21 4FDA text3 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":22 4FE2 text3 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":100 4FEE text29 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":102 4FEE text29 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":103 4FF0 text29 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":104 4FF6 text29 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":105 4FF8 text29 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":118 4FFA text23 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":121 4FFA text23 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":122 4FFC text23 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":123 5002 text23 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":124 5004 text23 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":125 5006 text23 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\d1ktcyx.c":8 5008 text34 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\d1ktcyx.c":10 500A text34 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\d1ktcyx.c":11 500A text34 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\d1ktcyx.c":12 5012 text34 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\d1ktcyx.c":13 5016 text34 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\d100tcyx.c":8 5018 text28 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\d100tcyx.c":10 501A text28 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\d100tcyx.c":11 501A text28 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\d100tcyx.c":12 5022 text28 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\d100tcyx.c":13 5026 text28 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":107 5028 text24 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":110 5028 text24 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":111 502C text24 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":112 502E text24 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":114 5030 text24 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":115 5034 text24 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":116 5036 text24 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":58 5038 text36 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":62 503A text36 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":63 503E text36 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":64 5040 text36 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":65 5042 text36 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":66 5046 text36 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":72 504A text36 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":74 504E text36 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\plib\SPI\spi_writ.c":13 5050 text31 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\plib\SPI\spi_writ.c":16 5052 text31 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\plib\SPI\spi_writ.c":17 5056 text31 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\plib\SPI\spi_writ.c":18 5058 text31 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\plib\SPI\spi_writ.c":19 505A text31 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\plib\SPI\spi_writ.c":20 505E text31 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\plib\SPI\spi_writ.c":24 5062 text31 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\plib\SPI\spi_writ.c":26 5066 text31 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\delay.c":33 5068 text33 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\delay.c":36 506A text33 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\delay.c":37 5070 text33 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\delay.c":36 5076 text33 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\delay.c":42 507E text33 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\delay.c":36 5080 text33 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\sw_uart.c":23 5082 text27 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\sw_uart.c":25 5082 text27 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\sw_uart.c":27 5088 text27 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\sw_uart.c":28 5092 text27 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\sw_uart.c":29 509A text27 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\delay.c":44 509C text32 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\delay.c":47 509E text32 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\delay.c":48 50A4 text32 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\delay.c":49 50AA text32 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\delay.c":48 50B0 text32 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\delay.c":47 50B8 text32 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\delay.c":50 50C0 text32 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\delay.c":47 50C2 text32 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":329 50C4 text17 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":330 50C4 text17 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":331 50CC text17 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":332 50EC text17 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":331 50EE text17 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":76 50F0 text35 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":78 50F2 text35 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":79 50F8 text35 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":80 5100 text35 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":81 5106 text35 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":82 510C text35 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":83 5112 text35 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":84 5118 text35 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":85 511E text35 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\sw_uart.c":82 5120 text26 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\sw_uart.c":84 5122 text26 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\sw_uart.c":87 5126 text26 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\sw_uart.c":88 5128 text26 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\sw_uart.c":90 512C text26 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\sw_uart.c":92 512E text26 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\sw_uart.c":93 5142 text26 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\sw_uart.c":94 5146 text26 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\sw_uart.c":90 514A text26 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\sw_uart.c":98 5152 text26 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\sw_uart.c":99 5154 text26 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\sw_uart.c":100 5158 text26 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":87 515A text30 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":89 515A text30 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":90 5162 text30 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":91 5168 text30 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":92 516A text30 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":93 5174 text30 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":94 5174 text30 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":95 5176 text30 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":96 517C text30 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":92 517E text30 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":98 5194 text30 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":92 5196 text30 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":35 5198 text1 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":37 5198 text1 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":38 519C text1 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":39 51A0 text1 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":40 51A4 text1 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":42 51AC text1 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":44 51AE text1 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":45 51B2 text1 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":47 51B6 text1 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":48 51B8 text1 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":49 51BA text1 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":51 51BC text1 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":52 51C0 text1 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":53 51C4 text1 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":54 51C8 text1 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":55 51D6 text1 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul32.c":15 51D8 text37 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul32.c":119 51D8 text37 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul32.c":121 51E8 text37 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul32.c":122 51EC text37 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul32.c":123 51FC text37 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul32.c":124 5206 text37 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul32.c":125 5210 text37 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul32.c":128 521C text37 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul32.c":129 522C text37 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\plib\SPI\spi_open.c":14 522E text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\plib\SPI\spi_open.c":16 5230 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\plib\SPI\spi_open.c":17 5234 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\plib\SPI\spi_open.c":18 5238 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\plib\SPI\spi_open.c":19 523C text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\plib\SPI\spi_open.c":21 5240 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\plib\SPI\spi_open.c":23 5242 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\plib\SPI\spi_open.c":24 5242 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\plib\SPI\spi_open.c":25 5244 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\plib\SPI\spi_open.c":26 5246 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\plib\SPI\spi_open.c":27 5246 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\plib\SPI\spi_open.c":30 5248 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\plib\SPI\spi_open.c":31 5248 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\plib\SPI\spi_open.c":32 524A text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\plib\SPI\spi_open.c":21 524C text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\plib\SPI\spi_open.c":39 5262 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\plib\SPI\spi_open.c":47 5262 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\plib\SPI\spi_open.c":62 5264 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\plib\SPI\spi_open.c":66 5264 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\plib\SPI\spi_open.c":72 5266 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\plib\SPI\spi_open.c":74 5268 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\plib\SPI\spi_open.c":78 5268 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\plib\SPI\spi_open.c":85 526A text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\plib\SPI\spi_open.c":37 526C text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\plib\SPI\spi_open.c":86 527C text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\plib\SPI\spi_open.c":88 527C text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\plib\SPI\spi_open.c":89 527E text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\plib\SPI\spi_open.c":101 5280 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\plib\SPI\spi_open.c":102 5282 text2 CODE
+"C:\Users\ETIQLA~1\AppData\Local\Temp\s3ts.":2788 5284 cinit CODE
+"C:\Users\ETIQLA~1\AppData\Local\Temp\s3ts.":2790 5284 cinit CODE
+"C:\Users\ETIQLA~1\AppData\Local\Temp\s3ts.":2793 5284 cinit CODE
+"C:\Users\ETIQLA~1\AppData\Local\Temp\s3ts.":2863 5284 cinit CODE
+"C:\Users\ETIQLA~1\AppData\Local\Temp\s3ts.":2864 5288 cinit CODE
+"C:\Users\ETIQLA~1\AppData\Local\Temp\s3ts.":2865 528C cinit CODE
+"C:\Users\ETIQLA~1\AppData\Local\Temp\s3ts.":2866 528C cinit CODE
+"C:\Users\ETIQLA~1\AppData\Local\Temp\s3ts.":2867 528E cinit CODE
+"C:\Users\ETIQLA~1\AppData\Local\Temp\s3ts.":2868 5290 cinit CODE
+"C:\Users\ETIQLA~1\AppData\Local\Temp\s3ts.":2869 5292 cinit CODE
+"C:\Users\ETIQLA~1\AppData\Local\Temp\s3ts.":2870 5294 cinit CODE
+"C:\Users\ETIQLA~1\AppData\Local\Temp\s3ts.":2871 5296 cinit CODE
+"C:\Users\ETIQLA~1\AppData\Local\Temp\s3ts.":2874 5298 cinit CODE
+"C:\Users\ETIQLA~1\AppData\Local\Temp\s3ts.":2875 529C cinit CODE
+"C:\Users\ETIQLA~1\AppData\Local\Temp\s3ts.":2876 529E cinit CODE
+"C:\Users\ETIQLA~1\AppData\Local\Temp\s3ts.":2877 529E cinit CODE
+"C:\Users\ETIQLA~1\AppData\Local\Temp\s3ts.":2878 52A0 cinit CODE
+"C:\Users\ETIQLA~1\AppData\Local\Temp\s3ts.":2879 52A2 cinit CODE
+"C:\Users\ETIQLA~1\AppData\Local\Temp\s3ts.":2882 52A4 cinit CODE
+"C:\Users\ETIQLA~1\AppData\Local\Temp\s3ts.":2883 52A8 cinit CODE
+"C:\Users\ETIQLA~1\AppData\Local\Temp\s3ts.":2884 52AA cinit CODE
+"C:\Users\ETIQLA~1\AppData\Local\Temp\s3ts.":2885 52AA cinit CODE
+"C:\Users\ETIQLA~1\AppData\Local\Temp\s3ts.":2886 52AC cinit CODE
+"C:\Users\ETIQLA~1\AppData\Local\Temp\s3ts.":2887 52AE cinit CODE
+"C:\Users\ETIQLA~1\AppData\Local\Temp\s3ts.":2892 52B0 cinit CODE
+"C:\Users\ETIQLA~1\AppData\Local\Temp\s3ts.":2893 52B2 cinit CODE
+"C:\Users\ETIQLA~1\AppData\Local\Temp\s3ts.":2894 52B4 cinit CODE
+"C:\Users\ETIQLA~1\AppData\Local\Temp\s3ts.":2895 52B6 cinit CODE
+"C:\Users\ETIQLA~1\AppData\Local\Temp\s3ts.":2896 52B8 cinit CODE
+"C:\Users\ETIQLA~1\AppData\Local\Temp\s3ts.":2897 52BA cinit CODE
+"C:\Users\ETIQLA~1\AppData\Local\Temp\s3ts.":2898 52BC cinit CODE
+"C:\Users\ETIQLA~1\AppData\Local\Temp\s3ts.":2899 52C0 cinit CODE
+"C:\Users\ETIQLA~1\AppData\Local\Temp\s3ts.":2900 52C4 cinit CODE
+"C:\Users\ETIQLA~1\AppData\Local\Temp\s3ts.":2901 52C4 cinit CODE
+"C:\Users\ETIQLA~1\AppData\Local\Temp\s3ts.":2902 52C6 cinit CODE
+"C:\Users\ETIQLA~1\AppData\Local\Temp\s3ts.":2903 52CA cinit CODE
+"C:\Users\ETIQLA~1\AppData\Local\Temp\s3ts.":2904 52CC cinit CODE
+"C:\Users\ETIQLA~1\AppData\Local\Temp\s3ts.":2905 52CE cinit CODE
+"C:\Users\ETIQLA~1\AppData\Local\Temp\s3ts.":2911 52D0 cinit CODE
+"C:\Users\ETIQLA~1\AppData\Local\Temp\s3ts.":2913 52D0 cinit CODE
+"C:\Users\ETIQLA~1\AppData\Local\Temp\s3ts.":2914 52D2 cinit CODE
+"C:\Users\ETIQLA~1\AppData\Local\Temp\s3ts.":2915 52D4 cinit CODE
+"C:\Users\ETIQLA~1\AppData\Local\Temp\s3ts.":2916 52D6 cinit CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\sw_uart.c":58 52DA text25 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\sw_uart.c":60 52DA text25 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\sw_uart.c":62 52DA text25 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\sw_uart.c":63 52FE text25 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\sw_uart.c":64 532E text25 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\sw_uart.c":63 5330 text25 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":336 5332 text11 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":337 5332 text11 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":338 5342 text11 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":339 534A text11 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":340 5398 text11 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":341 53A0 text11 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":28 53A2 text20 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":30 53A2 text20 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":34 53B2 text20 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":35 53BE text20 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":36 53D8 text20 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":38 53DC text20 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":39 53E2 text20 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":40 53E6 text20 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":41 53FC text20 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":42 5404 text20 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":44 540A text20 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":45 5416 text20 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":47 541C text20 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lldiv.c":8 541E text38 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lldiv.c":14 541E text38 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lldiv.c":15 542E text38 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lldiv.c":16 543A text38 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lldiv.c":17 543E text38 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lldiv.c":18 5440 text38 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lldiv.c":19 544A text38 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lldiv.c":17 544C text38 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lldiv.c":22 5450 text38 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lldiv.c":23 545A text38 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lldiv.c":24 546E text38 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lldiv.c":25 547E text38 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lldiv.c":27 5480 text38 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lldiv.c":28 548A text38 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lldiv.c":29 548E text38 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lldiv.c":30 548E text38 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lldiv.c":31 549E text38 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":414 54A0 text9 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":418 54A0 text9 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":419 54AC text9 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":422 54BC text9 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":423 54CA text9 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":424 5504 text9 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":426 5514 text9 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":428 5558 text9 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":429 5568 text9 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":400 556A text15 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":404 556A text15 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":407 5576 text15 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":408 5582 text15 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":409 55CA text15 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":410 563C text15 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":510 563E text10 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":519 563E text10 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":520 564C text10 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":524 5652 text10 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":525 56BC text10 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":526 56C2 text10 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":527 56CE text10 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":528 56D8 text10 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":530 571C text10 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":531 572A text10 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":533 5730 text10 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":534 5732 text10 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":259 5734 text5 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":267 5734 text5 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":269 573C text5 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":271 5742 text5 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":272 574E text5 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":273 5788 text5 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":275 578C text5 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":276 5792 text5 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":279 5796 text5 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":281 579C text5 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":283 57A8 text5 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":285 57AE text5 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":287 57C6 text5 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":289 57DC text5 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":290 57F0 text5 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":291 57FC text5 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":293 57FE text5 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":285 5804 text5 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":295 580A text5 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":296 5810 text5 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":298 5816 text5 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":300 581A text5 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":301 5820 text5 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":303 582C text5 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":304 5846 text5 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":306 584A text5 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":307 5850 text5 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":309 5854 text5 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":310 5856 text5 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":437 5858 text12 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":442 5858 text12 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":445 5864 text12 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":446 5874 text12 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":447 5890 text12 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":448 58CC text12 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":449 58D0 text12 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":450 58EA text12 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":451 5906 text12 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":452 5922 text12 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":454 598C text12 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":455 598E text12 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":581 5990 text16 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":595 5990 text16 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":596 59A4 text16 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":597 59C0 text16 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":598 59CC text16 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":600 59DC text16 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":601 5A00 text16 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":602 5A0E text16 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":603 5A1E text16 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":604 5A2E text16 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":605 5A36 text16 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":609 5A38 text16 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":610 5A3E text16 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":619 5A66 text16 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":620 5A78 text16 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":623 5A90 text16 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":625 5AB4 text16 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":627 5AD0 text16 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":628 5AD2 text16 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":722 5AD4 text21 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":727 5AD4 text21 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":728 5B06 text21 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":729 5B0A text21 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":731 5B42 text21 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":733 5B46 text21 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":735 5BB0 text21 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":736 5C1A text21 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":737 5C1E text21 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":738 5C20 text21 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":680 5C22 text8 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":689 5C22 text8 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":690 5C40 text8 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":691 5C5C text8 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":693 5C76 text8 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":694 5C92 text8 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":695 5CA6 text8 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":697 5CB2 text8 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":699 5CB4 text8 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":700 5CD4 text8 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":701 5CDC text8 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":702 5CFC text8 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":703 5D04 text8 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":704 5D28 text8 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":705 5D46 text8 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":707 5D4E text8 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":708 5D94 text8 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":711 5D96 text8 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":712 5D9A text8 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":49 5D9C text19 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":52 5D9C text19 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":54 5DB4 text19 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":55 5DB8 text19 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":56 5DBE text19 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":57 5DCA text19 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":58 5DE4 text19 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":60 5DE8 text19 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":61 5DEE text19 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":63 5DF4 text19 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":64 5DFA text19 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":65 5DFE text19 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":68 5E04 text19 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":69 5E0A text19 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":71 5E12 text19 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":72 5E1A text19 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":73 5E26 text19 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":74 5E40 text19 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":77 5E42 text19 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":78 5E48 text19 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":79 5E4C text19 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":81 5E62 text19 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":82 5E68 text19 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":83 5E70 text19 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":85 5E7C text19 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":86 5E96 text19 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":88 5E98 text19 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":90 5E9C text19 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":91 5EA2 text19 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":92 5EA6 text19 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":93 5EBC text19 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":95 5EC0 text19 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":97 5EC8 text19 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":98 5ECE text19 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":99 5ED2 text19 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":100 5EDE text19 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":101 5EEA text19 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":102 5EF0 text19 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":104 5EF2 text19 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":106 5EFA text19 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":107 5EFE text19 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":108 5F0A text19 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":110 5F10 text19 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":112 5F16 text19 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":113 5F22 text19 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":114 5F3C text19 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":116 5F40 text19 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":117 5F46 text19 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":119 5F4A text19 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":120 5F56 text19 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":121 5F5C text19 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":122 5F68 text19 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":123 5F6A text19 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":829 5F6C text7 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":836 5F6C text7 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":838 5F78 text7 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":840 5F86 text7 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":841 5F9C text7 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":842 5FAC text7 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":843 5FE0 text7 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":844 5FEE text7 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":845 5FFC text7 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":847 6000 text7 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":848 6046 text7 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":849 612C text7 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":850 6146 text7 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":852 615C text7 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":853 615E text7 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":131 6160 text0 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":136 6160 text0 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":137 6164 text0 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":141 6168 text0 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":142 6174 text0 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":143 6178 text0 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":145 6192 text0 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":146 619E text0 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":147 61AE text0 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":148 61BA text0 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":150 61C6 text0 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":152 61DA text0 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":154 61E0 text0 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":157 61EC text0 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":159 6216 text0 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":160 6222 text0 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":163 6224 text0 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":164 6230 text0 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":165 623A text0 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":167 6246 text0 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":170 6248 text0 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":175 6254 text0 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":177 6260 text0 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":180 628E text0 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":181 62A6 text0 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":186 62A8 text0 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":187 62B4 text0 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":188 62BE text0 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":190 62CA text0 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":196 62CC text0 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":197 62D8 text0 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":198 62E2 text0 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":200 62EE text0 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":205 62F0 text0 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":206 62FC text0 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":207 6306 text0 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":209 6312 text0 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":212 6314 text0 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":218 6320 text0 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":222 632C text0 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":224 6334 text0 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":225 6340 text0 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":226 634A text0 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":228 6356 text0 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":231 6358 text0 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c":232 6364 text0 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":465 6366 text13 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":471 6366 text13 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":474 6372 text13 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":475 638E text13 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":476 63BC text13 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":478 63BE text13 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":479 63D2 text13 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":481 63E8 text13 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":482 6410 text13 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":486 6432 text13 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":487 647A text13 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":488 64AA text13 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":489 64CC text13 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":490 64FC text13 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":491 6500 text13 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":492 651C text13 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":497 6560 text13 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":499 6570 text13 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":500 6572 text13 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":130 6574 text22 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":138 6574 text22 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":143 6578 text22 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":144 6580 text22 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":146 65B0 text22 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":147 65B6 text22 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":148 65C2 text22 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":149 65DC text22 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":151 65E0 text22 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":152 65E6 text22 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":153 65EA text22 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":154 65F0 text22 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":156 65F4 text22 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":157 65FA text22 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":158 6602 text22 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":159 660A text22 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":161 660C text22 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":162 661E text22 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":159 6622 text22 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":165 662E text22 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":166 6634 text22 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":167 6640 text22 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":168 665A text22 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":170 665E text22 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":171 6664 text22 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":173 666A text22 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":175 6672 text22 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":178 6674 text22 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":175 6678 text22 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":181 668A text22 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":186 6698 text22 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":188 66C8 text22 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":189 66D0 text22 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":191 66D2 text22 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":192 66E2 text22 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":189 66E6 text22 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":195 66F6 text22 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":196 66FC text22 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":198 6708 text22 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":199 6722 text22 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":201 6726 text22 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":202 672C text22 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":204 6730 text22 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":205 6736 text22 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":207 673E text22 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":208 6746 text22 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":212 6748 text22 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":213 675A text22 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":210 675E text22 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":217 6770 text22 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":218 677E text22 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":219 6796 text22 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":220 679A text22 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":215 679E text22 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":224 67B0 text22 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":225 67C2 text22 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":222 67C6 text22 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":208 67D6 text22 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":228 67E6 text22 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":231 67EC text22 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":232 6806 text22 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":234 680A text22 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":235 6810 text22 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":237 6816 text22 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":239 681E text22 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":242 682A text22 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":243 683C text22 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":240 6840 text22 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":247 6854 text22 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":249 6860 text22 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":251 6866 text22 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c":254 6868 text22 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":350 686A text14 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":355 686A text14 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":357 6876 text14 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":358 68BA text14 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":362 68BC text14 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":365 68BC text14 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":366 68D6 text14 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":367 68F0 text14 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":368 68FA text14 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":370 694C text14 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":371 69A0 text14 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":373 6A0E text14 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":374 6A16 text14 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":379 6A50 text14 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":380 6AD2 text14 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":384 6AF4 text14 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":385 6B84 text14 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":360 6C0E text14 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":389 6C2A text14 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":390 6C3A text14 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":863 6C3C text6 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":873 6C3C text6 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":874 6C48 text6 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":877 6C54 text6 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":878 6C64 text6 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":879 6C72 text6 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":880 6C8C text6 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":882 6C90 text6 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":883 6D06 text6 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":886 6D38 text6 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":887 6D6E text6 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":888 6DC0 text6 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":889 6DC6 text6 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":890 6DF4 text6 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":892 6E20 text6 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":893 6E56 text6 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":894 6E7C text6 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":896 6EA6 text6 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":897 6EDC text6 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":898 6EEA text6 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":899 6F32 text6 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":900 6F32 text6 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":901 6F74 text6 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":902 6F8C text6 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":903 7012 text6 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":904 7034 text6 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":905 706C text6 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":885 708C text6 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":908 7094 text6 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":909 7096 text6 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":919 7098 text4 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":927 7098 text4 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":930 70A4 text4 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":933 70B0 text4 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":934 70C0 text4 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":935 70CE text4 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":936 70E8 text4 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":938 70EC text4 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":939 70F4 text4 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":940 7134 text4 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":943 714C text4 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":944 7166 text4 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":945 718C text4 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":946 718C text4 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":947 7202 text4 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":950 7234 text4 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":951 7266 text4 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":952 72B8 text4 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":953 72BE text4 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":954 72EC text4 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":956 7318 text4 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":957 734E text4 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":958 7374 text4 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":960 739E text4 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":961 73D4 text4 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":962 73E2 text4 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":963 742A text4 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":964 7462 text4 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":965 7478 text4 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":966 7478 text4 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":967 74BA text4 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":968 74D2 text4 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":969 750E text4 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":970 7546 text4 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":971 7566 text4 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":972 7598 text4 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":973 75D8 text4 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":949 75EE text4 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":977 75F6 text4 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":978 75F8 text4 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":755 75FA text18 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":763 75FA text18 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":764 7606 text18 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":765 7610 text18 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":767 7614 text18 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":768 762C text18 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":769 7650 text18 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":771 7658 text18 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":772 768E text18 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":774 7692 text18 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":775 769A text18 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":776 771C text18 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":780 7740 text18 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":781 774A text18 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":784 7752 text18 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":786 778C text18 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":787 77B8 text18 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":789 7848 text18 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":790 7878 text18 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":791 78D0 text18 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":792 78E2 text18 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":793 790E text18 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":794 793A text18 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":797 79CA text18 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":798 7AB8 text18 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":800 7ADC text18 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":801 7AE2 text18 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":802 7B0E text18 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":803 7B14 text18 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":804 7B5C text18 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":805 7B62 text18 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":806 7B7E text18 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":807 7B84 text18 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":808 7B8E text18 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":810 7B9C text18 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":811 7BA6 text18 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":813 7C3E text18 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":814 7C9A text18 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":816 7D30 text18 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":817 7D40 text18 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":819 7D4C text18 CODE
+"D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c":820 7D4E text18 CODE
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+mem_set@d 7 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+___lldiv@counter D 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+_s FB 0 BANK0 1 bssBANK0 dist/default/production\SDC_FILE_SYS.X.production.obj
+create_name@dj 9 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+_rd F7 0 BANK0 1 bssBANK0 dist/default/production\SDC_FILE_SYS.X.production.obj
+_RD4 7C1C 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+_RD5 7C1D 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+__S0 30000E 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+__S1 76E 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+__S2 0 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+__Hintentry 0 0 ABS 0 intentry dist/default/production\SDC_FILE_SYS.X.production.obj
+Delay_s@i 5 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+__CFG_PWRT$OFF 0 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+__Lintentry 0 0 ABS 0 intentry dist/default/production\SDC_FILE_SYS.X.production.obj
+pf_write@wcnt 6F 0 BANK0 1 cstackBANK0 dist/default/production\SDC_FILE_SYS.X.production.obj
+__size_of_pf_write 0 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+Delay_s@j 6 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+dummy_clocks@i 7 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+_str 36E 0 BIGRAM 1 bssBIGRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+_txt 130 0 BANK1 1 bssBANK1 dist/default/production\SDC_FILE_SYS.X.production.obj
+dir_rewind@dj 1C 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+__CFG_PLLDIV$5 0 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+__end_of_reset 541E 0 CODE 0 text20 dist/default/production\SDC_FILE_SYS.X.production.obj
+get_fat@bc 43 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+get_clust@fs D 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+disk_readp@ptr 17 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+__end_of_putsUART 5332 0 CODE 0 text25 dist/default/production\SDC_FILE_SYS.X.production.obj
+delay_ms@i 3 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+_flag F5 0 BANK0 1 bssBANK0 dist/default/production\SDC_FILE_SYS.X.production.obj
+pf_open@path 6B 0 BANK0 1 cstackBANK0 dist/default/production\SDC_FILE_SYS.X.production.obj
+_main 6160 0 CODE 0 text0 dist/default/production\SDC_FILE_SYS.X.production.obj
+follow_path@res 6A 0 BANK0 1 cstackBANK0 dist/default/production\SDC_FILE_SYS.X.production.obj
+___sp 0 0 STACK 2 stack C:\Users\ETIQLA~1\AppData\Local\Temp\s3ts.obj
+mem_cmp@r E 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+start 0 0 CODE 0 init C:\Users\ETIQLA~1\AppData\Local\Temp\s3ts.obj
+OpenSPI@bus_mode 1 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+mem_cmp@s C 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+_LATB0 7C50 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+_LATB4 7C54 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+_LATA5 7C4D 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+dir_next@i 56 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+Delay_s@t 4 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+_fileName 164 0 BANK1 1 dataBANK1 dist/default/production\SDC_FILE_SYS.X.production.obj
+__size_of_clust2sect 0 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+_Delay100TCYx 5018 0 CODE 0 text28 dist/default/production\SDC_FILE_SYS.X.production.obj
+__end_of_response 5008 0 CODE 0 text23 dist/default/production\SDC_FILE_SYS.X.production.obj
+__size_of_follow_path 0 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+__size_of_reset 0 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+__Hirdata 0 0 CODE 0 irdata dist/default/production\SDC_FILE_SYS.X.production.obj
+__Lirdata 0 0 CODE 0 irdata dist/default/production\SDC_FILE_SYS.X.production.obj
+__HRAM 0 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+__LRAM 1 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+_CMCON FB4 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+_uartdata FC 0 BANK0 1 bssBANK0 dist/default/production\SDC_FILE_SYS.X.production.obj
+follow_path@path 64 0 BANK0 1 cstackBANK0 dist/default/production\SDC_FILE_SYS.X.production.obj
+_dir_find 563E 0 CODE 0 text10 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Hconfig 30000E 0 CONFIG 0 config dist/default/production\SDC_FILE_SYS.X.production.obj
+__Lconfig 300000 0 CONFIG 0 config dist/default/production\SDC_FILE_SYS.X.production.obj
+pf_write@p 60 0 BANK0 1 cstackBANK0 dist/default/production\SDC_FILE_SYS.X.production.obj
+__size_of_WriteUART 0 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+create_name@si 18 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+dir_find@dir 5A 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+__Hbigram 0 0 ABS 0 bigram dist/default/production\SDC_FILE_SYS.X.production.obj
+__Lbigram 0 0 ABS 0 bigram dist/default/production\SDC_FILE_SYS.X.production.obj
+_FatFs F3 0 BANK0 1 bssBANK0 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Hrparam 0 0 ABS 0 rparam dist/default/production\SDC_FILE_SYS.X.production.obj
+__Lrparam 0 0 ABS 0 rparam dist/default/production\SDC_FILE_SYS.X.production.obj
+_fileSize EF 0 BANK0 1 bssBANK0 dist/default/production\SDC_FILE_SYS.X.production.obj
+pf_open@dj B2 0 BANK0 1 cstackBANK0 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Hram 0 0 ABS 0 ram dist/default/production\SDC_FILE_SYS.X.production.obj
+__Lram 0 0 ABS 0 ram dist/default/production\SDC_FILE_SYS.X.production.obj
+__Hcomram 0 0 ABS 0 comram dist/default/production\SDC_FILE_SYS.X.production.obj
+__Lcomram 0 0 ABS 0 comram dist/default/production\SDC_FILE_SYS.X.production.obj
+__end_of_OpenSPI 5284 0 CODE 0 text2 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Hsfr 0 0 ABS 0 sfr dist/default/production\SDC_FILE_SYS.X.production.obj
+__Lsfr 0 0 ABS 0 sfr dist/default/production\SDC_FILE_SYS.X.production.obj
+__end_of__stringdata 7FFF 0 MEDIUMCONST 0 mediumconst dist/default/production\SDC_FILE_SYS.X.production.obj
+_pf_write 7098 0 CODE 0 text4 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Hbss 0 0 RAM 1 bss dist/default/production\SDC_FILE_SYS.X.production.obj
+__CFG_STVREN$ON 0 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+__Lbss 0 0 RAM 1 bss dist/default/production\SDC_FILE_SYS.X.production.obj
+disk_readp@length 1D 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+_reset 53A2 0 CODE 0 text20 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Hnvrram 0 0 COMRAM 1 nvrram dist/default/production\SDC_FILE_SYS.X.production.obj
+_response 4FFA 0 CODE 0 text23 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Lnvrram 0 0 COMRAM 1 nvrram dist/default/production\SDC_FILE_SYS.X.production.obj
+?_get_fat 1F 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+WriteUART@uartdata 3 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+_check_fs 5AD4 0 CODE 0 text21 dist/default/production\SDC_FILE_SYS.X.production.obj
+disk_readp@rd 9 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+?_mem_cmp 1 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+get_fat@wc 3B 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+__size_of_disk_initialize 0 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+_ADCON1 FC1 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+_TRISB4 7C9C 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+_TRISA5 7C95 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+follow_path@dj 60 0 BANK0 1 cstackBANK0 dist/default/production\SDC_FILE_SYS.X.production.obj
+_follow_path 5C22 0 CODE 0 text8 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\SDC_FILE_SYS.X.production.obj
+__Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\SDC_FILE_SYS.X.production.obj
+_PIR1bits F9E 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+__end_of_get_clust 556A 0 CODE 0 text9 dist/default/production\SDC_FILE_SYS.X.production.obj
+_readover 4FDA 0 CODE 0 text3 dist/default/production\SDC_FILE_SYS.X.production.obj
+delay_ms@t 2 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+__Hintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\SDC_FILE_SYS.X.production.obj
+__Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\SDC_FILE_SYS.X.production.obj
+_delay_ms 5068 0 CODE 0 text33 dist/default/production\SDC_FILE_SYS.X.production.obj
+__size_of_pf_read 0 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+?___lldiv 1 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+pf_read@br 4B 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+__Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\SDC_FILE_SYS.X.production.obj
+__Lbigbss 0 0 BIGRAM 1 bigbss dist/default/production\SDC_FILE_SYS.X.production.obj
+__Hintret 0 0 ABS 0 intret dist/default/production\SDC_FILE_SYS.X.production.obj
+__Lintret 0 0 ABS 0 intret dist/default/production\SDC_FILE_SYS.X.production.obj
+__Hramtop 800 0 RAM 0 ramtop dist/default/production\SDC_FILE_SYS.X.production.obj
+__end_of_soft_hard_init 51D8 0 CODE 0 text1 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Lramtop 800 0 RAM 0 ramtop dist/default/production\SDC_FILE_SYS.X.production.obj
+__Hstruct 0 0 COMRAM 1 struct dist/default/production\SDC_FILE_SYS.X.production.obj
+__Lstruct 0 0 COMRAM 1 struct dist/default/production\SDC_FILE_SYS.X.production.obj
+__Hbigdata 0 0 BIGRAM 1 bigdata dist/default/production\SDC_FILE_SYS.X.production.obj
+__Lbigdata 0 0 BIGRAM 1 bigdata dist/default/production\SDC_FILE_SYS.X.production.obj
+__Hmediumconst 8000 0 MEDIUMCONST 0 mediumconst dist/default/production\SDC_FILE_SYS.X.production.obj
+__Lmediumconst 7D50 0 MEDIUMCONST 0 mediumconst dist/default/production\SDC_FILE_SYS.X.production.obj
+__Hfarbss 0 0 FARRAM 0 farbss dist/default/production\SDC_FILE_SYS.X.production.obj
+__Lfarbss 0 0 FARRAM 0 farbss dist/default/production\SDC_FILE_SYS.X.production.obj
+__pmediumconst 7D50 0 MEDIUMCONST 0 mediumconst dist/default/production\SDC_FILE_SYS.X.production.obj
+__Hintcode 0 0 CODE 0 intcode dist/default/production\SDC_FILE_SYS.X.production.obj
+_SSPBUF FC9 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+__Lintcode 0 0 CODE 0 intcode dist/default/production\SDC_FILE_SYS.X.production.obj
+__Hfardata 0 0 FARRAM 0 fardata dist/default/production\SDC_FILE_SYS.X.production.obj
+__Lfardata 0 0 FARRAM 0 fardata dist/default/production\SDC_FILE_SYS.X.production.obj
+pf_read@dr 64 0 BANK0 1 cstackBANK0 dist/default/production\SDC_FILE_SYS.X.production.obj
+_soft_hard_init 5198 0 CODE 0 text1 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Habs1 0 0 ABS 0 abs1 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Labs1 0 0 ABS 0 abs1 dist/default/production\SDC_FILE_SYS.X.production.obj
+reset@buff D 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+_BitCount F9 0 BANK0 1 bssBANK0 dist/default/production\SDC_FILE_SYS.X.production.obj
+pf_read@cs 71 0 BANK0 1 cstackBANK0 dist/default/production\SDC_FILE_SYS.X.production.obj
+create_name@i 1B 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+__size_of_pf_open 0 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+follow_path@dir 62 0 BANK0 1 cstackBANK0 dist/default/production\SDC_FILE_SYS.X.production.obj
+_sector_buffer 16E 0 BIGRAM 1 bssBIGRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+__end_of_get_fat 6C3C 0 CODE 0 text14 dist/default/production\SDC_FILE_SYS.X.production.obj
+_pf_mount 75FA 0 CODE 0 text18 dist/default/production\SDC_FILE_SYS.X.production.obj
+__HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+__LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+__size_of_OpenUART 0 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+pf_write@clst 6A 0 BANK0 1 cstackBANK0 dist/default/production\SDC_FILE_SYS.X.production.obj
+_dir_next 6366 0 CODE 0 text13 dist/default/production\SDC_FILE_SYS.X.production.obj
+pf_read@fs 74 0 BANK0 1 cstackBANK0 dist/default/production\SDC_FILE_SYS.X.production.obj
+disk_readp@count 11 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+__CFG_PBADEN$OFF 0 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+__size_of_disk_readp 0 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+disk_readp@arr 56E 0 BIGRAM 1 bssBIGRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+pf_write@remain 66 0 BANK0 1 cstackBANK0 dist/default/production\SDC_FILE_SYS.X.production.obj
+dir_find@res 5F 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+pf_open@fs B0 0 BANK0 1 cstackBANK0 dist/default/production\SDC_FILE_SYS.X.production.obj
+get_fat@fs 45 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+Delay100TCYx@unit 1 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+__end_of_Delay1KTCYx 5018 0 CODE 0 text34 dist/default/production\SDC_FILE_SYS.X.production.obj
+dir_find@dj 58 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+__size_of_proceed 0 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+__end_of_disk_initialize 5F6C 0 CODE 0 text19 dist/default/production\SDC_FILE_SYS.X.production.obj
+reset@i 9 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+?_clust2sect D 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+pf_read@sect 65 0 BANK0 1 cstackBANK0 dist/default/production\SDC_FILE_SYS.X.production.obj
+_dir_rewind$173 22 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+dir_next@clst 52 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+disk_writep@buff 18 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+__Hdata 0 0 ABS 0 data dist/default/production\SDC_FILE_SYS.X.production.obj
+__Ldata 0 0 ABS 0 data dist/default/production\SDC_FILE_SYS.X.production.obj
+main@br C2 0 BANK0 1 cstackBANK0 dist/default/production\SDC_FILE_SYS.X.production.obj
+__end_of_WriteUART 515A 0 CODE 0 text26 dist/default/production\SDC_FILE_SYS.X.production.obj
+__size_of_dir_find 0 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+main@fs C5 0 BANK0 1 cstackBANK0 dist/default/production\SDC_FILE_SYS.X.production.obj
+putsUART@data 5 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+__size_of_dir_next 0 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+stackhi 7FF 0 ABS 0 - C:\Users\ETIQLA~1\AppData\Local\Temp\s3ts.obj
+pf_open@sp 83 0 BANK0 1 cstackBANK0 dist/default/production\SDC_FILE_SYS.X.production.obj
+WriteSPI@data_out 2 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+__end_of_disk_writep 5858 0 CODE 0 text5 dist/default/production\SDC_FILE_SYS.X.production.obj
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 dist/default/production\SDC_FILE_SYS.X.production.obj
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 dist/default/production\SDC_FILE_SYS.X.production.obj
+__CFG_CPUDIV$OSC1_PLL2 0 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+pf_mount@bsect 8C 0 BANK0 1 cstackBANK0 dist/default/production\SDC_FILE_SYS.X.production.obj
+__pcstackBANK0 60 0 BANK0 1 cstackBANK0 dist/default/production\SDC_FILE_SYS.X.production.obj
+_folder 100 0 BANK1 1 bssBANK1 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Htemp 0 0 COMRAM 1 temp dist/default/production\SDC_FILE_SYS.X.production.obj
+__Ltemp 0 0 COMRAM 1 temp dist/default/production\SDC_FILE_SYS.X.production.obj
+stacklo 76E 0 ABS 0 - C:\Users\ETIQLA~1\AppData\Local\Temp\s3ts.obj
+__Hrbit 0 0 COMRAM 1 rbit dist/default/production\SDC_FILE_SYS.X.production.obj
+__Lrbit 0 0 COMRAM 1 rbit dist/default/production\SDC_FILE_SYS.X.production.obj
+disk_writep@wr 9 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+__CFG_BOR$ON 0 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+___lmul 51D8 0 CODE 0 text37 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Hinit 0 0 CODE 0 init dist/default/production\SDC_FILE_SYS.X.production.obj
+__Linit 0 0 CODE 0 init dist/default/production\SDC_FILE_SYS.X.production.obj
+__Hintcodelo 0 0 CODE 0 intcodelo dist/default/production\SDC_FILE_SYS.X.production.obj
+__Lintcodelo 0 0 CODE 0 intcodelo dist/default/production\SDC_FILE_SYS.X.production.obj
+__size_of_putsUART 0 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+__Hrbss 0 0 COMRAM 1 rbss dist/default/production\SDC_FILE_SYS.X.production.obj
+__end_of_main 6366 0 CODE 0 text0 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Lrbss 0 0 COMRAM 1 rbss dist/default/production\SDC_FILE_SYS.X.production.obj
+Command@cmd 8 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+_Result FA 0 BANK0 1 bssBANK0 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Htext 0 0 ABS 0 text dist/default/production\SDC_FILE_SYS.X.production.obj
+__Ltext 0 0 ABS 0 text dist/default/production\SDC_FILE_SYS.X.production.obj
+___lmul@multiplier 1 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+dir_next@dj 47 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+disk_readp@start_add 18 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+__size_of_Delay1KTCYx 0 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+__end_of_pf_write 75FA 0 CODE 0 text4 dist/default/production\SDC_FILE_SYS.X.production.obj
+end_of_initialization 52D0 0 CODE 0 cinit dist/default/production\SDC_FILE_SYS.X.production.obj
+__CFG_USBDIV$1 0 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+___lmul@multiplicand 5 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+_SSPCON1 FC6 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+__CFG_VREGEN$OFF 0 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+__end_of_create_name 5AD4 0 CODE 0 text16 dist/default/production\SDC_FILE_SYS.X.production.obj
+__HdataBANK1 0 0 ABS 0 dataBANK1 dist/default/production\SDC_FILE_SYS.X.production.obj
+__LdataBANK1 0 0 ABS 0 dataBANK1 dist/default/production\SDC_FILE_SYS.X.production.obj
+soft_hard_init@i 4 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+__pdataBANK1 164 0 BANK1 1 dataBANK1 dist/default/production\SDC_FILE_SYS.X.production.obj
+disk_writep@sc C 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+_TRISAbits F92 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+_TRISBbits F93 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+_TRISCbits F94 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+_TRISDbits F95 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+_PORTDbits F83 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+__size_of_Delay100TCYx 0 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+pf_mount@fmt 94 0 BANK0 1 cstackBANK0 dist/default/production\SDC_FILE_SYS.X.production.obj
+__size_of_ReadSPI_ 0 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+get_clust@dir 1 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+__size_of_get_clust 0 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+__end_of_dummy_clocks 5198 0 CODE 0 text30 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Hibigdata 0 0 CODE 0 ibigdata dist/default/production\SDC_FILE_SYS.X.production.obj
+__Libigdata 0 0 CODE 0 ibigdata dist/default/production\SDC_FILE_SYS.X.production.obj
+_disk_writep 5734 0 CODE 0 text5 dist/default/production\SDC_FILE_SYS.X.production.obj
+__HbssBIGRAM 0 0 ABS 0 bssBIGRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+__LbssBIGRAM 0 0 ABS 0 bssBIGRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+__end_of_readover 4FE4 0 CODE 0 text3 dist/default/production\SDC_FILE_SYS.X.production.obj
+__pbssBIGRAM 16E 0 BIGRAM 1 bssBIGRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+__Hifardata 0 0 CODE 0 ifardata dist/default/production\SDC_FILE_SYS.X.production.obj
+__Lifardata 0 0 CODE 0 ifardata dist/default/production\SDC_FILE_SYS.X.production.obj
+Command@arg 3 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+__Hbank0 0 0 ABS 0 bank0 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Lbank0 0 0 ABS 0 bank0 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Hbank1 0 0 ABS 0 bank1 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Lbank1 0 0 ABS 0 bank1 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Hbank2 0 0 ABS 0 bank2 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Lbank2 0 0 ABS 0 bank2 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Hbank3 0 0 ABS 0 bank3 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Lbank3 0 0 ABS 0 bank3 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Hbank4 0 0 ABS 0 bank4 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Lbank4 0 0 ABS 0 bank4 dist/default/production\SDC_FILE_SYS.X.production.obj
+__end_of___lmul 522E 0 CODE 0 text37 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Hbank5 0 0 ABS 0 bank5 dist/default/production\SDC_FILE_SYS.X.production.obj
+__end_of_DelayTXBitUART 509C 0 CODE 0 text27 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Lbank5 0 0 ABS 0 bank5 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Hpowerup 0 0 CODE 0 powerup dist/default/production\SDC_FILE_SYS.X.production.obj
+_SSPSTAT FC7 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+__Lpowerup 0 0 CODE 0 powerup dist/default/production\SDC_FILE_SYS.X.production.obj
+__Hbank6 0 0 ABS 0 bank6 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Lbank6 0 0 ABS 0 bank6 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Hbank7 0 0 ABS 0 bank7 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Lbank7 0 0 ABS 0 bank7 dist/default/production\SDC_FILE_SYS.X.production.obj
+_OpenSPI 522E 0 CODE 0 text2 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Htext0 0 0 ABS 0 text0 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Ltext0 0 0 ABS 0 text0 dist/default/production\SDC_FILE_SYS.X.production.obj
+_SSPCON1bits FC6 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+mem_cmp@src 3 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+__Htext1 0 0 ABS 0 text1 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Ltext1 0 0 ABS 0 text1 dist/default/production\SDC_FILE_SYS.X.production.obj
+__ptext0 6160 0 CODE 0 text0 dist/default/production\SDC_FILE_SYS.X.production.obj
+_data_buffer_32 144 0 BANK1 1 bssBANK1 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Htext2 0 0 ABS 0 text2 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Ltext2 0 0 ABS 0 text2 dist/default/production\SDC_FILE_SYS.X.production.obj
+get_fat@buf 3F 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+__ptext1 5198 0 CODE 0 text1 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Htext3 0 0 ABS 0 text3 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Ltext3 0 0 ABS 0 text3 dist/default/production\SDC_FILE_SYS.X.production.obj
+__ptext2 522E 0 CODE 0 text2 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Htext4 0 0 ABS 0 text4 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Ltext4 0 0 ABS 0 text4 dist/default/production\SDC_FILE_SYS.X.production.obj
+__ptext3 4FDA 0 CODE 0 text3 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Htext5 0 0 ABS 0 text5 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Ltext5 0 0 ABS 0 text5 dist/default/production\SDC_FILE_SYS.X.production.obj
+__ptext4 7098 0 CODE 0 text4 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Htext6 0 0 ABS 0 text6 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Ltext6 0 0 ABS 0 text6 dist/default/production\SDC_FILE_SYS.X.production.obj
+__ptext5 5734 0 CODE 0 text5 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Htext7 0 0 ABS 0 text7 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Ltext7 0 0 ABS 0 text7 dist/default/production\SDC_FILE_SYS.X.production.obj
+__ptext6 6C3C 0 CODE 0 text6 dist/default/production\SDC_FILE_SYS.X.production.obj
+create_name@sfn 19 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+pf_write@cs 6E 0 BANK0 1 cstackBANK0 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Htext8 0 0 ABS 0 text8 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Ltext8 0 0 ABS 0 text8 dist/default/production\SDC_FILE_SYS.X.production.obj
+__ptext7 5F6C 0 CODE 0 text7 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Htext9 0 0 ABS 0 text9 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Ltext9 0 0 ABS 0 text9 dist/default/production\SDC_FILE_SYS.X.production.obj
+__ptext8 5C22 0 CODE 0 text8 dist/default/production\SDC_FILE_SYS.X.production.obj
+_get_clust 54A0 0 CODE 0 text9 dist/default/production\SDC_FILE_SYS.X.production.obj
+__ptext9 54A0 0 CODE 0 text9 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Hclrtext 0 0 ABS 0 clrtext dist/default/production\SDC_FILE_SYS.X.production.obj
+__Lclrtext 0 0 ABS 0 clrtext dist/default/production\SDC_FILE_SYS.X.production.obj
+mem_set@val 3 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+pf_read@rcnt 72 0 BANK0 1 cstackBANK0 dist/default/production\SDC_FILE_SYS.X.production.obj
+pf_mount@tsect 84 0 BANK0 1 cstackBANK0 dist/default/production\SDC_FILE_SYS.X.production.obj
+disk_writep@i 14 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+__end_of_check_fs 5C22 0 CODE 0 text21 dist/default/production\SDC_FILE_SYS.X.production.obj
+pf_write@fs 71 0 BANK0 1 cstackBANK0 dist/default/production\SDC_FILE_SYS.X.production.obj
+_dir_rewind 5858 0 CODE 0 text12 dist/default/production\SDC_FILE_SYS.X.production.obj
+__end_of__initialization 52D0 0 CODE 0 cinit dist/default/production\SDC_FILE_SYS.X.production.obj
+_SSPSTATbits FC7 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+__end_of_OpenUART 4FDA 0 CODE 0 text39 dist/default/production\SDC_FILE_SYS.X.production.obj
+__size_of_Command 0 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+pf_mount@fs 29 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+dir_next@fs 50 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+pf_write@bw 4B 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+get_clust@clst F 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+__size_of_pf_mount 0 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+_pf_read 6C3C 0 CODE 0 text6 dist/default/production\SDC_FILE_SYS.X.production.obj
+_proceed 4FEE 0 CODE 0 text29 dist/default/production\SDC_FILE_SYS.X.production.obj
+_get_fat$113 39 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+__Hidata 0 0 CODE 0 idata dist/default/production\SDC_FILE_SYS.X.production.obj
+__Lidata 0 0 CODE 0 idata dist/default/production\SDC_FILE_SYS.X.production.obj
+__Hrdata 0 0 COMRAM 1 rdata dist/default/production\SDC_FILE_SYS.X.production.obj
+__Lrdata 0 0 COMRAM 1 rdata dist/default/production\SDC_FILE_SYS.X.production.obj
+_Command 50F0 0 CODE 0 text35 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Hidloc 200008 0 IDLOC 0 idloc dist/default/production\SDC_FILE_SYS.X.production.obj
+__Lidloc 200000 0 IDLOC 0 idloc dist/default/production\SDC_FILE_SYS.X.production.obj
+__end_of_Command 5120 0 CODE 0 text35 dist/default/production\SDC_FILE_SYS.X.production.obj
+pf_write@sect 62 0 BANK0 1 cstackBANK0 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Hstack 0 0 STACK 2 stack dist/default/production\SDC_FILE_SYS.X.production.obj
+__Lstack 0 0 STACK 2 stack dist/default/production\SDC_FILE_SYS.X.production.obj
+__end_of___lldiv 54A0 0 CODE 0 text38 dist/default/production\SDC_FILE_SYS.X.production.obj
+__end_of_Delay_s 50C4 0 CODE 0 text32 dist/default/production\SDC_FILE_SYS.X.production.obj
+check_fs@sect 21 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+disk_readp@buff 1C 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+_disk_readp 6574 0 CODE 0 text22 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Hparam 0 0 ABS 0 rparam dist/default/production\SDC_FILE_SYS.X.production.obj
+__Lparam 0 0 ABS 0 rparam dist/default/production\SDC_FILE_SYS.X.production.obj
+__Hspace_0 30000E 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+__HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+__Lspace_0 0 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+__LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+disk_writep@j 16 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+__size_of_dummy_clocks 0 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+__pcstackCOMRAM 1 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+_pf_open 5F6C 0 CODE 0 text7 dist/default/production\SDC_FILE_SYS.X.production.obj
+pf_open@dir 8F 0 BANK0 1 cstackBANK0 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Hspace_1 76E 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+__Lspace_1 0 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+_get_fat 686A 0 CODE 0 text14 dist/default/production\SDC_FILE_SYS.X.production.obj
+pf_write@btw 49 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+_mem_cmp 5332 0 CODE 0 text11 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Hsmallconst 0 0 SMALLCONST 0 smallconst dist/default/production\SDC_FILE_SYS.X.production.obj
+__Lsmallconst 0 0 SMALLCONST 0 smallconst dist/default/production\SDC_FILE_SYS.X.production.obj
+_Delay_s 509C 0 CODE 0 text32 dist/default/production\SDC_FILE_SYS.X.production.obj
+__size_of_mem_cmp 0 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+__size_of_mem_set 0 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+?___lmul 1 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+disk_readp@sector B 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+__Hspace_2 0 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+__Lspace_2 0 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+__Hnvbit 0 0 COMRAM 1 nvbit dist/default/production\SDC_FILE_SYS.X.production.obj
+__Lnvbit 0 0 COMRAM 1 nvbit dist/default/production\SDC_FILE_SYS.X.production.obj
+_mem_set 50C4 0 CODE 0 text17 dist/default/production\SDC_FILE_SYS.X.production.obj
+__size_of_delay_ms 0 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+__Hcinit 0 0 ABS 0 cinit dist/default/production\SDC_FILE_SYS.X.production.obj
+__Lcinit 0 0 ABS 0 cinit dist/default/production\SDC_FILE_SYS.X.production.obj
+__CFG_FOSC$HS 0 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+pf_read@clst 6D 0 BANK0 1 cstackBANK0 dist/default/production\SDC_FILE_SYS.X.production.obj
+__end_of_mem_set 50F0 0 CODE 0 text17 dist/default/production\SDC_FILE_SYS.X.production.obj
+___lldiv 541E 0 CODE 0 text38 dist/default/production\SDC_FILE_SYS.X.production.obj
+__pcinit 5284 0 CODE 0 cinit dist/default/production\SDC_FILE_SYS.X.production.obj
+__ramtop 800 0 RAM 0 ramtop C:\Users\ETIQLA~1\AppData\Local\Temp\s3ts.obj
+__mediumconst 7D50 0 MEDIUMCONST 0 mediumconst C:\Users\ETIQLA~1\AppData\Local\Temp\s3ts.obj
+__end_of_disk_readp 686A 0 CODE 0 text22 dist/default/production\SDC_FILE_SYS.X.production.obj
+__size_of_main 0 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+pf_read@remain 69 0 BANK0 1 cstackBANK0 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Hconst 0 0 CODE 0 const dist/default/production\SDC_FILE_SYS.X.production.obj
+__Lconst 0 0 CODE 0 const dist/default/production\SDC_FILE_SYS.X.production.obj
+_disk_initialize 5D9C 0 CODE 0 text19 dist/default/production\SDC_FILE_SYS.X.production.obj
+get_fat@clst 1F 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+__size_of_check_fs 0 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+get_fat@ofs 3D 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+_clust2sect 556A 0 CODE 0 text15 dist/default/production\SDC_FILE_SYS.X.production.obj
+pf_open@res AF 0 BANK0 1 cstackBANK0 dist/default/production\SDC_FILE_SYS.X.production.obj
+pf_write@buff 47 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+response@buff 2 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+__end_ofcreate_name@cvt 7DD1 0 MEDIUMCONST 0 mediumconst dist/default/production\SDC_FILE_SYS.X.production.obj
+__end_of_clust2sect 563E 0 CODE 0 text15 dist/default/production\SDC_FILE_SYS.X.production.obj
+_Delay1KTCYx 5008 0 CODE 0 text34 dist/default/production\SDC_FILE_SYS.X.production.obj
+WriteSPI_@data_out 2 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+pf_read@btr 49 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+__HbssBANK0 0 0 ABS 0 bssBANK0 dist/default/production\SDC_FILE_SYS.X.production.obj
+__LbssBANK0 0 0 ABS 0 bssBANK0 dist/default/production\SDC_FILE_SYS.X.production.obj
+__pbssBANK0 EF 0 BANK0 1 bssBANK0 dist/default/production\SDC_FILE_SYS.X.production.obj
+mem_cmp@cnt 5 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+main@FResult C4 0 BANK0 1 cstackBANK0 dist/default/production\SDC_FILE_SYS.X.production.obj
+mem_set@cnt 5 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+OpenSPI@smp_phase 2 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+__CFG_FCMEN$OFF 0 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+__size_of_dir_rewind 0 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+__HbssBANK1 0 0 ABS 0 bssBANK1 dist/default/production\SDC_FILE_SYS.X.production.obj
+__LbssBANK1 0 0 ABS 0 bssBANK1 dist/default/production\SDC_FILE_SYS.X.production.obj
+__pbssBANK1 100 0 BANK1 1 bssBANK1 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Htext10 0 0 ABS 0 text10 dist/default/production\SDC_FILE_SYS.X.production.obj
+__end_of_dir_next 6574 0 CODE 0 text13 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Ltext10 0 0 ABS 0 text10 dist/default/production\SDC_FILE_SYS.X.production.obj
+create_name@c 1C 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+__Htext20 0 0 ABS 0 text20 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Ltext20 0 0 ABS 0 text20 dist/default/production\SDC_FILE_SYS.X.production.obj
+__ptext10 563E 0 CODE 0 text10 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Htext30 0 0 ABS 0 text30 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Htext11 0 0 ABS 0 text11 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Ltext30 0 0 ABS 0 text30 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Ltext11 0 0 ABS 0 text11 dist/default/production\SDC_FILE_SYS.X.production.obj
+create_name@ni 17 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+__ptext20 53A2 0 CODE 0 text20 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Htext21 0 0 ABS 0 text21 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Ltext21 0 0 ABS 0 text21 dist/default/production\SDC_FILE_SYS.X.production.obj
+__ptext11 5332 0 CODE 0 text11 dist/default/production\SDC_FILE_SYS.X.production.obj
+__ptext30 515A 0 CODE 0 text30 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Htext31 0 0 ABS 0 text31 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Htext12 0 0 ABS 0 text12 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Ltext31 0 0 ABS 0 text31 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Ltext12 0 0 ABS 0 text12 dist/default/production\SDC_FILE_SYS.X.production.obj
+__ptext21 5AD4 0 CODE 0 text21 dist/default/production\SDC_FILE_SYS.X.production.obj
+__end_of_dir_rewind 5990 0 CODE 0 text12 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Htext22 0 0 ABS 0 text22 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Ltext22 0 0 ABS 0 text22 dist/default/production\SDC_FILE_SYS.X.production.obj
+__ptext12 5858 0 CODE 0 text12 dist/default/production\SDC_FILE_SYS.X.production.obj
+__ptext31 5050 0 CODE 0 text31 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Htext32 0 0 ABS 0 text32 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Htext13 0 0 ABS 0 text13 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Ltext32 0 0 ABS 0 text32 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Ltext13 0 0 ABS 0 text13 dist/default/production\SDC_FILE_SYS.X.production.obj
+__end_of_Delay100TCYx 5028 0 CODE 0 text28 dist/default/production\SDC_FILE_SYS.X.production.obj
+__ptext22 6574 0 CODE 0 text22 dist/default/production\SDC_FILE_SYS.X.production.obj
+__CFG_CCP2MX$OFF 0 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+__Htext23 0 0 ABS 0 text23 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Ltext23 0 0 ABS 0 text23 dist/default/production\SDC_FILE_SYS.X.production.obj
+__ptext13 6366 0 CODE 0 text13 dist/default/production\SDC_FILE_SYS.X.production.obj
+__ptext32 509C 0 CODE 0 text32 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Htext33 0 0 ABS 0 text33 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Htext14 0 0 ABS 0 text14 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Ltext33 0 0 ABS 0 text33 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Ltext14 0 0 ABS 0 text14 dist/default/production\SDC_FILE_SYS.X.production.obj
+__ptext23 4FFA 0 CODE 0 text23 dist/default/production\SDC_FILE_SYS.X.production.obj
+__HidataBANK1 0 0 ABS 0 idataBANK1 dist/default/production\SDC_FILE_SYS.X.production.obj
+__LidataBANK1 0 0 ABS 0 idataBANK1 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Htext24 0 0 ABS 0 text24 dist/default/production\SDC_FILE_SYS.X.production.obj
+_DelayTXBitUART 5082 0 CODE 0 text27 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Ltext24 0 0 ABS 0 text24 dist/default/production\SDC_FILE_SYS.X.production.obj
+__size_of_disk_writep 0 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+__ptext14 686A 0 CODE 0 text14 dist/default/production\SDC_FILE_SYS.X.production.obj
+__ptext33 5068 0 CODE 0 text33 dist/default/production\SDC_FILE_SYS.X.production.obj
+__pidataBANK1 4FE4 0 CODE 0 idataBANK1 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Htext34 0 0 ABS 0 text34 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Htext15 0 0 ABS 0 text15 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Ltext34 0 0 ABS 0 text34 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Ltext15 0 0 ABS 0 text15 dist/default/production\SDC_FILE_SYS.X.production.obj
+__ptext24 5028 0 CODE 0 text24 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Htext25 0 0 ABS 0 text25 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Ltext25 0 0 ABS 0 text25 dist/default/production\SDC_FILE_SYS.X.production.obj
+__ptext15 556A 0 CODE 0 text15 dist/default/production\SDC_FILE_SYS.X.production.obj
+__ptext34 5008 0 CODE 0 text34 dist/default/production\SDC_FILE_SYS.X.production.obj
+___inthi_sp 0 0 STACK 2 stack C:\Users\ETIQLA~1\AppData\Local\Temp\s3ts.obj
+__Htext35 0 0 ABS 0 text35 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Htext16 0 0 ABS 0 text16 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Ltext35 0 0 ABS 0 text35 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Ltext16 0 0 ABS 0 text16 dist/default/production\SDC_FILE_SYS.X.production.obj
+__ptext25 52DA 0 CODE 0 text25 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Htext26 0 0 ABS 0 text26 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Ltext26 0 0 ABS 0 text26 dist/default/production\SDC_FILE_SYS.X.production.obj
+__ptext16 5990 0 CODE 0 text16 dist/default/production\SDC_FILE_SYS.X.production.obj
+__ptext35 50F0 0 CODE 0 text35 dist/default/production\SDC_FILE_SYS.X.production.obj
+mem_cmp@dst 1 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+__Htext36 0 0 ABS 0 text36 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Htext17 0 0 ABS 0 text17 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Ltext36 0 0 ABS 0 text36 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Ltext17 0 0 ABS 0 text17 dist/default/production\SDC_FILE_SYS.X.production.obj
+__ptext26 5120 0 CODE 0 text26 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Htext27 0 0 ABS 0 text27 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Ltext27 0 0 ABS 0 text27 dist/default/production\SDC_FILE_SYS.X.production.obj
+__ptext17 50C4 0 CODE 0 text17 dist/default/production\SDC_FILE_SYS.X.production.obj
+__ptext36 5038 0 CODE 0 text36 dist/default/production\SDC_FILE_SYS.X.production.obj
+WriteSPI_@TempVar 1 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+mem_set@dst 1 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+__Htext37 0 0 ABS 0 text37 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Htext18 0 0 ABS 0 text18 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Ltext37 0 0 ABS 0 text37 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Ltext18 0 0 ABS 0 text18 dist/default/production\SDC_FILE_SYS.X.production.obj
+__ptext27 5082 0 CODE 0 text27 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Htext28 0 0 ABS 0 text28 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Ltext28 0 0 ABS 0 text28 dist/default/production\SDC_FILE_SYS.X.production.obj
+pf_mount@mclst 88 0 BANK0 1 cstackBANK0 dist/default/production\SDC_FILE_SYS.X.production.obj
+__ptext18 75FA 0 CODE 0 text18 dist/default/production\SDC_FILE_SYS.X.production.obj
+__ptext37 51D8 0 CODE 0 text37 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Htext38 0 0 ABS 0 text38 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Htext19 0 0 ABS 0 text19 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Ltext38 0 0 ABS 0 text38 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Ltext19 0 0 ABS 0 text19 dist/default/production\SDC_FILE_SYS.X.production.obj
+__ptext28 5018 0 CODE 0 text28 dist/default/production\SDC_FILE_SYS.X.production.obj
+__size_of_WriteSPI 0 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+__Htext29 0 0 ABS 0 text29 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Ltext29 0 0 ABS 0 text29 dist/default/production\SDC_FILE_SYS.X.production.obj
+__ptext19 5D9C 0 CODE 0 text19 dist/default/production\SDC_FILE_SYS.X.production.obj
+__ptext38 541E 0 CODE 0 text38 dist/default/production\SDC_FILE_SYS.X.production.obj
+__CFG_BORV$3 0 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+___intlo_sp 0 0 STACK 2 stack C:\Users\ETIQLA~1\AppData\Local\Temp\s3ts.obj
+__Htext39 0 0 ABS 0 text39 dist/default/production\SDC_FILE_SYS.X.production.obj
+__Ltext39 0 0 ABS 0 text39 dist/default/production\SDC_FILE_SYS.X.production.obj
+__ptext29 4FEE 0 CODE 0 text29 dist/default/production\SDC_FILE_SYS.X.production.obj
+__ptext39 4FD0 0 CODE 0 text39 dist/default/production\SDC_FILE_SYS.X.production.obj
+__size_of_WriteSPI_ 0 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+WriteSPI@TempVar 1 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+__Hend_init 4 0 CODE 0 end_init dist/default/production\SDC_FILE_SYS.X.production.obj
+__Lend_init 0 0 CODE 0 end_init dist/default/production\SDC_FILE_SYS.X.production.obj
+_pf_read$366 62 0 BANK0 1 cstackBANK0 dist/default/production\SDC_FILE_SYS.X.production.obj
+___lldiv@divisor 5 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+__size_of___lldiv 0 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+__size_of_DelayTXBitUART 0 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+_WriteUART 5120 0 CODE 0 text26 dist/default/production\SDC_FILE_SYS.X.production.obj
+__end_of_pf_open 6160 0 CODE 0 text7 dist/default/production\SDC_FILE_SYS.X.production.obj
+create_name@d 14 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+pf_read@rbuff 60 0 BANK0 1 cstackBANK0 dist/default/production\SDC_FILE_SYS.X.production.obj
+__end_of_delay_ms 5082 0 CODE 0 text33 dist/default/production\SDC_FILE_SYS.X.production.obj
+soft_hard_init@sync_mode 6 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\ETIQLA~1\AppData\Local\Temp\s3ts.obj
+ReadSPI_@TempVar 1 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+disk_readp@offset F 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+soft_hard_init@smp_phase 8 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+__Hreset_vec 0 0 CODE 0 reset_vec dist/default/production\SDC_FILE_SYS.X.production.obj
+__Lreset_vec 0 0 CODE 0 reset_vec dist/default/production\SDC_FILE_SYS.X.production.obj
+pf_read@buff 47 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+create_name@p 15 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+__end_of_dir_find 5734 0 CODE 0 text10 dist/default/production\SDC_FILE_SYS.X.production.obj
+soft_hard_init@bus_mode 7 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+__stringdata 7DD1 0 MEDIUMCONST 0 mediumconst dist/default/production\SDC_FILE_SYS.X.production.obj
+__accesstop 60 0 ABS 0 - C:\Users\ETIQLA~1\AppData\Local\Temp\s3ts.obj
+__Hintcode_body 0 0 ABS 0 intcode_body dist/default/production\SDC_FILE_SYS.X.production.obj
+__Lintcode_body 0 0 ABS 0 intcode_body dist/default/production\SDC_FILE_SYS.X.production.obj
+OpenSPI@sync_mode 3 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+intlevel0 0 0 CODE 0 text C:\Users\ETIQLA~1\AppData\Local\Temp\s3ts.obj
+__size_of_get_fat 0 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+intlevel1 0 0 CODE 0 text C:\Users\ETIQLA~1\AppData\Local\Temp\s3ts.obj
+disk_initialize@i E 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+__end_of_mem_cmp 53A2 0 CODE 0 text11 dist/default/production\SDC_FILE_SYS.X.production.obj
+intlevel2 0 0 CODE 0 text C:\Users\ETIQLA~1\AppData\Local\Temp\s3ts.obj
+__size_of_readover 0 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+intlevel3 0 0 CODE 0 text C:\Users\ETIQLA~1\AppData\Local\Temp\s3ts.obj
+__size_of_OpenSPI 0 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+__size_of___lmul 0 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+dir_rewind@clst 28 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+reset@count B 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+_create_name 5990 0 CODE 0 text16 dist/default/production\SDC_FILE_SYS.X.production.obj
+_WriteSPI 5050 0 CODE 0 text31 dist/default/production\SDC_FILE_SYS.X.production.obj
+disk_initialize@buff 15 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+disk_initialize@stat 12 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+check_fs@buf 1F 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+_WriteSPI_ 5038 0 CODE 0 text36 dist/default/production\SDC_FILE_SYS.X.production.obj
+Command@CRCbits 7 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+WriteUART@bitcount 4 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+_OpenUART 4FD0 0 CODE 0 text39 dist/default/production\SDC_FILE_SYS.X.production.obj
+__end_of_pf_read 7098 0 CODE 0 text6 dist/default/production\SDC_FILE_SYS.X.production.obj
+create_name@cvt 7D51 0 MEDIUMCONST 0 mediumconst dist/default/production\SDC_FILE_SYS.X.production.obj
+_putsUART 52DA 0 CODE 0 text25 dist/default/production\SDC_FILE_SYS.X.production.obj
+dummy_clocks@n 4 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+start_initialization 5284 0 CODE 0 cinit dist/default/production\SDC_FILE_SYS.X.production.obj
+__end_of_follow_path 5D9C 0 CODE 0 text8 dist/default/production\SDC_FILE_SYS.X.production.obj
+__size_of_Delay_s 0 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+dir_rewind@fs 26 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+pf_mount@fsize 90 0 BANK0 1 cstackBANK0 dist/default/production\SDC_FILE_SYS.X.production.obj
+___lldiv@quotient 9 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+__end_of_WriteSPI 5068 0 CODE 0 text31 dist/default/production\SDC_FILE_SYS.X.production.obj
+pf_mount@buf 60 0 BANK0 1 cstackBANK0 dist/default/production\SDC_FILE_SYS.X.production.obj
+__end_of_ReadSPI_ 5038 0 CODE 0 text24 dist/default/production\SDC_FILE_SYS.X.production.obj
+__end_of_WriteSPI_ 5050 0 CODE 0 text36 dist/default/production\SDC_FILE_SYS.X.production.obj
+?_get_clust 1 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+clust2sect@clst D 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+__end_of_proceed 4FFA 0 CODE 0 text29 dist/default/production\SDC_FILE_SYS.X.production.obj
+__CFG_IESO$OFF 0 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+__CFG_MCLRE$ON 0 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+__size_of_soft_hard_init 0 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+_ReadSPI_ 5028 0 CODE 0 text24 dist/default/production\SDC_FILE_SYS.X.production.obj
+_dummy_clocks 515A 0 CODE 0 text30 dist/default/production\SDC_FILE_SYS.X.production.obj
+__end_of_pf_mount 7D50 0 CODE 0 text18 dist/default/production\SDC_FILE_SYS.X.production.obj
+disk_initialize@count1 10 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+disk_initialize@count2 13 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+create_name@path B 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+__initialization 5284 0 CODE 0 cinit dist/default/production\SDC_FILE_SYS.X.production.obj
+__size_of_response 0 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+dir_find@c 5E 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+__CFG_LPT1OSC$OFF 0 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+clust2sect@fs 1A 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+__activetblptr 2 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+___lmul@product 9 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+readover@a 1 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+__CFG_WDT$OFF 0 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+Delay1KTCYx@unit 1 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+__CFG_LVP$OFF 0 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+__size_of_create_name 0 0 ABS 0 - dist/default/production\SDC_FILE_SYS.X.production.obj
+___lldiv@dividend 1 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+mem_cmp@d A 0 COMRAM 1 cstackCOMRAM dist/default/production\SDC_FILE_SYS.X.production.obj
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect in on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+reset_vec 0 0 0 4 1
+mediumconst 0 7D50 7D50 2B0 1
+config 0 300000 300000 E 1
+idloc 0 200000 200000 8 1
+cstackCOMRAM 1 1 1 5F 1
+cstackBANK0 1 60 60 9D 1
+bssBANK1 1 100 100 6E 1
+bssBIGRAM 1 16E 16E 600 1
+text18 0 75FA 75FA 756 1
+text4 0 7098 7098 562 1
+text6 0 6C3C 6C3C 45C 1
+text14 0 686A 686A 3D2 1
+text22 0 6574 6574 2F6 1
+text13 0 6366 6366 20E 1
+text0 0 6160 6160 206 1
+text7 0 5F6C 5F6C 1F4 1
+text19 0 5D9C 5D9C 1D0 1
+text8 0 5C22 5C22 17A 1
+text21 0 5AD4 5AD4 14E 1
+text16 0 5990 5990 144 1
+text12 0 5858 5858 138 1
+text5 0 5734 5734 124 1
+text10 0 563E 563E F6 1
+text15 0 556A 556A D4 1
+text9 0 54A0 54A0 CA 1
+text38 0 541E 541E 82 1
+text20 0 53A2 53A2 7C 1
+text11 0 5332 5332 70 1
+text25 0 52DA 52DA 58 1
+cinit 0 5284 5284 56 1
+text2 0 522E 522E 56 1
+text37 0 51D8 51D8 56 1
+text1 0 5198 5198 40 1
+text30 0 515A 515A 3E 1
+text26 0 5120 5120 3A 1
+text35 0 50F0 50F0 30 1
+text17 0 50C4 50C4 2C 1
+text32 0 509C 509C 28 1
+text27 0 5082 5082 1A 1
+text33 0 5068 5068 1A 1
+text31 0 5050 5050 18 1
+text36 0 5038 5038 18 1
+text24 0 5028 5028 10 1
+text28 0 5018 5018 10 1
+text34 0 5008 5008 10 1
+text23 0 4FFA 4FFA E 1
+text29 0 4FEE 4FEE C 1
+idataBANK1 0 4FE4 4FE4 A 1
+text3 0 4FDA 4FDA A 1
+text39 0 4FD0 4FD0 A 1

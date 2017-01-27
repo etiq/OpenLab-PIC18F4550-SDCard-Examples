@@ -1,0 +1,998 @@
+[p LITE_MODE AUTOSTATIC LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F4550 ]
+[d frameptr 4065 ]
+"368 D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c
+[e E73 . `uc
+RES_OK 0
+RES_ERROR 1
+RES_NOTRDY 2
+RES_PARERR 3
+]
+"440
+[e E43 . `uc
+FR_OK 0
+FR_DISK_ERR 1
+FR_NOT_READY 2
+FR_NO_FILE 3
+FR_NOT_OPENED 4
+FR_NOT_ENABLED 5
+FR_NO_FILESYSTEM 6
+]
+"133 D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c
+[e E4539 . `uc
+FR_OK 0
+FR_DISK_ERR 1
+FR_NOT_READY 2
+FR_NO_FILE 3
+FR_NOT_OPENED 4
+FR_NOT_ENABLED 5
+FR_NO_FILESYSTEM 6
+]
+"136 D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c
+[e E14 . `uc
+RES_OK 0
+RES_ERROR 1
+RES_NOTRDY 2
+RES_PARERR 3
+]
+"4 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\abdiv.c
+[v ___abdiv __abdiv `(c  1 e 1 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\abmod.c
+[v ___abmod __abmod `(c  1 e 1 0 ]
+"31 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\abtofl.c
+[v ___abtofl __abtofl `(d  1 e 3 0 ]
+"33 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\abtoft.c
+[v ___abtoft __abtoft `(f  1 e 3 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\aldiv.c
+[v ___aldiv __aldiv `(l  1 e 4 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\almod.c
+[v ___almod __almod `(l  1 e 4 0 ]
+"36 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\altofl.c
+[v ___altofl __altofl `(d  1 e 3 0 ]
+"42 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\altoft.c
+[v ___altoft __altoft `(f  1 e 3 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\atdiv.c
+[v ___atdiv __atdiv `(m  1 e 3 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\atmod.c
+[v ___atmod __atmod `(m  1 e 3 0 ]
+"37 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\attofl.c
+[v ___attofl __attofl `(d  1 e 3 0 ]
+"37 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\attoft.c
+[v ___attoft __attoft `(f  1 e 3 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"31 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awtofl.c
+[v ___awtofl __awtofl `(d  1 e 3 0 ]
+"32 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awtoft.c
+[v ___awtoft __awtoft `(f  1 e 3 0 ]
+"63 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\double.c
+[v ___flpack __flpack `(d  1 e 3 0 ]
+"88 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fladd.c
+[v ___fladd __fladd `(d  1 e 3 0 ]
+"49 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fldiv.c
+[v ___fldiv __fldiv `(d  1 e 3 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\flge.c
+[v ___flge __flge `(b  1 e 0 0 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\flmul.c
+[v ___flmul __flmul `(d  1 e 3 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\flneg.c
+[v ___flneg __flneg `(d  1 e 3 0 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"20 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\flsub.c
+[v ___flsub __flsub `(d  1 e 3 0 ]
+"43 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fltol.c
+[v ___fltol __fltol `(l  1 e 4 0 ]
+"86 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"49 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 3 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftge.c
+[v ___ftge __ftge `(b  1 e 0 0 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftneg.c
+[v ___ftneg __ftneg `(f  1 e 3 0 ]
+"20 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 3 0 ]
+"44 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c
+[v ___fttol __fttol `(l  1 e 4 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lbdiv.c
+[v ___lbdiv __lbdiv `(uc  1 e 1 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lbmod.c
+[v ___lbmod __lbmod `(uc  1 e 1 0 ]
+"27 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lbtofl.c
+[v ___lbtofl __lbtofl `(d  1 e 3 0 ]
+"27 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lbtoft.c
+[v ___lbtoft __lbtoft `(f  1 e 3 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\llmod.c
+[v ___llmod __llmod `(ul  1 e 4 0 ]
+"30 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lltofl.c
+[v ___lltofl __lltofl `(d  1 e 3 0 ]
+"35 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lltoft.c
+[v ___lltoft __lltoft `(f  1 e 3 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ltdiv.c
+[v ___ltdiv __ltdiv `(um  1 e 3 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ltmod.c
+[v ___ltmod __ltmod `(um  1 e 3 0 ]
+"30 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lttofl.c
+[v ___lttofl __lttofl `(d  1 e 3 0 ]
+"30 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lttoft.c
+[v ___lttoft __lttoft `(f  1 e 3 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+"28 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwtofl.c
+[v ___lwtofl __lwtofl `(d  1 e 3 0 ]
+"28 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwtoft.c
+[v ___lwtoft __lwtoft `(f  1 e 3 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul24.c
+[v ___tmul __tmul `(um  1 e 3 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul8.c
+[v ___bmul __bmul `(uc  1 e 1 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\asfladd.c
+[v ___asfladd __asfladd `(d  1 e 3 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\asfldiv.c
+[v ___asfldiv __asfldiv `(d  1 e 3 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\asflmul.c
+[v ___asflmul __asflmul `(d  1 e 3 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\asflsub.c
+[v ___asflsub __asflsub `(d  1 e 3 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\asftadd.c
+[v ___asftadd __asftadd `(f  1 e 3 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\asftdiv.c
+[v ___asftdiv __asftdiv `(f  1 e 3 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\asftmul.c
+[v ___asftmul __asftmul `(f  1 e 3 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\asftsub.c
+[v ___asftsub __asftsub `(f  1 e 3 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\aslmul.c
+[v ___aslmul __aslmul `(ul  1 e 4 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\d100tcyx.c
+[v _Delay100TCYx Delay100TCYx `(v  1 e 0 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\d10ktcyx.c
+[v _Delay10KTCYx Delay10KTCYx `(v  1 e 0 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\d10tcyx.c
+[v _Delay10TCYx Delay10TCYx `(v  1 e 0 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\d1ktcyx.c
+[v _Delay1KTCYx Delay1KTCYx `(v  1 e 0 0 ]
+"14 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\plib\SPI\spi_open.c
+[v _OpenSPI OpenSPI `(v  1 e 0 0 ]
+"13 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\plib\SPI\spi_writ.c
+[v _WriteSPI WriteSPI `(c  1 e 1 0 ]
+"8 D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\delay.c
+[v _DelayFor18TCY DelayFor18TCY `(v  1 e 0 0 ]
+"16
+[v _DelayPORXLCD DelayPORXLCD `(v  1 e 0 0 ]
+"25
+[v _DelayXLCD DelayXLCD `(v  1 e 0 0 ]
+"33
+[v _delay_ms delay_ms `(v  1 e 0 0 ]
+"44
+[v _Delay_s Delay_s `(v  1 e 0 0 ]
+"53
+[v _Delay_s_ Delay_s_ `(v  1 e 0 0 ]
+"19 D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c
+[v _readover readover `(v  1 e 0 0 ]
+"28
+[v _reset reset `(v  1 e 0 0 ]
+"49
+[v _disk_initialize disk_initialize `(uc  1 e 1 0 ]
+"130
+[v _disk_readp disk_readp `(E73  1 e 1 0 ]
+"259
+[v _disk_writep disk_writep `(E73  1 e 1 0 ]
+"35 D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c
+[v _soft_hard_init soft_hard_init `(v  1 e 0 0 ]
+"58
+[v _WriteSPI_ WriteSPI_ `(c  1 e 1 0 ]
+"76
+[v _Command Command `(v  1 e 0 0 ]
+"87
+[v _dummy_clocks dummy_clocks `(v  1 e 0 0 ]
+"100
+[v _proceed proceed `(v  1 e 0 0 ]
+"107
+[v _ReadSPI_ ReadSPI_ `(uc  1 e 1 0 ]
+"118
+[v _response response `(uc  1 e 1 0 ]
+"131
+[v _main main `(v  1 e 0 0 ]
+"30 D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\openuart.c
+[v _OpenUART OpenUART `(v  1 e 0 0 ]
+"329 D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c
+[v _mem_set mem_set `(v  1 s 0 mem_set ]
+"336
+[v _mem_cmp mem_cmp `(i  1 s 2 mem_cmp ]
+"350
+[v _get_fat get_fat `(ul  1 s 4 get_fat ]
+"400
+[v _clust2sect clust2sect `(ul  1 s 4 clust2sect ]
+"414
+[v _get_clust get_clust `(ul  1 s 4 get_clust ]
+"437
+[v _dir_rewind dir_rewind `(E43  1 s 1 dir_rewind ]
+"465
+[v _dir_next dir_next `(E43  1 s 1 dir_next ]
+"510
+[v _dir_find dir_find `(E43  1 s 1 dir_find ]
+"544
+[v _dir_read dir_read `(E43  1 s 1 dir_read ]
+"581
+[v _create_name create_name `(E43  1 s 1 create_name ]
+"638
+[v _get_fileinfo get_fileinfo `(v  1 s 0 get_fileinfo ]
+"680
+[v _follow_path follow_path `(E43  1 s 1 follow_path ]
+"722
+[v _check_fs check_fs `(uc  1 s 1 check_fs ]
+"755
+[v _pf_mount pf_mount `(E43  1 e 1 0 ]
+"829
+[v _pf_open pf_open `(E43  1 e 1 0 ]
+"863
+[v _pf_read pf_read `(E43  1 e 1 0 ]
+"919
+[v _pf_write pf_write `(E43  1 e 1 0 ]
+"988
+[v _pf_lseek pf_lseek `(E43  1 e 1 0 ]
+"1039
+[v _pf_opendir pf_opendir `(E43  1 e 1 0 ]
+"1076
+[v _pf_readdir pf_readdir `(E43  1 e 1 0 ]
+"6 D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\sw_uart.c
+[v _DelayRXHalfBitUART DelayRXHalfBitUART `(v  1 e 0 0 ]
+"14
+[v _DelayRXBitUART DelayRXBitUART `(v  1 e 0 0 ]
+"23
+[v _DelayTXBitUART DelayTXBitUART `(v  1 e 0 0 ]
+"39
+[v _getsUART getsUART `(v  1 e 0 0 ]
+"58
+[v _putsUART putsUART `(v  1 e 0 0 ]
+"82
+[v _WriteUART WriteUART `(v  1 e 0 0 ]
+"125
+[v _ReadUART ReadUART `(uc  1 e 1 0 ]
+[s S797 . 1 `uc 1 RD0 1 0 :1:0 
+`uc 1 RD1 1 0 :1:1 
+`uc 1 RD2 1 0 :1:2 
+`uc 1 RD3 1 0 :1:3 
+`uc 1 RD4 1 0 :1:4 
+`uc 1 RD5 1 0 :1:5 
+`uc 1 RD6 1 0 :1:6 
+`uc 1 RD7 1 0 :1:7 
+]
+"3018 C:\Program Files (x86)\Microchip\xc8\v1.33\include\pic18f4550.h
+[s S865 . 1 `uc 1 SPP0 1 0 :1:0 
+`uc 1 SPP1 1 0 :1:1 
+`uc 1 SPP2 1 0 :1:2 
+`uc 1 SPP3 1 0 :1:3 
+`uc 1 SPP4 1 0 :1:4 
+`uc 1 SPP5 1 0 :1:5 
+`uc 1 SPP6 1 0 :1:6 
+`uc 1 SPP7 1 0 :1:7 
+]
+[s S874 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 SS2 1 0 :1:7 
+]
+[u S877 . 1 `S797 1 . 1 0 `S865 1 . 1 0 `S874 1 . 1 0 ]
+[v _PORTDbits PORTDbits `VES877  1 e 1 @3971 ]
+[s S1125 . 1 `uc 1 TRISA0 1 0 :1:0 
+`uc 1 TRISA1 1 0 :1:1 
+`uc 1 TRISA2 1 0 :1:2 
+`uc 1 TRISA3 1 0 :1:3 
+`uc 1 TRISA4 1 0 :1:4 
+`uc 1 TRISA5 1 0 :1:5 
+`uc 1 TRISA6 1 0 :1:6 
+]
+"4004
+[s S1133 . 1 `uc 1 RA0 1 0 :1:0 
+`uc 1 RA1 1 0 :1:1 
+`uc 1 RA2 1 0 :1:2 
+`uc 1 RA3 1 0 :1:3 
+`uc 1 RA4 1 0 :1:4 
+`uc 1 RA5 1 0 :1:5 
+`uc 1 RA6 1 0 :1:6 
+]
+[u S1141 . 1 `S1125 1 . 1 0 `S1133 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES1141  1 e 1 @3986 ]
+[s S788 . 1 `uc 1 TRISD0 1 0 :1:0 
+`uc 1 TRISD1 1 0 :1:1 
+`uc 1 TRISD2 1 0 :1:2 
+`uc 1 TRISD3 1 0 :1:3 
+`uc 1 TRISD4 1 0 :1:4 
+`uc 1 TRISD5 1 0 :1:5 
+`uc 1 TRISD6 1 0 :1:6 
+`uc 1 TRISD7 1 0 :1:7 
+]
+"4203
+[u S806 . 1 `S788 1 . 1 0 `S797 1 . 1 0 ]
+[v _TRISBbits TRISBbits `VES806  1 e 1 @3987 ]
+[s S1201 . 1 `uc 1 TRISC0 1 0 :1:0 
+`uc 1 TRISC1 1 0 :1:1 
+`uc 1 TRISC2 1 0 :1:2 
+`uc 1 . 1 0 :3:3 
+`uc 1 TRISC6 1 0 :1:6 
+`uc 1 TRISC7 1 0 :1:7 
+]
+"4424
+[s S1208 . 1 `uc 1 RC0 1 0 :1:0 
+`uc 1 RC1 1 0 :1:1 
+`uc 1 RC2 1 0 :1:2 
+`uc 1 . 1 0 :3:3 
+`uc 1 RC6 1 0 :1:6 
+`uc 1 RC7 1 0 :1:7 
+]
+[s S1215 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 TRISC3 1 0 :1:3 
+]
+[u S1218 . 1 `S1201 1 . 1 0 `S1208 1 . 1 0 `S1215 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES1218  1 e 1 @3988 ]
+"4595
+[v _TRISDbits TRISDbits `VES806  1 e 1 @3989 ]
+"7531
+[v _SSPSTAT SSPSTAT `VEuc  1 e 1 @4039 ]
+[s S937 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R_NOT_W 1 0 :1:2 
+]
+"7633
+[s S940 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 D_NOT_A 1 0 :1:5 
+]
+[s S943 . 1 `uc 1 BF 1 0 :1:0 
+`uc 1 UA 1 0 :1:1 
+`uc 1 R_nW 1 0 :1:2 
+`uc 1 S 1 0 :1:3 
+`uc 1 P 1 0 :1:4 
+`uc 1 D_nA 1 0 :1:5 
+`uc 1 CKE 1 0 :1:6 
+`uc 1 SMP 1 0 :1:7 
+]
+[s S958 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R_W 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 D_A 1 0 :1:5 
+]
+[s S963 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 I2C_READ 1 0 :1:2 
+`uc 1 I2C_START 1 0 :1:3 
+`uc 1 I2C_STOP 1 0 :1:4 
+`uc 1 I2C_DAT 1 0 :1:5 
+]
+[s S969 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nW 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 nA 1 0 :1:5 
+]
+[s S974 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 NOT_WRITE 1 0 :1:2 
+]
+[s S977 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 NOT_ADDRESS 1 0 :1:5 
+]
+[s S980 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nWRITE 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 nADDRESS 1 0 :1:5 
+]
+[s S985 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 READ_WRITE 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 DATA_ADDRESS 1 0 :1:5 
+]
+[s S990 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 D 1 0 :1:5 
+]
+[s S995 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 DA 1 0 :1:5 
+]
+[s S998 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 RW 1 0 :1:2 
+]
+[s S1001 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 START 1 0 :1:3 
+]
+[s S1004 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 STOP 1 0 :1:4 
+]
+[s S1007 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 NOT_W 1 0 :1:2 
+]
+[s S1010 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 NOT_A 1 0 :1:5 
+]
+[u S1013 . 1 `S937 1 . 1 0 `S940 1 . 1 0 `S943 1 . 1 0 `S937 1 . 1 0 `S940 1 . 1 0 `S958 1 . 1 0 `S963 1 . 1 0 `S969 1 . 1 0 `S974 1 . 1 0 `S977 1 . 1 0 `S980 1 . 1 0 `S985 1 . 1 0 `S990 1 . 1 0 `S995 1 . 1 0 `S998 1 . 1 0 `S1001 1 . 1 0 `S1004 1 . 1 0 `S1007 1 . 1 0 `S1010 1 . 1 0 ]
+[v _SSPSTATbits SSPSTATbits `VES1013  1 e 1 @4039 ]
+"10561
+[v _RD4 RD4 `VEb  1 e 0 @31772 ]
+"10563
+[v _RD5 RD5 `VEb  1 e 0 @31773 ]
+"17 D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c
+[v _flag flag `i  1 e 2 0 ]
+"25 D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c
+[v _sector_buffer sector_buffer `[512]uc  1 e 512 0 ]
+"26
+[v _rd rd `*.39uc  1 e 2 0 ]
+"27
+[v _Result Result `uc  1 e 1 0 ]
+"28
+[v _str str `[512]uc  1 s 512 str ]
+"29
+[v _s s `uc  1 e 1 0 ]
+"30
+[v _fileSize fileSize `ul  1 e 4 0 ]
+"31
+[v _txt txt `[20]uc  1 e 20 0 ]
+"32
+[v _data_buffer_32 data_buffer_32 `[32]uc  1 e 32 0 ]
+"128
+[v _fileName fileName `[10]uc  1 e 10 0 ]
+"129
+[v _folder folder `[48]uc  1 e 48 0 ]
+[s S21 . 42 `uc 1 fs_type 1 0 `uc 1 flag 1 1 `uc 1 csize 1 2 `uc 1 pad1 1 3 `us 1 n_rootdir 2 4 `ul 1 n_fatent 4 6 `ul 1 fatbase 4 10 `ul 1 dirbase 4 14 `ul 1 database 4 18 `ul 1 fptr 4 22 `ul 1 fsize 4 26 `ul 1 org_clust 4 30 `ul 1 curr_clust 4 34 `ul 1 dsect 4 38 ]
+"324 D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c
+[v _FatFs FatFs `*.39S21  1 s 2 FatFs ]
+[s S482 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSPIF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+`uc 1 SPPIF 1 0 :1:7 
+]
+"5060 D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pic_18f4550.h
+[s S491 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 PSPIF 1 0 :1:7 
+]
+[s S494 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 RC1IF 1 0 :1:5 
+]
+[s S497 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 TX1IF 1 0 :1:4 
+]
+[u S500 . 1 `S482 1 . 1 0 `S491 1 . 1 0 `S494 1 . 1 0 `S497 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES500  1 e 1 @3998 ]
+"6185
+[v _CMCON CMCON `VEuc  1 e 1 @4020 ]
+"7171
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @4033 ]
+"7462
+[v _SSPCON1 SSPCON1 `VEuc  1 e 1 @4038 ]
+[s S524 . 1 `uc 1 SSPM 1 0 :4:0 
+`uc 1 CKP 1 0 :1:4 
+`uc 1 SSPEN 1 0 :1:5 
+`uc 1 SSPOV 1 0 :1:6 
+`uc 1 WCOL 1 0 :1:7 
+]
+"7482
+[s S530 . 1 `uc 1 SSPM0 1 0 :1:0 
+`uc 1 SSPM1 1 0 :1:1 
+`uc 1 SSPM2 1 0 :1:2 
+`uc 1 SSPM3 1 0 :1:3 
+]
+[u S535 . 1 `S524 1 . 1 0 `S530 1 . 1 0 ]
+[v _SSPCON1bits SSPCON1bits `VES535  1 e 1 @4038 ]
+"7803
+[v _SSPBUF SSPBUF `VEuc  1 e 1 @4041 ]
+"10181
+[v _LATA5 LATA5 `VEb  1 e 0 @31821 ]
+"10187
+[v _LATB0 LATB0 `VEb  1 e 0 @31824 ]
+"10195
+[v _LATB4 LATB4 `VEb  1 e 0 @31828 ]
+"10853
+[v _TRISA5 TRISA5 `VEb  1 e 0 @31893 ]
+"10865
+[v _TRISB4 TRISB4 `VEb  1 e 0 @31900 ]
+"3 D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\uartdata.c
+[v _uartdata uartdata `uc  1 e 1 0 ]
+"4
+[v _BitCount BitCount `uc  1 e 1 0 ]
+"131 D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c
+[v _main main `(v  1 e 0 0 ]
+{
+[s S21 . 42 `uc 1 fs_type 1 0 `uc 1 flag 1 1 `uc 1 csize 1 2 `uc 1 pad1 1 3 `us 1 n_rootdir 2 4 `ul 1 n_fatent 4 6 `ul 1 fatbase 4 10 `ul 1 dirbase 4 14 `ul 1 database 4 18 `ul 1 fptr 4 22 `ul 1 fsize 4 26 `ul 1 org_clust 4 30 `ul 1 curr_clust 4 34 `ul 1 dsect 4 38 ]
+"134
+[v main@fs fs `S21  1 a 42 101 ]
+"135
+[v main@br br `us  1 a 2 98 ]
+"133
+[v main@FResult FResult `E4539  1 a 1 100 ]
+"234
+} 0
+"35
+[v _soft_hard_init soft_hard_init `(v  1 e 0 0 ]
+{
+"40
+[v soft_hard_init@i i `i  1 a 2 3 ]
+"39
+[v soft_hard_init@smp_phase smp_phase `uc  1 a 1 7 ]
+"38
+[v soft_hard_init@bus_mode bus_mode `uc  1 a 1 6 ]
+"37
+[v soft_hard_init@sync_mode sync_mode `uc  1 a 1 5 ]
+"55
+} 0
+"14 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\plib\SPI\spi_open.c
+[v _OpenSPI OpenSPI `(v  1 e 0 0 ]
+{
+[v OpenSPI@sync_mode sync_mode `uc  1 a 1 wreg ]
+[v OpenSPI@sync_mode sync_mode `uc  1 a 1 wreg ]
+[v OpenSPI@bus_mode bus_mode `uc  1 p 1 0 ]
+[v OpenSPI@smp_phase smp_phase `uc  1 p 1 1 ]
+"16
+[v OpenSPI@sync_mode sync_mode `uc  1 a 1 2 ]
+"102
+} 0
+"19 D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c
+[v _readover readover `(v  1 e 0 0 ]
+{
+[v readover@a a `i  1 p 2 0 ]
+"22
+} 0
+"919 D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c
+[v _pf_write pf_write `(E43  1 e 1 0 ]
+{
+"925
+[v pf_write@clst clst `ul  1 a 4 10 ]
+"926
+[v pf_write@remain remain `ul  1 a 4 6 ]
+[v pf_write@sect sect `ul  1 a 4 2 ]
+[s S21 . 42 `uc 1 fs_type 1 0 `uc 1 flag 1 1 `uc 1 csize 1 2 `uc 1 pad1 1 3 `us 1 n_rootdir 2 4 `ul 1 n_fatent 4 6 `ul 1 fatbase 4 10 `ul 1 dirbase 4 14 `ul 1 database 4 18 `ul 1 fptr 4 22 `ul 1 fsize 4 26 `ul 1 org_clust 4 30 `ul 1 curr_clust 4 34 `ul 1 dsect 4 38 ]
+"930
+[v pf_write@fs fs `*.39S21  1 a 2 17 ]
+"929
+[v pf_write@wcnt wcnt `ui  1 a 2 15 ]
+"927
+[v pf_write@p p `*.25Cuc  1 a 2 0 ]
+"928
+[v pf_write@cs cs `uc  1 a 1 14 ]
+"920
+[v pf_write@buff buff `*.25Cv  1 p 2 70 ]
+"921
+[v pf_write@btw btw `ui  1 p 2 72 ]
+"922
+[v pf_write@bw bw `*.39ui  1 p 2 74 ]
+"978
+} 0
+"259 D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c
+[v _disk_writep disk_writep `(E73  1 e 1 0 ]
+{
+"267
+[v disk_writep@j j `i  1 a 2 21 ]
+[v disk_writep@i i `i  1 a 2 19 ]
+"266
+[v disk_writep@buff buff `uc  1 a 1 23 ]
+"260
+[v disk_writep@wr wr `*.33Cuc  1 p 3 8 ]
+"261
+[v disk_writep@sc sc `ul  1 p 4 11 ]
+"310
+} 0
+"863 D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c
+[v _pf_read pf_read `(E43  1 e 1 0 ]
+{
+"870
+[v pf_read@clst clst `ul  1 a 4 13 ]
+"871
+[v pf_read@remain remain `ul  1 a 4 9 ]
+[v pf_read@sect sect `ul  1 a 4 5 ]
+[s S21 . 42 `uc 1 fs_type 1 0 `uc 1 flag 1 1 `uc 1 csize 1 2 `uc 1 pad1 1 3 `us 1 n_rootdir 2 4 `ul 1 n_fatent 4 6 `ul 1 fatbase 4 10 `ul 1 dirbase 4 14 `ul 1 database 4 18 `ul 1 fptr 4 22 `ul 1 fsize 4 26 `ul 1 org_clust 4 30 `ul 1 curr_clust 4 34 `ul 1 dsect 4 38 ]
+"874
+[v pf_read@fs fs `*.39S21  1 a 2 20 ]
+"872
+[v pf_read@rcnt rcnt `ui  1 a 2 18 ]
+"873
+[v pf_read@rbuff rbuff `*.39uc  1 a 2 0 ]
+[v pf_read@cs cs `uc  1 a 1 17 ]
+"869
+[v pf_read@dr dr `E73  1 a 1 4 ]
+"864
+[v pf_read@buff buff `*.39v  1 p 2 70 ]
+"865
+[v pf_read@btr btr `ui  1 p 2 72 ]
+"866
+[v pf_read@br br `*.39ui  1 p 2 74 ]
+"909
+} 0
+"829
+[v _pf_open pf_open `(E43  1 e 1 0 ]
+{
+"835
+[v pf_open@dir dir `[32]uc  1 a 32 47 ]
+[s S49 . 16 `us 1 index 2 0 `*.39uc 1 fn 2 2 `ul 1 sclust 4 4 `ul 1 clust 4 8 `ul 1 sect 4 12 ]
+"834
+[v pf_open@dj dj `S49  1 a 16 82 ]
+"835
+[v pf_open@sp sp `[12]uc  1 a 12 35 ]
+[s S21 . 42 `uc 1 fs_type 1 0 `uc 1 flag 1 1 `uc 1 csize 1 2 `uc 1 pad1 1 3 `us 1 n_rootdir 2 4 `ul 1 n_fatent 4 6 `ul 1 fatbase 4 10 `ul 1 dirbase 4 14 `ul 1 database 4 18 `ul 1 fptr 4 22 `ul 1 fsize 4 26 `ul 1 org_clust 4 30 `ul 1 curr_clust 4 34 `ul 1 dsect 4 38 ]
+"836
+[v pf_open@fs fs `*.39S21  1 a 2 80 ]
+"833
+[v pf_open@res res `E43  1 a 1 79 ]
+"830
+[v pf_open@path path `*.25Cuc  1 p 2 11 ]
+"853
+} 0
+"680
+[v _follow_path follow_path `(E43  1 s 1 follow_path ]
+{
+"686
+[v follow_path@res res `E43  1 a 1 10 ]
+[s S49 . 16 `us 1 index 2 0 `*.39uc 1 fn 2 2 `ul 1 sclust 4 4 `ul 1 clust 4 8 `ul 1 sect 4 12 ]
+"681
+[v follow_path@dj dj `*.39S49  1 p 2 0 ]
+"682
+[v follow_path@dir dir `*.39uc  1 p 2 2 ]
+"683
+[v follow_path@path path `*.25Cuc  1 p 2 4 ]
+"712
+} 0
+"414
+[v _get_clust get_clust `(ul  1 s 4 get_clust ]
+{
+"419
+[v get_clust@clst clst `ul  1 a 4 14 ]
+[s S21 . 42 `uc 1 fs_type 1 0 `uc 1 flag 1 1 `uc 1 csize 1 2 `uc 1 pad1 1 3 `us 1 n_rootdir 2 4 `ul 1 n_fatent 4 6 `ul 1 fatbase 4 10 `ul 1 dirbase 4 14 `ul 1 database 4 18 `ul 1 fptr 4 22 `ul 1 fsize 4 26 `ul 1 org_clust 4 30 `ul 1 curr_clust 4 34 `ul 1 dsect 4 38 ]
+"418
+[v get_clust@fs fs `*.39S21  1 a 2 12 ]
+"415
+[v get_clust@dir dir `*.39uc  1 p 2 0 ]
+"429
+} 0
+"510
+[v _dir_find dir_find `(E43  1 s 1 dir_find ]
+{
+"515
+[v dir_find@res res `E43  1 a 1 94 ]
+"516
+[v dir_find@c c `uc  1 a 1 93 ]
+[s S49 . 16 `us 1 index 2 0 `*.39uc 1 fn 2 2 `ul 1 sclust 4 4 `ul 1 clust 4 8 `ul 1 sect 4 12 ]
+"511
+[v dir_find@dj dj `*.39S49  1 p 2 87 ]
+"512
+[v dir_find@dir dir `*.39uc  1 p 2 89 ]
+"534
+} 0
+"336
+[v _mem_cmp mem_cmp `(i  1 s 2 mem_cmp ]
+{
+"338
+[v mem_cmp@r r `i  1 a 2 13 ]
+"337
+[v mem_cmp@s s `*.39Cuc  1 a 2 11 ]
+[v mem_cmp@d d `*.39Cuc  1 a 2 9 ]
+"336
+[v mem_cmp@dst dst `*.39Cv  1 p 2 0 ]
+[v mem_cmp@src src `*.39Cv  1 p 2 2 ]
+[v mem_cmp@cnt cnt `i  1 p 2 4 ]
+"341
+} 0
+"437
+[v _dir_rewind dir_rewind `(E43  1 s 1 dir_rewind ]
+{
+"441
+[v dir_rewind@clst clst `ul  1 a 4 39 ]
+[s S21 . 42 `uc 1 fs_type 1 0 `uc 1 flag 1 1 `uc 1 csize 1 2 `uc 1 pad1 1 3 `us 1 n_rootdir 2 4 `ul 1 n_fatent 4 6 `ul 1 fatbase 4 10 `ul 1 dirbase 4 14 `ul 1 database 4 18 `ul 1 fptr 4 22 `ul 1 fsize 4 26 `ul 1 org_clust 4 30 `ul 1 curr_clust 4 34 `ul 1 dsect 4 38 ]
+"442
+[v dir_rewind@fs fs `*.39S21  1 a 2 37 ]
+[s S49 . 16 `us 1 index 2 0 `*.39uc 1 fn 2 2 `ul 1 sclust 4 4 `ul 1 clust 4 8 `ul 1 sect 4 12 ]
+"438
+[v dir_rewind@dj dj `*.39S49  1 p 2 27 ]
+"455
+} 0
+"465
+[v _dir_next dir_next `(E43  1 s 1 dir_next ]
+{
+"469
+[v dir_next@clst clst `ul  1 a 4 81 ]
+"470
+[v dir_next@i i `us  1 a 2 85 ]
+[s S21 . 42 `uc 1 fs_type 1 0 `uc 1 flag 1 1 `uc 1 csize 1 2 `uc 1 pad1 1 3 `us 1 n_rootdir 2 4 `ul 1 n_fatent 4 6 `ul 1 fatbase 4 10 `ul 1 dirbase 4 14 `ul 1 database 4 18 `ul 1 fptr 4 22 `ul 1 fsize 4 26 `ul 1 org_clust 4 30 `ul 1 curr_clust 4 34 `ul 1 dsect 4 38 ]
+"471
+[v dir_next@fs fs `*.39S21  1 a 2 79 ]
+[s S49 . 16 `us 1 index 2 0 `*.39uc 1 fn 2 2 `ul 1 sclust 4 4 `ul 1 clust 4 8 `ul 1 sect 4 12 ]
+"466
+[v dir_next@dj dj `*.39S49  1 p 2 70 ]
+"500
+} 0
+"350
+[v _get_fat get_fat `(ul  1 s 4 get_fat ]
+{
+"363
+[v get_fat@bc bc `ui  1 a 2 66 ]
+[v get_fat@ofs ofs `ui  1 a 2 60 ]
+[v get_fat@wc wc `ui  1 a 2 58 ]
+"354
+[v get_fat@buf buf `[4]uc  1 a 4 62 ]
+[s S21 . 42 `uc 1 fs_type 1 0 `uc 1 flag 1 1 `uc 1 csize 1 2 `uc 1 pad1 1 3 `us 1 n_rootdir 2 4 `ul 1 n_fatent 4 6 `ul 1 fatbase 4 10 `ul 1 dirbase 4 14 `ul 1 database 4 18 `ul 1 fptr 4 22 `ul 1 fsize 4 26 `ul 1 org_clust 4 30 `ul 1 curr_clust 4 34 `ul 1 dsect 4 38 ]
+"355
+[v get_fat@fs fs `*.39S21  1 a 2 68 ]
+"351
+[v get_fat@clst clst `ul  1 p 4 30 ]
+"390
+} 0
+"400
+[v _clust2sect clust2sect `(ul  1 s 4 clust2sect ]
+{
+[s S21 . 42 `uc 1 fs_type 1 0 `uc 1 flag 1 1 `uc 1 csize 1 2 `uc 1 pad1 1 3 `us 1 n_rootdir 2 4 `ul 1 n_fatent 4 6 `ul 1 fatbase 4 10 `ul 1 dirbase 4 14 `ul 1 database 4 18 `ul 1 fptr 4 22 `ul 1 fsize 4 26 `ul 1 org_clust 4 30 `ul 1 curr_clust 4 34 `ul 1 dsect 4 38 ]
+"404
+[v clust2sect@fs fs `*.39S21  1 a 2 25 ]
+"401
+[v clust2sect@clst clst `ul  1 p 4 12 ]
+"410
+} 0
+"581
+[v _create_name create_name `(E43  1 s 1 create_name ]
+{
+"613
+[v create_name@d d `uc  1 a 1 19 ]
+"586
+[v create_name@sfn sfn `*.39uc  1 a 2 24 ]
+"587
+[v create_name@p p `*.25Cuc  1 a 2 20 ]
+"586
+[v create_name@c c `uc  1 a 1 27 ]
+[v create_name@i i `uc  1 a 1 26 ]
+[v create_name@si si `uc  1 a 1 23 ]
+[v create_name@ni ni `uc  1 a 1 22 ]
+[s S49 . 16 `us 1 index 2 0 `*.39uc 1 fn 2 2 `ul 1 sclust 4 4 `ul 1 clust 4 8 `ul 1 sect 4 12 ]
+"582
+[v create_name@dj dj `*.39S49  1 p 2 8 ]
+"583
+[v create_name@path path `*.39*.25Cuc  1 p 2 10 ]
+"590
+[v create_name@cvt cvt `C[128]uc  1 s 128 cvt ]
+"628
+} 0
+"329
+[v _mem_set mem_set `(v  1 s 0 mem_set ]
+{
+"330
+[v mem_set@d d `*.39uc  1 a 2 6 ]
+"329
+[v mem_set@dst dst `*.39v  1 p 2 0 ]
+[v mem_set@val val `i  1 p 2 2 ]
+[v mem_set@cnt cnt `i  1 p 2 4 ]
+"332
+} 0
+"755
+[v _pf_mount pf_mount `(E43  1 e 1 0 ]
+{
+"759
+[v pf_mount@buf buf `[36]uc  1 a 36 0 ]
+"760
+[v pf_mount@fsize fsize `ul  1 a 4 48 ]
+[v pf_mount@bsect bsect `ul  1 a 4 44 ]
+[v pf_mount@mclst mclst `ul  1 a 4 40 ]
+[v pf_mount@tsect tsect `ul  1 a 4 36 ]
+"759
+[v pf_mount@fmt fmt `uc  1 a 1 52 ]
+[s S21 . 42 `uc 1 fs_type 1 0 `uc 1 flag 1 1 `uc 1 csize 1 2 `uc 1 pad1 1 3 `us 1 n_rootdir 2 4 `ul 1 n_fatent 4 6 `ul 1 fatbase 4 10 `ul 1 dirbase 4 14 `ul 1 database 4 18 `ul 1 fptr 4 22 `ul 1 fsize 4 26 `ul 1 org_clust 4 30 `ul 1 curr_clust 4 34 `ul 1 dsect 4 38 ]
+"756
+[v pf_mount@fs fs `*.39S21  1 p 2 40 ]
+"820
+} 0
+"49 D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c
+[v _disk_initialize disk_initialize `(uc  1 e 1 0 ]
+{
+"52
+[v disk_initialize@count2 count2 `i  1 a 2 18 ]
+[v disk_initialize@count1 count1 `i  1 a 2 15 ]
+[v disk_initialize@i i `i  1 a 2 13 ]
+"53
+[v disk_initialize@buff buff `uc  1 a 1 20 ]
+"51
+[v disk_initialize@stat stat `uc  1 a 1 17 ]
+"123
+} 0
+"28
+[v _reset reset `(v  1 e 0 0 ]
+{
+"30
+[v reset@count count `i  1 a 2 10 ]
+[v reset@i i `i  1 a 2 8 ]
+"31
+[v reset@buff buff `uc  1 a 1 12 ]
+"47
+} 0
+"722 D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\pff.c
+[v _check_fs check_fs `(uc  1 s 1 check_fs ]
+{
+"723
+[v check_fs@buf buf `*.39uc  1 p 2 30 ]
+"724
+[v check_fs@sect sect `ul  1 p 4 32 ]
+"738
+} 0
+"130 D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\diskio.c
+[v _disk_readp disk_readp `(E73  1 e 1 0 ]
+{
+"139
+[v disk_readp@start_add start_add `ul  1 a 4 23 ]
+"141
+[v disk_readp@length length `i  1 a 2 28 ]
+"138
+[v disk_readp@buff buff `uc  1 a 1 27 ]
+[v disk_readp@ptr ptr `uc  1 a 1 22 ]
+"131
+[v disk_readp@rd rd `*.39uc  1 p 2 8 ]
+"132
+[v disk_readp@sector sector `ul  1 p 4 10 ]
+"133
+[v disk_readp@offset offset `ui  1 p 2 14 ]
+"134
+[v disk_readp@count count `ui  1 p 2 16 ]
+"140
+[v disk_readp@arr arr `[512]uc  1 s 512 arr ]
+"254
+} 0
+"118 D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c
+[v _response response `(uc  1 e 1 0 ]
+{
+"120
+[v response@buff buff `uc  1 a 1 1 ]
+"125
+} 0
+"107
+[v _ReadSPI_ ReadSPI_ `(uc  1 e 1 0 ]
+{
+"109
+[v ReadSPI_@TempVar TempVar `uc  1 a 1 0 ]
+"116
+} 0
+"58 D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\sw_uart.c
+[v _putsUART putsUART `(v  1 e 0 0 ]
+{
+[v putsUART@data data `*.35uc  1 p 2 4 ]
+"64
+} 0
+"82
+[v _WriteUART WriteUART `(v  1 e 0 0 ]
+{
+[v WriteUART@uartdata uartdata `uc  1 a 1 wreg ]
+"84
+[v WriteUART@bitcount bitcount `uc  1 a 1 3 ]
+"82
+[v WriteUART@uartdata uartdata `uc  1 a 1 wreg ]
+"84
+[v WriteUART@uartdata uartdata `uc  1 a 1 2 ]
+"100
+} 0
+"23
+[v _DelayTXBitUART DelayTXBitUART `(v  1 e 0 0 ]
+{
+"29
+} 0
+"8 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\d100tcyx.c
+[v _Delay100TCYx Delay100TCYx `(v  1 e 0 0 ]
+{
+[v Delay100TCYx@unit unit `uc  1 a 1 wreg ]
+[v Delay100TCYx@unit unit `uc  1 a 1 wreg ]
+[v Delay100TCYx@unit unit `uc  1 a 1 0 ]
+"13
+} 0
+"100 D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c
+[v _proceed proceed `(v  1 e 0 0 ]
+{
+"105
+} 0
+"87
+[v _dummy_clocks dummy_clocks `(v  1 e 0 0 ]
+{
+"89
+[v dummy_clocks@i i `i  1 a 2 6 ]
+"87
+[v dummy_clocks@n n `i  1 p 2 3 ]
+"98
+} 0
+"13 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\plib\SPI\spi_writ.c
+[v _WriteSPI WriteSPI `(c  1 e 1 0 ]
+{
+[v WriteSPI@data_out data_out `uc  1 a 1 wreg ]
+"15
+[v WriteSPI@TempVar TempVar `uc  1 a 1 0 ]
+"13
+[v WriteSPI@data_out data_out `uc  1 a 1 wreg ]
+"16
+[v WriteSPI@data_out data_out `uc  1 a 1 1 ]
+"26
+} 0
+"44 D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\delay.c
+[v _Delay_s Delay_s `(v  1 e 0 0 ]
+{
+[v Delay_s@t t `uc  1 a 1 wreg ]
+"46
+[v Delay_s@j j `uc  1 a 1 5 ]
+[v Delay_s@i i `uc  1 a 1 4 ]
+"44
+[v Delay_s@t t `uc  1 a 1 wreg ]
+"47
+[v Delay_s@t t `uc  1 a 1 3 ]
+"50
+} 0
+"33
+[v _delay_ms delay_ms `(v  1 e 0 0 ]
+{
+[v delay_ms@t t `uc  1 a 1 wreg ]
+"35
+[v delay_ms@i i `uc  1 a 1 2 ]
+"33
+[v delay_ms@t t `uc  1 a 1 wreg ]
+"36
+[v delay_ms@t t `uc  1 a 1 1 ]
+"42
+} 0
+"8 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\d1ktcyx.c
+[v _Delay1KTCYx Delay1KTCYx `(v  1 e 0 0 ]
+{
+[v Delay1KTCYx@unit unit `uc  1 a 1 wreg ]
+[v Delay1KTCYx@unit unit `uc  1 a 1 wreg ]
+[v Delay1KTCYx@unit unit `uc  1 a 1 0 ]
+"13
+} 0
+"76 D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\main.c
+[v _Command Command `(v  1 e 0 0 ]
+{
+[v Command@cmd cmd `uc  1 a 1 wreg ]
+[v Command@cmd cmd `uc  1 a 1 wreg ]
+[v Command@arg arg `ul  1 p 4 2 ]
+[v Command@CRCbits CRCbits `uc  1 p 1 6 ]
+"78
+[v Command@cmd cmd `uc  1 a 1 7 ]
+"85
+} 0
+"58
+[v _WriteSPI_ WriteSPI_ `(c  1 e 1 0 ]
+{
+[v WriteSPI_@data_out data_out `uc  1 a 1 wreg ]
+"60
+[v WriteSPI_@TempVar TempVar `uc  1 a 1 0 ]
+"58
+[v WriteSPI_@data_out data_out `uc  1 a 1 wreg ]
+"62
+[v WriteSPI_@data_out data_out `uc  1 a 1 1 ]
+"74
+} 0
+"15 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+{
+"17
+[v ___lmul@product product `ul  1 a 4 8 ]
+"15
+[v ___lmul@multiplier multiplier `ul  1 p 4 0 ]
+[v ___lmul@multiplicand multiplicand `ul  1 p 4 4 ]
+"129
+} 0
+"8 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+{
+"11
+[v ___lldiv@quotient quotient `ul  1 a 4 8 ]
+"12
+[v ___lldiv@counter counter `uc  1 a 1 12 ]
+"8
+[v ___lldiv@dividend dividend `ul  1 p 4 0 ]
+[v ___lldiv@divisor divisor `ul  1 p 4 4 ]
+"31
+} 0
+"30 D:\Kevin\OpenLabCodes\SDC_FILE_SYS.X\openuart.c
+[v _OpenUART OpenUART `(v  1 e 0 0 ]
+{
+"37
+} 0
